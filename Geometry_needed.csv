@@ -1,14 +1,9 @@
-Experiment: steady_experiment Library: TRABAJO Component: RL10 Partition: design_partition
-User: Andrés Date: 2021:02:05 Time: 12:26:27
-Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.17763]
-Library dependency list: LPRES V1.3.7 MATH V3.2.7 TRABAJO V0.0 
-Programme and Version: EcosimPro V6.0.0
-
-Point\Name,Injector_F.A_d,Injector_F.A_sl,Injector_O.A_d,Injector_O.A_sl,Pump_F.A_in_d,Pump_F.H,Pump_F.r_m_d,Pump_O.A_in_d,Pump_O.H,Pump_O.r_m_d,ThrustMonitor.A_out,ThrustMonitor.g.A_out,Turbine.A_in_d,Turbine.r_m_d,CombCha.AR,CombCha.AR_r,CombCha.A_th,Pump_F.A_in,Pump_F.r_m,Pump_O.A_in,Pump_O.r_m,Turbine.A_in,Turbine.M,Turbine.alpha_2,Turbine.alpha_4r,Turbine.r_m
-Units,m^2,m^2,m^2,m^2,m^2,m,m,m^2,m,m,m^2,m^2,m^2,m,-,-,m^2,m^2,m,m^2,m,m^2,-,deg,deg,m
-Alias,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--,--
-0,0.00178349971,0.000901501125,0.000580606872,0,0.000677279675,10278.1807,0.208304833,0.0014118924,363.868735,0.194281146,0.762924077,0.762924077,0.000513113762,0.715229315,56.8879856,14,0.05,0.01,0.05,0.01,0.05,0.005,1,45,-75,0.01
-
-
-
-
+Experiment: steady_experiment Library: TRABAJO Component: RL10 Partition: design_partition												
+User: Andrés Date: 2021:02:05 Time: 16:13:06												
+Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.17763]												
+Library dependency list: LPRES V1.3.7 MATH V3.2.7 TRABAJO V0.0 												
+Programme and Version: EcosimPro V6.0.0												
+												
+Point\Name	Injector_F.A_d	Injector_O.A_d	Pump_F.A_in_d	Pump_F.r_m_d	Pump_O.A_in_d	Pump_O.r_m_d	Turbine.A_in_d	Turbine.r_m_d	CombCha.A_th_d	Regulator_F.dp_d	CombCha.A_out	CombCha.A_r
+Units	m^2	m^2	m^2	m	m^2	m	m^2	m	m^2	Pa	m^2	m^2
+1	0.00178349971	0.000580606872	0.000677279675	0.208304833	0.0014118924	0.194281146	0.000513113762	0.715229315	0.0134109877	3219188.99	0.762924077	0.187753828

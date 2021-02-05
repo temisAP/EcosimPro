@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="873" dy="440" state="maximized">
+				<plot id="Plot_1" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="LPRES.Altitude">
+							<titleAxe value="LPRES.Altitude"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.C_E" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="Table_1" colums="true">
+					<var name="LPRES.Altitude"/>
+					<var name="ControlPanel.C_E"/>
+					<var name="ControlPanel.Thrust"/>
+					<var name="ControlPanel.c_star"/>
+					<var name="CombCha.g.W"/>
+					<var name="ControlPanel.Isp"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="468" height="696" visible="true" pos="right" >
+		<currentTab name="inputs"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+				<var name="LPRES.Altitude" value="100000"/>
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+				<column name="type" width="125"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+		</layout>
+	</watch>
+
+	<outputWindow height="207" width="1822" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

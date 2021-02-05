@@ -1,5 +1,5 @@
 Experiment: steady_experiment Library: TRABAJO Component: RL10 Partition: design_partition
-User: Andrés Date: 2021:02:05 Time: 12:25:54
+User: Andrés Date: 2021:02:05 Time: 16:12:40
 Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.17763]
 Library dependency list: LPRES V1.3.7 MATH V3.2.7 TRABAJO V0.0 
 Programme and Version: EcosimPro V6.0.0

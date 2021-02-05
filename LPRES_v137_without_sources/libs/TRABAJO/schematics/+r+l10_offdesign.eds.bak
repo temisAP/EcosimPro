@@ -55,6 +55,8 @@
 			<datum id="pi" value="1.8" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="A_in" value="0.000513113762" pos="D" />
+			<datum id="M" value="0.1" pos="D" />
+			<datum id="r_m" value="0.715229315" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -72,6 +74,8 @@
 			<datum id="dp" value="4282000" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="r_m" value="0.194281146" pos="D" />
+			<datum id="U_0" value="350" pos="D" />
+			<datum id="A_in" value="0.0014118924" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -89,6 +93,8 @@
 			<datum id="dp" value="7358000" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="r_m" value="0.208304833" pos="D" />
+			<datum id="U_0" value="350" pos="D" />
+			<datum id="A_in" value="0.000677279675" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -107,21 +113,23 @@
 
 	<component id="CombCha" library="LPRES" type="CombCha" layer="1"  hotPort="i" >
 	
-		<symbol cx="218" cy="150" sx="117" sy="181" dx="352" dy="400" rotation="180" flipY="true" onLabel="true" />
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="356" dy="404" rotation="180" flipY="true" onLabel="true" />
 	
-		<label cx="32.5" cy="12" dx="531" dy="638" />
+		<label cx="32.5" cy="12" dx="535" dy="642" />
 	
 		<instanceData>
 			<datum id="eta_d" value="0.99" pos="D" />
 			<datum id="Q_comb" value="14700000" pos="D" />
 			<datum id="cp_P" value="3700" pos="D" />
 			<datum id="M_P" value="14.25" pos="D" />
-			<datum id="AR" value="56.88798558" pos="D" />
+			<datum id="AR" value="56.8879856" pos="D" />
 			<datum id="p_c" value="3275010" pos="D" />
 			<datum id="Cooled" value="Yes" pos="P" />
 			<datum id="AR_r" value="14" pos="D" />
 			<datum id="A_wet" value="2.521128707" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="T_c0" value="3300" pos="D" />
+			<datum id="W_F0" value="2.7" pos="D" />
 			<datum id="A_th" value="0.0134109877" pos="D" />
 		</instanceData>
 	
@@ -190,6 +198,7 @@
 		<instanceData>
 			<datum id="W" value="16.3526821" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A" value="0.000580606872" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -216,12 +225,12 @@
 
 	<component id="Junction" library="LPRES" type="Junction" layer="1"  hotPort="f_in1" >
 	
-		<symbol cx="244" cy="128" sx="81" sy="49" dx="508" dy="180" onLabel="true" />
+		<symbol cx="244" cy="128" sx="81" sy="49" dx="504" dy="176" onLabel="true" />
 	
-		<label cx="28" cy="12" dx="719" dy="330" />
+		<label cx="28" cy="12" dx="715" dy="326" />
 	
 		<instanceData>
-			<datum id="TPL" value="1" pos="D" />
+			<datum id="TPL" value="0" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -257,6 +266,11 @@
 		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="616" dy="204" rotation="180" flipY="true" onLabel="true" />
 	
 		<label cx="39" cy="12" dx="796" dy="298" />
+	
+		<instanceData>
+			<datum id="Type" value="Known_dp" pos="P" />
+			<datum id="dp" value="3219188.99" pos="D" />
+		</instanceData>
 	
 	</component>
 
@@ -294,19 +308,19 @@
 
 	<connector id="Connector_4" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_LOX" ePort="f_in" points="308,176"  intermediate1="1"  />
 
-	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h" points="624,580"  intermediate1="1"  />
+	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h" points="628,580"  intermediate1="1"  />
 
 	<connector id="Connector_6" sShape="Gearbox" sPort="m_out" eShape="Turbine" ePort="m" points="560,132"  intermediate2="1"  />
 
-	<connector id="Connector_7" sShape="CombCha" sPort="g" eShape="ThrustMonitor" ePort="g"  />
+	<connector id="Connector_7" sShape="CombCha" sPort="g" eShape="ThrustMonitor" ePort="g" points="564,640"  intermediate1="1"  />
 
-	<connector id="Connector_8" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="624,464"  intermediate1="1"  />
+	<connector id="Connector_8" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="584,436"  intermediate2="1"  />
 
-	<connector id="Connector_9" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="512,464"  intermediate1="1"  />
+	<connector id="Connector_9" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="552,436"  intermediate2="1"  />
 
 	<connector id="Connector_10" sShape="FlowMeter_LOX" sPort="f_out" eShape="Injector_O" ePort="f_in" points="308,348 508,348 508,376"  intermediate2="3"  />
 
-	<connector id="Connector_11" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb" points="516,512 68,512 68,584"  intermediate1="1"  />
+	<connector id="Connector_11" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb" points="520,512 68,512 68,584"  intermediate1="1"  />
 
 	<connector id="Connector_12" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel" ePort="i_Thrust" points="496,704 68,704 68,612"  intermediate1="3"  />
 
@@ -322,9 +336,9 @@
 
 	<connector id="Connector_18" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in"  />
 
-	<connector id="Connector_19" sShape="Regulator_F" sPort="f_out" eShape="Junction" ePort="f_in2"  />
+	<connector id="Connector_19" sShape="Regulator_F" sPort="f_out" eShape="Junction" ePort="f_in2" points="784,292"  intermediate2="1"  />
 
-	<connector id="Connector_20" sShape="HeadLoss_Turb" sPort="f_out" eShape="Junction" ePort="f_in1" points="698,292"  intermediate1="1"  />
+	<connector id="Connector_20" sShape="HeadLoss_Turb" sPort="f_out" eShape="Junction" ePort="f_in1" points="712,290"  intermediate2="1"  />
 
 	<connector id="Connector_21" sShape="SplitFrac" sPort="f_b" eShape="Regulator_F" ePort="f_in"  />
 
@@ -336,7 +350,7 @@
 
 	<connector id="Connector_25" sShape="HeadLoss_Junct" sPort="f_out" eShape="Injector_F" ePort="f_in" points="632,348 620,348 620,376"  intermediate1="1"  />
 
-	<connector id="Connector_26" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="752,348 704,348"  intermediate2="2"  />
+	<connector id="Connector_26" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="752,324 752,348 704,348"  intermediate1="1"  />
 
 	<connector id="Connector_27" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="620,280 620,292 626,292"  intermediate1="1"  intermediate2="2"  />
 
