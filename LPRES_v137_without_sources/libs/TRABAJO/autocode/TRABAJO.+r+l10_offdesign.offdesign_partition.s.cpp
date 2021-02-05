@@ -12,7 +12,7 @@ m_infoGroupName = "";
 m_infoExperimentName = "s";
 m_infoExperimentFileName = "TRABAJO.+r+l10_offdesign.offdesign_partition.s";
 m_infoExperimentFileNameExtra = "s";
-m_infoExperimentDate = "05/02/2021 16:59:17.019000";
+m_infoExperimentDate = "05/02/2021 17:35:36.811000";
 
 m_perfFlag = false;
 
@@ -69,11 +69,10 @@ void TRABAJO__RL10_offdesign_offdesign_partition_s::initDefaultsLibraryGlobalsIn
 /* Initialisation of variables in experiment*/
 void TRABAJO__RL10_offdesign_offdesign_partition_s::initDefaultsExp()
 {
-	dyn[2] = 1. ;
-	dyn[3] = 200. ;
-	dyn[7] = 100. ;
-	dyn[8] = 4. ;
-	dyn[6] = 0.1 ;
+	dyn[2] = 0.8 ;
+	dyn[3] = 170. ;
+	dyn[7] = 90. ;
+	dyn[8] = 90. ;
 }
 
 /* Initialisation of boundaries*/
@@ -82,7 +81,7 @@ void TRABAJO__RL10_offdesign_offdesign_partition_s::evalBoundsExp(double TIME)
 	if (m_boundsLaw)
 		{(*m_boundsLaw)(TIME); return;}
 	if (m_boundaryBranch[0] == 0)  
-		unkR[333] = 9000. ;
+		unkR[333] = 0. ;
 }
 /* Initialisation of delays in experiments*/
 void TRABAJO__RL10_offdesign_offdesign_partition_s::initDelaysExpt()

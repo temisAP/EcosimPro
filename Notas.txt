@@ -1,0 +1,14 @@
+CombCha.M_r
+CombCha.W_F
+HeadLoss_TO.f_in.W
+Junction.f_in2.Tt
+Pump_F.U
+ThrustMonitor.g.Tt
+Turbine.M_2
+
+CC.M_r = 10
+Junct.f_in2.Tt = 170
+CC.p_out_ch = 100
+ThrustMonitor.M_out = 100
+
+350/850

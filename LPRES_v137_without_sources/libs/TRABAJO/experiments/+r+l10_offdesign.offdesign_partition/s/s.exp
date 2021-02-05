@@ -13,15 +13,15 @@ EXPERIMENT s ON RL10_offdesign.offdesign_partition
    OBJECTS
    INIT
       -- initial values for algebraics
-      HeadLoss_TO.f_in.W = 1
-      Junction.f_in2.Tt = 200
-      CombCha.p_out_ch = 100
-      ThrustMonitor.M_out = 4
-		Turbine.M_2 = 0.1
+      HeadLoss_TO.f_in.W = 0.8
+      Junction.f_in2.Tt = 170
+      CombCha.p_out_ch = 90
+      ThrustMonitor.M_out = 90
+		--Turbine.M_2 = 0.1
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LPRES.Altitude = 9000
+      LPRES.Altitude = 0
 
    BODY
       -- report results in file reportAll.rpt

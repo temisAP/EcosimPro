@@ -28,9 +28,9 @@
 
 	<component id="Tank_F" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
 	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="825.971" dy="10.0294" rotation="90" onLabel="true" />
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="829.971" dy="6.02941" rotation="90" onLabel="true" />
 	
-		<label cx="25" cy="12" dx="1007" dy="124.029" />
+		<label cx="25" cy="12" dx="1011" dy="120.029" />
 	
 		<instanceData>
 			<datum id="Tt" value="21.11111" pos="D" />
@@ -74,7 +74,7 @@
 			<datum id="dp" value="4282000" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="r_m" value="0.194281146" pos="D" />
-			<datum id="U_0" value="350" pos="D" />
+			<datum id="U_0" value="850" pos="D" />
 			<datum id="A_in" value="0.0014118924" pos="D" />
 		</instanceData>
 	
@@ -93,7 +93,7 @@
 			<datum id="dp" value="7358000" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="r_m" value="0.208304833" pos="D" />
-			<datum id="U_0" value="350" pos="D" />
+			<datum id="U_0" value="850" pos="D" />
 			<datum id="A_in" value="0.000677279675" pos="D" />
 		</instanceData>
 	
@@ -332,7 +332,7 @@
 
 	<connector id="Connector_16" sShape="HeadLoss_TO" sPort="f_out" eShape="Pump_O" ePort="f_in" points="304,84"  intermediate2="1"  />
 
-	<connector id="Connector_17" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in"  />
+	<connector id="Connector_17" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in" points="1000,84"  intermediate1="1"  />
 
 	<connector id="Connector_18" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in"  />
 
@@ -360,8 +360,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

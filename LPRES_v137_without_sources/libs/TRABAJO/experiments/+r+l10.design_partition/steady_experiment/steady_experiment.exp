@@ -13,7 +13,7 @@ EXPERIMENT steady_experiment ON RL10.design_partition
    OBJECTS
    INIT
       -- initial values for algebraics
-      HeadLoss_Turb.f_in.Tt = 1
+      CombCha.M_r = 10
       Junction.f_in2.W = 1
       CombCha.p_out_ch = 100
       ThrustMonitor.M_out = 100

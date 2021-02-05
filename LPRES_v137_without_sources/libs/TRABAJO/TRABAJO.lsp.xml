@@ -4,7 +4,6 @@
   <file name="version.el"/>
   <file name="RL10.eds"/>
   <file name="RL10_offdesign.eds"/>
-  <file name="RL10_offdesign2.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>
