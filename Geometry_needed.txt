@@ -6,9 +6,6 @@ Pump_F.r_m
 ***
 Turbine.A_in
 Turine.r_m
-Turbine.alpha_2
-Turbine.alpha_4r
-Turbine.M
 ***
 Injector_O.A
 Injector_F.A
@@ -17,4 +14,3 @@ CombCha.A_th
 CombCha.AR
 CombCHa.AR_r
 
-3219188.99

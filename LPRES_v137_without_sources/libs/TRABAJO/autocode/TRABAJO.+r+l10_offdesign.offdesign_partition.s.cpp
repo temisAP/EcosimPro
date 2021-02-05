@@ -12,7 +12,7 @@ m_infoGroupName = "";
 m_infoExperimentName = "s";
 m_infoExperimentFileName = "TRABAJO.+r+l10_offdesign.offdesign_partition.s";
 m_infoExperimentFileNameExtra = "s";
-m_infoExperimentDate = "05/02/2021 16:52:25.267000";
+m_infoExperimentDate = "05/02/2021 16:59:17.019000";
 
 m_perfFlag = false;
 
@@ -51,7 +51,7 @@ void TRABAJO__RL10_offdesign_offdesign_partition_s::runExperiment()
 	REPORT_LIST("reportAll", "*") ;
 	DEBUG_LEVEL = 1 ;
 	TOLTYPE = 1 ;
-	TOLERANCE = 0.001 ;
+	TOLERANCE = 1e-06 ;
 	m_boundaryBranch[0] = -1;
 	unkR[333] = 0. ;
 	while ( unkR[333] <= 100000 ) {

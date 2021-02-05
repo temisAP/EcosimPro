@@ -29,7 +29,7 @@ EXPERIMENT s ON RL10_offdesign.offdesign_partition
 
       DEBUG_LEVEL= 1      -- Range 0..4
       TOLTYPE= RELTOL -- convergence criteria
-      TOLERANCE = 1e-03 -- steady solver relative tolerance 
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
 		
 		FOR(LPRES.Altitude=0.;LPRES.Altitude<=100.e3;LPRES.Altitude=LPRES.Altitude+100.)
       STEADY()
