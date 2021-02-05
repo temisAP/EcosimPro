@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<tableWindow title="Tt_evolution" x="514" y="75" dx="700" dy="250" state="maximized">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="Tt_evolution" colums="true">
+					<var name="CombCha.g.Tt"/>
+					<var name="CoolingJacket.g.Tt"/>
+					<var name="CoolingJacket.l.Tt"/>
+					<var name="FlowMeter_LH2.f_in.Tt"/>
+					<var name="FlowMeter_LH2.f_out.Tt"/>
+					<var name="FlowMeter_LOX.f_in.Tt"/>
+					<var name="FlowMeter_LOX.f_out.Tt"/>
+					<var name="HeadLoss_Junct.f_in.Tt"/>
+					<var name="HeadLoss_Junct.f_out.Tt"/>
+					<var name="Injector_F.f_in.Tt"/>
+					<var name="Injector_O.f_in.Tt"/>
+					<var name="Junction.f_in2.Tt"/>
+					<var name="Junction.f_out.Tt"/>
+					<var name="Pump_F.f_out.Tt"/>
+					<var name="Pump_O.f_out.Tt"/>
+					<var name="Regulator_F.f_in.Tt"/>
+					<var name="Regulator_F.f_out.Tt"/>
+					<var name="SplitFrac.f_b.Tt"/>
+					<var name="SplitFrac.f_in.Tt"/>
+					<var name="SplitFrac.f_out.Tt"/>
+					<var name="ThrustMonitor.g.Tt"/>
+					<var name="Turbine.f_in.Tt"/>
+				</table>
+			</tableWindow>
+			<tableWindow title="E _and_Isp" x="355" y="495" dx="665" dy="250" state="maximized">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="E _and_Isp" colums="true">
+					<var name="ControlPanel.Isp"/>
+					<var name="ControlPanel.Thrust"/>
+				</table>
+			</tableWindow>
+			<tableWindow title="Regulator" x="13" y="137" dx="491" dy="353" state="maximized">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="Regulator" colums="true">
+					<var name="Regulator_F.dp_d"/>
+				</table>
+			</tableWindow>
+			<tableWindow title="Geometrical_configuration" x="0" y="0" dx="350" dy="250" state="maximized">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="Geometrical_configuration" colums="true">
+					<var name="Injector_F.A_d"/>
+					<var name="Injector_F.A_sl"/>
+					<var name="Injector_O.A_d"/>
+					<var name="Injector_O.A_sl"/>
+					<var name="Pump_F.A_in_d"/>
+					<var name="Pump_F.H"/>
+					<var name="Pump_F.r_m_d"/>
+					<var name="Pump_O.A_in_d"/>
+					<var name="Pump_O.H"/>
+					<var name="Pump_O.r_m_d"/>
+					<var name="ThrustMonitor.A_out"/>
+					<var name="ThrustMonitor.g.A_out"/>
+					<var name="Turbine.A_in_d"/>
+					<var name="Turbine.r_m_d"/>
+					<var name="CombCha.AR"/>
+					<var name="CombCha.AR_r"/>
+					<var name="CombCha.A_th"/>
+					<var name="Pump_F.A_in"/>
+					<var name="Pump_F.r_m"/>
+					<var name="Pump_O.A_in"/>
+					<var name="Pump_O.r_m"/>
+					<var name="Turbine.A_in"/>
+					<var name="Turbine.M"/>
+					<var name="Turbine.alpha_2"/>
+					<var name="Turbine.alpha_4r"/>
+					<var name="Turbine.r_m"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="632" height="816" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+				<column name="type" width="125"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+		</layout>
+	</watch>
+
+	<outputWindow height="87" width="1822" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

@@ -1,0 +1,14 @@
+EXTRA_OBJECTS=
+EXTERN_INCLUDE_PATH_VC=
+EXTERN_INCLUDE_PATH_GCC=
+EXTERN_LIBRARY_PATH=
+PLATFORM=win64_gcc64v4_9
+TYPE=GEN_EXPERIMENT
+IS_DEBUG=no
+IS_OPTIM=no
+INSTALL_DIR=D:/Archivos de programa/EcosimPro/EcosimPro_6.0.0_DEMO
+LIBRARY_DIR=D:/0_Andres/1_Universidad/MUSE/PEL/superpequeproblemas/EcosimPro/EcosimPro/LPRES_v137_without_sources/libs/TRABAJO
+PARTITION_FILE=TRABAJO.+r+l10.design_partition
+EXPERIMENT_FILE=TRABAJO.+r+l10.design_partition.steady_experiment
+EXPERIMENT_DIR=D:/0_Andres/1_Universidad/MUSE/PEL/superpequeproblemas/EcosimPro/EcosimPro/LPRES_v137_without_sources/libs/TRABAJO/experiments/+r+l10.design_partition/steady_experiment
+EXPERIMENT_DLL=+r+l10.design_partition.steady_experiment.win64_gcc64v4_9

@@ -1,0 +1,36 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: TRABAJO
+ COMPONENT: RL10
+ PARTITION: design_partition
+ EXPERIMENT: steady_experiment
+ TEMPLATE: TRANSIENT
+ TEMPLATE: STEADY
+ CREATION DATE: 05/02/2021
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT steady_experiment ON RL10.design_partition
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      HeadLoss_Turb.f_in.Tt = 1
+      Junction.f_in2.W = 1
+      CombCha.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 9000
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*")
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

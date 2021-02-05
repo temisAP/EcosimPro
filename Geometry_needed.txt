@@ -1,0 +1,13 @@
+Pump_O.A_in
+Pump_O.r_m
+
+Pump_F.A_in
+Pump_F.r_m
+
+Turbine.A_in
+Turine.r_m
+
+Injector_O.A
+Injector_F.A
+
+CombCha.A_th

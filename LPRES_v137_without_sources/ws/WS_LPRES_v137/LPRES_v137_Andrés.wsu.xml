@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <openFiles version="1.0">
  <file area="mdi_main" path="@TRABAJO@/schematics/+r+l10.eds"/>
+ <file area="mdi_main" path="@TRABAJO@/schematics/+r+l10_offdesign.eds"/>
+ <file area="mdi_main" path="@TRABAJO@/experiments/+r+l10.design_partition/steady_experiment/steady_experiment.exp"/>
 </openFiles>
