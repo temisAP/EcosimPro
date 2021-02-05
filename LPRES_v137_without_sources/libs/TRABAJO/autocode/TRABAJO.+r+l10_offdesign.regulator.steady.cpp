@@ -12,7 +12,7 @@ m_infoGroupName = "";
 m_infoExperimentName = "steady";
 m_infoExperimentFileName = "TRABAJO.+r+l10_offdesign.regulator.steady";
 m_infoExperimentFileNameExtra = "steady";
-m_infoExperimentDate = "06/02/2021 00:05:28.535000";
+m_infoExperimentDate = "06/02/2021 00:23:46.334000";
 
 m_perfFlag = false;
 
@@ -20,6 +20,7 @@ m_perfFlag = false;
 n_typ_exp=0;
 // Experiment variables (initialisation)
 PG = 0.0;
+FRACC = 0.0;
 nBounds = 2;// Number of boundary variables
 if (m_boundaryBranch==NULL)
 {
@@ -42,6 +43,7 @@ void TRABAJO__RL10_offdesign_regulator_steady::initInternalModels()
 void TRABAJO__RL10_offdesign_regulator_steady::addExptVariables()
 {
 	ADD_EXPT_VAR( "PG", "REAL", "",&PG);
+	ADD_EXPT_VAR( "FRACC", "REAL", "",&FRACC);
 varHasEquationInBoundBlock("LPRES.Altitude");
 varHasEquationInBoundBlock("Regulator_F.dp");
 
@@ -60,6 +62,7 @@ void TRABAJO__RL10_offdesign_regulator_steady::runExperiment()
 	while ( unkR[358] <= 4000000 ) {
 	STEADY() ;
 	PG = _div( _div( unkR[306] * _sqrt(dyn[3],"Junction.f_in2.Tt") , unkR[364],"Turbine.f_in.pt") , unkR[371],"Turbine.A_in") ;
+	FRACC = _div( unkR[306] , unkR[317],"Injector_F.W") ;
 	m_boundaryBranch[1] = -1;
 	unkR[358] = unkR[358] + 100000. ;
 	}

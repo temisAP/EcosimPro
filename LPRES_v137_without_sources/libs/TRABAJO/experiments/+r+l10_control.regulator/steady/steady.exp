@@ -1,0 +1,40 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: TRABAJO
+ COMPONENT: RL10_control
+ PARTITION: regulator
+ EXPERIMENT: steady
+ TEMPLATE: TRANSIENT
+ TEMPLATE: STEADY
+ CREATION DATE: 06/02/2021
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT steady ON RL10_control.regulator
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Injector_O.PR = 10
+      Junction.f_in2.W = 1
+      CombCha.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      CombCha.OF = 0
+      LPRES.Altitude = 0
+      Regulator_F.dp = 3219188.99
+      Regulator_O.dp = 100000
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*")
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+		FOR(Regulator_F.dp=25e+5;Regulator_F.dp<=40e+5;Regulator_F.dp=Regulator_F.dp+1e+5)
+      	STEADY()
+		END FOR
+
+END EXPERIMENT

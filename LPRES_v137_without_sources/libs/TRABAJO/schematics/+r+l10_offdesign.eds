@@ -210,9 +210,9 @@
 
 	<component id="SplitFrac" library="LPRES" type="SplitFrac" layer="1"  hotPort="f_b" >
 	
-		<symbol cx="244" cy="112" sx="81" sy="49" dx="674" dy="186" rotation="-90" flipY="true" onLabel="true" />
+		<symbol cx="244" cy="112" sx="81" sy="49" dx="696" dy="208" rotation="-90" flipY="true" onLabel="true" />
 	
-		<label cx="30" cy="12" dx="881.5" dy="320" />
+		<label cx="30" cy="12" dx="903.5" dy="342" />
 	
 		<instanceData>
 			<datum id="TPL" value="1" pos="D" />
@@ -337,11 +337,11 @@
 
 	<connector id="Connector_20" sShape="HeadLoss_Turb" sPort="f_out" eShape="Junction" ePort="f_in1" points="712,290"  intermediate2="1" dx="10" dy="10"  />
 
-	<connector id="Connector_21" sShape="SplitFrac" sPort="f_b" eShape="Regulator_F" ePort="f_in" points="870,288"  intermediate2="1" dx="10" dy="10"  />
+	<connector id="Connector_21" sShape="SplitFrac" sPort="f_b" eShape="Regulator_F" ePort="f_in" points="910,286"  intermediate1="1" dx="10" dy="10"  />
 
-	<connector id="Connector_22" sShape="CoolingJacket" sPort="g" eShape="SplitFrac" ePort="f_in" points="762,502 762,325 924,325"  intermediate1="1" dx="10" dy="10"  />
+	<connector id="Connector_22" sShape="CoolingJacket" sPort="g" eShape="SplitFrac" ePort="f_in" points="762,502 762,325 938,325 938,346"  intermediate2="4" dx="10" dy="10"  />
 
-	<connector id="Connector_23" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="926,252 926,225 690,225 690,153 616,153"  intermediate1="1"  intermediate2="4" dx="10" dy="10"  />
+	<connector id="Connector_23" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="926,274 926,225 690,225 690,153 616,153"  intermediate1="1" dx="10" dy="10"  />
 
 	<connector id="Connector_24" sShape="FlowMeter_F" sPort="f_out" eShape="CoolingJacket" ePort="l" points="1002,697 674,697 674,610"  intermediate2="3" dx="10" dy="10"  />
 

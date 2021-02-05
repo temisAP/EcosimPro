@@ -29,8 +29,8 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Presion_de_camara" x="682" y="120" dx="913" dy="606">
-				<plot id="Presion_de_camara" graphType="plot_x_y">
+			<plotWindow title="Gasto" x="549" y="88" dx="911" dy="626">
+				<plot id="Gasto" graphType="plot_x_y">
 						<title value="">
 							<font/>
 						</title>
@@ -51,50 +51,12 @@
 							<font/>
 						</legend>
 						<chartStyles>
-							<var name="CombCha.g.pt" nick=""/>
+							<var name="CombCha.g.W" nick=""/>
 						</chartStyles>
 					
 					</plot>
 			</plotWindow>
-			<tableWindow title="Tabla" x="840" y="0" dx="751" dy="549">
-				<findBar visible="f" names="t" sensitive="f"/>
-				<table id="Tabla" colums="true">
-					<var name="PG"/>
-					<var name="Regulator_F.dp"/>
-					<var name="CombCha.g.W"/>
-					<var name="CombCha.OF"/>
-					<var name="CombCha.T_c"/>
-					<var name="CombCha.g.pt"/>
-				</table>
-			</tableWindow>
-			<plotWindow title="Temperatura_de_camara" x="211" y="56" dx="839" dy="607">
-				<plot id="Temperatura_de_camara" graphType="plot_x_y">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="Regulator_F.dp">
-							<titleAxe value="Regulator_F.dp"/>
-							<scale scaleType="auto"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale scaleType="auto"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.g.Tt" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="OF" x="624" y="54" dx="682" dy="483">
+			<plotWindow title="OF" x="159" y="70" dx="765" dy="600">
 				<plot id="OF" graphType="plot_x_y">
 						<title value="">
 							<font/>
@@ -121,8 +83,8 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Gasto" x="208" y="271" dx="622" dy="361">
-				<plot id="Gasto" graphType="plot_x_y">
+			<plotWindow title="Temperatura_de_camara" x="294" y="314" dx="839" dy="607">
+				<plot id="Temperatura_de_camara" graphType="plot_x_y">
 						<title value="">
 							<font/>
 						</title>
@@ -143,7 +105,185 @@
 							<font/>
 						</legend>
 						<chartStyles>
-							<var name="CombCha.g.W" nick=""/>
+							<var name="CombCha.g.Tt" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<tableWindow title="Tabla" x="602" y="18" dx="751" dy="549">
+				<findBar visible="f" names="t" sensitive="f"/>
+				<table id="Tabla" colums="true">
+					<var name="PG"/>
+					<var name="Regulator_F.dp"/>
+					<var name="CombCha.g.W"/>
+					<var name="CombCha.OF"/>
+					<var name="CombCha.T_c"/>
+					<var name="CombCha.g.pt"/>
+					<var name="FRACC"/>
+					<var name="ControlPanel.C_E"/>
+					<var name="ControlPanel.Isp"/>
+					<var name="ControlPanel.Thrust"/>
+					<var name="ControlPanel.c_star"/>
+				</table>
+			</tableWindow>
+			<plotWindow title="C_E" x="332" y="460" dx="848" dy="477">
+				<plot id="C_E" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.C_E" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="c_estrella" x="443" y="39" dx="1095" dy="654">
+				<plot id="c_estrella" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.21235e+06" maxCurrent="4.18765e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="2304.86" maxCurrent="2305.24" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.c_star" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Empuje" x="333" y="285" dx="748" dy="621">
+				<plot id="Empuje" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.Thrust" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Presion_de_camara" x="292" y="71" dx="1209" dy="696">
+				<plot id="Presion_de_camara" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.4e+06" maxCurrent="4e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="2.9e+06" maxCurrent="3.6e+06" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.g.pt" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Fracc" x="155" y="68" dx="1172" dy="635">
+				<plot id="Fracc" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="FRACC" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Isp" x="403" y="28" dx="1200" dy="733">
+				<plot id="Isp" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.31111e+06" maxCurrent="4.08889e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="2983.33" maxCurrent="3316.67" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.Isp" nick=""/>
 						</chartStyles>
 					
 					</plot>

@@ -26,6 +26,7 @@ private:
 
 // Experiment variables
 	double PG;
+	double FRACC;
 
 // experiment functions
 

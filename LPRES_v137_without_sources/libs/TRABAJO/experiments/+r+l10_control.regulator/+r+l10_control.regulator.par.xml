@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="TRABAJO" component="RL10_control" partition="regulator">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="Regulator_F.dp"/>
+  <variable name="Regulator_O.dp"/>
+</noDatas>
+<boundaries>
+  <variable name="CombCha.OF"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="Regulator_F.dp"/>
+  <variable name="Regulator_O.dp"/>
+</boundaries>
+<algebraics>
+  <variable name="CombCha.M_r"/>
+  <variable name="CombCha.W_F"/>
+  <variable name="Injector_O.PR"/>
+  <variable name="Junction.f_in2.W"/>
+  <variable name="Pump_F.U"/>
+  <variable name="ThrustMonitor.g.Tt"/>
+  <variable name="Turbine.M_2"/>
+  <variable name="CombCha.p_out_ch"/>
+  <variable name="ThrustMonitor.M_out"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

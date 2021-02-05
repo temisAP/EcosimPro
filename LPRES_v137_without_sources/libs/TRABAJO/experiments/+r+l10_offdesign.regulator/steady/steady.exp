@@ -11,6 +11,7 @@
 EXPERIMENT steady ON RL10_offdesign.regulator
    DECLS
 		REAL PG
+		REAL FRACC
    OBJECTS
    INIT
       -- initial values for algebraics
@@ -37,6 +38,7 @@ EXPERIMENT steady ON RL10_offdesign.regulator
 		FOR(Regulator_F.dp=25e+5;Regulator_F.dp<=40e+5;Regulator_F.dp=Regulator_F.dp+1e+5)
       	STEADY()
 			PG = Turbine.f_in.W * sqrt(Turbine.f_in.Tt) / Turbine.f_in.pt /Turbine.A_in
+			FRACC = Turbine.f_in.W/ Injector_F.W
 		END FOR
 
 END EXPERIMENT
