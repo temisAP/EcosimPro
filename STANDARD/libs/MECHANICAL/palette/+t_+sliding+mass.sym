@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="T_SlidingMass" >
+
+		<line id="Line_2" points="154,577 170.001,577"  end_arrow="true" dx="-58" dy="-481" lineColor="192,192,192"   />
+
+		<line id="Line_1" points="214,577 226,577"  end_arrow="true" dx="-70" dy="-481" lineColor="192,192,192"   />
+
+		<rect id="Rectangle_1" cx="269.999" cy="577" sx="31.9999" sy="31.9999" dx="-141.999" dy="-481" lineWidth="1.5"  color="220,220,220"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_trans"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_trans"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="68" cy="58" sx="88" sy="12" variable="m_in.F"  headerText="m_in.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="4" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="65" cy="66" sx="90" sy="12" variable="m_in.s"  headerText="m_in.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="6" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="210.5" cy="122" sx="93" sy="12" variable="m_out.F"  headerText="m_out.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="211.5" cy="142" sx="95" sy="12" variable="m_out.s"  headerText="m_out.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-1" dy="-2" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_AbsoluteSensorTorque" >
+
+		<line id="Line_10" points="31.1787,46.5601 43.1787,46.5601"  end_arrow="true" dx="112.821" dy="49.4399" lineColor="100,100,100" lineWidth="0.5"  aliasing="true"  />
+
+		<text id="Text_1" cx="8" cy="13.5" sx="16" sy="27" aliasing="true" dx="96" dy="48"  >
+			<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62;&#60;span style=&#34; font-family:&#39;Symbol&#39;; font-size:11pt; font-weight:600; color:#000000;&#34;&#62;t&#60;/span&#62;&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+		</text>
+
+		<line id="Line_16" points="202.914,23.9546 202.914,11.9546"  end_arrow="true" dx="-74.914" dy="40.0454" lineColor="255,128,0" lineWidth="0.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_2" cx="60" cy="60" rx="20" ry="20" dx="68" dy="20" lineWidth="1.5"  color="220,220,220" aliasing="true"  />
+
+		<ellipse id="Ellipse_3" cx="168" cy="72" rx="16" ry="16" dx="-40" dy="8" color="255,255,255" aliasing="true"  />
+
+		<line id="Line_1" points="31.1787,46.5601 43.1787,46.5601"  end_arrow="true" dx="64.8213" dy="49.4399" lineColor="100,100,100" lineWidth="0.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="171.188" cy="91.1875" rx="15.1875" ry="15.1875" rotation="3.17983" dx="-43.1875" dy="-11.1875" lineColor="85,170,255" lineType="1"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="189.915,31.9548 190.913,35.9535 193.913,33.9549" dx="-70.415" dy="36.6702" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_4" cx="169.5" cy="88.5" rx="6.5" ry="6.5" dx="-41.5" dy="-8.5" color="220,220,220" aliasing="true"  />
+
+		<line id="Line_4" points="170,78 174,78" dx="-30" dy="2" aliasing="true"  />
+
+		<line id="Line_5" points="170,78 174,78" dx="-58" dy="1.875" aliasing="true"  />
+
+		<line id="Line_6" points="174,74 174,78" dx="-45.625" dy="-9.625" aliasing="true"  />
+
+		<line id="Line_3" points="174,74 174,78" dx="-46" dy="18" aliasing="true"  />
+
+		<line id="Line_7" points="80,95.5 82.3333,93.3333" dx="57" dy="-24.5" lineColor="255,85,0"  aliasing="true"  />
+
+		<line id="Line_8" points="81.0612,95.7449 82.3333,93.3333" dx="51.6735" dy="-27.6633" lineColor="255,85,0"  aliasing="true"  />
+
+		<line id="Line_9" points="79.5714,94.2959 82.3333,93.3333" dx="59.8571" dy="-19.0306" lineColor="255,85,0"  aliasing="true"  />
+
+		<line id="Line_2" points="198.914,43.9556 191.039,33.3306" dx="-70.914" dy="36.0444" aliasing="true"  />
+
+		<rect id="Rectangle_1" cx="273.414" cy="62.9555" sx="40" sy="12" dx="-145.414" dy="33.0445" color="220,220,220" aliasing="true"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_rot"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="128" dy="48" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="125" dy="30.5" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="145.5" cy="110" sx="99" sy="12" variable="m_in.T"  headerText="m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-40" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="144.5" cy="118" sx="97" sy="12" variable="m_in.n"  headerText="m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-40" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="228" cy="114" sx="104" sy="12" variable="m_out.T"  headerText="m_out.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="4" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="227" cy="130" sx="102" sy="12" variable="m_out.n"  headerText="m_out.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="4" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

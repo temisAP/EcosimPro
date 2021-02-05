@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+wind+up_+example.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+wind+up_+example.default.par.html">Summary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Variables<br /></h2>
+<br/>
+<font size="4" color="black">Types</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>NAME
+&nbsp;</b></color></td>
+</tr>
+<tr><td>ENUM&nbsp;</td><td><a href="file:///G:/EASVN/trunk/libs/standard_demo/CONTROL/docs/CONTROL.enumerativeTypes.html#EndPosBehaviour" data-ajax='false'>CONTROL.EndPosBehaviour</a>&nbsp;</td></tr>
+</table>
+<br/>
+<font size="4" color="black">Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>MATH-TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>LRANGE&nbsp;</b></color></td>
+<td><color="black"><b>RRANGE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>IS-ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>EDIT&nbsp;</b></color></td>
+<td><color="black"><b>TRACE
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a name="v1">1</a>&nbsp;</td><td>Integrator.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v2">2</a>&nbsp;</td><td>Integrator.output_o&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 0} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v3">3</a>&nbsp;</td><td>Integrator.s_in.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v4">4</a>&nbsp;</td><td>Integrator.s_in.signal&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v5">5</a>&nbsp;</td><td>Integrator.s_out.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v6">6</a>&nbsp;</td><td>Integrator.s_out.signal&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v7">7</a>&nbsp;</td><td>Integrator.s_out.signal[1]'&nbsp;</td><td>&nbsp;</td><td>REAL&nbsp;</td><td>DERIVATIVE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v8">8</a>&nbsp;</td><td>Integrator.s_out.signal[1]&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DYNAMIC&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v9">9</a>&nbsp;</td><td>PI.Ti&nbsp;</td><td>s&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 1} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v10">10</a>&nbsp;</td><td>PI.beta&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 1} &nbsp;</td><td>0&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v11">11</a>&nbsp;</td><td>PI.e&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v12">12</a>&nbsp;</td><td>PI.end_pos&nbsp;</td><td>-&nbsp;</td><td><a href="file:///G:/EASVN/trunk/libs/standard_demo/CONTROL/docs/CONTROL.enumerativeTypes.html#EndPosBehaviour" data-ajax='false'>CONTROL.EndPosBehaviour</a>&nbsp;</td><td>DATA_VAR&nbsp;</td><td>2&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v13">13</a>&nbsp;</td><td>PI.es&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v14">14</a>&nbsp;</td><td>PI.gamma&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 100000000} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v15">15</a>&nbsp;</td><td>PI.k&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 1} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v16">16</a>&nbsp;</td><td>PI.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v17">17</a>&nbsp;</td><td>PI.r&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v18">18</a>&nbsp;</td><td>PI.s_out.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v19">19</a>&nbsp;</td><td>PI.s_out.signal&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v20">20</a>&nbsp;</td><td>PI.s_set.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v21">21</a>&nbsp;</td><td>PI.s_set.signal&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v22">22</a>&nbsp;</td><td>PI.s_var.n&nbsp;</td><td>-&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v23">23</a>&nbsp;</td><td>PI.s_var.signal&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v24">24</a>&nbsp;</td><td>PI.u&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v25">25</a>&nbsp;</td><td>PI.u_max&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ 0.1} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v26">26</a>&nbsp;</td><td>PI.u_min&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>DATA_VAR&nbsp;</td><td>{ -0.1} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v27">27</a>&nbsp;</td><td>PI.v&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v28">28</a>&nbsp;</td><td>PI.vi&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v29">29</a>&nbsp;</td><td>PI.vi[1]'&nbsp;</td><td>&nbsp;</td><td>REAL&nbsp;</td><td>DERIVATIVE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v30">30</a>&nbsp;</td><td>PI.vi[1]&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DYNAMIC&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v31">31</a>&nbsp;</td><td>PI.vil&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v32">32</a>&nbsp;</td><td>PI.y&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td></tr>
+</table>
+</body></html>

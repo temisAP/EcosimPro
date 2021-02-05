@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="THERMAL_EXAMPLES" component="View_Factors_Model" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="N1.s_temperature.signal[1]"/>
+  <variable name="N2.s_temperature.signal[1]"/>
+  <variable name="N3.s_temperature.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="N4.T"/>
+  <variable name="N5.T"/>
+  <variable name="N6.T"/>
+</dynamics>
+<residues>
+  <r id="1" value="N4.T' =  ZONE[1] (N4.Boundary) 0	  OTHERS N4.q / N4.C"/>
+  <r id="2" value="N5.T' =  ZONE[2] (N5.Boundary) 0	  OTHERS N5.q / N5.C"/>
+  <r id="3" value="N6.T' =  ZONE[3] (N6.Boundary) 0	  OTHERS N6.q / N6.C"/>
+</residues>
+</partitionInfo>

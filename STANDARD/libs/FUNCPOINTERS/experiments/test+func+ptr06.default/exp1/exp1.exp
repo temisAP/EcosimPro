@@ -1,0 +1,23 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: FUNCPOINTERS
+ COMPONENT: testFuncPtr06
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 15/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON testFuncPtr06.default
+   DECLS
+   OBJECTS
+   INIT
+   BOUNDS
+   BODY
+		 INTEG_TO(1,1) 
+		 
+		 WRITE("p1datum1 (solution 41)= %g\n",p1.datum1)
+		 WRITE("p.finalValue (solution 42+41=83)= %g\n",p1.finalValue)
+		 
+		 WRITE("p2[1,3].datum1 (solution 10)= %g\n",p2[1,3].datum1)
+		 WRITE("p2[1,3].finalValue (solution 41+10=51)= %g\n",p2[1,3].finalValue)
+END EXPERIMENT

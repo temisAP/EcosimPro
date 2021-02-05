@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Lungs" >
+
+		<line id="Line_1" points="247.999,117.001 231.998,117.001" dx="-55.999" dy="-37.001" lineColor="255,0,0"   />
+
+		<line id="Line_2" points="135.999,117.001 152.001,117.001" dx="-55.999" dy="-37.001" lineColor="255,0,0"   />
+
+		<polygon id="Polygon_1" points="188.001,68.9997 196,68.9997 196,100.999 204,104.999 204,112.999 192,109.001 180.001,112.999 180.001,104.999 188.001,100.999" dx="-55.999" dy="-37.001" color="255,224,192"  />
+
+		<closedBezier id="ClosedBezier_1" points="204,104.999 208.002,88.9996 228.001,88.9996 231.998,100.999 236,112.999 236,121.001 228.001,140.999 204,168.998 200,153.001 204,148.999 208.002,144.999 211.999,132.997 204,112.999" dx="-55.999" dy="-37.001" color="128,0,0"  />
+
+		<closedBezier id="ClosedBezier_2" points="180.001,104.999 175.999,88.9996 156,88.9996 152.001,100.999 148.001,112.999 148.001,121.001 156,140.999 180.001,168.998 184.001,153.001 180.001,148.999 175.999,144.999 172.002,132.997 180.001,112.999" dx="-55.999" dy="-37.001" color="128,0,0"  />
+
+		<port id="p_in" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="40" dy="68" />
+		
+		</port>
+
+		<port id="p_out" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_out" >
+		
+				<symbol dx="192" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="196" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="rai"/>
+				<var name="rao"/>
+				<var name="comp"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="60" cy="98" sx="88" sy="12" variable="p_in.p"  headerText="p_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-12" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="71" cy="98" sx="110" sy="12" variable="p_in.w"  headerText="p_in.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-12" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="62.5" cy="98" sx="93" sy="12" variable="p_out.p"  headerText="p_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="164" dy="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="73.5" cy="98" sx="115" sy="12" variable="p_out.w"  headerText="p_out.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="164" dy="-40" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

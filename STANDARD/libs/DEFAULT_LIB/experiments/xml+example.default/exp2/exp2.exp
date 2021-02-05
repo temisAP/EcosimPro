@@ -1,0 +1,90 @@
+//--------------------------------------------------------------------------------------------------
+// Experiment to illustrate the use of the iternal XML parser
+// File exp2.exp
+// Company: EEAA
+// Date: 05-04-2011
+//--------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------
+// Experiment
+//----------------------------------------------------------------------------------------------
+EXPERIMENT exp2 ON xmlExample.default
+   DECLS
+   	STRING inFileName = "exampleInput.xml"
+   	STRING outFileName = "exampleOutput.xml"
+   	STRING type = "xmlExample"
+   	STRING auxValueString
+   	REAL auxValueReal
+   	INTEGER auxValueInteger
+   	BOOLEAN auxValueBoolean
+   	STRING nodeName
+   INIT
+   BOUNDS
+   BODY
+  		// Load input XML file
+		IF( NOT in.loadFile(inFileName, type, "") ) THEN
+			STOP "Could not load file." 
+		END IF
+
+		// Get node with value
+		nodeName = in.firstChild()
+		
+		IF( nodeName != "node1" ) THEN
+			STOP "'Node1' was not found."
+		END IF
+		
+		// Rename node name
+		in.setNodeName( "newNodeName" )
+		
+
+		// Get current STRING value
+		in.getAttribute( "valueString" )
+		auxValueString = in.getAttributeValueString( )
+		
+		// Modify auxiliar value
+		auxValueString = "new my value"
+		
+		// Set modified value for attribute
+		in.setAttributeValueString( auxValueString )
+
+
+		// Get current REAL value
+		in.getAttribute( "valueReal" )
+		auxValueReal = in.getAttributeValueReal( )
+		
+		// Modify auxiliar value
+		auxValueReal = auxValueReal * 4
+		
+		// Set modified value for attribute
+		in.setAttributeValueReal( auxValueReal )
+
+
+		// Get current INTEGER value
+		in.getAttribute( "valueInteger" )
+		auxValueInteger = in.getAttributeValueInteger( )
+		
+		// Modify auxiliar value
+		auxValueInteger = auxValueInteger * 4
+		
+		// Set modified value for attribute
+		in.setAttributeValueInteger( auxValueInteger )
+
+
+		// Get current BOOLEAN value
+		in.getAttribute( "valueBoolean" )
+		auxValueBoolean = in.getAttributeValueBoolean( )
+		
+		// Modify auxiliar value
+		auxValueBoolean = NOT auxValueBoolean
+		
+		// Set modified value for attribute
+		in.setAttributeValueBoolean( auxValueBoolean )
+
+		
+		// Save output file
+		IF ( NOT in.saveFile(outFileName) ) THEN
+			STOP "Could not save file."
+		END IF
+	
+END EXPERIMENT

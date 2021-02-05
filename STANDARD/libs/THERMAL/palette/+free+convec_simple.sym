@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FreeConvec_simple" >
+
+		<bezier id="Bezier_19" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-78" dy="-229.187" lineColor="170,0,0"  aliasing="true"  />
+
+		<line id="Line_3" points="34,45 54,45"  end_arrow="true" dx="62" dy="35" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_4" points="69,77 69,50"  end_arrow="true" dx="75" dy="51" lineColor="170,0,0"  aliasing="true"  />
+
+		<bezier id="Bezier_1" points="196,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-58.6894" dy="-229.421" lineColor="170,0,0"  aliasing="true"  />
+
+		<bezier id="Bezier_2" points="196,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" dx="-36" dy="-229.421" lineColor="170,0,0"  aliasing="true"  />
+
+		<rect id="Rectangle_2" cx="477.991" cy="372" sx="45" sy="8" dx="-333.951" dy="-276" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="144" dy="128" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="128" dy="129" />
+		
+		</port>
+
+		<port id="s_fluid_tem" library="PORTS_LIB" type="analog_signal"  hotPort="s_fluid_tem" >
+		
+				<symbol dx="96" dy="80" onLabel="true" />
+		
+				<label cx="37" cy="12" dx="23.5" dy="73" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="Lc"/>
+				<var name="b_l"/>
+				<var name="b_t"/>
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="92" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="92" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

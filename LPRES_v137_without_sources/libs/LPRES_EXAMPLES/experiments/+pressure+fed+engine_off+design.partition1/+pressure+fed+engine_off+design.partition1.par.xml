@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="PressureFedEngine_offDesign" partition="partition1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="TRUE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="ThrustMonitor.p_amb"/>
+</boundaries>
+<algebraics>
+  <variable name="CC.M_r"/>
+  <variable name="CC.W_F"/>
+  <variable name="CJ.T_w_cold"/>
+  <variable name="Tank_MMH.M_g"/>
+  <variable name="Tank_NTO.M_g"/>
+  <variable name="ThrustMonitor.g.Tt"/>
+  <variable name="CC.p_out_ch"/>
+  <variable name="ThrustMonitor.M_out"/>
+  <variable name="LPRES.Altitude"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

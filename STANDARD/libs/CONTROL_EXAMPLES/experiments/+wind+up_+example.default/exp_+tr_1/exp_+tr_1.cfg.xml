@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot1" x="0" y="486" dx="1061" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot1" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="PI.s_set.signal[1]" lineColor="255,0,0"/>
+						<var name="PI.s_var.signal[1]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot2" x="0" y="243" dx="1061" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot2" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="PI.u[1]" lineColor="255,0,0"/>
+						<var name="PI.v[1]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot3" x="0" y="0" dx="1061" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot3" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="PI.s_out.signal[1]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+
+	<outputWindow height="112" visible="true"/>
+</experiment>

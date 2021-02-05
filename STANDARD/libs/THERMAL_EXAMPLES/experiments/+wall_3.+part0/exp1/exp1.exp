@@ -1,0 +1,27 @@
+
+EXPERIMENT exp1 ON Wall_3.Part0
+
+DECLS
+
+
+INIT    -- set initial values for variables
+  
+     -- Algebraical variables
+
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+   Environment.s_temperature.signal[1] = 1000 + 273.15
+   layer1.tp_in.q[1] = 0
+
+
+BODY
+   layer1.mat = GCF
+   layer2.mat = Aluminum
+   layer3.mat = GCF
+   REPORT_LIST("reportAll", " * ")
+   TIME = 0
+   TSTOP = 2500
+   CINT = 10
+   INTEG()
+	
+END EXPERIMENT

@@ -1,0 +1,18 @@
+
+EXPERIMENT exp1 ON Amplifier.default
+
+DECLS
+
+INIT    -- set initial values for variables
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+BODY
+   REPORT_TABLE("reportAll", " * ")
+   TIME = 0
+   TSTOP = 4
+   CINT = 0.01
+   INTEG()
+
+END EXPERIMENT

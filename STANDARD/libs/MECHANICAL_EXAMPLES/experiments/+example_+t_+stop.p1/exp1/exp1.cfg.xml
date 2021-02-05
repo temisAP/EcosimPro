@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Example_T_Stop.p1.exp1_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Example_T_Stop.p1.exp1_1">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<scale min="0" max="5"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<scale min="-200" max="0"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_T_Stop.p1.exp1_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="T_Stop.fr" nick="T_Stop.fr" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_T_Stop.p1.exp1_2" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Example_T_Stop.p1.exp1_2">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_T_Stop.p1.exp1_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="T_Stop.f" nick="T_Stop.f" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_T_Stop.p1.exp1_3" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Example_T_Stop.p1.exp1_3">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_T_Stop.p1.exp1_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="T_Stop.s" nick="T_Stop.s" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_T_Stop.p1.exp1_4" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Example_T_Stop.p1.exp1_4">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_T_Stop.p1.exp1_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="T_Stop.v" nick="T_Stop.v" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_T_Stop.p1.exp1_5" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Example_T_Stop.p1.exp1_5">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_T_Stop.p1.exp1_5" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="T_Stop.a" nick="T_Stop.a" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="412" visible="true">
+		<var name="T_Stop.a" code="2"/>
+		<var name="T_Stop.f" code="2"/>
+		<var name="T_Stop.fr" code="2"/>
+	</watch>
+	<outputWindow height="252" visible="true"/>
+</experiment>

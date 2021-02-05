@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Clock" >
+
+		<line id="Line_4" points="35,45 45,45"  end_arrow="true" dx="78" dy="51" lineColor="255,128,0"   />
+
+		<ellipse id="Ellipse_2" cx="173" cy="225" rx="16" ry="16" dx="-77" dy="-129" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<line id="Line_1" points="90,50 90,60 100,55" dx="6" dy="38" lineWidth="2"  aliasing="true"  />
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="23.5" cy="14" dx="111.5" dy="93" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Offset"/>
+				<var name="n_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="150" cy="51" sx="132" sy="14" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-36" dy="16" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

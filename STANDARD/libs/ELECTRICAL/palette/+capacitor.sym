@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Capacitor" >
+
+		<rect id="Rectangle_1" cx="19.8781" cy="22.7214" sx="8" sy="32" dx="88.1219" dy="57.2786" lineColor="0,192,0"  color="0,192,0"  />
+
+		<line id="Line_1" points="28,1 12,1 12,49 28,49" dx="84" dy="55" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_2" points="12,17 -4,17" dx="84" dy="63" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_3" points="-5,17 11,17" dx="117" dy="63" lineColor="0,192,0"   />
+
+		<line id="Line_6" points="-5.5,5 -1,5" dx="83" dy="67"  />
+
+		<g id="Group_1" dx="18.25" dy="1.5" >
+		
+					<line id="Line_5" points="-5.5,5 -1,5" dx="113.25" dy="64.75"  />
+		 />
+					<line id="Line_4" points="-5.5,5 -1,5" rotation="-90" dx="113.25" dy="64.75"  />
+		 />
+		</g>
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="126.5" dy="76" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="48.5" dy="76" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="C"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="180.5" cy="119" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="185.5" cy="147" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-60" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

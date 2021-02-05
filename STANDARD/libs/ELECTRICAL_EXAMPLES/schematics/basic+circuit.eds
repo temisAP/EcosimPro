@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="VAC1" sPort="e_p" eShape="C1" ePort="e_p" points="352,240" elPosition="0" dy="16" lineColor="0,170,0"   />
+
+	<connector id="Connector_2" sShape="C1" sPort="e_n" eShape="R1" ePort="e_p" points="752,240" elPosition="1" dy="16" lineColor="0,170,0"   />
+
+	<connector id="Connector_3" sShape="R1" sPort="e_n" eShape="VAC1" ePort="e_n" points="752,480 352,480" elPosition="2" dy="16" lineColor="0,170,0"   />
+
+	<connector id="Connector_4" sShape="VAC1" sPort="e_n" eShape="G1" ePort="e_p" points="352,480 544,480" elPosition="3" dy="16" lineColor="0,170,0"   />
+
+	<connector id="Connector_5" sPort="Elec2" eShape="C1" ePort="e_n" elPosition="4" dy="16" lineColor="0,170,0"   />
+
+	<connector id="Connector_6" sPort="Elec1" eShape="C1" ePort="e_p" elPosition="5" dy="16" lineColor="0,170,0"   />
+
+	<component id="VAC1" library="ELECTRICAL" type="VoltageSine" layer="1" elPosition="2"  hotPort="e_n" >
+	
+		<symbol cx="104" cy="80" sx="57" sy="33.5" dx="248" dy="296" rotation="-90" onLabel="true" />
+	
+		<label cx="20.5" cy="12" dx="384.15" dy="369.5" />
+	
+		<instanceData>
+			<datum id="Vpeak" value="10" />
+			<datum id="freqHz" value="50" />
+		</instanceData>
+	
+	</component>
+
+	<component id="C1" library="ELECTRICAL" type="Capacitor" layer="1" elPosition="3"  hotPort="e_p" >
+	
+		<symbol cx="104" cy="80" sx="58" sy="53" dx="440" dy="176" rotation="-180" onLabel="true" />
+	
+		<label cx="12" cy="12" dx="533.5" dy="286.5" />
+	
+		<instanceData>
+			<datum id="C" value="5e-005" />
+		</instanceData>
+	
+	</component>
+
+	<component id="R1" library="ELECTRICAL" type="Resistor" layer="1" elPosition="4"  hotPort="e_n" >
+	
+		<symbol cx="112" cy="77.5532" sx="73" sy="22.1064" dx="642.447" dy="306.447" rotation="90" onLabel="true" />
+	
+		<label cx="12" cy="12" dx="778.066" dy="371.843" />
+	
+		<instanceData>
+			<datum id="R" value="5500" />
+		</instanceData>
+	
+	</component>
+
+	<component id="G1" library="ELECTRICAL" type="Ground" layer="1" elPosition="5"  hotPort="e_p" >
+	
+		<symbol cx="80" cy="91.5" sx="35" sy="32" dx="464" dy="496" onLabel="true" />
+	
+		<label cx="12.5" cy="12" dx="535.5" dy="601.5" />
+	
+	</component>
+
+	<port id="Elec1" library="PORTS_LIB" type="elec" layer="1"  hotPort="Elec1" direction="IN" elPosition="0" >
+	
+		<symbol dx="192" dy="256" onLabel="true" />
+	
+		<label cx="20.5" cy="12" dx="172" dy="260" />
+	
+	</port>
+
+	<port id="Elec2" library="PORTS_LIB" type="elec" layer="1"  hotPort="Elec2" direction="IN" elPosition="1" >
+	
+		<symbol dx="896" dy="256" onLabel="true" />
+	
+		<label cx="20.5" cy="12" dx="875" dy="260" />
+	
+	</port>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="ELECTRICAL" version="3.1" auto="false" />
+	<usedLibrary name="PORTS_LIB" version="1.1" auto="false" />
+</schematic>

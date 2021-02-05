@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Clock" >
+
+		<line id="Line_4" points="35,45 45,45"  end_arrow="true" dx="78" dy="51" lineColor="0,131,0"   />
+
+		<ellipse id="Ellipse_2" cx="173" cy="225" rx="16" ry="16" dx="-77" dy="-129" lineWidth="1.5"  color="0,170,0" aliasing="true"  />
+
+		<line id="Line_2" points="90,50 90,60 100,55" dx="6" dy="38" lineWidth="2"  aliasing="true"  />
+
+		<port id="po" library="DISCRETE_LIB" type="DigitalPort"  hotPort="po" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="11" cy="12" dx="138" dy="86" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="period"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="174.5" cy="66" sx="117" sy="12" variable="po.s"  headerText="po.s"  tailText="TRUE/FALSE" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="12" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

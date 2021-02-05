@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+gear+friction2.p2.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+gear+friction2.p2.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 37<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>bearingFriction.w = gear.trans_ratio * <b><font color="red">inertia2.w</font></b><br/>
+<a name="e2">[E-2] </a>torque1.s_in.signal[1] =  ZONE[9] (TIME &lt; driveSine.Tstart) driveSine.Offset ZONE[9] (driveSine.source == Source_Constant) driveSine.Amp + driveSine.Offset ZONE[9] (driveSine.source == Source_Sine) driveSine.Amp * sin(6.28318530717959 / driveSine.Period * (TIME - driveSine.Tstart) + driveSine.Phase) + driveSine.Offset ZONE[9] (driveSine.source == Source_Pulse) driveSine.Amp * pulse(TIME - driveSine.Tstart, driveSine.Period, driveSine.pulseWidth, 1) + driveSine.Offset ZONE[9] (driveSine.source == Source_Step) driveSine.Amp * step(TIME, driveSine.Tstart, 2) + driveSine.Offset ZONE[9] (driveSine.source == Source_SawTooth) driveSine.Amp * ramp(TIME - driveSine.Tstart, driveSine.Period, 3) / driveSine.Period + driveSine.Offset ZONE[9] (driveSine.source == Source_Square) driveSine.Amp * square(TIME - driveSine.Tstart, driveSine.Period, 4) + driveSine.Offset ZONE[9] (driveSine.source == Source_Ramp) driveSine.Amp / driveSine.rampDuration * (TIME - driveSine.Tstart) * (1 - step(TIME, driveSine.Tstart + driveSine.rampDuration, 5)) + driveSine.Amp * step(TIME, driveSine.Tstart + driveSine.rampDuration, 6) + driveSine.Offset ZONE[9] (driveSine.source == Source_Table AND driveSine.tabmethod == LinearInterpWithEvents) driveSine.Amp * timeTableInterp(TIME - driveSine.Tstart, driveSine.timeTable, 7) + driveSine.Offset ZONE[9] (driveSine.source == Source_Table AND driveSine.tabmethod == LinearInterpWithoutEvents) driveSine.Amp * linearInterp1D(driveSine.timeTable, TIME - driveSine.Tstart) + driveSine.Offset ZONE[9] (driveSine.source == Source_Table AND driveSine.tabmethod == SplineInterp) driveSine.Amp * splineInterp1D(driveSine.timeTable, TIME - driveSine.Tstart) + driveSine.Offset ZONE[9] (driveSine.source == Source_Table AND driveSine.tabmethod == StepConnect) driveSine.Amp * timeTableStep(TIME - driveSine.Tstart, driveSine.timeTable, 8) + driveSine.Offset	  OTHERS 0<br/>
+<a name="e3">[E-3] </a>gear.eta_mf1 =  ZONE[2] (gear.ideal) gear.lossTable_ideal[1]	  OTHERS linearInterp1D(gear.tab_eta_mf1, abs(bearingFriction.w))<br/>
+<a name="e4">[E-4] </a>gear.tau_bf1 =  ZONE[4] (gear.ideal) gear.lossTable_ideal[3]	  OTHERS abs(linearInterp1D(gear.tab_tau_bf1, abs(bearingFriction.w)))<br/>
+<a name="e5">[E-5] </a>gear.eta_mf2 =  ZONE[3] (gear.ideal) gear.lossTable_ideal[2]	  OTHERS linearInterp1D(gear.tab_eta_mf2, abs(bearingFriction.w))<br/>
+<a name="e6">[E-6] </a>gear.tau_bf2 =  ZONE[5] (gear.ideal) gear.lossTable_ideal[4]	  OTHERS abs(linearInterp1D(gear.tab_tau_bf2, abs(bearingFriction.w)))<br/>
+<a name="e7">[E-7] </a>torque2.s_in.signal[1] =  ZONE[10] (TIME &lt; load.Tstart) load.Offset ZONE[10] (load.source == Source_Constant) load.Amp + load.Offset ZONE[10] (load.source == Source_Sine) load.Amp * sin(6.28318530717959 / load.Period * (TIME - load.Tstart) + load.Phase) + load.Offset ZONE[10] (load.source == Source_Pulse) load.Amp * pulse(TIME - load.Tstart, load.Period, load.pulseWidth, 9) + load.Offset ZONE[10] (load.source == Source_Step) load.Amp * step(TIME, load.Tstart, 10) + load.Offset ZONE[10] (load.source == Source_SawTooth) load.Amp * ramp(TIME - load.Tstart, load.Period, 11) / load.Period + load.Offset ZONE[10] (load.source == Source_Square) load.Amp * square(TIME - load.Tstart, load.Period, 12) + load.Offset ZONE[10] (load.source == Source_Ramp) load.Amp / load.rampDuration * (TIME - load.Tstart) * (1 - step(TIME, load.Tstart + load.rampDuration, 13)) + load.Amp * step(TIME, load.Tstart + load.rampDuration, 14) + load.Offset ZONE[10] (load.source == Source_Table AND load.tabmethod == LinearInterpWithEvents) load.Amp * timeTableInterp(TIME - load.Tstart, load.timeTable, 15) + load.Offset ZONE[10] (load.source == Source_Table AND load.tabmethod == LinearInterpWithoutEvents) load.Amp * linearInterp1D(load.timeTable, TIME - load.Tstart) + load.Offset ZONE[10] (load.source == Source_Table AND load.tabmethod == SplineInterp) load.Amp * splineInterp1D(load.timeTable, TIME - load.Tstart) + load.Offset ZONE[10] (load.source == Source_Table AND load.tabmethod == StepConnect) load.Amp * timeTableStep(TIME - load.Tstart, load.timeTable, 16) + load.Offset	  OTHERS 0<br/>
+<a name="e8">[E-8] </a>inertia2.m_out.T = -torque2.s_in.signal[1]<br/>
+<a name="e9">[E-9] </a>bearingFriction.tau0 = linearInterp1D(bearingFriction.tau_pos, 0)<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v13" data-ajax='false'><font color="green">bearingFriction.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v13" data-ajax='false'><font color="green">bearingFriction.sa</font></a>&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-16] MECHANICAL.fun_R_AbsFriction(bearingFriction.imode, bearingFriction.a, <b><font color="green">bearingFriction.sa</font></b>, bearingFriction.tau0) = 0&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><a href="doc_vars.par.html#v56" data-ajax='false'><font color="green">gear.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v56" data-ajax='false'><font color="green">gear.sa</font></a>&nbsp;</td><td>&nbsp;</td><td>Path parameter for acceleration and torque loss&nbsp;</td><td>&nbsp;</td><td>[E-27] inertia2.m_in.T - gear.trans_ratio * (gear.m_in.T - gear.Tloss) = 0&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><a href="doc_vars.par.html#v86" data-ajax='false'><font color="green">inertia2.w'</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v86" data-ajax='false'><font color="green">inertia2.w'</font></a>&nbsp;</td><td>&nbsp;</td><td>Derivative of variable inertia2.w&nbsp;</td><td>&nbsp;</td><td>[E-28] IMPL(<b><font color="green">gear.sa</font></b>) 0 = MECHANICAL.fun_R_GearFriction(gear.imode, gear.a, <b><font color="green">gear.sa</font></b>, gear.Tloss)&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e10">[E-10] </a>bearingFriction.tau =  ZONE[1] (bearingFriction.imode == 0) <b><font color="green">bearingFriction.sa</font></b> ZONE[1] (bearingFriction.imode == 2 OR bearingFriction.imode == 1) linearInterp1D(bearingFriction.tau_pos, bearingFriction.w) ZONE[1] (bearingFriction.imode == -2 OR bearingFriction.imode == -1) -linearInterp1D(bearingFriction.tau_pos, -bearingFriction.w)	  OTHERS 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e11">[E-11] </a>inertia1.m_in.T = torque1.s_in.signal[1] - bearingFriction.tau<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e12">[E-12] </a>inertia2.a = <b><font color="red">inertia2.w</font></b>'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e13">[E-13] </a>inertia2.m_in.T = inertia2.I * inertia2.a + inertia2.m_out.T<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e14">[E-14] </a>bearingFriction.w' = gear.trans_ratio * <b><font color="red">inertia2.w</font></b>'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e15">[E-15] </a>bearingFriction.a = bearingFriction.w'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e16">[E-16] </a>MECHANICAL.fun_R_AbsFriction(bearingFriction.imode, bearingFriction.a, <b><font color="green">bearingFriction.sa</font></b>, bearingFriction.tau0) = 0	{I@bearingFriction.sa}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e17">[E-17] </a>gear.a = bearingFriction.w'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e18">[E-18] </a>inertia1.a = bearingFriction.w'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e19">[E-19] </a>gear.m_in.T = inertia1.m_in.T - inertia1.I * inertia1.a<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e20">[E-20] </a>gear.q1 = (1 - gear.eta_mf1) * gear.m_in.T + gear.tau_bf1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e21">[E-21] </a>gear.q2 = (1 - 1 / gear.eta_mf2) * gear.m_in.T + gear.tau_bf2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e22">[E-22] </a>gear.Tloss_max =  ZONE[6] (gear.imode == 3 OR gear.m_in.T &gt; 0) gear.q1	  OTHERS gear.q2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e23">[E-23] </a>gear.q3 = (1 - gear.eta_mf1) * gear.m_in.T - gear.tau_bf1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e24">[E-24] </a>gear.q4 = (1 - 1 / gear.eta_mf2) * gear.m_in.T - gear.tau_bf2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e25">[E-25] </a>gear.Tloss_min =  ZONE[7] (gear.imode == 3 OR gear.m_in.T &gt; 0) gear.q4	  OTHERS gear.q3<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e26">[E-26] </a>gear.Tloss =  ZONE[8] (gear.imode == 0) <b><font color="green">gear.sa</font></b> ZONE[8] (gear.imode == 1) gear.Tloss_max ZONE[8] (gear.imode == 2) gear.Tloss_max ZONE[8] (gear.imode == -1) gear.Tloss_min ZONE[8] (gear.imode == -2) gear.Tloss_min	  OTHERS 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e27">[E-27] </a>inertia2.m_in.T - gear.trans_ratio * (gear.m_in.T - gear.Tloss) = 0	{I@gear.sa}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e28">[E-28] </a>IMPL(<b><font color="green">gear.sa</font></b>) 0 = MECHANICAL.fun_R_GearFriction(gear.imode, gear.a, <b><font color="green">gear.sa</font></b>, gear.Tloss)	{I@inertia2.w'}<br/>
+</b><hr>END OF BOX 1<hr><a name="e29">[E-29] </a>bearingFriction.tau0_max = bearingFriction.peak * bearingFriction.tau0<br/>
+<a name="e30">[E-30] </a>bearingFriction.m_in.T = torque1.s_in.signal[1]<br/>
+<a name="e31">[E-31] </a>torque2.m_out.T = -inertia2.m_out.T<br/>
+<a name="e32">[E-32] </a>bearingFriction.m_in.n = bearingFriction.w / 0.10471975511966<br/>
+<a name="e33">[E-33] </a>inertia1.m_in.n = bearingFriction.w / 0.10471975511966<br/>
+<a name="e34">[E-34] </a>gear.m_in.n = bearingFriction.w / 0.10471975511966<br/>
+<a name="e35">[E-35] </a>inertia2.m_in.n = <b><font color="red">inertia2.w</font></b> / 0.10471975511966<br/>
+<a name="e36">[E-36] </a>inertia2.m_out.n = <b><font color="red">inertia2.w</font></b> / 0.10471975511966<br/>
+<a name="e37">[E-37] </a>torque2.m_out.n = <b><font color="red">inertia2.w</font></b> / 0.10471975511966<br/>
+</body></html>

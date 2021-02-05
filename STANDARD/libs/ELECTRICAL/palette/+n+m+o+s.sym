@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="NMOS" >
+
+		<line id="Line_1" points="8,678.525 8,688.904" dx="96" dy="-620.328" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="11.0012,685 33,685"  start_arrow="true" dx="95" dy="-621" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="8,699.913 8,713" dx="96" dy="-626.333" lineColor="0,192,0"   />
+
+		<line id="Line_4" points="7.38171,705 33,705" dx="96.6183" dy="-625" lineColor="0,192,0"   />
+
+		<line id="Line_5" points="9,677 9,660.214" dx="95" dy="-625" lineColor="0,192,0"   />
+
+		<line id="Line_6" points="9,665 33,665" dx="95" dy="-617" lineColor="0,192,0"   />
+
+		<line id="Line_7" points="0,665 0,705 -15,705" dx="96" dy="-625" lineColor="0,192,0"   />
+
+		<port id="e_D" library="PORTS_LIB" type="elec"  hotPort="e_D" >
+		
+				<symbol dx="128" dy="48" onLabel="true" />
+		
+				<label cx="19" cy="14" dx="133" dy="37" />
+		
+		</port>
+
+		<port id="e_G" library="PORTS_LIB" type="elec"  hotPort="e_G" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="19" cy="14" dx="34" dy="73" />
+		
+		</port>
+
+		<port id="e_S" library="PORTS_LIB" type="elec"  hotPort="e_S" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="18.5" cy="14" dx="133" dy="69" />
+		
+		</port>
+
+		<port id="e_B" library="PORTS_LIB" type="elec"  hotPort="e_B" >
+		
+				<symbol dx="128" dy="64" onLabel="true" />
+		
+				<label cx="18.5" cy="14" dx="132.5" dy="53" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Beta"/>
+				<var name="K2"/>
+				<var name="K5"/>
+				<var name="L"/>
+				<var name="Vt"/>
+				<var name="W"/>
+				<var name="dL"/>
+				<var name="dW"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="261.5" cy="27" sx="171" sy="30" variable="uds"  headerText="uds"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="268.5" cy="79" sx="153" sy="30" variable="id"  headerText="id"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-8" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="277.5" cy="75" sx="171" sy="30" variable="ubs"  headerText="ubs"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-12" dy="-4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

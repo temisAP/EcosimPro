@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<varProperties version="1.0">
+ <variable name="LPC.f_in.pt" alias="p2t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="LPC.f_in.Tt" alias="T2t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="HPC.f_out.pt" alias="p3t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="HPC.f_in.pt" alias="p25t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="HPC.f_out.Tt" alias="T3t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="HPC.f_in.Tt" alias="T25t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="GG.g.pt" alias="p4t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="GG.g.Tt" alias="T4t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="LPT.f_out.pt" alias="p5t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="LPT.f_in.pt" alias="p45t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="LPT.f_out.Tt" alias="T5t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+ <variable name="LPT.f_in.Tt" alias="T45t" edit="TRUE" store="FALSE" deckIn="NO" deckOut="NO"/>
+</varProperties>

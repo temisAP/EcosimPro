@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_Spring" >
+
+		<line id="Line_4" points="77,80 89,80"  end_arrow="true" dx="67" dy="16" lineColor="100,100,100"   />
+
+		<line id="Line_3" points="72,88 86.4505,88"  end_arrow="true" dx="24" dy="8" lineColor="100,100,100"   />
+
+		<ellipse id="Ellipse_2" cx="61" cy="62" rx="16" ry="16" dx="67" dy="34" lineWidth="1.5"  color="220,220,220" aliasing="true"  />
+
+		<bezier id="Bezier_2" points="208.98,349.98 200.946,365.631 183.417,360.823 181.279,350.949 178.647,342.223 185.711,335.714 190.974,334.467 198.315,333.359 204.547,338.484 204.409,345.547 203.855,353.442 195.822,356.074 190.559,353.304 186.68,350.534 186.265,347.348 187.927,343.747 190.542,339.698 195.792,340.823 195.792,340.948 200.667,342.573 199.542,348.948 196.771,348.865 193.417,348.823 193.417,346.198 193.417,346.323" dx="-65.4173" dy="-250.323" aliasing="true"  />
+
+		<line id="Line_2" points="96,64 112,64" dx="16" dy="32"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_rot"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="145.5" cy="110" sx="99" sy="12" variable="m_in.T"  headerText="m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-56" dy="-52" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="144.5" cy="118" sx="97" sy="12" variable="m_in.n"  headerText="m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-56" dy="-44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="228" cy="114" sx="104" sy="12" variable="m_out.T"  headerText="m_out.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="227" cy="130" sx="102" sy="12" variable="m_out.n"  headerText="m_out.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="F16_Autopiloted" >
+
+		<text id="Text_2" cx="33" cy="9" sx="66" sy="18" dx="314.5" dy="103"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Tahoma'; font-size:6pt; font-weight:600; color:#000000;">pqrAutopiloted</span></p></body></html>]]>
+		</text>
+
+		<polygon id="Polygon_3" points="266,253 274,269 130,265 106,249" dx="24" dy="-180" color="200,200,200" aliasing="true"  />
+
+		<line id="Line_1" points="336,244 364,244" dx="24" dy="-176" aliasing="true"  />
+
+		<polygon id="Polygon_2" points="104,268 84,272 84,284 104,288" dx="26" dy="-199" color="0,0,0" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_5" points="121,324 391,317 423,317 273,292 247,317 117,304 119,309" dx="11" dy="-244" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<line id="Line_2" points="23.3077,129.304 59.3077,129.304" dx="56.6923" dy="-49.3037" lineColor="255,128,0" lineWidth="1.5"  aliasing="true"  />
+
+		<text id="Text_1" cx="25.5" cy="15.5" sx="51" sy="31" aliasing="true" dx="322" dy="77.0003"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Tahoma'; font-size:14pt; font-weight:600; color:#000000;">F-16</span></p></body></html>]]>
+		</text>
+
+		<polygon id="Polygon_1" points="268,240 288,280 348,276 328,269 328,269 296,240" dx="-158" dy="-212" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_1" points="224,209 252,221 272,216 288,213 250,190 226,205 224,209" dx="52" dy="-155" lineWidth="2"   color="255,255,255" gradientColor="85,170,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<ellipse id="Ellipse_2" cx="262" cy="302" rx="18" ry="2" dx="-34" dy="-203" color="255,255,255" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="262" cy="302" rx="18" ry="2" dx="-50" dy="-191" color="255,255,255" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_3" points="290.419,217.446 234.419,217.446 234.419,233.446 166.419,281.446 166.419,281.446 166.419,281.446 150.419,281.446 178.419,225.446 176.419,224.446 176.419,224.446" dx="19.5808" dy="-152.445" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<line id="Line_8" points="142,305 170,249" dx="38" dy="-177" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_10" points="87,203 108,240" dx="31" dy="-174" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_12" points="80,248 96,248" dx="32" dy="-174" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_13" points="80,248 96,248" dx="32" dy="-171" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_14" points="80,248 96,248" dx="32" dy="-168" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_15" points="80,248 96,248" dx="32" dy="-165" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_2" points="221.419,231.446 253.419,231.446 253.419,231.446 229.419,231.446 173.419,255.446 205.419,255.446 161.419,255.446 185.419,231.446 185.419,231.446 185.419,231.446" dx="-49.419" dy="-159.446" color="163,163,163" aliasing="true"  />
+
+		<line id="Line_11" points="88,232 112,208" dx="34" dy="-136" lineWidth="0.5" lineType="2"   />
+
+		<line id="Line_3" points="203,164 161,167" dx="-34" dy="-107" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<port id="s_thtl" library="PORTS_LIB" type="analog_signal"  hotPort="s_thtl" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="27.9998" dy="68" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+</palette>

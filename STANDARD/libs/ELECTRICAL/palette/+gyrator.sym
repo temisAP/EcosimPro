@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Gyrator" >
+
+		<line id="Line_1" points="-14,396 -6,396 -6,364 -14,364 -14,364" dx="174" dy="-284" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_2" points="46,364 36,364 36,396 44,396" dx="164" dy="-284" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_9" points="16,339 46,339"  end_arrow="true" dx="152" dy="-267" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="56.75,78 61.25,78" dx="149.75" dy="26"  />
+
+		<g id="Group_2" dx="132.5" dy="4.5" >
+		
+					<line id="Line_4" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_5" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<line id="Line_6" points="56.75,78 61.25,78" dx="101.25" dy="26"  />
+
+		<g id="Group_1" dx="84.5" dy="4.5" >
+		
+					<line id="Line_7" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_8" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<bezier id="Bezier_1" points="280,353 296,349 296,381 280,377" dx="-112" dy="-269" lineColor="0,192,0"  aliasing="true"  />
+
+		<bezier id="Bezier_2" points="280,350 296,346 296,378 280,374" rotation="180" flipY="true" dx="-91.468" dy="-266" lineColor="0,192,0"  aliasing="true"  />
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="108" dy="71" />
+		
+		</port>
+
+		<port id="e_n1" library="PORTS_LIB" type="elec"  hotPort="e_n1" >
+		
+				<symbol dx="160" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="108" dy="103" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="208" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="221" dy="68" />
+		
+		</port>
+
+		<port id="e_n2" library="PORTS_LIB" type="elec"  hotPort="e_n2" >
+		
+				<symbol dx="208" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="220" dy="100" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="G1"/>
+				<var name="G2"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="115" cy="155" sx="198" sy="30" variable="v1"  headerText="v1"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="112" cy="187" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="307" cy="155" sx="198" sy="30" variable="v2"  headerText="v2"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="304" cy="187" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" dy="-4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

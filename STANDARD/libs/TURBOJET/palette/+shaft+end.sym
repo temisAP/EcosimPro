@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="ShaftEnd" >
+
+		<line id="Line_3" points="190,808 206,808"  start_arrow="true" dx="-126" dy="-744" lineColor="128,0,0"   />
+
+		<line id="Line_4" points="182,800 174,800 174,816 182,816" dx="-126" dy="-744" lineWidth="4"   />
+
+		<polygon id="Polygon_3" points="190,810 190,806 178,806 178,810" dx="-126" dy="-744" color="128,0,0"  />
+
+		<port id="sh_in" library="TURBOJET" type="Shaft"  hotPort="sh_in" >
+		
+				<symbol dx="80" dy="64" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="84.5" dy="52" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="114" cy="42" sx="108" sy="12" variable="sh_in.Power"  headerText="sh_in.Power"  tailText="W" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="109.5" cy="42" sx="99" sy="12" variable="sh_in.N"  headerText="sh_in.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

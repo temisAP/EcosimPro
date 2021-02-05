@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="SensorPotential" >
+
+		<line id="Line_11" points="14,866 14,856"  end_arrow="true" dx="82" dy="-802" lineColor="255,128,0"   />
+
+		<line id="Line_12" points="-22,882 -12,882" dx="102" dy="-802" lineColor="0,192,0"   />
+
+		<rect id="Rectangle_7" cx="11.5" cy="889" sx="32" sy="48" dx="92.5" dy="-801" lineWidth="1.5"  color="0,192,0"  />
+
+		<rect id="Rectangle_8" cx="9.5" cy="897" sx="24" sy="20" dx="94.5" dy="-799" lineWidth="0.5"   />
+
+		<text id="Text_5" cx="10.5" cy="16.5" sx="21" sy="33" dx="94" dy="81.5"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12pt; font-weight:600; color:#000000;">V</span></p></body></html>]]>
+		</text>
+
+		<rect id="Rectangle_9" cx="10.625" cy="880" sx="24" sy="16" dx="93.375" dy="-804" color="255,255,255"  />
+
+		<line id="Line_14" points="140.056,154.552 136.931,150.802" dx="-36.0558" dy="-74.5522" lineWidth="0.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_3" cx="14" cy="884" rx="1.05556" ry="0.993469" rotation="90" dx="90.0065" dy="-803.944" color="0,0,0"  />
+
+		<polygon id="Polygon_4" points="7,876 8,880 11,877.625" dx="92" dy="-802" color="0,0,0" aliasing="true"  />
+
+		<g id="Group_2" dx="-6.25" dy="-26.5" >
+		
+					<line id="Line_15" points="-5.5,5 -1,5" dx="89.75" dy="109.75"  />
+		 />
+					<line id="Line_16" points="-5.5,5 -1,5" rotation="-90" dx="89.75" dy="109.75"  />
+		 />
+		</g>
+
+		<bezier id="Bezier_2" points="96.5,79.875 96.5,67.875 112.5,67.875 112.5,79.875" dx="-0.5" dy="0.125" aliasing="true"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="36.5" dy="73" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="96" dy="48" onLabel="true" />
+		
+				<label cx="23.5" cy="14" dx="103.5" dy="37" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="303.5" cy="59" sx="287" sy="30" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-44" dy="-8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

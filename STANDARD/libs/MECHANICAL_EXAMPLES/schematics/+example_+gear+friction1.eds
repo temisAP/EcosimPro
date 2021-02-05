@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="inertia1" sPort="m_out" eShape="gear" ePort="m_in" elPosition="0" lineColor="151,161,158"   />
+
+	<connector id="Connector_2" sShape="gear" sPort="m_out" eShape="inertia2" ePort="m_in" elPosition="1" lineColor="151,161,158"   />
+
+	<connector id="Connector_3" sShape="inertia2" sPort="m_out" eShape="torque2" ePort="m_out" elPosition="2" lineColor="151,161,158"   />
+
+	<connector id="Connector_4" sShape="driveSine" sPort="s_out" eShape="torque1" ePort="s_in" elPosition="3" lineColor="255,128,0"   />
+
+	<connector id="Connector_5" sShape="load" sPort="s_out" eShape="torque2" ePort="s_in" elPosition="4" lineColor="255,128,0"   />
+
+	<connector id="Connector_6" sShape="torque1" sPort="m_out" eShape="inertia1" ePort="m_in" elPosition="5" lineColor="151,161,158"   />
+
+	<component id="gear" library="MECHANICAL" type="R_GearFriction" layer="1" elPosition="0"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="86" sx="73" sy="61.5" dx="416" dy="256" />
+	
+		<label cx="16.5" cy="12" dx="528" dy="384" />
+	
+	</component>
+
+	<component id="inertia1" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="1"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="288" dy="256" />
+	
+		<label cx="25" cy="12" dx="384" dy="384" />
+	
+	</component>
+
+	<component id="driveSine" library="CONTROL" type="AnalogSource" layer="1" elPosition="2"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="2.84217e-14" dy="256" />
+	
+		<label cx="30" cy="12" dx="64" dy="384" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Sine" />
+			<datum id="Amp" value="10" />
+			<datum id="Period" value="1" />
+		</instanceData>
+	
+	</component>
+
+	<component id="load" library="CONTROL" type="AnalogSource" layer="1" elPosition="3"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="876.25" dy="256" rotation="180" flipY="true" />
+	
+		<label cx="16" cy="12" dx="976" dy="384" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Ramp" />
+			<datum id="Amp" value="5" />
+			<datum id="Offset" value="-10" />
+			<datum id="rampDuration" value="2" />
+		</instanceData>
+	
+	</component>
+
+	<component id="inertia2" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="4"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="576" dy="256" />
+	
+		<label cx="25" cy="12" dx="672" dy="384" />
+	
+		<instanceData>
+			<datum id="I" value="1.5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="torque1" library="MECHANICAL" type="R_ActuatorTorque" layer="1" elPosition="5"  hotPort="s_in" >
+	
+		<symbol cx="112" cy="68" sx="73" sy="56" dx="144" dy="272" />
+	
+		<label cx="25.5" cy="12" dx="224" dy="384" />
+	
+	</component>
+
+	<component id="torque2" library="MECHANICAL" type="R_ActuatorTorque" layer="1" elPosition="6"  hotPort="s_in" >
+	
+		<symbol cx="112" cy="68" sx="73" sy="56" dx="720" dy="296" rotation="180" />
+	
+		<label cx="25.5" cy="12" dx="800" dy="384" />
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+	<usedLibrary name="MECHANICAL" version="3.1" auto="false" />
+</schematic>

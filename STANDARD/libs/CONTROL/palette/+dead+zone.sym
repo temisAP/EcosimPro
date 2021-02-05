@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="DeadZone" >
+
+		<line id="Line_5" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.3061" lineColor="255,128,0"   />
+
+		<line id="Line_4" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_1" cx="105" cy="32" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0"  />
+
+		<line id="Line_6" points="38,178 38,202" dx="74" dy="-110" lineColor="255,255,255"   />
+
+		<line id="Line_3" points="28.5,192 52.5,192" dx="71.5" dy="-112" lineColor="255,255,255"   />
+
+		<line id="Line_1" points="207,163 208.713,155.013 221.002,155.013 223,147" dx="-103" dy="-75" lineWidth="2.5"   />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal"  hotPort="s_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="19" cy="14" dx="39" dy="73" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="23.5" cy="14" dx="147.5" dy="73" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="n"/>
+				<var name="output_max"/>
+				<var name="output_min"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="94.5" cy="115" sx="125" sy="14" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="210" cy="115" sx="132" sy="14" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

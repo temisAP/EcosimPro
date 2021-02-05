@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="T_Piston" >
+
+		<line id="Line_5" points="88.864,575.609 88.864,567.609 140.864,567.611 140.864,575.609 140.864,575.609" dx="11.136" dy="-499.609" lineWidth="2"   />
+
+		<line id="Line_1" points="104.864,551.615 104.864,571.615" dx="7.136" dy="-503.615"  />
+
+		<line id="Line_2" points="96.864,584.621 80.864,584.621" dx="15.136" dy="-488.621"  />
+
+		<line id="Line_3" points="88.864,595.612 88.864,603.612 140.864,603.627 140.864,595.612 140.864,595.612" dx="11.136" dy="-479.612" lineWidth="2"   />
+
+		<line id="Line_4" points="112.864,584.621 116.864,584.621 120.864,564.621 124.864,604.621 128.864,564.621 132.864,604.621 136.864,564.621 140.864,604.621 144.864,584.621 152.864,584.621" dx="7.136" dy="-488.621" aliasing="true"  />
+
+		<polygon id="Polygon_1" points="88.864,555.611 88.864,611.611 104.864,611.611 104.864,555.611" dx="15.136" dy="-487.611" color="192,192,192"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_trans"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="85" />
+		
+		</port>
+
+		<port id="s_Fext" library="PORTS_LIB" type="analog_signal"  hotPort="s_Fext" >
+		
+				<symbol dx="112" dy="48" onLabel="true" />
+		
+				<label cx="24" cy="12" dx="58" dy="38" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_trans"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="85" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="68" cy="58" sx="88" sy="12" variable="m_in.F"  headerText="m_in.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-12" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="65" cy="66" sx="90" sy="12" variable="m_in.s"  headerText="m_in.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-10" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="210.5" cy="122" sx="93" sy="12" variable="m_out.F"  headerText="m_out.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="211.5" cy="142" sx="95" sy="12" variable="m_out.s"  headerText="m_out.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="7" dy="10" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

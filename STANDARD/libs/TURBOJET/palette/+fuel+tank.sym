@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FuelTank" >
+
+		<polygon id="Polygon_1" points="256,92 256,136 284,136 284,120 272,120 272,92" dx="-208" dy="-16" lineWidth="1.5"   color="255,0,0" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="196" cy="172" rx="4" ry="8" dx="-120" dy="-60"  color="255,255,255" gradientColor="255,0,0" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_4" points="168,168 184,168"  end_arrow="true" dx="-92" dy="-56" lineWidth="0.5"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_3" points="272,120 272,88 336,88 336,120 336,144 336,160 336,160 320,160 304,160 272,160 272,160 272,144 272,128 272,120 272,120 272,120" dx="-248" dy="-80" lineType="-1"   color="255,240,240" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_5" points="272,104 272,72 336,72 336,104 336,124 336,124 336,112 320,112 296,112 272,112 272,112 272,112 272,112 272,112 272,104 272,104" rotation="180" dx="-248" dy="-20" lineWidth="1.5"   color="255,0,0" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<ellipse id="Ellipse_3" cx="256" cy="116" rx="32" ry="8" dx="-200" dy="-52"  color="255,0,0" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_4" points="16,112 16,80 80,80 80,112 80,112 80,120 80,144 80,176 16,176 16,144 16,124 16,112 16,112" dx="8" dy="-72" lineWidth="1.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_5" cx="290" cy="54" rx="8" ry="2" dx="-234" dy="40" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_6" points="42.0269,58.675 30.0269,58.675 30.0269,38.675"  start_arrow="true" dx="25.9731" dy="53.325" aliasing="true"  />
+
+		<port id="f_out" library="TURBOJET" type="Fuel"  hotPort="f_out" >
+		
+				<symbol dx="96" dy="112" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="78" dy="116" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="FHV"/>
+				<var name="X"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="135" cy="126" sx="102" sy="12" variable="f_out.W"  headerText="f_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-32" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

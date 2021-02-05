@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_2" x="0" y="352" dx="1016" dy="352">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="te" nick="te" lineColor="0,204,153"/>
+						<var name="tr" nick="tr" lineColor="0,102,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="1016" dy="352">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="ta" nick="ta" lineColor="204,0,255"/>
+						<var name="tc" nick="tc" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="mc" nick="mc" lineColor="255,0,0"/>
+						<var name="qe" nick="qe" lineColor="0,204,153"/>
+						<var name="wk" nick="wk" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_3">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="40"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-20" max="10"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="tr" nick="tr" lineColor="255,0,0"/>
+						<var name="wk" nick="wk" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+		<var name="te"/>
+		<var name="mc"/>
+		<var name="ta"/>
+		<var name="compressorON"/>
+		<var name="tr"/>
+		<var name="tc"/>
+		<var name="qe"/>
+		<var name="wk"/>
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

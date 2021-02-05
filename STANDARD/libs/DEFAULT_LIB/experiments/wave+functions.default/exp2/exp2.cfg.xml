@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="R1.e_p.v" nick="R1.e_p.v" lineColor="255,0,0"/>
+						<var name="R2.e_p.v" nick="R2.e_p.v" lineColor="0,204,153"/>
+						<var name="R4.e_n.v" nick="R4.e_n.v" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+		<var name="R2.e_p.v"/>
+		<var name="R4.e_n.v"/>
+		<var name="R1.e_p.v"/>
+		<var name="R1.R"/>
+		<var name="C1.C"/>
+		<var name="R3.R"/>
+		<var name="R4.R"/>
+		<var name="R2.R"/>
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

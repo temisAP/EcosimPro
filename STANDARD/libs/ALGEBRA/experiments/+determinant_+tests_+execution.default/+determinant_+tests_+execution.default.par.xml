@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="ALGEBRA" component="Determinant_Tests_Execution" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="TRUE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="FALSE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="TRUE"/>
+<generateAdvancedBox value="disabled"/>
+</partitionInfo>

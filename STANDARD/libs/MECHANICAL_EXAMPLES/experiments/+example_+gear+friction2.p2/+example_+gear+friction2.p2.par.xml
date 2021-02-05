@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="MECHANICAL_EXAMPLES" component="Example_GearFriction2" partition="p2">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<highIndexVars>
+  <variable name="bearingFriction.w"/>
+</highIndexVars>
+<dynamics>
+  <variable name="inertia2.w"/>
+</dynamics>
+<algebraics>
+  <variable name="bearingFriction.sa"/>
+  <variable name="gear.sa"/>
+  <variable name="inertia2.w'"/>
+</algebraics>
+<residues>
+  <r id="1" value="IMPL(gear.sa) 0 = MECHANICAL.fun_R_GearFriction(gear.imode, gear.a, gear.sa, gear.Tloss)"/>
+  <r id="2" value="MECHANICAL.fun_R_AbsFriction(bearingFriction.imode, bearingFriction.a, bearingFriction.sa, bearingFriction.tau0) = 0"/>
+  <r id="3" value="inertia2.m_in.T - gear.trans_ratio * (gear.m_in.T - gear.Tloss) = 0"/>
+  <r id="4" value="IMPL(gear.sa) 0 = MECHANICAL.fun_R_GearFriction(gear.imode, gear.a, gear.sa, gear.Tloss)"/>
+</residues>
+</partitionInfo>

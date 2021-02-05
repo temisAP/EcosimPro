@@ -1,0 +1,41 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: Rocketdyne_F1_offDesign
+ PARTITION: performance
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Rocketdyne_F1_offDesign.performance
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 30000
+      Nozzle.A = 0.346776149 * (0.8 + TIME / 40.)
+
+   BODY		
+		Pump_O.A_in = 0.125397196
+		Pump_F.A_in = 0.0541868469
+		Pump_O.r_m = 0.477942772
+		Pump_F.r_m = 0.72263409
+		Turbine_ch.A_in = 0.00692409717
+		Inj_O.A = 0.0489035601
+		Inj_F.A = 0.0143139263
+		CC.A_th = 0.637328951
+		
+      DEBUG_LEVEL= 1   
+		TOLERANCE = 1e-006
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()
+		
+END EXPERIMENT

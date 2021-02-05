@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="funcPtrExamples01.el"/>
+  <file name="funcPtrExamples02.el"/>
+  <file name="funcPtrExamples03.el"/>
+  <file name="funcPtrExamples04.el"/>
+  <file name="funcPtrExamples05.el"/>
+  <file name="funcPtrExamples06.el"/>
+  <file name="funcPtrExamples07.el"/>
+  <file name="funcPtrExamples08.el"/>
+  <file name="funcPtrExamples09.el"/>
+  <file name="funcPtrExamples10.el"/>
+ </filedeps>
+ <libdeps>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

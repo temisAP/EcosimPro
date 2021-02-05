@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_SpringDamper" >
+
+		<line id="Line_10" points="88,40 76,40"  start_arrow="true" dx="76" dy="32" lineColor="100,100,100"   />
+
+		<line id="Line_11" points="83.5627,39.657 67.5627,39.657"  start_arrow="true" dx="80.4373" dy="80.343" lineColor="100,100,100"   />
+
+		<closedBezier id="ClosedBezier_3" points="128,100 128,84 112,84 112,84 96,84 96,100 96,100 104,100 104,100 104,100 104,92 112,92 112,92 120,92 120,100 120,100" rotation="90" dx="32" dy="-20" lineColor="220,220,220"  color="220,220,220" aliasing="true"  />
+
+		<bezier id="Bezier_6" points="304,440 320,440 320,424 320,424 320,424 320,408 304,408" dx="-168" dy="-352" lineWidth="1.5"  aliasing="true"  />
+
+		<bezier id="Bezier_7" points="308,432 316,432 316,424 316,424 316,424 316,416 308,416" dx="-172" dy="-352" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_14" points="260,384 260,392" dx="-124" dy="-304" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_15" points="266.419,371.163 272.744,365.953" dx="-124" dy="-304" lineWidth="1.5"  aliasing="true"  />
+
+		<bezier id="Bezier_8" points="144.323,103.496 144.539,103.059 156.196,103.496 156.196,115.496 156,125.63 149.63,125.481 152,125.481" rotation="-90" dx="-14.8941" dy="-48.0771" aliasing="true"  />
+
+		<line id="Line_16" points="115.792,79.2113 91.7924,79.2113" dx="20.208" dy="-7.2113"  />
+
+		<line id="Line_18" points="77,80 85,80" dx="19" dy="16" lineColor="100,100,100"   />
+
+		<line id="Line_19" points="91.5627,39.657 75.5627,39.657 75.5627,87.657 91.5627,87.657"  start_arrow="true"  end_arrow="true" dx="28.4373" dy="32.343" lineColor="100,100,100"   />
+
+		<ellipse id="Ellipse_4" cx="61" cy="62" rx="16" ry="16" dx="75" dy="58" lineWidth="1.5"  color="220,220,220" aliasing="true"  />
+
+		<bezier id="Bezier_9" points="208.98,349.98 200.946,365.631 183.417,360.823 181.279,350.949 178.647,342.223 185.711,335.714 190.974,334.467 198.315,333.359 204.547,338.484 204.409,345.547 203.855,353.442 195.822,356.074 190.559,353.304 186.68,350.534 186.265,347.348 187.927,343.747 190.542,339.698 195.792,340.823 195.792,340.948 200.667,342.573 199.542,348.948 196.771,348.865 193.417,348.823 193.417,346.198 193.417,346.323" dx="-57.4173" dy="-226.323" aliasing="true"  />
+
+		<line id="Line_20" points="96,64 112,64" dx="24" dy="56"  />
+
+		<line id="Line_13" points="88,40 80,40 80,88 88,88" rotation="180" flipY="true" dx="80" dy="32" lineColor="100,100,100"   />
+
+		<line id="Line_12" points="84.8261,80 89,80" dx="83.1739" dy="16" lineColor="100,100,100"   />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_rot"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="176" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="183" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="145.5" cy="110" sx="99" sy="12" variable="m_in.T"  headerText="m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-64" dy="-60" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="144.5" cy="118" sx="97" sy="12" variable="m_in.n"  headerText="m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-64" dy="-52" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="228" cy="114" sx="104" sy="12" variable="m_out.T"  headerText="m_out.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="28" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="227" cy="130" sx="102" sy="12" variable="m_out.n"  headerText="m_out.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="28" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

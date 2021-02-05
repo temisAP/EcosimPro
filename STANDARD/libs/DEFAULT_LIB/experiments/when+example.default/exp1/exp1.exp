@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------
+-- Used to show the behaviour of the WHEN statement
+--------------------------------------------------------------------------------
+EXPERIMENT exp1 ON whenExample.default
+   INIT
+      -- Dynamic variables
+      T = 10.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 200.
+      CINT = 1.
+      INTEG()
+
+END EXPERIMENT

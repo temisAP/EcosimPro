@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="MECHANICAL_EXAMPLES" component="Example_T_Stop" partition="p1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="T_Stop.s"/>
+  <variable name="T_Stop.v"/>
+</dynamics>
+<residues>
+  <r id="1" value="T_Stop.s' = T_Stop.v"/>
+  <r id="2" value="T_Stop.v' = T_Stop.a"/>
+</residues>
+</partitionInfo>

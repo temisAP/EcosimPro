@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FreeConvec_Plate" >
+
+		<bezier id="Bezier_1" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-100" dy="-208" lineColor="170,0,0"  aliasing="true"  />
+
+		<bezier id="Bezier_6" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" dx="-51" dy="-208" lineColor="170,0,0"  aliasing="true"  />
+
+		<rect id="Rectangle_2" cx="479.491" cy="370.5" sx="48" sy="5" dx="-351.491" dy="-254" lineWidth="1.5"  color="192,192,192"  />
+
+		<bezier id="Bezier_2" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-74" dy="-208" lineColor="170,0,0"  aliasing="true"  />
+
+		<port id="tp_surface" library="PORTS_LIB" type="thermal"  hotPort="tp_surface" >
+		
+				<symbol dx="128" dy="128" onLabel="true" />
+		
+				<label cx="34" cy="12" dx="59" dy="119" />
+		
+		</port>
+
+		<port id="tp_fluid" library="PORTS_LIB" type="thermal"  hotPort="tp_fluid" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="24.5" cy="12" dx="130.5" dy="72" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="Grav"/>
+				<var name="Lc"/>
+				<var name="P"/>
+				<var name="n"/>
+				<var name="position"/>
+				<var name="thermal_fluid"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="110.5" cy="130" sx="109" sy="12" variable="tp_surface.Tk[1]"  headerText="tp_surface.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="28" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="108" cy="130" sx="104" sy="12" variable="tp_surface.q[1]"  headerText="tp_surface.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="28" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="105" cy="130" sx="98" sy="12" variable="tp_fluid.Tk[1]"  headerText="tp_fluid.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="28" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="102.5" cy="130" sx="93" sy="12" variable="tp_fluid.q[1]"  headerText="tp_fluid.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="28" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

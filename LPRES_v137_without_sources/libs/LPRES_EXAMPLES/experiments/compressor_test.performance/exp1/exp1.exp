@@ -1,0 +1,36 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: compressor_test
+ PARTITION: performance
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON compressor_test.performance
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Compressor.M_in = 0.001
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Compressor.f_out.W = 2 * (1 + TIME / 2)
+      Compressor.m.N = 3000
+
+   BODY
+      DEBUG_LEVEL= 1   
+      TOLERANCE = 1e-006
+
+		FOR (i IN 1, 5)
+			Compressor.M_in = 0.001
+			Compressor.m.N = 3000 + i * 500
+		
+     		TIME = 0
+      	TSTOP = 20
+      	CINT = 0.1
+      	INTEG()		
+		END FOR
+		
+END EXPERIMENT

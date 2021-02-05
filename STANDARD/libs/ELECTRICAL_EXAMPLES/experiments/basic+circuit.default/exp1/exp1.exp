@@ -1,0 +1,21 @@
+EXPERIMENT exp1 ON basicCircuit.default
+   DECLS
+   INIT
+      -- initial values for state variables
+      C1.v = 0
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Elec1.i = 0
+      Elec2.i = 0
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_TABLE("reportAll.rpt", "*",TRUE)
+      -- for example integrate the model 15 seconds (obtain results every 0.1 seconds)
+      TIME = 0
+      TSTOP = 0.2
+      CINT = 0.001
+      INTEG()
+END EXPERIMENT
+

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="1092" y="464" dx="546" dy="232">
+				<plot id="Plot_1">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="Turbine.f_in.W" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_4" x="546" y="464" dx="546" dy="232">
+				<plot id="Plot_4">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="Turbine.f_in.Tt" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_5" x="0" y="464" dx="546" dy="232">
+				<plot id="Plot_5">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="aux1" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_6" x="1092" y="232" dx="546" dy="232">
+				<plot id="Plot_6">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CC.f_F.p_c" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_7" x="546" y="232" dx="546" dy="232">
+				<plot id="Plot_7">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="CC.f_F.p_c">
+							<titleAxe value="CC.f_F.p_c"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ThrustMonitor.Thrust" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_8" x="0" y="232" dx="546" dy="232">
+				<plot id="Plot_8">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="CC.f_F.p_c">
+							<titleAxe value="CC.f_F.p_c"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CC.g.Tt" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_9" x="1092" y="0" dx="546" dy="232">
+				<plot id="Plot_9">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.Isp_0" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_10" x="546" y="0" dx="546" dy="232">
+				<plot id="Plot_10">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CC.OF" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="0" y="0" dx="546" dy="232">
+				<plot id="Plot_3">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_1.dp">
+							<titleAxe value="Regulator_1.dp"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CC.g.W" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="192" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

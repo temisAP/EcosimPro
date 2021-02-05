@@ -1,0 +1,14 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: CONTAINERS
+ COMPONENT: constructionPars
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 30/03/2016
+-----------------------------------------------------------------------------------------*/
+
+
+EXPERIMENT exp1 ON constructionPars.default
+   BODY
+	   EXEC_INIT()
+END EXPERIMENT

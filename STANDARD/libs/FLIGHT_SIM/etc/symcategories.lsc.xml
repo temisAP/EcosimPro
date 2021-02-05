@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<symcategories>
+ <category name="Electronic">
+  <symbol name="AOASensor"/>
+  <symbol name="AccelSensor"/>
+  <symbol name="F16prAutopilot"/>
+  <symbol name="F16qAutopilot"/>
+  <symbol name="GyroSensor"/>
+  <symbol name="SDLSensor"/>
+ </category>
+ <category name="Components">
+  <symbol name="ARI"/>
+  <symbol name="Actuator"/>
+  <symbol name="F16"/>
+  <symbol name="F16Aerodynamics"/>
+  <symbol name="F16Engine"/>
+  <symbol name="F16_Autopiloted"/>
+  <symbol name="Frame"/>
+  <symbol name="Trimmer"/>
+ </category>
+ <category name="Ports">
+  <symbol name="Forces"/>
+  <symbol name="State"/>
+ </category>
+</symcategories>

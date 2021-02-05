@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="GRAVITATIONAL_EXAMPLES" component="solarSystem" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="Sun.r[x]"/>
+  <variable name="Sun.r[x]'"/>
+  <variable name="Sun.r[y]"/>
+  <variable name="Sun.r[y]'"/>
+  <variable name="Sun.r[z]"/>
+  <variable name="Sun.r[z]'"/>
+  <variable name="Mercury.r[x]"/>
+  <variable name="Mercury.r[x]'"/>
+  <variable name="Mercury.r[y]"/>
+  <variable name="Mercury.r[y]'"/>
+  <variable name="Mercury.r[z]"/>
+  <variable name="Mercury.r[z]'"/>
+  <variable name="Venus.r[x]"/>
+  <variable name="Venus.r[x]'"/>
+  <variable name="Venus.r[y]"/>
+  <variable name="Venus.r[y]'"/>
+  <variable name="Venus.r[z]"/>
+  <variable name="Venus.r[z]'"/>
+  <variable name="Earth.r[x]"/>
+  <variable name="Earth.r[x]'"/>
+  <variable name="Earth.r[y]"/>
+  <variable name="Earth.r[y]'"/>
+  <variable name="Earth.r[z]"/>
+  <variable name="Earth.r[z]'"/>
+  <variable name="Mars.r[x]"/>
+  <variable name="Mars.r[x]'"/>
+  <variable name="Mars.r[y]"/>
+  <variable name="Mars.r[y]'"/>
+  <variable name="Mars.r[z]"/>
+  <variable name="Mars.r[z]'"/>
+  <variable name="Jupiter.r[x]"/>
+  <variable name="Jupiter.r[x]'"/>
+  <variable name="Jupiter.r[y]"/>
+  <variable name="Jupiter.r[y]'"/>
+  <variable name="Jupiter.r[z]"/>
+  <variable name="Jupiter.r[z]'"/>
+  <variable name="Saturn.r[x]"/>
+  <variable name="Saturn.r[x]'"/>
+  <variable name="Saturn.r[y]"/>
+  <variable name="Saturn.r[y]'"/>
+  <variable name="Saturn.r[z]"/>
+  <variable name="Saturn.r[z]'"/>
+  <variable name="Uranus.r[x]"/>
+  <variable name="Uranus.r[x]'"/>
+  <variable name="Uranus.r[y]"/>
+  <variable name="Uranus.r[y]'"/>
+  <variable name="Uranus.r[z]"/>
+  <variable name="Uranus.r[z]'"/>
+  <variable name="Neptune.r[x]"/>
+  <variable name="Neptune.r[x]'"/>
+  <variable name="Neptune.r[y]"/>
+  <variable name="Neptune.r[y]'"/>
+  <variable name="Neptune.r[z]"/>
+  <variable name="Neptune.r[z]'"/>
+  <variable name="Pluto.r[x]"/>
+  <variable name="Pluto.r[x]'"/>
+  <variable name="Pluto.r[y]"/>
+  <variable name="Pluto.r[y]'"/>
+  <variable name="Pluto.r[z]"/>
+  <variable name="Pluto.r[z]'"/>
+  <variable name="Moon.r[x]"/>
+  <variable name="Moon.r[x]'"/>
+  <variable name="Moon.r[y]"/>
+  <variable name="Moon.r[y]'"/>
+  <variable name="Moon.r[z]"/>
+  <variable name="Moon.r[z]'"/>
+</dynamics>
+<residues>
+  <r id="1" value="Sun.r[x]'. = Sun.r[x]'"/>
+  <r id="2" value="Sun.r[x]'' = Sun.f[x]"/>
+  <r id="3" value="Sun.r[y]'. = Sun.r[y]'"/>
+  <r id="4" value="Sun.r[y]'' = Sun.f[y]"/>
+  <r id="5" value="Sun.r[z]'. = Sun.r[z]'"/>
+  <r id="6" value="Sun.r[z]'' = Sun.f[z]"/>
+  <r id="7" value="Mercury.r[x]'. = Mercury.r[x]'"/>
+  <r id="8" value="Mercury.r[x]'' = Mercury.f[x]"/>
+  <r id="9" value="Mercury.r[y]'. = Mercury.r[y]'"/>
+  <r id="10" value="Mercury.r[y]'' = Mercury.f[y]"/>
+  <r id="11" value="Mercury.r[z]'. = Mercury.r[z]'"/>
+  <r id="12" value="Mercury.r[z]'' = Mercury.f[z]"/>
+  <r id="13" value="Venus.r[x]'. = Venus.r[x]'"/>
+  <r id="14" value="Venus.r[x]'' = Venus.f[x]"/>
+  <r id="15" value="Venus.r[y]'. = Venus.r[y]'"/>
+  <r id="16" value="Venus.r[y]'' = Venus.f[y]"/>
+  <r id="17" value="Venus.r[z]'. = Venus.r[z]'"/>
+  <r id="18" value="Venus.r[z]'' = Venus.f[z]"/>
+  <r id="19" value="Earth.r[x]'. = Earth.r[x]'"/>
+  <r id="20" value="Earth.r[x]'' = Earth.f[x]"/>
+  <r id="21" value="Earth.r[y]'. = Earth.r[y]'"/>
+  <r id="22" value="Earth.r[y]'' = Earth.f[y]"/>
+  <r id="23" value="Earth.r[z]'. = Earth.r[z]'"/>
+  <r id="24" value="Earth.r[z]'' = Earth.f[z]"/>
+  <r id="25" value="Mars.r[x]'. = Mars.r[x]'"/>
+  <r id="26" value="Mars.r[x]'' = Mars.f[x]"/>
+  <r id="27" value="Mars.r[y]'. = Mars.r[y]'"/>
+  <r id="28" value="Mars.r[y]'' = Mars.f[y]"/>
+  <r id="29" value="Mars.r[z]'. = Mars.r[z]'"/>
+  <r id="30" value="Mars.r[z]'' = Mars.f[z]"/>
+  <r id="31" value="Jupiter.r[x]'. = Jupiter.r[x]'"/>
+  <r id="32" value="Jupiter.r[x]'' = Jupiter.f[x]"/>
+  <r id="33" value="Jupiter.r[y]'. = Jupiter.r[y]'"/>
+  <r id="34" value="Jupiter.r[y]'' = Jupiter.f[y]"/>
+  <r id="35" value="Jupiter.r[z]'. = Jupiter.r[z]'"/>
+  <r id="36" value="Jupiter.r[z]'' = Jupiter.f[z]"/>
+  <r id="37" value="Saturn.r[x]'. = Saturn.r[x]'"/>
+  <r id="38" value="Saturn.r[x]'' = Saturn.f[x]"/>
+  <r id="39" value="Saturn.r[y]'. = Saturn.r[y]'"/>
+  <r id="40" value="Saturn.r[y]'' = Saturn.f[y]"/>
+  <r id="41" value="Saturn.r[z]'. = Saturn.r[z]'"/>
+  <r id="42" value="Saturn.r[z]'' = Saturn.f[z]"/>
+  <r id="43" value="Uranus.r[x]'. = Uranus.r[x]'"/>
+  <r id="44" value="Uranus.r[x]'' = Uranus.f[x]"/>
+  <r id="45" value="Uranus.r[y]'. = Uranus.r[y]'"/>
+  <r id="46" value="Uranus.r[y]'' = Uranus.f[y]"/>
+  <r id="47" value="Uranus.r[z]'. = Uranus.r[z]'"/>
+  <r id="48" value="Uranus.r[z]'' = Uranus.f[z]"/>
+  <r id="49" value="Neptune.r[x]'. = Neptune.r[x]'"/>
+  <r id="50" value="Neptune.r[x]'' = Neptune.f[x]"/>
+  <r id="51" value="Neptune.r[y]'. = Neptune.r[y]'"/>
+  <r id="52" value="Neptune.r[y]'' = Neptune.f[y]"/>
+  <r id="53" value="Neptune.r[z]'. = Neptune.r[z]'"/>
+  <r id="54" value="Neptune.r[z]'' = Neptune.f[z]"/>
+  <r id="55" value="Pluto.r[x]'. = Pluto.r[x]'"/>
+  <r id="56" value="Pluto.r[x]'' = Pluto.f[x]"/>
+  <r id="57" value="Pluto.r[y]'. = Pluto.r[y]'"/>
+  <r id="58" value="Pluto.r[y]'' = Pluto.f[y]"/>
+  <r id="59" value="Pluto.r[z]'. = Pluto.r[z]'"/>
+  <r id="60" value="Pluto.r[z]'' = Pluto.f[z]"/>
+  <r id="61" value="Moon.r[x]'. = Moon.r[x]'"/>
+  <r id="62" value="Moon.r[x]'' = Moon.f[x]"/>
+  <r id="63" value="Moon.r[y]'. = Moon.r[y]'"/>
+  <r id="64" value="Moon.r[y]'' = Moon.f[y]"/>
+  <r id="65" value="Moon.r[z]'. = Moon.r[z]'"/>
+  <r id="66" value="Moon.r[z]'' = Moon.f[z]"/>
+</residues>
+</partitionInfo>

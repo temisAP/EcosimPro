@@ -1,0 +1,52 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: turbopump_design_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 31/03/2016
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON turbopump_design_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine_ch.rpm = 30000):")
+		PRINT(" ")
+		PRINT("	Discharge area = $Nozzle.A_d")		
+		PRINT("	Pump input area = $Pump.A_in_d")			
+		PRINT("	Pump average radius = $Pump.r_m_d")	
+		PRINT("	Turbine input area = $Turbine_ch.A_in_d")		
+		PRINT("	Mass flow through the turbine = $Turbine_ch.f_in.W")
+		PRINT(" ")		
+		
+		Turbine_ch.rpm = 10000
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine_ch.rpm = 10000):")
+		PRINT(" ")
+		PRINT("	Discharge area = $Nozzle.A_d")		
+		PRINT("	Pump input area = $Pump.A_in_d")			
+		PRINT("	Pump average radius = $Pump.r_m_d")	
+		PRINT("	Turbine input area = $Turbine_ch.A_in_d")		
+		PRINT("	Mass flow through the turbine = $Turbine_ch.f_in.W")
+		PRINT(" ")
+
+END EXPERIMENT

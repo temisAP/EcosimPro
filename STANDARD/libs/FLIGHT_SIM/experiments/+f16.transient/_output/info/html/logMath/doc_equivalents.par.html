@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16.transient.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16.transient.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>Addition_1.s_in_2.signal&nbsp;</td><td>Trimmer.s_throttle.signal&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>Aero.altitude&nbsp;</td><td>Engine.altitude&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>Aero.s_aileron.signal&nbsp;</td><td>Ail_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>Aero.s_elevator.signal&nbsp;</td><td>El_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>Aero.s_rudder.signal&nbsp;</td><td>Rdr_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>Ail_Actuator.s_in.signal&nbsp;</td><td>Sum_2.s_out.signal&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>El_Actuator.s_in.signal&nbsp;</td><td>Sum_1.s_out.signal&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>Engine.s_Mach.signal&nbsp;</td><td>Aero.s_Mach.signal, Engine.Mach&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>Engine.s_throttle.signal&nbsp;</td><td>Addition_1.s_out.signal, Engine.throttle&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>Rdr_Actuator.s_in.signal&nbsp;</td><td>Sum_3.s_out.signal&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>Sum_1.s_in_2.signal&nbsp;</td><td>Trimmer.s_elevator.signal&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>Sum_2.s_in_2.signal&nbsp;</td><td>Trimmer.s_aileron.signal&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>Sum_3.s_in_2.signal&nbsp;</td><td>Trimmer.s_rudder.signal&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>s_aileron.signal&nbsp;</td><td>Sum_2.s_in_1.signal&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>s_elevator.signal&nbsp;</td><td>Sum_1.s_in_1.signal&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>s_rudder.signal&nbsp;</td><td>Sum_3.s_in_1.signal&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>s_throttle.signal&nbsp;</td><td>Addition_1.s_in_1.signal&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>state_out.A&nbsp;</td><td>Aero.state_in.A, Engine.state_in.A, Frame.state_out.A, Trimmer.state_in.A&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>state_out.R&nbsp;</td><td>Aero.state_in.R, Engine.state_in.R, Frame.state_out.R, Trimmer.state_in.R&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>state_out.Rdot&nbsp;</td><td>Aero.state_in.Rdot, Engine.state_in.Rdot, Frame.state_out.Rdot, Trimmer.state_in.Rdot&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>state_out.V&nbsp;</td><td>Aero.state_in.V, Engine.state_in.V, Frame.state_out.V, Trimmer.V, Trimmer.state_in.V&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>state_out.VT&nbsp;</td><td>Aero.VT, Aero.state_in.VT, Engine.state_in.VT, Frame.VT, Frame.state_out.VT, Trimmer.VT, Trimmer.state_in.VT&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>state_out.Vdot&nbsp;</td><td>Aero.state_in.Vdot, Engine.state_in.Vdot, Frame.state_out.Vdot, Trimmer.state_in.Vdot&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>state_out.W&nbsp;</td><td>Aero.state_in.W, Engine.state_in.W, Frame.state_out.W, Trimmer.W, Trimmer.state_in.W&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>state_out.Wdot&nbsp;</td><td>Aero.state_in.Wdot, Engine.state_in.Wdot, Frame.state_out.Wdot, Trimmer.state_in.Wdot&nbsp;</td></tr>
+<tr><td>26&nbsp;</td><td>state_out.alpha&nbsp;</td><td>Aero.state_in.alpha, Engine.state_in.alpha, Frame.alpha, Frame.state_out.alpha, Trimmer.alpha, Trimmer.state_in.alpha&nbsp;</td></tr>
+<tr><td>27&nbsp;</td><td>state_out.beta&nbsp;</td><td>Aero.state_in.beta, Engine.state_in.beta, Frame.beta, Frame.state_out.beta, Trimmer.beta, Trimmer.state_in.beta&nbsp;</td></tr>
+<tr><td>28&nbsp;</td><td>state_out.phi&nbsp;</td><td>Aero.state_in.phi, Engine.state_in.phi, Frame.phi, Frame.state_out.phi, Trimmer.phi, Trimmer.state_in.phi&nbsp;</td></tr>
+<tr><td>29&nbsp;</td><td>state_out.psi&nbsp;</td><td>Aero.state_in.psi, Engine.state_in.psi, Frame.psi, Frame.state_out.psi, Trimmer.psi, Trimmer.state_in.psi&nbsp;</td></tr>
+<tr><td>30&nbsp;</td><td>state_out.theta&nbsp;</td><td>Aero.state_in.theta, Engine.state_in.theta, Frame.state_out.theta, Frame.theta, Trimmer.state_in.theta, Trimmer.theta&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

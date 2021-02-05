@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.Calc_Euler_Quater<br /><small></small></h1><hr><br><font size="5" color="black">FUNCTION <a name="Calc_Euler_Quater">Calc_Euler_Quater</a></font><br/>
+<br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Establishes Euler angles, quaternions, and 'dynAtt' variables relation</font><br/>
+<font size="4" color="black">RETURN TYPE: NO_TYPE </font><br/>
+<br/>
+<br/>
+<font size="4" color="black">ARGUMENTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>quater&nbsp;</td><td>IN BOOLEAN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Integration method (TRUE=quaternions/FALSE=Euler angles)&nbsp;</td><td>TRUE=quaternions/FALSE=Euler angles&nbsp;</td></tr>
+
+<tr><td>Trim&nbsp;</td><td>IN INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Variable used to select steady-state equations (0/1)&nbsp;</td><td>0/1&nbsp;</td></tr>
+
+<tr><td>dynAtt[4]&nbsp;</td><td>IN REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dynamic attitude variable&nbsp;</td><td>rad&nbsp;</td></tr>
+
+<tr><td>psi&nbsp;</td><td>OUT REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yaw angle&nbsp;</td><td>rad&nbsp;</td></tr>
+
+<tr><td>theta&nbsp;</td><td>OUT REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitch angle&nbsp;</td><td>rad&nbsp;</td></tr>
+
+<tr><td>phi&nbsp;</td><td>OUT REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Roll angle&nbsp;</td><td>rad&nbsp;</td></tr>
+
+<tr><td>lambda[4]&nbsp;</td><td>OUT REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Quaternions coordinates&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

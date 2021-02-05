@@ -1,0 +1,16 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DEFAULT_LIB
+ COMPONENT: _LIBRARY_MISC
+ PARTITION: experiments
+ EXPERIMENT: helloWorld
+ TEMPLATE: EXPERIMENT STANDALONE
+ CREATION DATE: 09/03/2015
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT helloWorld
+DECLS
+BODY
+
+	WRITE ("\nHello World!!!\n\n")
+	
+END EXPERIMENT

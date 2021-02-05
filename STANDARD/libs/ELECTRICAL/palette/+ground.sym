@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Ground" >
+
+		<line id="Line_1" points="-2,348 28,348" dx="67" dy="-258" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_2" points="11,356 21,356" dx="64" dy="-256" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_3" points="2,352 22,352" dx="68" dy="-257" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_4" points="15,360 18,360" dx="63.5" dy="-255" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_5" points="14,350 14,340" dx="66" dy="-260" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="57.5" dy="50" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="227" cy="59" sx="230" sy="30" variable="e_p.v"  headerText="e_p.v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="224" cy="91" sx="224" sy="30" variable="e_p.i"  headerText="e_p.i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

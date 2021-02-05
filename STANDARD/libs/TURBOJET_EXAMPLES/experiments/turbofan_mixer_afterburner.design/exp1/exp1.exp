@@ -1,0 +1,96 @@
+EXPERIMENT exp1 ON turbofan_mixer_afterburner.design
+   INIT
+      -- Dynamic variables
+      compressor.N = 12000.
+      fan.N = 4000.
+
+      -- Algebraic variables
+      split1.g_in.T = 500.
+
+      hp_turbine.g_in.W = 25.
+
+      mixer.g_in2.T = 500.
+
+      afterburner.A = 0.3
+      afterburner.f_in.W = 1.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+      afterburner.M_in = 0.3
+
+      burner.AL = 2.5
+      burner.PQ = 0.96
+
+      compressor.DN = 0.
+      compressor.EPD = 0.92
+      compressor.PCNR = 92.
+      compressor.beta = 0.7
+
+      fan.BPR = 1.
+      fan.DN = 0.
+      fan.EPD = 0.92
+      fan.PCNR = 92.
+      fan.PQ = 4.
+      fan.beta = 0.7
+      fan.g_pr.W = 25.
+
+      hp_turbine.DHQTJ = 1.
+      hp_turbine.EPD = 0.92
+      hp_turbine.NRJ = 1.
+      hp_turbine.g_in.T = 1800.
+
+      lp_turbine.DHQTJ = 1.
+      lp_turbine.EPD = 0.92
+      lp_turbine.NRJ = 1.
+
+      mixer.Ps1 = 3.5e+5
+
+      nozzle.g_in.T = 2000.
+      nozzle.s_Area.signal[1] = 1.
+
+      split1.g_in.P = 25.e+5
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      FREEZE(compressor.N)
+      FREEZE(fan.N)
+
+      STEADY()
+
+      PRINT(" ")
+      PRINT("   afterburner.A = $afterburner.A")
+      PRINT("   afterburner.M_in = $afterburner.M_in")
+      PRINT("   afterburner.M_out = $afterburner.M_out")
+      PRINT("   afterburner.f_in.W = $afterburner.f_in.W")
+      PRINT("   burner.GLP = $burner.GLP")
+      PRINT("   burner.VOL = $burner.VOL")
+      PRINT("   burner.f_in.W = $burner.f_in.W")
+      PRINT("   compressor.CG1 = $compressor.CG1")
+      PRINT("   compressor.CG2 = $compressor.CG2")
+      PRINT("   compressor.CG4 = $compressor.CG4")
+      PRINT("   compressor.ND = $compressor.ND")
+      PRINT("   fan.CG1 = $fan.CG1")
+      PRINT("   fan.CG2 = $fan.CG2")
+      PRINT("   fan.CG4 = $fan.CG4")
+      PRINT("   fan.ND = $fan.ND")
+      PRINT("   hp_turbine.CG1 = $hp_turbine.CG1")
+      PRINT("   hp_turbine.CG2 = $hp_turbine.CG2")
+      PRINT("   hp_turbine.CG3 = $hp_turbine.CG3")
+      PRINT("   hp_turbine.CG4 = $hp_turbine.CG4")
+      PRINT("   lp_turbine.CG1 = $lp_turbine.CG1")
+      PRINT("   lp_turbine.CG2 = $lp_turbine.CG2")
+      PRINT("   lp_turbine.CG3 = $lp_turbine.CG3")
+      PRINT("   lp_turbine.CG4 = $lp_turbine.CG4")
+      PRINT("   mixer.A1 = $mixer.A1")
+      PRINT("   mixer.A2 = $mixer.A2")
+      PRINT("   mixer.M_out = $mixer.M_out")
+      PRINT("   mixer.M1 = $mixer.M1")
+      PRINT("   mixer.M2 = $mixer.M2")
+      PRINT("   nozzle.A_exit = $nozzle.A_exit")
+
+END EXPERIMENT

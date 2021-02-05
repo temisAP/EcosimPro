@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="DEFAULT_LIB" component="bouncingBall" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="h"/>
+  <variable name="h'"/>
+</dynamics>
+<residues>
+  <r id="1" value="h'. = h'"/>
+  <r id="2" value="h'' = -g"/>
+</residues>
+</partitionInfo>

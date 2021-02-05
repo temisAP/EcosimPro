@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Line_RC" >
+
+		<rect id="Rectangle_1" cx="20" cy="658" sx="80" sy="48" dx="108" dy="-562" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_1" points="-12,642 -8,638 -4,646 0,638 4,646 8,638 12,646 16,642" dx="108" dy="-562" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="19,642 71,642" dx="105" dy="-562" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="-12,642 -29,642" dx="108" dy="-562" lineColor="0,192,0"   />
+
+		<line id="Line_4" points="27,642 27,658" dx="121" dy="-562" lineColor="0,192,0"   />
+
+		<line id="Line_5" points="30,655 18,655" dx="124" dy="-559" lineColor="0,192,0" lineWidth="2"   />
+
+		<line id="Line_6" points="17,658 29,658" dx="125" dy="-558" lineColor="0,192,0" lineWidth="2"   />
+
+		<line id="Line_7" points="28,662 28,674" dx="120" dy="-562" lineColor="0,192,0"   />
+
+		<line id="Line_8" points="62,672 -18,672" dx="106" dy="-560" lineColor="0,192,0"   />
+
+		<line id="Line_9" points="11,672 11,690" dx="117" dy="-560" lineColor="0,192,0"   />
+
+		<text id="Text_1" cx="8" cy="11.5" sx="16" sy="23" dx="100.5" dy="78"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">R</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_2" cx="8" cy="11.5" sx="16" sy="23" dx="127.5" dy="86"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">C</span></p></body></html>]]>
+		</text>
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="70" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="176" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="182" dy="70" />
+		
+		</port>
+
+		<port id="e_p3" library="PORTS_LIB" type="elec"  hotPort="e_p3" >
+		
+				<symbol dx="128" dy="128" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="98" dy="127" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="N"/>
+				<var name="c"/>
+				<var name="length"/>
+				<var name="r"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="102" cy="27" sx="172" sy="30" variable="v13"  headerText="v13"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="278" cy="27" sx="172" sy="30" variable="v23"  headerText="v23"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="112" cy="59" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-12" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="304" cy="59" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" dy="-8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

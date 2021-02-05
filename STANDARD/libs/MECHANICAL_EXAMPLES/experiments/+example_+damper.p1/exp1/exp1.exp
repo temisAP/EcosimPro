@@ -1,0 +1,19 @@
+
+EXPERIMENT exp1 ON Example_Damper.p1
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+   REPORT_MODE = IS_STEP
+   TIME = 0
+   TSTOP = 5
+   CINT = 0.1
+   INTEG()
+END EXPERIMENT

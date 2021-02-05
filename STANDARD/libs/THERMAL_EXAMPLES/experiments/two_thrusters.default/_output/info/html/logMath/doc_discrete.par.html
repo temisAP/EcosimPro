@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../two_thrusters.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../two_thrusters.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Discrete Blocks<br /></h2>
+WHEN (THERMAL.Bmax(thruster1.N1.Tmax, thruster1.N1.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N1.Tmin, thruster1.N1.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N1.Label") + " - Temperature: " + getValueAsString("thruster1.N1.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N2.Tmax, thruster1.N2.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N2.Tmin, thruster1.N2.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N2.Label") + " - Temperature: " + getValueAsString("thruster1.N2.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N3.Tmax, thruster1.N3.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N3.Tmin, thruster1.N3.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N3.Label") + " - Temperature: " + getValueAsString("thruster1.N3.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N4.Tmax, thruster1.N4.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N4.Tmin, thruster1.N4.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N4.Label") + " - Temperature: " + getValueAsString("thruster1.N4.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N5.Tmax, thruster1.N5.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N5.Tmin, thruster1.N5.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N5.Label") + " - Temperature: " + getValueAsString("thruster1.N5.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N6.Tmax, thruster1.N6.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N6.Tmin, thruster1.N6.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N6.Label") + " - Temperature: " + getValueAsString("thruster1.N6.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N7.Tmax, thruster1.N7.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N7.Tmin, thruster1.N7.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N7.Label") + " - Temperature: " + getValueAsString("thruster1.N7.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N8.Tmax, thruster1.N8.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N8.Tmin, thruster1.N8.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N8.Label") + " - Temperature: " + getValueAsString("thruster1.N8.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N9.Tmax, thruster1.N9.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N9.Tmin, thruster1.N9.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N9.Label") + " - Temperature: " + getValueAsString("thruster1.N9.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N10.Tmax, thruster1.N10.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N10.Tmin, thruster1.N10.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N10.Label") + " - Temperature: " + getValueAsString("thruster1.N10.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N11.Tmax, thruster1.N11.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N11.Tmin, thruster1.N11.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N11.Label") + " - Temperature: " + getValueAsString("thruster1.N11.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N12.Tmax, thruster1.N12.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N12.Tmin, thruster1.N12.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N12.Label") + " - Temperature: " + getValueAsString("thruster1.N12.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N13.Tmax, GR_coupling.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N13.Tmin, GR_coupling.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N13.Label") + " - Temperature: " + getValueAsString("thruster1.N13.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N14.Tmax, thruster1.N14.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N14.Tmin, thruster1.N14.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N14.Label") + " - Temperature: " + getValueAsString("thruster1.N14.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N15.Tmax, thruster1.N15.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N15.Tmin, thruster1.N15.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster1.N15.Label") + " - Temperature: " + getValueAsString("thruster1.N15.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster1.N105.Tmax, thruster1.N105.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster1.N105.Tmin, thruster1.N105.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	WRITE("\n")
+	_vi1 = 1
+	WHILE ( _vi1 <= thruster1.N105.n )
+	WRITE("Node: %s - Temperature %d: %g\n",thruster1.N105.Label,_vi1,thruster1.N105.tp_in.Tk[_vi1])
+	_vi1 += 1
+	END WHILE
+	WRITE("\n")
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N1.Tmax, thruster2.N1.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N1.Tmin, thruster2.N1.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N1.Label") + " - Temperature: " + getValueAsString("thruster2.N1.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N2.Tmax, thruster2.N2.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N2.Tmin, thruster2.N2.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N2.Label") + " - Temperature: " + getValueAsString("thruster2.N2.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N3.Tmax, thruster2.N3.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N3.Tmin, thruster2.N3.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N3.Label") + " - Temperature: " + getValueAsString("thruster2.N3.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N4.Tmax, thruster2.N4.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N4.Tmin, thruster2.N4.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N4.Label") + " - Temperature: " + getValueAsString("thruster2.N4.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N5.Tmax, thruster2.N5.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N5.Tmin, thruster2.N5.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N5.Label") + " - Temperature: " + getValueAsString("thruster2.N5.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N6.Tmax, thruster2.N6.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N6.Tmin, thruster2.N6.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N6.Label") + " - Temperature: " + getValueAsString("thruster2.N6.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N7.Tmax, thruster2.N7.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N7.Tmin, thruster2.N7.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N7.Label") + " - Temperature: " + getValueAsString("thruster2.N7.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N8.Tmax, thruster2.N8.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N8.Tmin, thruster2.N8.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N8.Label") + " - Temperature: " + getValueAsString("thruster2.N8.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N9.Tmax, thruster2.N9.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N9.Tmin, thruster2.N9.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N9.Label") + " - Temperature: " + getValueAsString("thruster2.N9.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N10.Tmax, thruster2.N10.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N10.Tmin, thruster2.N10.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N10.Label") + " - Temperature: " + getValueAsString("thruster2.N10.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N11.Tmax, thruster2.N11.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N11.Tmin, thruster2.N11.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N11.Label") + " - Temperature: " + getValueAsString("thruster2.N11.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N12.Tmax, thruster2.N12.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N12.Tmin, thruster2.N12.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N12.Label") + " - Temperature: " + getValueAsString("thruster2.N12.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N13.Tmax, thruster2.N13.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N13.Tmin, thruster2.N13.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N13.Label") + " - Temperature: " + getValueAsString("thruster2.N13.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N14.Tmax, thruster2.N14.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N14.Tmin, thruster2.N14.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N14.Label") + " - Temperature: " + getValueAsString("thruster2.N14.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N15.Tmax, thruster2.N15.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N15.Tmin, thruster2.N15.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	PRINT("Node: " + getValueAsString("thruster2.N15.Label") + " - Temperature: " + getValueAsString("thruster2.N15.T"))
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(thruster2.N105.Tmax, thruster2.N105.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(thruster2.N105.Tmin, thruster2.N105.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	WRITE("\n")
+	_vi2 = 1
+	WHILE ( _vi2 <= thruster2.N105.n )
+	WRITE("Node: %s - Temperature %d: %g\n",thruster2.N105.Label,_vi2,thruster2.N105.tp_in.Tk[_vi2])
+	_vi2 += 1
+	END WHILE
+	WRITE("\n")
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+WHEN (THERMAL.Bmax(Space.Tmax, Space.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.Bmin(Space.Tmin, Space.tp_in.Tk[1]) != 0)  THEN
+	END WHEN<br/>
+WHEN (THERMAL.PRINT_TEMP)  THEN
+	WRITE("\n")
+	_vi3 = 1
+	WHILE ( _vi3 <= Space.n )
+	WRITE("Node: %s - Temperature %d: %g\n",Space.Label,_vi3,Space.tp_in.Tk[_vi3])
+	_vi3 += 1
+	END WHILE
+	WRITE("\n")
+	THERMAL.PRINT_TEMP =  FALSE  AFTER 0
+	END WHEN<br/>
+</body></html>

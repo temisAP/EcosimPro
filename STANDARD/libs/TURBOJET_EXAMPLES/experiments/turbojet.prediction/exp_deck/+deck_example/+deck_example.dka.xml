@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DeckSupplierConfig version="2.0">
+<data>
+ <var id="SwitchBranch" type="STRING" category="EXPERIMENT_VAR" inputUnits="" inputCandidates="" inputValue="PARAMETRIC" deckin="PUBLIC" deckout="PUBLIC" control="TRUE" controlValues="PARAMETRIC,STEADY,TRANSIENT," pos=""/>
+ <var id="TURBOJET.Altitude" type="REAL" category="BOUNDARY" inputUnits="m" inputCandidates="" inputValue="0" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="TURBOJET.Mach" type="REAL" category="BOUNDARY" inputUnits="-" inputCandidates="" inputValue="0" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="compressor.N" type="REAL" category="DYNAMIC" inputUnits="rpm" inputCandidates="" inputValue="12000" deckin="PUBLIC" deckout="NO" control="FALSE" controlValues="" pos=""/>
+ <var id="compressor.beta" type="REAL" category="ALGEBRAIC" inputUnits="-" inputCandidates="" inputValue="0.7" deckin="PUBLIC" deckout="NO" control="FALSE" controlValues="" pos=""/>
+ <var id="compressor.g_in.W" type="REAL" category="ALGEBRAIC" inputUnits="kg/s" inputCandidates="" inputValue="100" deckin="PUBLIC" deckout="NO" control="FALSE" controlValues="" pos=""/>
+ <var id="deck_CINT" type="REAL" category="EXPERIMENT_VAR" inputUnits="" inputCandidates="" inputValue="0" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="deck_TIME" type="REAL" category="EXPERIMENT_VAR" inputUnits="" inputCandidates="" inputValue="0" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="deck_TSTOP" type="REAL" category="EXPERIMENT_VAR" inputUnits="" inputCandidates="" inputValue="0" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="fuelmeter.f_in.W" type="REAL" category="ALGEBRAIC" inputUnits="kg/s" inputCandidates="" inputValue="0.5" deckin="PUBLIC" deckout="NO" control="FALSE" controlValues="" pos=""/>
+ <var id="monitor.SFC" type="REAL" category="EXPLICIT" inputUnits="kg/(N?s)" inputCandidates="" inputValue="0" deckin="NO" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="monitor.Thrust_kgf" type="REAL" category="EXPLICIT" inputUnits="kgf" inputCandidates="" inputValue="0" deckin="NO" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="monitor.s_fuel.n" type="INTEGER" category="CONSTANT" inputUnits="-" inputCandidates="" inputValue="1" deckin="NO" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="monitor.s_fuel.signal[1]" type="REAL" category="EXPLICIT" inputUnits="-" inputCandidates="" inputValue="0" deckin="NO" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="monitor.thrust.F" type="REAL" category="EXPLICIT" inputUnits="N" inputCandidates="" inputValue="0" deckin="NO" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="turbine.g_in.T" type="REAL" category="BOUNDARY" inputUnits="K" inputCandidates="" inputValue="500" deckin="PUBLIC" deckout="PUBLIC" control="FALSE" controlValues="" pos=""/>
+ <var id="turbine.g_out.T" type="REAL" category="ALGEBRAIC" inputUnits="K" inputCandidates="" inputValue="1500" deckin="PUBLIC" deckout="NO" control="FALSE" controlValues="" pos=""/>
+</data>
+<info>
+ <swmode id="beta"/>
+ <useexegui id="no"/>
+ <useexenogui id="yes"/>
+ <usefortran id="no"/>
+ <usecpp id="no"/>
+ <usefmi id="no"/>
+ <useexcel id="no"/>
+ <usert id="no"/>
+ <usecardpackbinary id="no"/>
+ <usecardpackfile id="yes"/>
+ <version id="1.0"/>
+ <description id="<center><p><b>Customer Deck Example</b></p><p>This deck has been created as an example of deck generation capabilities</p></center>"/>
+ <supplier id=""/>
+ <customer id=""/>
+ <subject id=""/>
+ <password id=""/>
+ <platforms id="win64_gcc64v4_9,win64_vc2010"/>
+ <help id="<center><p><b>Usage help</b></p></center><p>This deck includes two tabs:</p><ul><li><b>Information</b>: it contains several data related to deck release.</li> <li><b>Simulation</b>: Input and Output values.</li> </ul> <p>To start simulation, press <b>load</b> button. Once you have keyed in the input values click the <b>play</b> button to execute the calculation. Output values will be updated with their new values. To execute a new calculation, just click the <b>load</b> button, change the input values and click the <b>play</b> button once again.</p> <p>You can also pause and stop the simulation.</p>"/>
+<folders>
+</folders>
+<filepaths>
+</filepaths>
+</info>
+<mapping>
+</mapping>
+</DeckSupplierConfig>

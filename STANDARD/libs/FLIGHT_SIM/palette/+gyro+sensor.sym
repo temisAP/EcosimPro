@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="GyroSensor" >
+
+		<line id="Line_1" points="78.0004,346 62.0008,346" dx="81.9997" dy="-266" lineColor="255,128,0"   />
+
+		<line id="Line_2" points="-1.99967,346 14,346" dx="81.9997" dy="-266" lineColor="85,85,255"   />
+
+		<ellipse id="Ellipse_1" cx="38.2088" cy="345.161" rx="23.7869" ry="24.4152" rotation="91" dx="80.9646" dy="-265.804" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<line id="Line_3" points="29.9996,366.001 29.9996,334 45.9993,326 45.9993,358.001 29.9996,366.001" dx="81.9997" dy="-266" lineWidth="2"   />
+
+		<line id="Line_4" points="54.0009,346 37.9995,338 21.9998,346 37.9995,353.998 54.0009,346" dx="81.9997" dy="-266" lineWidth="2"   />
+
+		<line id="Line_5" points="37.9995,329.999 37.9995,362" dx="81.9997" dy="-266"  />
+
+		<line id="Line_6" points="29.9996,349.999 45.9993,341.999" dx="81.9997" dy="-266"  />
+
+		<port id="state_in" library="FLIGHT_SIM" type="State" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="21" dy="68" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="164" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="CosDir"/>
+				<var name="bias"/>
+				<var name="gain"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

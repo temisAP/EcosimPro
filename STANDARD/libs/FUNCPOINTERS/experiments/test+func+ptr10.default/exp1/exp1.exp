@@ -1,0 +1,15 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: FUNCPOINTERS
+ COMPONENT: testFuncPtr10
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 15/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON testFuncPtr10.default
+   BODY
+		INTEG_TO(1,1)
+		WRITE("t1[2].z (solution is 4+1)= %g\n",t1[2].z)
+		WRITE("t1[2].t (solution is 4+1)= %g\n",t1[2].t)
+END EXPERIMENT

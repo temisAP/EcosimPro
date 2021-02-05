@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+amplifier.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+amplifier.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 18<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>G.e_p.i = 0<br/>
+<a name="e2">[E-2] </a>A.e_p1.i = -G.e_p.i<br/>
+<a name="e3">[E-3] </a>A.e_n1.i = -A.e_p1.i<br/>
+<a name="e4">[E-4] </a>V.e_p.i = -A.e_n1.i<br/>
+<a name="e5">[E-5] </a>V.e_n.i = -V.e_p.i<br/>
+<a name="e6">[E-6] </a>A.e_p1.v =  ZONE[1] (V.source.state_off) V.Voffset ZONE[1] (NOT V.source.state_off) V.Voffset + V.Vpeak * sin(6.28318530717959 * V.freqHz * (TIME - V.startTime) + V.phase)	  OTHERS 0<br/>
+<br/>
+<hr>BOX 1 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v9" data-ajax='false'>A.e_p2.v</a>&nbsp;</td><td><a href="doc_vars.par.html#v9" data-ajax='false'></a>&nbsp;</td><td>V&nbsp;</td><td>Potential at pin&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v12" data-ajax='false'>A.v1</a>&nbsp;</td><td><a href="doc_vars.par.html#v12" data-ajax='false'></a>&nbsp;</td><td>V&nbsp;</td><td>Voltage drop over the left port&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v23" data-ajax='false'>RF.v</a>&nbsp;</td><td><a href="doc_vars.par.html#v23" data-ajax='false'></a>&nbsp;</td><td>V&nbsp;</td><td>Voltage drop between the two pins = e_p.v - e_n.v&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v27" data-ajax='false'>RI.e_p.i</a>&nbsp;</td><td><a href="doc_vars.par.html#v27" data-ajax='false'></a>&nbsp;</td><td>A&nbsp;</td><td>Current flowing into the pin&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v28" data-ajax='false'>RI.e_p.v</a>&nbsp;</td><td><a href="doc_vars.par.html#v28" data-ajax='false'></a>&nbsp;</td><td>V&nbsp;</td><td>Potential at pin&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e7">[E-7] </a>RF.R * RI.e_p.i = RF.v	{L@RF.v}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e8">[E-8] </a>RI.R * RI.e_p.i = RI.e_p.v	{L@RI.e_p.i}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e9">[E-9] </a>RI.e_p.v + RF.v = A.e_p2.v	{L@RI.e_p.v}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e10">[E-10] </a>A.e_p2.v = A.G * A.v1	{L@A.e_p2.v}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e11">[E-11] </a>A.e_p1.v + RF.v = A.v1 + A.e_p2.v	{L@A.v1}<br/>
+<hr>END OF BOX 1<hr><a name="e12">[E-12] </a>V.voltage.s_in.signal[1] = A.v1 + A.e_p2.v - RF.v<br/>
+<a name="e13">[E-13] </a>G.e_p.v = 0<br/>
+<a name="e14">[E-14] </a>Ra.e_p.i = A.e_p2.v / Ra.R<br/>
+<a name="e15">[E-15] </a>A.e_p2.i = -Ra.e_p.i - RI.e_p.i<br/>
+<a name="e16">[E-16] </a>A.e_n2.i = -A.e_p2.i<br/>
+<a name="e17">[E-17] </a>RI.e_n.i = -RI.e_p.i<br/>
+<a name="e18">[E-18] </a>Ra.e_n.i = -Ra.e_p.i<br/>
+</body></html>

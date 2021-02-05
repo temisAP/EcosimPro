@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="summer_1" library="CONTROL" type="Addition" layer="1" elPosition="6"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="432" dy="48" onLabel="true" />
+	
+		<label cx="34.5" cy="12" dx="517" dy="87.096" />
+	
+	</component>
+
+	<component id="summer_2" library="CONTROL" type="Addition" layer="1" elPosition="7"  hotPort="s_in_2" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="742.125" dy="486.125" rotation="90" onLabel="true" />
+	
+		<label cx="34.5" cy="12" dx="825.875" dy="654.375" />
+	
+	</component>
+
+	<component id="comparator" library="CONTROL" type="Subtraction" layer="1" elPosition="8"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="121.875" dy="518.125" rotation="-90" onLabel="true" />
+	
+		<label cx="36.5" cy="12" dx="187.125" dy="654.375" />
+	
+	</component>
+
+	<component id="amplifier" library="CONTROL" type="Gain" layer="1" elPosition="9"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="79.9604" sx="73" sy="33.4208" dx="111.96" dy="272.04" rotation="-90" onLabel="true" />
+	
+		<label cx="28" cy="12" dx="249.71" dy="347.29" />
+	
+		<instanceData>
+			<datum id="k" value="{ 1438}" />
+		</instanceData>
+	
+	</component>
+
+	<component id="compensator" library="CONTROL" type="TransferFunction" layer="1" elPosition="10"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="80" sx="73" sy="33.5" dx="752" dy="272" rotation="90" onLabel="true" />
+	
+		<label cx="41.5" cy="12" dx="759.5" dy="342" />
+	
+		<instanceData>
+			<datum id="n_num" value="2" />
+			<datum id="n_den" value="2" />
+			<datum id="p" value="{ 1,2,1}" />
+			<datum id="q" value="{ 1,28,160}" />
+		</instanceData>
+	
+	</component>
+
+	<component id="process_plant" library="CONTROL" type="TransferFunction" layer="1" elPosition="11"  hotPort="s_in" >
+	
+		<symbol cx="112" cy="80" sx="73" sy="33.5" dx="432" dy="528" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="44.5" cy="12" dx="497" dy="653.5" />
+	
+		<instanceData>
+			<datum id="n_den" value="3" />
+			<datum id="p" value="{ 1}" />
+			<datum id="q" value="{ 1,3.2,3.56,0}" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_1" sShape="comparator" sPort="s_out" eShape="amplifier" ePort="s_in" elPosition="0" lineColor="255,85,0"   />
+
+	<connector id="Connector_2" sShape="amplifier" sPort="s_out" eShape="summer_1" ePort="s_in_1" points="224,128" elPosition="16" lineColor="255,85,0"   />
+
+	<connector id="Connector_3" sShape="summer_1" sPort="s_out" eShape="compensator" ePort="s_in" points="864,128" elPosition="17" lineColor="255,85,0"   />
+
+	<connector id="Connector_4" sShape="compensator" sPort="s_out" eShape="summer_2" ePort="s_in_1" elPosition="18" lineColor="255,85,0"   />
+
+	<connector id="Connector_5" sShape="summer_2" sPort="s_out" eShape="process_plant" ePort="s_in" elPosition="19" lineColor="255,85,0"   />
+
+	<connector id="Connector_6" sShape="process_plant" sPort="s_out" eShape="comparator" ePort="s_in_2" elPosition="20" lineColor="255,85,0"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+</schematic>

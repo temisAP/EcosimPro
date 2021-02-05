@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="F16" >
+
+		<polygon id="Polygon_3" points="266,253 274,269 130,265 106,249" dx="20" dy="-116" color="200,200,200" aliasing="true"  />
+
+		<line id="Line_7" points="336,244 364,244" dx="20" dy="-112" aliasing="true"  />
+
+		<polygon id="Polygon_2" points="104,268 84,272 84,284 104,288" dx="22" dy="-135" color="0,0,0" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_5" points="121,324 391,317 423,317 273,292 247,317 117,304 119,309" dx="7" dy="-180" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<line id="Line_2" points="23.3077,129.304 59.3077,129.304" dx="52.6923" dy="14.696" lineColor="255,128,0" lineWidth="1.5"  aliasing="true"  />
+
+		<text id="Text_1" cx="25.5" cy="15.5" sx="51" sy="31" aliasing="true" dx="318" dy="141"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Tahoma'; font-size:14pt; font-weight:600; color:#000000;">F-16</span></p></body></html>]]>
+		</text>
+
+		<polygon id="Polygon_1" points="268,240 288,280 348,276 328,269 328,269 296,240" dx="-162" dy="-148" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_1" points="224,209 252,221 272,216 288,213 250,190 226,205 224,209" dx="48" dy="-91" lineWidth="2"   color="255,255,255" gradientColor="85,170,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<ellipse id="Ellipse_2" cx="262" cy="302" rx="18" ry="2" dx="-38" dy="-139" color="255,255,255" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="262" cy="302" rx="18" ry="2" dx="-54" dy="-127" color="255,255,255" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_3" points="290.419,217.446 234.419,217.446 234.419,233.446 166.419,281.446 166.419,281.446 166.419,281.446 150.419,281.446 178.419,225.446 176.419,224.446 176.419,224.446" dx="15.5808" dy="-88.4457" lineWidth="1.5"  color="163,163,163" aliasing="true"  />
+
+		<line id="Line_8" points="142,305 170,249" dx="34" dy="-113" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_10" points="87,203 108,240" dx="27" dy="-110" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_6" points="197.303,88.3123 213.303,56.3123 229.303,56.3123" dx="-53.303" dy="119.688" lineColor="255,128,0" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_5" points="163.308,161.312 181.308,120.312 213.308,120.312" dx="138.692" dy="-40.3123" lineColor="85,85,255" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_12" points="80,248 96,248" dx="28" dy="-110" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_13" points="80,248 96,248" dx="28" dy="-107" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_14" points="80,248 96,248" dx="28" dy="-104" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<line id="Line_15" points="80,248 96,248" dx="28" dy="-101" lineColor="255,255,255" lineWidth="0.5" lineType="1"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_2" points="221.419,231.446 253.419,231.446 253.419,231.446 229.419,231.446 173.419,255.446 205.419,255.446 161.419,255.446 185.419,231.446 185.419,231.446 185.419,231.446" dx="-53.419" dy="-95.446" color="163,163,163" aliasing="true"  />
+
+		<line id="Line_11" points="88,232 112,208" dx="30" dy="-72" lineWidth="0.5" lineType="2"   />
+
+		<line id="Line_9" points="25.303,208.311 57.303,208.311 57.303,160.311" dx="54.697" dy="-0.311" lineColor="255,128,0" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_16" points="15.303,94.311 47.303,94.311 47.303,110.311" dx="64.697" dy="-14.311" lineColor="255,128,0" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_1" points="203,164 161,167" dx="-38" dy="-43" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<port id="s_elevator" library="PORTS_LIB" type="analog_signal"  hotPort="s_elevator" >
+		
+				<symbol dx="80" dy="208" onLabel="true" />
+		
+				<label cx="33" cy="12" dx="-1" dy="198" />
+		
+		</port>
+
+		<port id="s_aileron" library="PORTS_LIB" type="analog_signal"  hotPort="s_aileron" >
+		
+				<symbol dx="144" dy="208" onLabel="true" />
+		
+				<label cx="30" cy="12" dx="112" dy="208" />
+		
+		</port>
+
+		<port id="s_rudder" library="PORTS_LIB" type="analog_signal"  hotPort="s_rudder" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="29" cy="12" dx="3" dy="70" />
+		
+		</port>
+
+		<port id="s_throttle" library="PORTS_LIB" type="analog_signal"  hotPort="s_throttle" >
+		
+				<symbol dx="80" dy="144" onLabel="true" />
+		
+				<label cx="31" cy="12" dx="1" dy="134" />
+		
+		</port>
+
+		<port id="state_out" library="FLIGHT_SIM" type="State"  hotPort="state_out" >
+		
+				<symbol dx="352" dy="80" onLabel="true" />
+		
+				<label cx="31" cy="12" dx="356.5" dy="68" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+</palette>

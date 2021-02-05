@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="F16qAutopilot" >
+
+		<line id="Line_1" points="179.646,170.314 179.646,186.311" dx="-67.646" dy="-122.314" lineColor="85,85,255"  aliasing="true"  />
+
+		<line id="Line_2" points="239.645,202.314 227.646,202.314" dx="-79.645" dy="-122.314" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_3" points="147.646,202.314 163.645,202.314" dx="-67.646" dy="-122.314" lineColor="255,128,0"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="159.646,234.314 159.646,170.314 215.646,202.314" dx="-67.646" dy="-122.314" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<text id="Text_1" cx="21" cy="10.5" sx="42" sy="21" aliasing="true" dx="90.9995" dy="66.997"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600; color:#000000;">qAuto</span></p></body></html>]]>
+		</text>
+
+		<port id="state_in" library="FLIGHT_SIM" type="State"  hotPort="state_in" >
+		
+				<symbol dx="112" dy="48" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="85" dy="21" />
+		
+		</port>
+
+		<port id="s_q" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="14.5" cy="12" dx="41.5" dy="69" />
+		
+		</port>
+
+		<port id="s_elevator" library="PORTS_LIB" type="analog_signal"  hotPort="s_elevator" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="33" cy="12" dx="167.501" dy="69" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+</palette>

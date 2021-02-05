@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindexHL" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<div class="qindex"><a class="qindex" href="THERMAL.components.html">Alphabetical</a> | 
+	  <a class="qindex" href="THERMAL.componentsTree.html">Inheritance&nbsp;Tree</a> | 
+	  <a class="qindexHL" href="THERMAL.componentsGraph.html">Inheritance&nbsp;Graph</a></div><h1 align="center">Components (Inheritance Graph)<br /><small></small></h1><hr><br>  <script type="text/javascript" src="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.js"></script>
+  <link href="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    #mynetwork {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<div id="mynetwork"></div>
+<script type="text/javascript">
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'CONTROL.ASensor'},
+    {id: 2, label: 'THERMAL.ADNode'},
+    {id: 3, label: 'THERMAL.AGL'},
+    {id: 4, label: 'THERMAL.AGR'},
+    {id: 5, label: 'THERMAL.BNode'},
+    {id: 6, label: 'THERMAL.Conductor'},
+    {id: 7, label: 'THERMAL.Cylinder'},
+    {id: 8, label: 'THERMAL.Cylinder_AI'},
+    {id: 9, label: 'THERMAL.DNode'},
+    {id: 10, label: 'THERMAL.DNodeMat'},
+    {id: 11, label: 'THERMAL.DNodeMat_vec'},
+    {id: 12, label: 'THERMAL.DNodeRoom'},
+    {id: 13, label: 'THERMAL.DNphases'},
+    {id: 14, label: 'THERMAL.FreeConvec_Horizontal_Cylinder'},
+    {id: 15, label: 'THERMAL.FreeConvec_Plate'},
+    {id: 16, label: 'THERMAL.FreeConvec_UserDefined'},
+    {id: 17, label: 'THERMAL.FreeConvec_Wire'},
+    {id: 18, label: 'THERMAL.FreeConvec_simple'},
+    {id: 19, label: 'THERMAL.GL'},
+    {id: 20, label: 'THERMAL.GL_mat'},
+    {id: 21, label: 'THERMAL.GR'},
+    {id: 22, label: 'THERMAL.HeatFlowMultiplier'},
+    {id: 23, label: 'THERMAL.Heater'},
+    {id: 24, label: 'THERMAL.Insulation'},
+    {id: 25, label: 'THERMAL.Node'},
+    {id: 26, label: 'THERMAL.Peltier'},
+    {id: 27, label: 'THERMAL.Periodic_Stop_Control'},
+    {id: 28, label: 'THERMAL.Plate'},
+    {id: 29, label: 'THERMAL.Q_sensor'},
+    {id: 30, label: 'THERMAL.Radiator'},
+    {id: 31, label: 'THERMAL.Saddle'},
+    {id: 32, label: 'THERMAL.TD_GL'},
+    {id: 33, label: 'THERMAL.T_sensor'},
+    {id: 34, label: 'THERMAL.Th_Demux'},
+    {id: 35, label: 'THERMAL.Th_Mux'},
+    {id: 36, label: 'THERMAL.Tube'},
+    {id: 37, label: 'THERMAL.VCHP'},
+    {id: 38, label: 'THERMAL.View_Factors'},
+    {id: 39, label: 'THERMAL.Wall'},
+  ]);
+  var edges = new vis.DataSet([
+    {from: 2, to: 25, arrows:'to'},
+    {from: 3, to: 6, arrows:'to'},
+    {from: 4, to: 6, arrows:'to'},
+    {from: 5, to: 25, arrows:'to'},
+    {from: 8, to: 7, arrows:'to'},
+    {from: 9, to: 2, arrows:'to'},
+    {from: 10, to: 2, arrows:'to'},
+    {from: 12, to: 2, arrows:'to'},
+    {from: 13, to: 25, arrows:'to'},
+    {from: 16, to: 3, arrows:'to'},
+    {from: 19, to: 3, arrows:'to'},
+    {from: 20, to: 3, arrows:'to'},
+    {from: 21, to: 4, arrows:'to'},
+    {from: 29, to: 1, arrows:'to'},
+    {from: 29, to: 6, arrows:'to'},
+    {from: 32, to: 3, arrows:'to'},
+    {from: 33, to: 1, arrows:'to'},
+  ]);
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {physics:{enabled:true},interaction:{navigationButtons:true,keyboard:true}};
+  var network = new vis.Network(container, data, options);
+</script>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

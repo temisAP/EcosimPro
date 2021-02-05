@@ -1,0 +1,101 @@
+EXPERIMENT exp1 ON solarSystem.default
+   INIT
+      -- Dynamic variables
+      Sun.r[x] = 0.
+      Sun.r[y] = 0.
+      Sun.r[z] = 0.
+
+      Sun.r[x]' = 0.
+      Sun.r[y]' = 0.
+      Sun.r[z]' = 0.
+
+      Mercury.r[x] = 0.387098
+      Mercury.r[y] = 0.
+      Mercury.r[z] = 0.
+
+      Mercury.r[x]' = 0.
+      Mercury.r[y]' = 47873. * MStoAUD
+      Mercury.r[z]' = 0.
+
+      Venus.r[x] = 0.723330
+      Venus.r[y] = 0.
+      Venus.r[z] = 0.
+
+      Venus.r[x]' = 0.
+      Venus.r[y]' = 35021. * MStoAUD
+      Venus.r[z]' = 0.
+
+      Earth.r[x] = 1.000001
+      Earth.r[y] = 0.
+      Earth.r[z] = 0.
+
+      Earth.r[x]' = 0.
+      Earth.r[y]' = 29786. * MStoAUD
+      Earth.r[z]' = 0.
+
+      Mars.r[x] = 1.523679
+      Mars.r[y] = 0.
+      Mars.r[z] = 0.
+
+      Mars.r[x]' = 0.
+      Mars.r[y]' = 24131. * MStoAUD
+      Mars.r[z]' = 0.
+
+      Jupiter.r[x] = 5.202603
+      Jupiter.r[y] = 0.
+      Jupiter.r[z] = 0.
+
+      Jupiter.r[x]' = 0.
+      Jupiter.r[y]' = 13070. * MStoAUD
+      Jupiter.r[z]' = 0.
+
+      Saturn.r[x] = 9.554910
+      Saturn.r[y] = 0.
+      Saturn.r[z] = 0.
+
+      Saturn.r[x]' = 0.
+      Saturn.r[y]' = 9672. * MStoAUD
+      Saturn.r[z]' = 0.
+
+      Uranus.r[x] = 19.218446
+      Uranus.r[y] = 0.
+      Uranus.r[z] = 0.
+
+      Uranus.r[x]' = 0.
+      Uranus.r[y]' = 6835. * MStoAUD
+      Uranus.r[z]' = 0.
+
+      Neptune.r[x] = 30.110387
+      Neptune.r[y] = 0.
+      Neptune.r[z] = 0.
+
+      Neptune.r[x]' = 0.
+      Neptune.r[y]' = 5478. * MStoAUD
+      Neptune.r[z]' = 0.
+
+      Pluto.r[x] = 39.544674
+      Pluto.r[y] = 0.
+      Pluto.r[z] = 0.
+
+      Pluto.r[x]' = 0.
+      Pluto.r[y]' = 4749. * MStoAUD
+      Pluto.r[z]' = 0.
+
+      Moon.r[x] = 1.000001 + 0.002570
+      Moon.r[y] = 0.
+      Moon.r[z] = 0.
+
+      Moon.r[x]' = 0.
+      Moon.r[y]' = (29786. + 1018.) * MStoAUD
+      Moon.r[z]' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 365.
+      CINT = 0.25
+      INTEG()
+
+END EXPERIMENT

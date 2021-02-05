@@ -1,0 +1,25 @@
+EXPERIMENT exp1 ON hydro_circuit1.default
+   INIT
+      -- Dynamic variables
+      HydTank1.H[1] = 3.
+      HydTank1.T = 288.
+
+      HydTank2.H[1] = 1.
+      HydTank2.T = 288.
+
+   BOUNDS
+      HydTank1.hp_in.T = 0.
+      HydTank1.hp_in.w = 0.
+
+      HydTank2.hp_out.w = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 30.
+      CINT = 1.
+      INTEG()
+
+END EXPERIMENT

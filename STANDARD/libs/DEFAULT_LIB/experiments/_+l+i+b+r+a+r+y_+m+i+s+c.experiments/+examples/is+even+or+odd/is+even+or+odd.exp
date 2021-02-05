@@ -1,0 +1,23 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DEFAULT_LIB
+ COMPONENT: _LIBRARY_MISC
+ PARTITION: experiments
+ EXPERIMENT: isEvenOrOdd
+ TEMPLATE: EXPERIMENT STANDALONE
+ CREATION DATE: 09/03/2015
+ DESCRIPTION: USE OF IF STATEMENT
+-----------------------------------------------------------------------------------------*/
+USE MATH
+
+EXPERIMENT isEvenOrOdd
+DECLS
+	INTEGER numberToEvalueate = 24  //Change value to evaluate different numbers
+BODY
+
+	IF( rem(numberToEvalueate,2) == 0) THEN //Determine the residue of the number when id divided by 2
+		WRITE("\nThe number %i is EVEN.\n\n", numberToEvalueate ) --If the residue is zero, the number is EVEN
+	ELSE
+		WRITE("\nThe number %i is ODD.\n\n", numberToEvalueate ) //Residue is not zero, then the number is ODD
+	END IF
+	
+END EXPERIMENT

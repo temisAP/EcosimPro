@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="GRAVITATIONAL_EXAMPLES" component="SunEarth" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="CentralBody.r[x]"/>
+  <variable name="CentralBody.r[x]'"/>
+  <variable name="CentralBody.r[y]"/>
+  <variable name="CentralBody.r[y]'"/>
+  <variable name="CentralBody.r[z]"/>
+  <variable name="CentralBody.r[z]'"/>
+  <variable name="OrbitalBody.r[x]"/>
+  <variable name="OrbitalBody.r[x]'"/>
+  <variable name="OrbitalBody.r[y]"/>
+  <variable name="OrbitalBody.r[y]'"/>
+  <variable name="OrbitalBody.r[z]"/>
+  <variable name="OrbitalBody.r[z]'"/>
+</dynamics>
+<residues>
+  <r id="1" value="CentralBody.r[x]'. = CentralBody.r[x]'"/>
+  <r id="2" value="CentralBody.r[x]'' = CentralBody.f[x]"/>
+  <r id="3" value="CentralBody.r[y]'. = CentralBody.r[y]'"/>
+  <r id="4" value="CentralBody.r[y]'' = CentralBody.f[y]"/>
+  <r id="5" value="CentralBody.r[z]'. = CentralBody.r[z]'"/>
+  <r id="6" value="CentralBody.r[z]'' = CentralBody.f[z]"/>
+  <r id="7" value="OrbitalBody.r[x]'. = OrbitalBody.r[x]'"/>
+  <r id="8" value="OrbitalBody.r[x]'' = OrbitalBody.f[x]"/>
+  <r id="9" value="OrbitalBody.r[y]'. = OrbitalBody.r[y]'"/>
+  <r id="10" value="OrbitalBody.r[y]'' = OrbitalBody.f[y]"/>
+  <r id="11" value="OrbitalBody.r[z]'. = OrbitalBody.r[z]'"/>
+  <r id="12" value="OrbitalBody.r[z]'' = OrbitalBody.f[z]"/>
+</residues>
+</partitionInfo>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Compressor" >
+
+		<line id="Line_1" points="63.248,212.501 75.249,212.501" dx="84.752" dy="-148.501" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_2" points="75.249,200.501 59.249,200.501" dx="84.751" dy="-152.501" aliasing="true"  />
+
+		<polygon id="Polygon_1" points="47.248,192.501 47.248,232.501 -24.752,248.501 -24.751,180.501 -24.752,176.501" dx="100.752" dy="-148.501" lineWidth="1.5"   color="255,255,255" gradientColor="170,170,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<line id="Line_3" points="-32.751,212.501 -44.751,212.501" dx="108.751" dy="-148.501" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_4" points="34.249,195.783 34.249,231.013" dx="99.752" dy="-149.501" aliasing="true"  />
+
+		<line id="Line_8" points="27.249,194.367 27.249,232.428" dx="99.752" dy="-149.501" aliasing="true"  />
+
+		<line id="Line_9" points="20.249,193.924 20.249,234.186" rotation="-180" dx="99.752" dy="-150.001" aliasing="true"  />
+
+		<line id="Line_10" points="41.249,198.501 41.249,231.069" dx="99.752" dy="-150.501" aliasing="true"  />
+
+		<line id="Line_11" points="12.249,191.851 12.249,235.102" dx="100.752" dy="-149.501" aliasing="true"  />
+
+		<line id="Line_13" points="-1.751,190.02 -1.751,238.776" dx="100.752" dy="-150.501" aliasing="true"  />
+
+		<line id="Line_14" points="5.249,191.935 5.249,238.017" dx="100.752" dy="-151.001" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="-14.751" cy="205.501" rx="7.00001" ry="5.99998" dx="99.752" dy="-148.501" color="192,192,192" aliasing="true"  />
+
+		<polygon id="Polygon_2" points="47.248,204.501 -8.751,204.501 -8.751,220.501 47.248,220.501" dx="100.752" dy="-148.501" color="192,192,192" aliasing="true"  />
+
+		<line id="Line_15" points="-32.751,196.501 -44.751,196.501" dx="108.751" dy="-148.501" aliasing="true"  />
+
+		<line id="Line_16" points="-8.751,187.919 -8.751,239.034" dx="100.752" dy="-149.501" aliasing="true"  />
+
+		<port id="sh_in" library="TURBOJET" type="Shaft"  hotPort="sh_in" >
+		
+				<symbol dx="160" dy="64" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="164.5" dy="52" />
+		
+		</port>
+
+		<port id="sh_out" library="TURBOJET" type="Shaft"  hotPort="sh_out" >
+		
+				<symbol dx="64" dy="64" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="8.5001" dy="52" />
+		
+		</port>
+
+		<port id="g_in" library="TURBOJET" type="Gas"  hotPort="g_in" >
+		
+				<symbol dx="64" dy="48" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="24" dy="36" />
+		
+		</port>
+
+		<port id="g_out" library="TURBOJET" type="Gas"  hotPort="g_out" >
+		
+				<symbol dx="160" dy="48" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="164" dy="36" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Geometry">
+				<var name="I"/>
+			</tab>
+			<tab name="Map">
+				<var name="ND"/>
+				<var name="F3"/>
+				<var name="F2"/>
+				<var name="F1"/>
+				<var name="CG4"/>
+				<var name="CG2"/>
+				<var name="CG1"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100" cy="106" sx="88" sy="12" variable="g_in.P"  headerText="g_in.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="-56" dy="-68" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="105" cy="106" sx="98" sy="12" variable="g_in.W"  headerText="g_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-56" dy="-80" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="102.5" cy="106" sx="93" sy="12" variable="g_out.P"  headerText="g_out.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="88" dy="-68" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="107.5" cy="106" sx="103" sy="12" variable="g_out.W"  headerText="g_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="88" dy="-80" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="80.5" cy="70" sx="113" sy="12" variable="sh_out.Power"  headerText="sh_out.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="-24" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="76" cy="70" sx="104" sy="12" variable="sh_out.N"  headerText="sh_out.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="-24" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="78" cy="70" sx="108" sy="12" variable="sh_in.Power"  headerText="sh_in.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="124" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_9" cx="73.5" cy="70" sx="99" sy="12" variable="sh_in.N"  headerText="sh_in.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="124" dy="20" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

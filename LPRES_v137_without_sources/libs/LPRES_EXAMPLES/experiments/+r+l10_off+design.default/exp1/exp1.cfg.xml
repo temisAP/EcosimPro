@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+				</tab>
+	</experimentViews>
+	<watch width="578" height="192" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+				<var name="CC.T_c"/>
+				<var name="CC.f_F.W"/>
+				<var name="CC.f_O.W"/>
+				<var name="CC.g.W"/>
+				<var name="CC.g.pt"/>
+				<var name="CJ.g.pt"/>
+				<var name="CJ.l.pt"/>
+				<var name="ControlPanel.Isp_0"/>
+				<var name="Pump_LH2.f_in.pt"/>
+				<var name="Pump_LH2.f_out.pt"/>
+				<var name="Pump_LOX.f_in.pt"/>
+				<var name="Pump_LOX.f_out.pt"/>
+				<var name="ThrustMonitor.Thrust"/>
+				<var name="Turbine.f_in.pt"/>
+				<var name="Turbine.f_out.pt"/>
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="139"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

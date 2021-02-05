@@ -1,0 +1,28 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: ExpanderEngine
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 19/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON ExpanderEngine.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junction_1.f_in2.Tt = 300
+      CombCha_1.p_out_ch = 100
+      ThrustMonitor_1.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+
+END EXPERIMENT

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="ButterLow" >
+
+		<line id="Line_9" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,128,0"   />
+
+		<line id="Line_5" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.3061" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_1" cx="105" cy="31.5" sx="32" sy="31" dx="7" dy="48" lineWidth="1.5"  color="255,128,0"  />
+
+		<bezier id="Bezier_3" points="123,135.5 128,132 127,103.5 131,123.5 135,139.5 135,115.5 143,115.5" dx="-21" dy="-45.5" lineWidth="2.5"   />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal"  hotPort="s_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="19" cy="14" dx="39" dy="73" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="23.5" cy="14" dx="147.5" dy="73" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="freq"/>
+				<var name="n_f"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="94.5" cy="35" sx="125" sy="14" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-44" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="210" cy="51" sx="132" sy="14" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

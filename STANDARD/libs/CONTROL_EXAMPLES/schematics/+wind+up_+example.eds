@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="PI" library="CONTROL" type="Cntrl_PI" layer="1" elPosition="0"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="87.875" sx="73" sy="33.75" dx="400" dy="472" />
+	
+		<label cx="10" cy="12" dx="503" dy="590.375" />
+	
+		<instanceData>
+			<datum id="k" value="{ 1}" />
+			<datum id="u_min" value="{ -0.1}" />
+			<datum id="u_max" value="{ 0.1}" />
+			<datum id="end_pos" value="end_PI" />
+			<datum id="Ti" value="{ 1}" />
+			<datum id="gamma" value="{ 100000000}" />
+			<datum id="beta" value="{ 1}" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Integrator" library="CONTROL" type="Integrator" layer="1" elPosition="1"  hotPort="s_in" >
+	
+		<symbol cx="112" cy="80.5" sx="73" sy="37" dx="400" dy="80" rotation="180" flipY="true" />
+	
+		<label cx="31" cy="12" dx="484" dy="112" />
+	
+		<instanceData>
+			<datum id="output_o" value="{ 0}" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_1" sShape="Integrator" sPort="s_out" eShape="PI" ePort="s_var" elPosition="0" lineColor="255,85,0"   />
+
+	<connector id="Connector_2" sShape="PI" sPort="s_out" eShape="Integrator" ePort="s_in" elPosition="2" lineColor="255,85,0"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+</schematic>

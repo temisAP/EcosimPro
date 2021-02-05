@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.0">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="turbopump_offDesign_test.eds"/>
+  <file name="turbopump_design_test.eds"/>
+  <file name="ExpanderEngine.eds"/>
+  <file name="TurbojetEngine_design.eds"/>
+  <file name="TurbojetEngine_performance.eds"/>
+  <file name="turbine_liq_design_test.eds"/>
+  <file name="turbine_design_test.eds"/>
+  <file name="turbine_ch_design_test.eds"/>
+  <file name="staged_combustion_test.eds"/>
+  <file name="turbine_performance_test.eds"/>
+  <file name="turbine_ch_performance_test.eds"/>
+  <file name="tank_offDesign_test.eds"/>
+  <file name="tank_design_test.eds"/>
+  <file name="coolingJacket_offDesign_test.eds"/>
+  <file name="coolingJacket_design_test.eds"/>
+  <file name="compressor_test.eds"/>
+  <file name="Rocketdyne_F1_offDesign.eds"/>
+  <file name="Rocketdyne_F1_design.eds"/>
+  <file name="RL10_offDesign.eds"/>
+  <file name="RL10_design.eds"/>
+  <file name="RL10A_3_3A.eds"/>
+  <file name="PressureFedEngine_offDesign.eds"/>
+  <file name="PressureFedEngine_design.eds"/>
+  <file name="turbine_liq_offDesign_test.eds"/>
+ </filedeps>
+ <libdeps>
+  <lib name="LPRES" version=""/>
+  <lib name="MATH" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+ <symcategories>
+ </symcategories>
+</library>

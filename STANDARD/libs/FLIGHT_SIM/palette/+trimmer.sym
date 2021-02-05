@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="Trimmer" >
+
+		<line id="Line_1" points="81.0007,471 64.9998,471" dx="78.9993" dy="-383" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_2" points="97.0007,439.001 81.0007,439.001" dx="62.9993" dy="-335.001" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_3" points="65.0007,406.999 49.0007,406.999" dx="94.9993" dy="-334.999" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_4" points="97.0007,375 81.0007,375" dx="62.9993" dy="-319" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_5" points="-63.0002,423 -30.9994,423" dx="143" dy="-343" lineColor="85,85,255"  aliasing="true"  />
+
+		<polygon id="Polygon_2" points="156.094,143.285 156.094,87.285 208.094,115.285" rotation="180" flipY="true" dx="-60.4485" dy="-35.285" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<port id="state_in" library="FLIGHT_SIM" type="State"  hotPort="state_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="21" dy="68" />
+		
+		</port>
+
+		<port id="s_elevator" library="PORTS_LIB" type="analog_signal"  hotPort="s_elevator" >
+		
+				<symbol dx="160" dy="56" onLabel="true" />
+		
+				<label cx="33" cy="12" dx="167.5" dy="44" />
+		
+		</port>
+
+		<port id="s_aileron" library="PORTS_LIB" type="analog_signal"  hotPort="s_aileron" >
+		
+				<symbol dx="160" dy="72" onLabel="true" />
+		
+				<label cx="30" cy="12" dx="170.5" dy="60" />
+		
+		</port>
+
+		<port id="s_rudder" library="PORTS_LIB" type="analog_signal"  hotPort="s_rudder" >
+		
+				<symbol dx="160" dy="88" onLabel="true" />
+		
+				<label cx="29" cy="12" dx="171" dy="76" />
+		
+		</port>
+
+		<port id="s_throttle" library="PORTS_LIB" type="analog_signal"  hotPort="s_throttle" >
+		
+				<symbol dx="160" dy="104" onLabel="true" />
+		
+				<label cx="31" cy="12" dx="169.5" dy="92" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="ClimbAngle_req"/>
+				<var name="R_req"/>
+				<var name="VT_req"/>
+				<var name="alpha_req"/>
+				<var name="dpsi_req"/>
+				<var name="mode"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

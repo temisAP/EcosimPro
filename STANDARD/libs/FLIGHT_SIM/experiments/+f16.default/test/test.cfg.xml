@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_2" x="0" y="0" dx="994" dy="326">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<font family="Arial"/>
+						<scale min="0" max="10"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font family="Arial"/>
+						<scale min="-6" max="0"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="
+				" isShowed="false">
+						<font family="Arial" size="8" bold="false"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Frame.psi" nick="Frame.psi" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="326" dx="994" dy="326">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<font family="Arial"/>
+						<scale min="0" max="10"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font family="Arial"/>
+						<scale min="-0.6" max="0.6"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="
+				" isShowed="false">
+						<font family="Arial" size="8" bold="false"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Trimmer.throttle" nick="Trimmer.throttle" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="274" visible="true">
+		<var name="Ail_Actuator.defl" code="0"/>
+		<var name="El_Actuator.defl" code="0"/>
+		<var name="Engine.apow" code="0"/>
+		<var name="Frame.R[D]" code="0"/>
+		<var name="Frame.R[E]" code="0"/>
+		<var name="Frame.R[N]" code="0"/>
+		<var name="Frame.V[x]" code="0"/>
+		<var name="Frame.V[y]" code="0"/>
+		<var name="Frame.V[z]" code="0"/>
+		<var name="Frame.W[x]" code="0"/>
+		<var name="Frame.W[y]" code="0"/>
+		<var name="Frame.W[z]" code="0"/>
+		<var name="Frame.dynAtt[1]" code="0"/>
+		<var name="Frame.dynAtt[2]" code="0"/>
+		<var name="Frame.dynAtt[3]" code="0"/>
+		<var name="Frame.dynAtt[4]" code="0"/>
+		<var name="Rdr_Actuator.defl" code="0"/>
+		<var name="Trimmer.aileron" code="0"/>
+		<var name="Trimmer.elevator" code="0"/>
+		<var name="Trimmer.rudder" code="0"/>
+		<var name="Trimmer.throttle" code="0"/>
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Arms" >
+
+		<line id="Line_1" points="27.0004,35.9999 43.0007,35.9999" dx="52.9996" dy="44.0001" lineColor="255,0,0"   />
+
+		<line id="Line_2" points="202.998,35.9999 186.998,35.9999" dx="52.9996" dy="44.0001" lineColor="255,0,0"   />
+
+		<polygon id="Polygon_1" points="138.999,32.0001 135,40 158.998,56.0003 179,40 186.998,40 186.998,28.0003 179,32.0001 179,28.0003 175.001,28.0003 175.001,35.9999 158.998,48.0004" dx="52.9996" dy="44.0001" color="255,224,192"  />
+
+		<polygon id="Polygon_2" points="91.0028,32.0001 95.0018,40 71.0039,56.0003 51.0003,40 43.0007,40 43.0007,28.0003 51.0003,32.0001 51.0003,28.0003 55.0013,28.0003 55.0013,35.9999 71.0039,48.0004" dx="52.9996" dy="44.0001" color="255,224,192"  />
+
+		<port id="p_in" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="40" dy="68" />
+		
+		</port>
+
+		<port id="p_out" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_out" >
+		
+				<symbol dx="256" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="260" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="comp"/>
+				<var name="rai"/>
+				<var name="rao"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="60" cy="98" sx="88" sy="12" variable="p_in.p"  headerText="p_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="71" cy="98" sx="110" sy="12" variable="p_in.w"  headerText="p_in.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="62.5" cy="98" sx="93" sy="12" variable="p_out.p"  headerText="p_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="208" dy="-32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="73.5" cy="98" sx="115" sy="12" variable="p_out.w"  headerText="p_out.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="208" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

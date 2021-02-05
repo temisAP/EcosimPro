@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="HYDRAULIC_EXAMPLES" component="hydro_circuit3" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="Cntrl_pid1.s_set.signal[1]"/>
+  <variable name="HydTank1.hp_in.T"/>
+  <variable name="HydTank1.hp_in.w"/>
+  <variable name="HydTank2.hp_out.w"/>
+</boundaries>
+<dynamics>
+  <variable name="Cntrl_pid1.vi[1]"/>
+  <variable name="Cntrl_pid1.yf[1]"/>
+  <variable name="HydTank1.H[1]"/>
+  <variable name="HydTank1.T"/>
+  <variable name="HydTank2.H[1]"/>
+  <variable name="HydTank2.T"/>
+</dynamics>
+<algebraics>
+  <variable name="HydPipe1.hp_in.w"/>
+</algebraics>
+<residues>
+  <r id="1" value="Cntrl_pid1.vi[1]' = Cntrl_pid1.k[1] / Cntrl_pid1.Ti[1] * Cntrl_pid1.e[1] + Cntrl_pid1.es[1] / (Cntrl_pid1.gamma[1] * Cntrl_pid1.Ti[1])"/>
+  <r id="2" value="Cntrl_pid1.yf[1]' = (Cntrl_pid1.y[1] - Cntrl_pid1.yf[1]) / (Cntrl_pid1.alpha[1] * Cntrl_pid1.Td[1])"/>
+  <r id="3" value="HydTank1.H[1]' = (HydTank1.hp_in.w - HydPipe1.hp_in.w) / (1000 * HydTank1.A)"/>
+  <r id="4" value="HydTank1.T' = (HydTank1.hp_in.wh - HydPipe1.hp_in.wh - (HydTank1.hp_in.w - HydPipe1.hp_in.w) * 4186 * HydTank1.T) / (HydTank1.m * 4186)"/>
+  <r id="5" value="HydTank2.H[1]' = (HydPipe1.hp_in.w - HydTank2.hp_out.w) / (1000 * HydTank2.A)"/>
+  <r id="6" value="HydTank2.T' = (HydTank2.hp_in.wh - HydTank2.hp_out.wh - (HydPipe1.hp_in.w - HydTank2.hp_out.w) * 4186 * HydTank2.T) / (HydTank2.m * 4186)"/>
+  <r id="7" value="IMPL(HydPipe1.hp_in.w) HydPipe1.hp_in.w = HydValve1.Av * 31.6227766016838 * fsqrt(HydValve1.hp_in.p - HydFlowMeter1.hp_in.p - 9806 * (HydValve1.z_in - HydValve1.z_out), HydValve1.dp_lam)"/>
+</residues>
+</partitionInfo>

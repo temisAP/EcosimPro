@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Radiator" >
+
+		<line id="Line_5" points="60,44.6 60,35"  start_arrow="true" dx="84" dy="63.4" lineColor="170,0,0"   />
+
+		<line id="Line_4" points="74,53 74,29"  end_arrow="true" dx="70" dy="43" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_2" cx="467.491" cy="378" sx="56" sy="4" dx="-323.491" dy="-282" lineWidth="1.5"  color="192,192,192"  />
+
+		<line id="Line_6" points="-4,39 12,39"  end_arrow="true" dx="100" dy="57" lineColor="170,0,0"   />
+
+		<ellipse id="Ellipse_1" cx="292" cy="460" rx="4" ry="4" dx="-176" dy="-364" color="0,0,0"  />
+
+		<bezier id="Bezier_1" points="205.405,324.449 216.665,323.356 230.469,319.176 210.489,318.272 196.14,316.823 193.052,314.281 209.943,312.642 232.465,310.457 209.397,307.012 209.397,307.012" rotation="-140.541" flipY="true" dx="-88.1925" dy="-233.449" aliasing="true"  />
+
+		<line id="Line_1" points="51.125,49.875 59.125,41.875"  end_arrow="true" dx="76.875" dy="26.125"  />
+
+		<line id="Line_2" points="51.125,49.875 59.125,41.875"  end_arrow="true" dx="116.875" dy="26.125"  />
+
+		<bezier id="Bezier_2" points="205.405,324.449 216.665,323.356 230.469,319.176 210.489,318.272 196.14,316.823 193.052,314.281 209.943,312.642 232.465,310.457 209.397,307.012 209.397,307.012" rotation="-140.541" flipY="true" dx="-48.1925" dy="-233.449" aliasing="true"  />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="59.5" dy="87" />
+		
+		</port>
+
+		<port id="tp_2" library="PORTS_LIB" type="thermal"  hotPort="tp_2" >
+		
+				<symbol dx="144" dy="112" onLabel="true" />
+		
+				<label cx="16.5" cy="12" dx="148" dy="103" />
+		
+		</port>
+
+		<port id="tp_1" library="PORTS_LIB" type="thermal"  hotPort="tp_1" >
+		
+				<symbol dx="144" dy="64" onLabel="true" />
+		
+				<label cx="16.5" cy="12" dx="128" dy="31" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="F2"/>
+				<var name="Lx"/>
+				<var name="Ly"/>
+				<var name="TemperatureDependance"/>
+				<var name="To"/>
+				<var name="alpha1"/>
+				<var name="alpha2"/>
+				<var name="beta1"/>
+				<var name="beta2"/>
+				<var name="cp"/>
+				<var name="e"/>
+				<var name="emiss1"/>
+				<var name="emiss2"/>
+				<var name="k"/>
+				<var name="mat"/>
+				<var name="n_fin"/>
+				<var name="nx"/>
+				<var name="ny"/>
+				<var name="rho"/>
+				<var name="F1"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-8" dy="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-8" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="99.5" cy="130" sx="87" sy="12" variable="tp_2.Tk[1]"  headerText="tp_2.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="60" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="97" cy="130" sx="82" sy="12" variable="tp_2.q[1]"  headerText="tp_2.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="60" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="99.5" cy="130" sx="87" sy="12" variable="tp_1.Tk[1]"  headerText="tp_1.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="60" dy="-88" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="97" cy="130" sx="82" sy="12" variable="tp_1.q[1]"  headerText="tp_1.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="60" dy="-76" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

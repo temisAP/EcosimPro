@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="F16Aerodynamics" >
+
+		<line id="Line_1" points="240.093,115.285 256.097,115.285" dx="-96.093" dy="-19.285" lineColor="128,0,0"  aliasing="true"  />
+
+		<line id="Line_2" points="208.096,83.2871 208.096,107.287" dx="-96.096" dy="-19.2871" lineColor="85,85,255"  aliasing="true"  />
+
+		<line id="Line_3" points="208.096,147.286 208.096,123.286" dx="-96.096" dy="-19.286" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_4" points="144.096,147.286 160.094,147.286" dx="-64.096" dy="-35.286" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_5" points="144.096,115.285 160.094,115.285" dx="-64.094" dy="-19.285" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_6" points="144.096,83.2843 160.094,83.2843" dx="-64.096" dy="-3.2843" lineColor="255,128,0"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="156.094,143.285 156.094,87.285 208.094,115.285" dx="-64.094" dy="-19.285" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<text id="Text_1" cx="11" cy="16.5" sx="22" sy="33" aliasing="true" dx="94" dy="79"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:600; color:#000000;">A</span></p></body></html>]]>
+		</text>
+
+		<port id="state_in" library="FLIGHT_SIM" type="State"  hotPort="state_in" >
+		
+				<symbol dx="112" dy="64" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="101" dy="37.001" />
+		
+		</port>
+
+		<port id="s_elevator" library="PORTS_LIB" type="analog_signal"  hotPort="s_elevator" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="33" cy="12" dx="7.5" dy="69" />
+		
+		</port>
+
+		<port id="s_aileron" library="PORTS_LIB" type="analog_signal"  hotPort="s_aileron" >
+		
+				<symbol dx="80.002" dy="95.999" onLabel="true" />
+		
+				<label cx="30" cy="12" dx="10.502" dy="84.999" />
+		
+		</port>
+
+		<port id="s_rudder" library="PORTS_LIB" type="analog_signal"  hotPort="s_rudder" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="29" cy="12" dx="11" dy="101" />
+		
+		</port>
+
+		<port id="s_Mach" library="PORTS_LIB" type="analog_signal"  hotPort="s_Mach" >
+		
+				<symbol dx="112" dy="128" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="101.5" dy="133" />
+		
+		</port>
+
+		<port id="forces_out" library="FLIGHT_SIM" type="Forces"  hotPort="forces_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="34" cy="12" dx="166" dy="85" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Geometry">
+				<var name="S"/>
+				<var name="c"/>
+				<var name="b"/>
+				<var name="xr"/>
+				<var name="xcg"/>
+			</tab>
+			<tab name="Force Coeff.">
+				<var name="Cxq_vs_alpha"/>
+				<var name="Cx_vs_elevator_alpha"/>
+				<var name="Cyp_vs_alpha"/>
+				<var name="Czq_vs_alpha"/>
+				<var name="Cz_vs_alpha"/>
+				<var name="Cyr_vs_alpha"/>
+				<var name="dCy_beta"/>
+				<var name="dCy_aileron"/>
+				<var name="dCy_rudder"/>
+			</tab>
+			<tab name="Moment Coeff.">
+				<var name="Cl_vs_abs_beta_alpha"/>
+				<var name="Clp_vs_alpha"/>
+				<var name="Clr_vs_alpha"/>
+				<var name="Cm_vs_elevator_alpha"/>
+				<var name="Cmq_vs_alpha"/>
+				<var name="Cn_vs_abs_beta_alpha"/>
+				<var name="Cnp_vs_alpha"/>
+				<var name="Cnr_vs_alpha"/>
+				<var name="dCl_aileron_vs_beta_alpha"/>
+				<var name="dCl_rudder_vs_beta_alpha"/>
+				<var name="dCn_aileron_vs_beta_alpha"/>
+				<var name="dCn_rudder_vs_beta_alpha"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

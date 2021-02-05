@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sPort="s_elevator" eShape="Sum_1" ePort="s_in_1" elPosition="34" lineColor="255,85,0"   />
+
+	<connector id="Connector_2" sShape="Trimmer" sPort="s_elevator" eShape="Sum_1" ePort="s_in_2" points="144,192" elPosition="35" lineColor="255,85,0"   />
+
+	<connector id="Connector_3" sShape="Sum_1" sPort="s_out" eShape="El_Actuator" ePort="s_in" points="144,128" elPosition="37" lineColor="255,85,0"   />
+
+	<connector id="Connector_4" sPort="s_aileron" eShape="Sum_2" ePort="s_in_1" elPosition="38" lineColor="255,85,0"   />
+
+	<connector id="Connector_5" sShape="Trimmer" sPort="s_aileron" eShape="Sum_2" ePort="s_in_2" points="160,240" elPosition="39" lineColor="255,85,0"   />
+
+	<connector id="Connector_6" sShape="Sum_2" sPort="s_out" eShape="Ail_Actuator" ePort="s_in" elPosition="40" lineColor="255,85,0"   />
+
+	<connector id="Connector_7" sShape="Sum_3" sPort="s_in_1" ePort="s_rudder" elPosition="43" lineColor="255,85,0"   />
+
+	<connector id="Connector_8" sShape="Sum_3" sPort="s_out" eShape="Rdr_Actuator" ePort="s_in" points="448,288" elPosition="44" lineColor="255,85,0"   />
+
+	<connector id="Connector_9" sShape="Trimmer" sPort="s_rudder" eShape="Sum_3" ePort="s_in_2" points="176,384" elPosition="45" lineColor="255,85,0"   />
+
+	<connector id="Connector_10" sShape="Trimmer" sPort="s_throttle" eShape="Addition_1" ePort="s_in_2" points="192,480" elPosition="47" lineColor="255,85,0"   />
+
+	<connector id="Connector_11" sShape="Addition_1" sPort="s_in_1" ePort="s_throttle" elPosition="48" lineColor="255,85,0"   />
+
+	<connector id="Connector_12" sShape="Addition_1" sPort="s_out" eShape="Engine" ePort="s_throttle" elPosition="52" lineColor="255,85,0"   />
+
+	<port id="s_throttle" library="PORTS_LIB" type="analog_signal" layer="1"  hotPort="s_throttle" direction="IN" elPosition="0" >
+	
+		<symbol dx="496" dy="64" onLabel="true" />
+	
+		<label cx="31" cy="12" dx="476.5" dy="30.5" />
+	
+	</port>
+
+	<port id="s_rudder" library="PORTS_LIB" type="analog_signal" layer="1"  hotPort="s_rudder" direction="IN" elPosition="1" >
+	
+		<symbol dx="384" dy="64" onLabel="true" />
+	
+		<label cx="29" cy="12" dx="348.5" dy="30.5" />
+	
+	</port>
+
+	<port id="s_aileron" library="PORTS_LIB" type="analog_signal" layer="1"  hotPort="s_aileron" direction="IN" elPosition="2" >
+	
+		<symbol dx="240" dy="64" onLabel="true" />
+	
+		<label cx="30" cy="12" dx="219.5" dy="30.5" />
+	
+	</port>
+
+	<port id="s_elevator" library="PORTS_LIB" type="analog_signal" layer="1"  hotPort="s_elevator" direction="IN" elPosition="3" >
+	
+		<symbol dx="80" dy="64" onLabel="true" />
+	
+		<label cx="33" cy="12" dx="60.5" dy="30.5" />
+	
+	</port>
+
+	<component id="Trimmer" library="FLIGHT_SIM" type="Trimmer" layer="1" elPosition="15"  hotPort="s_elevator" >
+	
+		<symbol cx="120" cy="80.0448" sx="89" sy="57.4104" dx="48.0448" dy="567.955" rotation="-90" onLabel="true" />
+	
+		<label cx="27.5" cy="12" dx="149.545" dy="715.955" />
+	
+	</component>
+
+	<component id="Sum_1" library="CONTROL" type="Addition" layer="1" elPosition="20"  hotPort="s_in_1" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dy="79.9996" onLabel="true" />
+	
+		<label cx="24.5" cy="12" dx="87.5" dy="197.879" />
+	
+	</component>
+
+	<component id="El_Actuator" library="FLIGHT_SIM" type="Actuator" layer="1" elPosition="21"  hotPort="s_out" >
+	
+		<symbol cx="119.999" cy="80" sx="88.999" sy="17.4999" dx="480.001" dy="48" onLabel="true" />
+	
+		<label cx="38" cy="12" dx="562.001" dy="137" />
+	
+		<instanceData>
+			<datum id="Rtau" value="20.02" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Sum_2" library="CONTROL" type="Addition" layer="1" elPosition="22"  hotPort="s_in_1" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="160" dy="128" onLabel="true" />
+	
+		<label cx="24.5" cy="12" dx="219.5" dy="238.5" />
+	
+	</component>
+
+	<component id="Ail_Actuator" library="FLIGHT_SIM" type="Actuator" layer="1" elPosition="23"  hotPort="s_out" >
+	
+		<symbol cx="119.999" cy="80" sx="88.999" sy="17.4999" dx="480.001" dy="128" onLabel="true" />
+	
+		<label cx="39.5" cy="12" dx="565.001" dy="228" />
+	
+		<instanceData>
+			<datum id="Rtau" value="20.2" />
+			<datum id="RL" value="80" />
+			<datum id="DL" value="21.5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Rdr_Actuator" library="FLIGHT_SIM" type="Actuator" layer="1" elPosition="24"  hotPort="s_out" >
+	
+		<symbol cx="119.999" cy="80" sx="88.999" sy="17.4999" dx="480.001" dy="208" onLabel="true" />
+	
+		<label cx="42" cy="12" dx="569.001" dy="307" />
+	
+		<instanceData>
+			<datum id="Rtau" value="20.2" />
+			<datum id="RL" value="120" />
+			<datum id="DL" value="30" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Sum_3" library="CONTROL" type="Addition" layer="1" elPosition="25"  hotPort="s_in_1" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="304" dy="272" onLabel="true" />
+	
+		<label cx="24.5" cy="12" dx="395.5" dy="398.5" />
+	
+	</component>
+
+	<component id="Addition_1" library="CONTROL" type="Addition" layer="1" elPosition="26"  hotPort="s_in_1" >
+	
+		<symbol cx="112" cy="89.875" sx="73" sy="53.25" dx="416" dy="368" onLabel="true" />
+	
+		<label cx="34.5" cy="12" dx="491" dy="494.5" />
+	
+	</component>
+
+	<port id="state_out" library="FLIGHT_SIM" type="State" layer="1"  hotPort="state_out" direction="OUT" elPosition="27" >
+	
+		<symbol dx="1024" dy="320" onLabel="true" />
+	
+		<label cx="31" cy="12" dx="993" dy="323.5" />
+	
+	</port>
+
+	<component id="Engine" library="FLIGHT_SIM" type="F16Engine" layer="1" elPosition="29"  hotPort="s_throttle" >
+	
+		<symbol cx="120" cy="80" sx="89" sy="73" dx="656" dy="368" onLabel="true" />
+	
+		<label cx="24" cy="12" dx="785.999" dy="467.998" />
+	
+	</component>
+
+	<component id="Frame" library="FLIGHT_SIM" type="Frame" layer="1" elPosition="31"  hotPort="forces_in" >
+	
+		<symbol cx="119.999" cy="80.0448" sx="89.002" sy="57.4104" dx="800.002" dy="240" onLabel="true" />
+	
+		<label cx="22.5" cy="12" dx="898.001" dy="355" />
+	
+		<instanceData>
+			<datum id="mass" value="9071.8" />
+			<datum id="Ixx" value="28384" />
+			<datum id="Iyy" value="166832" />
+			<datum id="Izz" value="188610" />
+			<datum id="Ixz" value="2935" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_13" sShape="Engine" sPort="forces_out" eShape="Frame" ePort="forces_in" points="880,448" elPosition="60" lineColor="128,0,0"   />
+
+	<connector id="Connector_14" sPort="state_out" eShape="Frame" ePort="state_out" elPosition="62" lineColor="85,85,255"   />
+
+	<connector id="Connector_15" sShape="Frame" sPort="state_out" eShape="Trimmer" ePort="state_in" points="960.002,688" elPosition="63" lineColor="85,85,255"   />
+
+	<connector id="Connector_16" sShape="Frame" sPort="state_out" eShape="Engine" ePort="state_in" points="960,544 768,544" elPosition="65" lineColor="85,85,255"   />
+
+	<component id="Aero" library="FLIGHT_SIM" type="F16Aerodynamics" layer="1" elPosition="32"  hotPort="s_Mach" >
+	
+		<symbol cx="120" cy="96" sx="89" sy="73" dx="656" dy="112" onLabel="true" />
+	
+		<label cx="17.5" cy="12" dx="798" dy="222.463" />
+	
+	</component>
+
+	<connector id="Connector_17" sShape="Aero" sPort="s_Mach" eShape="Engine" ePort="s_Mach" elPosition="66" lineColor="255,85,0"   />
+
+	<connector id="Connector_18" sShape="Aero" sPort="forces_out" eShape="Frame" ePort="forces_in" points="880,208" elPosition="67" lineColor="128,0,0"   />
+
+	<connector id="Connector_19" sShape="Frame" sPort="state_out" eShape="Aero" ePort="state_in" points="960,320 960,128 768,128" elPosition="68" lineColor="85,85,255"   />
+
+	<connector id="Connector_20" sShape="El_Actuator" sPort="s_out" eShape="Aero" ePort="s_elevator" points="640,192" elPosition="69" lineColor="255,85,0"   />
+
+	<connector id="Connector_21" sShape="Ail_Actuator" sPort="s_out" eShape="Aero" ePort="s_aileron" points="640,207.999" elPosition="70" lineColor="255,85,0"   />
+
+	<connector id="Connector_22" sShape="Rdr_Actuator" sPort="s_out" eShape="Aero" ePort="s_rudder" points="640,224" elPosition="71" lineColor="255,85,0"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+&#34;F16 example&#34;
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+	<usedLibrary name="PORTS_LIB" version="1.1" auto="false" />
+</schematic>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_Clutch" >
+
+		<rect id="Rectangle_1" cx="417.023" cy="118.814" sx="4" sy="4" dx="-303.023" dy="-36.814" color="0,0,0"  />
+
+		<line id="Line_1" points="423.023,128.814 443.023,128.814"  end_arrow="true" dx="-287.023" dy="-32.814" lineColor="100,100,100"   />
+
+		<line id="Line_2" points="399.023,128.814 419.023,128.814"  end_arrow="true" dx="-303.023" dy="-32.814" lineColor="100,100,100"   />
+
+		<line id="Line_3" points="415.023,124.815 415.023,108.815 447.023,108.815 447.023,124.815" dx="-303.023" dy="-44.815"  />
+
+		<line id="Line_4" points="423.023,88.815 423.023,104.815"  end_arrow="true" dx="-295.023" dy="-40.815" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_3" cx="417.023" cy="118.814" sx="4" sy="4" dx="-275.023" dy="-36.814" color="0,0,0"  />
+
+		<rect id="Rectangle_2" cx="419.023" cy="128.814" sx="8" sy="48" dx="-299.023" dy="-32.814" lineWidth="1.5"  color="220,220,220"  />
+
+		<rect id="Rectangle_4" cx="427.023" cy="128.814" sx="8" sy="48" dx="-291.023" dy="-32.814" lineWidth="1.5"  color="220,220,220"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_rot"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="inPort" library="PORTS_LIB" type="analog_signal"  hotPort="inPort" >
+		
+				<symbol dx="128" dy="48" onLabel="true" />
+		
+				<label cx="21" cy="12" dx="106.294" dy="14.2835" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="145.5" cy="110" sx="99" sy="12" variable="m_in.T"  headerText="m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-52" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="144.5" cy="118" sx="97" sy="12" variable="m_in.n"  headerText="m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-52" dy="24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="228" cy="114" sx="104" sy="12" variable="m_out.T"  headerText="m_out.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="227" cy="130" sx="102" sy="12" variable="m_out.n"  headerText="m_out.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

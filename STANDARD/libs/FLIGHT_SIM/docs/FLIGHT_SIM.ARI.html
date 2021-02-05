@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.ARI<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="ARI">ARI</a> IS_A <a href="../../CONTROL/docs/CONTROL.SI2SO.html">CONTROL.SI2SO</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/FLIGHT_SIM.ARI.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">ARI actuator</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>s_in_1&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Inlet signal&nbsp;</td></tr>
+
+<tr><td>s_in_2&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Inlet signal&nbsp;</td></tr>
+
+<tr><td>s_out&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Outlet signal&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Scaler for ARI gain calculation&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>ADL&nbsp;</td><td>REAL &nbsp;</td><td>25&nbsp;</td><td>&nbsp;</td><td>ARI limit due to aileron defection&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>B&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Adder for ARI gain calculation&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">CLOSED:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>PARAM/DATUM/PORT&nbsp;</b></color></td>
+<td><color="black"><b>VALUE
+&nbsp;</b></color></td>
+</tr>
+<tr><td>n</td><td>1</td>
+</tr></table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>K_ARI&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>ARI gain&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>u&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>limited input signal&nbsp;</td><td>rad&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

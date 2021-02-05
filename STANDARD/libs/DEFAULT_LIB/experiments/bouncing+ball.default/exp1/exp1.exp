@@ -1,0 +1,16 @@
+EXPERIMENT exp1 ON bouncingBall.default
+   INIT
+      -- Dynamic variables
+      h = 10.
+      h' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      RDIGITS = 8
+
+      TSTOP = 15.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

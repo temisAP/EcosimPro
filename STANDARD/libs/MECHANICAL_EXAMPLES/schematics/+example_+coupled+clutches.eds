@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="signal_clutch3" sPort="s_out" eShape="clutch3" ePort="inPort" elPosition="0" lineColor="255,128,0"   />
+
+	<connector id="Connector_2" sShape="signal_clutch2" sPort="s_out" eShape="clutch2" ePort="inPort" elPosition="1" lineColor="255,128,0"   />
+
+	<connector id="Connector_3" sShape="signal_clutch1" sPort="s_out" eShape="clutch1" ePort="inPort" elPosition="2" lineColor="255,128,0"   />
+
+	<connector id="Connector_4" sShape="J4" sPort="m_out" eShape="torque2" ePort="m_out" elPosition="3" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_5" sShape="torqueZero" sPort="s_out" eShape="torque2" ePort="s_in" elPosition="4" dy="16" lineColor="255,128,0"   />
+
+	<connector id="Connector_6" sShape="sineSignal" sPort="s_out" eShape="torque1" ePort="s_in" elPosition="5" dy="16" lineColor="255,128,0"   />
+
+	<connector id="Connector_7" sShape="torque1" sPort="m_out" eShape="J1" ePort="m_in" elPosition="6" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_8" sShape="clutch3" sPort="m_out" eShape="J4" ePort="m_in" elPosition="7" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_9" sShape="J3" sPort="m_out" eShape="clutch3" ePort="m_in" elPosition="8" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_10" sShape="clutch2" sPort="m_out" eShape="J3" ePort="m_in" elPosition="9" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_11" sShape="J2" sPort="m_out" eShape="clutch2" ePort="m_in" elPosition="10" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_12" sShape="clutch1" sPort="m_out" eShape="J2" ePort="m_in" elPosition="11" dy="16" lineColor="151,161,158"   />
+
+	<connector id="Connector_13" sShape="J1" sPort="m_out" eShape="clutch1" ePort="m_in" elPosition="12" dy="16" lineColor="151,161,158"   />
+
+	<component id="J1" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="0"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="128" dy="320" />
+	
+		<label cx="10.5" cy="12" dx="240" dy="448" />
+	
+		<instanceData>
+			<datum id="w0" value="10" />
+		</instanceData>
+	
+	</component>
+
+	<component id="clutch1" library="MECHANICAL" type="R_Clutch" layer="1" elPosition="1"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="82.125" sx="73" sy="77.25" dx="224" dy="319.875" />
+	
+		<label cx="25" cy="12" dx="320" dy="448" />
+	
+	</component>
+
+	<component id="signal_clutch3" library="CONTROL" type="AnalogSource" layer="1" elPosition="2"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="630.125" dy="73.875" rotation="90" />
+	
+		<label cx="45.5" cy="12" dx="688" dy="112" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Step" />
+			<datum id="Tstart" value="0.9" />
+			<datum id="Period" value="0" />
+		</instanceData>
+	
+	</component>
+
+	<component id="signal_clutch2" library="CONTROL" type="AnalogSource" layer="1" elPosition="3"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="438.125" dy="73.875" rotation="90" />
+	
+		<label cx="45.5" cy="12" dx="496" dy="112" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Step" />
+			<datum id="Tstart" value="0.4" />
+			<datum id="Period" value="0" />
+		</instanceData>
+	
+	</component>
+
+	<component id="signal_clutch1" library="CONTROL" type="AnalogSource" layer="1" elPosition="4"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="246.125" dy="73.875" rotation="90" />
+	
+		<label cx="45.5" cy="12" dx="304" dy="112" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Sine" />
+			<datum id="Phase" value="1.57" />
+			<datum id="Period" value="5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="torqueZero" library="CONTROL" type="AnalogSource" layer="1" elPosition="5"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="924.25" dy="320" rotation="180" flipY="true" />
+	
+		<label cx="34.5" cy="12" dx="992" dy="448" />
+	
+		<instanceData>
+			<datum id="Amp" value="0" />
+		</instanceData>
+	
+	</component>
+
+	<component id="sineSignal" library="CONTROL" type="AnalogSource" layer="1" elPosition="6"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="-32" dy="320" />
+	
+		<label cx="34" cy="12" dx="32" dy="448" />
+	
+		<instanceData>
+			<datum id="source" value="Source_Sine" />
+			<datum id="Amp" value="10" />
+			<datum id="Period" value="0.2" />
+		</instanceData>
+	
+	</component>
+
+	<component id="torque2" library="MECHANICAL" type="R_ActuatorTorque" layer="1" elPosition="7"  hotPort="m_out" >
+	
+		<symbol cx="112" cy="68" sx="73" sy="56" dx="816" dy="360" rotation="180" />
+	
+		<label cx="25.5" cy="12" dx="896" dy="448" />
+	
+	</component>
+
+	<component id="torque1" library="MECHANICAL" type="R_ActuatorTorque" layer="1" elPosition="8"  hotPort="s_in" >
+	
+		<symbol cx="112" cy="68" sx="73" sy="56" dx="48" dy="336" />
+	
+		<label cx="25.5" cy="12" dx="128" dy="448" />
+	
+	</component>
+
+	<component id="J2" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="9"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="320" dy="320" />
+	
+		<label cx="10.5" cy="12" dx="432" dy="448" />
+	
+	</component>
+
+	<component id="clutch2" library="MECHANICAL" type="R_Clutch" layer="1" elPosition="10"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="82.125" sx="73" sy="77.25" dx="416" dy="319.875" />
+	
+		<label cx="25" cy="12" dx="512" dy="448" />
+	
+	</component>
+
+	<component id="J3" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="11"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="512" dy="320" />
+	
+		<label cx="10.5" cy="12" dx="624" dy="448" />
+	
+	</component>
+
+	<component id="clutch3" library="MECHANICAL" type="R_Clutch" layer="1" elPosition="12"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="82.125" sx="73" sy="77.25" dx="608" dy="319.875" />
+	
+		<label cx="25" cy="12" dx="704" dy="448" />
+	
+	</component>
+
+	<component id="J4" library="MECHANICAL" type="R_Inertia" layer="1" elPosition="13"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.5" dx="704" dy="320" />
+	
+		<label cx="10.5" cy="12" dx="816" dy="448" />
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+	<usedLibrary name="MECHANICAL" version="3.1" auto="false" />
+</schematic>

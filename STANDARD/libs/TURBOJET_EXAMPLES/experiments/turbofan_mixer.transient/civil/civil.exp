@@ -1,0 +1,77 @@
+EXPERIMENT civil ON turbofan_mixer.transient
+   DECLS
+      TABLE_1D FuelFlow = {
+            {0., 1., 2. , 12. , 14., 20.},
+            {1., 1., 0.5, 0.5, 1., 1.}
+         }
+
+   INIT
+      -- Dynamic variables
+      compressor.N = 12000.
+      fan.N = 4000.
+
+      -- Algebraic variables
+      compressor.beta = 0.7
+
+      fan.BPR = 6.
+      fan.beta = 0.7
+      fan.g_in.W = 150.
+
+      hp_turbine.g_out.T = 1500.
+
+      mixer.Ps1 = 1.5e+5
+      mixer.g_in1.T = 1200.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+      fuel_valve.s_flow.signal[1] = 0.7755762949 * timeTableInterp(TIME, FuelFlow)
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      ABS_ERROR = 5.e-4
+      REL_ERROR = 5.e-4
+
+      TIME = 0.
+
+      burner.GLP = 0.003181302028
+      burner.VOL = 0.008333202331
+
+      compressor.CG1 = 18.43105891
+      compressor.CG2 = 0.9095852489
+      compressor.CG4 = 1380.314354
+      compressor.I = 8.
+      compressor.ND = 12013.63464
+
+      fan.CG1 = 191.9698207
+      fan.CG2 = 0.9095852489
+      fan.CG4 = 208.5512352
+      fan.I = 15.
+      fan.ND = 4350.465819
+
+      hp_turbine.CG1 = 2.629129147
+      hp_turbine.CG2 = 0.92
+      hp_turbine.CG3 = 282.8427125
+      hp_turbine.CG4 = 252.3007032
+      hp_turbine.I = 8.
+
+      lp_turbine.CG1 = 7.005468445
+      lp_turbine.CG2 = 0.92
+      lp_turbine.CG3 = 105.7771185
+      lp_turbine.CG4 = 271.3363201
+      lp_turbine.I = 15.
+
+      nozzle.A_exit = 0.5011359814
+
+      mixer.A1 = 0.08385979762
+      mixer.A2 = 0.4972232076
+
+      STEADY()
+
+      TSTOP = 30.
+      CINT = 0.25
+      INTEG()
+
+END EXPERIMENT

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES_EXAMPLES.html">LPRES_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">LPRES_EXAMPLES.TurbojetEngine_performance<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="TurbojetEngine_performance">TurbojetEngine_performance</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>param_HPC&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>param_LPC&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>pi_HPC&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>pi_HPT&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>pi_LPC&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>pi_LPT&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>HPC&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Compressor.html">LPRES.Compressor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>LPC&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Compressor.html">LPRES.Compressor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>GG&nbsp;</td><td><a href="../../LPRES/docs/LPRES.GasGen.html">LPRES.GasGen</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Inlet&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Nozzle&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Nozzle.html">LPRES.Nozzle</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>HPT&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Turbine_ch.html">LPRES.Turbine_ch</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>LPT&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Turbine_ch.html">LPRES.Turbine_ch</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>GG.M_P&nbsp;</td><td>30&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Molar mass of the products using a stoichiometric mixture&nbsp;</td><td>"g/mol"&nbsp;</td></tr>
+
+<tr><td>GG.OF&nbsp;</td><td>1 / 0.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mixture ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>GG.OF_st&nbsp;</td><td>15.6&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Stoichiometric mixture ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>GG.Q_comb&nbsp;</td><td>44000000 / 15.6&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Heat of combustion per oxidant mass flow unit&nbsp;</td><td>"J/kg"&nbsp;</td></tr>
+
+<tr><td>GG.TPL_d&nbsp;</td><td>0.96&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design total pressure loss&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>GG.W_F0&nbsp;</td><td>0.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial fuel mass flow for iterative calculations&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>GG.cp_P&nbsp;</td><td>1000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Specific heat at constant pressure of the products using a stoichiometric mixture&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>GG.eta_d&nbsp;</td><td>0.99&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design combustion efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPC.A_in&nbsp;</td><td>0.35&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>HPC.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>HPC.Type_AC&nbsp;</td><td>Coefficients&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#AngCoef" data-ajax='false'>LPRES.AngCoef</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>HPC.U_0&nbsp;</td><td>500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>HPC.alpha_2r&nbsp;</td><td>-30&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Relative current angle in section 2 if Type_AC=Angles&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>HPC.eta_d&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPC.phi_d&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPC.pi&nbsp;</td><td>5.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design compression ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPC.psi_d&nbsp;</td><td>0.7&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient if Type_AC=Coefficients&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPC.r_m&nbsp;</td><td>0.3&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>HPT.A_in&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>HPT.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Turbines" data-ajax='false'>LPRES.Type_Turbines</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>HPT.W&nbsp;</td><td>25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>HPT.alpha_2&nbsp;</td><td>45&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Flow angle in section 2&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>HPT.eta_d&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPT.pi&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design expansion ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HPT.rpm&nbsp;</td><td>10000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed [rpm]&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+<tr><td>Inlet.Tt&nbsp;</td><td>288.15&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Inlet.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Inlet.fluid&nbsp;</td><td>Air&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet.pt&nbsp;</td><td>101325&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>LPC.A_in&nbsp;</td><td>0.35&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>LPC.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>LPC.Type_AC&nbsp;</td><td>Coefficients&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#AngCoef" data-ajax='false'>LPRES.AngCoef</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>LPC.U_0&nbsp;</td><td>500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>LPC.alpha_2r&nbsp;</td><td>-30&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Relative current angle in section 2 if Type_AC=Angles&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>LPC.eta_d&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPC.phi_d&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPC.pi&nbsp;</td><td>4&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design compression ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPC.psi_d&nbsp;</td><td>0.7&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient if Type_AC=Coefficients&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPC.r_m&nbsp;</td><td>0.3&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>LPT.A_in&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>LPT.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Turbines" data-ajax='false'>LPRES.Type_Turbines</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>LPT.W&nbsp;</td><td>25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>LPT.alpha_2&nbsp;</td><td>45&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Flow angle in section 2&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>LPT.eta_d&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPT.pi&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design expansion ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>LPT.rpm&nbsp;</td><td>4000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed [rpm]&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+<tr><td>Nozzle.A&nbsp;</td><td>0.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Nozzle.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:56)</font></p>
+</body>
+</html>

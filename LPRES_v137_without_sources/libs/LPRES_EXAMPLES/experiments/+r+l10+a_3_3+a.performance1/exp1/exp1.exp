@@ -1,0 +1,34 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: RL10A_3_3A
+ PARTITION: performance1
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON RL10A_3_3A.performance1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		Combustion_Chamber.M_r = 100
+      Split_Frac.f_in.Tt = 170
+      Combustion_Chamber.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+      TCV.dp = 1613370 * (0.5 + TIME / 40.)
+
+   BODY
+      DEBUG_LEVEL= 1   		
+      TOLERANCE = 1e-006
+		
+      TIME = 0
+      TSTOP = 25
+      CINT = 0.1
+      INTEG()
+		
+END EXPERIMENT

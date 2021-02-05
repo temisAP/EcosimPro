@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit3.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit3.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 46<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>Cntrl_pid1.vi[1] = <b><font color="red">Cntrl_pid1.vi[1].</font></b><br/>
+<a name="e2">[E-2] </a>Cntrl_pid1.yf[1] = <b><font color="red">Cntrl_pid1.yf[1].</font></b><br/>
+<a name="e3">[E-3] </a>HydTank1.H[1] = <b><font color="red">HydTank1.H[1].</font></b><br/>
+<a name="e4">[E-4] </a>HydTank2.H[1] = <b><font color="red">HydTank2.H[1].</font></b><br/>
+<a name="e5">[E-5] </a>HydPipe1.hp_in.p = HydTank1.p0 + 9806 * (HydTank1.H[1] - HydTank1.z_out)<br/>
+<a name="e6">[E-6] </a>HydPipe1.A = 0.785398163397448 * HydPipe1.d ** 2<br/>
+<a name="e7">[E-7] </a>HydPipe1.w_lam = HydPipe1.A * sqrt(2 * HydPipe1.d * HydPipe1.dp_lam * 1000 / (HydPipe1.f * HydPipe1.l))<br/>
+<a name="e8">[E-8] </a>HydTank2.hp_in.p = HydTank2.p0 + 9806 * (HydTank2.H[1] - HydTank2.z_in)<br/>
+<a name="e9">[E-9] </a>HydPipe2.A = 0.785398163397448 * HydPipe2.d ** 2<br/>
+<a name="e10">[E-10] </a>HydPipe2.w_lam = HydPipe2.A * sqrt(2 * HydPipe2.d * HydPipe2.dp_lam * 1000 / (HydPipe2.f * HydPipe2.l))<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v58" data-ajax='false'><font color="green">HydPipe1.hp_in.w</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v58" data-ajax='false'><font color="green">HydPipe1.hp_in.w</font></a>&nbsp;</td><td>kg/s&nbsp;</td><td>Mass flow&nbsp;</td><td>&nbsp;</td><td>[E-23] IMPL(<b><font color="green">HydPipe1.hp_in.w</font></b>) <b><font color="green">HydPipe1.hp_in.w</font></b> = HydValve1.Av * 31.6227766016838 * fsqrt(HydValve1.hp_in.p - HydFlowMeter1.hp_in.p - 9806 * (HydValve1.z_in - HydValve1.z_out), HydValve1.dp_lam)&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e11">[E-11] </a>HydFlowMeter1.var[1] = <b><font color="green">HydPipe1.hp_in.w</font></b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e12">[E-12] </a>Cntrl_pid1.s_var.signal[1] = HydFlowMeter1.gain[1] * HydFlowMeter1.var[1] + HydFlowMeter1.bias[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e13">[E-13] </a>Cntrl_pid1.y[1] = Cntrl_pid1.s_var.signal[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e14">[E-14] </a>Cntrl_pid1.e[1] = Cntrl_pid1.s_set.signal[1] - Cntrl_pid1.y[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e15">[E-15] </a>Cntrl_pid1.r[1] = Cntrl_pid1.y[1] + Cntrl_pid1.e[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e16">[E-16] </a>Cntrl_pid1.yf[1]' = (Cntrl_pid1.y[1] - Cntrl_pid1.yf[1]) / (Cntrl_pid1.alpha[1] * Cntrl_pid1.Td[1])<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e17">[E-17] </a>Cntrl_pid1.v[1] = Cntrl_pid1.k[1] * (Cntrl_pid1.beta[1] * Cntrl_pid1.r[1] - Cntrl_pid1.y[1] - Cntrl_pid1.Td[1] * Cntrl_pid1.yf[1]') + Cntrl_pid1.vi[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e18">[E-18] </a>Cntrl_pid1.u[1] =  ZONE[1] (Cntrl_pid1.v[1] &gt; Cntrl_pid1.u_max[1]) Cntrl_pid1.u_max[1] ZONE[1] (Cntrl_pid1.v[1] &lt; Cntrl_pid1.u_min[1]) Cntrl_pid1.u_min[1]	  OTHERS Cntrl_pid1.v[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e19">[E-19] </a>HydValve1.s_position.signal[1] = Cntrl_pid1.u[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e20">[E-20] </a>HydValve1.Av = HydValve1.Avo * HydValve1.s_position.signal[1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e21">[E-21] </a>HydFlowMeter1.hp_in.p = 0.5 * HydPipe2.f * HydPipe2.l * fpow2(<b><font color="green">HydPipe1.hp_in.w</font></b>, HydPipe2.w_lam) / (HydPipe2.d * 1000 * HydPipe2.A ** 2) - 9806 * (HydPipe2.z_in - HydPipe2.z_out) + HydTank2.hp_in.p<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e22">[E-22] </a>HydValve1.hp_in.p = HydPipe1.hp_in.p - (0.5 * HydPipe1.f * HydPipe1.l * fpow2(<b><font color="green">HydPipe1.hp_in.w</font></b>, HydPipe1.w_lam) / (HydPipe1.d * 1000 * HydPipe1.A ** 2) - 9806 * (HydPipe1.z_in - HydPipe1.z_out))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e23">[E-23] </a>IMPL(<b><font color="green">HydPipe1.hp_in.w</font></b>) <b><font color="green">HydPipe1.hp_in.w</font></b> = HydValve1.Av * 31.6227766016838 * fsqrt(HydValve1.hp_in.p - HydFlowMeter1.hp_in.p - 9806 * (HydValve1.z_in - HydValve1.z_out), HydValve1.dp_lam)	{I@HydPipe1.hp_in.w}<br/>
+</b><hr>END OF BOX 1<hr><a name="e24">[E-24] </a>Cntrl_pid1.vil[1] =  ZONE[3] (Cntrl_pid1.vi[1] &gt; Cntrl_pid1.u_max[1]) Cntrl_pid1.u_max[1] ZONE[3] (Cntrl_pid1.vi[1] &lt; Cntrl_pid1.u_min[1]) Cntrl_pid1.u_min[1]	  OTHERS Cntrl_pid1.vi[1]<br/>
+<a name="e25">[E-25] </a>Cntrl_pid1.es[1] =  ZONE[2] (Cntrl_pid1.end_pos == end_I) Cntrl_pid1.vil[1] - Cntrl_pid1.vi[1]	  OTHERS Cntrl_pid1.u[1] - Cntrl_pid1.v[1]<br/>
+<a name="e26">[E-26] </a>Cntrl_pid1.vi[1]' = Cntrl_pid1.k[1] / Cntrl_pid1.Ti[1] * Cntrl_pid1.e[1] + Cntrl_pid1.es[1] / (Cntrl_pid1.gamma[1] * Cntrl_pid1.Ti[1])<br/>
+<a name="e27">[E-27] </a>HydTank1.H[1]' = (HydTank1.hp_in.w - <b><font color="green">HydPipe1.hp_in.w</font></b>) / (1000 * HydTank1.A)<br/>
+<a name="e28">[E-28] </a>HydTank1.m = HydTank1.H[1] * 1000 * HydTank1.A<br/>
+<a name="e29">[E-29] </a>HydTank1.hp_in.p = HydTank1.p0 + 9806 * (HydTank1.H[1] - HydTank1.z_in)<br/>
+<a name="e30">[E-30] </a>HydTank1.hp_in.h = HydTank1.hp_in.T / 0.000238891543239369<br/>
+<a name="e31">[E-31] </a>HydTank1.hp_in.wh = HydTank1.hp_in.w * HydTank1.hp_in.h<br/>
+<a name="e32">[E-32] </a>HydValve1.hp_in.h = <b><font color="red">HydTank1.T</font></b> / 0.000238891543239369<br/>
+<a name="e33">[E-33] </a>HydPipe1.hp_in.wh = <b><font color="green">HydPipe1.hp_in.w</font></b> * HydValve1.hp_in.h<br/>
+<a name="e34">[E-34] </a>HydTank1.T' = (HydTank1.hp_in.wh - HydPipe1.hp_in.wh - (HydTank1.hp_in.w - <b><font color="green">HydPipe1.hp_in.w</font></b>) * 4186 * <b><font color="red">HydTank1.T</font></b>) / (HydTank1.m * 4186)<br/>
+<a name="e35">[E-35] </a>HydTank1.s_level.signal[1] = HydTank1.H[1]<br/>
+<a name="e36">[E-36] </a>HydTank2.H[1]' = (<b><font color="green">HydPipe1.hp_in.w</font></b> - HydTank2.hp_out.w) / (1000 * HydTank2.A)<br/>
+<a name="e37">[E-37] </a>HydTank2.m = HydTank2.H[1] * 1000 * HydTank2.A<br/>
+<a name="e38">[E-38] </a>HydTank2.hp_out.p = HydTank2.p0 + 9806 * (HydTank2.H[1] - HydTank2.z_out)<br/>
+<a name="e39">[E-39] </a>HydTank2.hp_in.wh = <b><font color="green">HydPipe1.hp_in.w</font></b> * HydValve1.hp_in.h<br/>
+<a name="e40">[E-40] </a>HydTank2.hp_out.h = <b><font color="red">HydTank2.T</font></b> / 0.000238891543239369<br/>
+<a name="e41">[E-41] </a>HydTank2.hp_out.wh = HydTank2.hp_out.w * HydTank2.hp_out.h<br/>
+<a name="e42">[E-42] </a>HydTank2.T' = (HydTank2.hp_in.wh - HydTank2.hp_out.wh - (<b><font color="green">HydPipe1.hp_in.w</font></b> - HydTank2.hp_out.w) * 4186 * <b><font color="red">HydTank2.T</font></b>) / (HydTank2.m * 4186)<br/>
+<a name="e43">[E-43] </a>HydTank2.s_level.signal[1] = HydTank2.H[1]<br/>
+<a name="e44">[E-44] </a>HydFlowMeter1.hp_in.wh = <b><font color="green">HydPipe1.hp_in.w</font></b> * HydValve1.hp_in.h<br/>
+<a name="e45">[E-45] </a>HydPipe2.hp_in.wh = <b><font color="green">HydPipe1.hp_in.w</font></b> * HydValve1.hp_in.h<br/>
+<a name="e46">[E-46] </a>HydValve1.hp_in.wh = <b><font color="green">HydPipe1.hp_in.w</font></b> * HydValve1.hp_in.h<br/>
+</body></html>

@@ -1,0 +1,73 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DEFAULT_LIB
+ COMPONENT: _LIBRARY_MISC
+ PARTITION: experiments
+ EXPERIMENT: calculateSum
+ TEMPLATE: EXPERIMENT STANDALONE
+ DESCRIPTION: USE OF FOR STATEMENT
+ CREATION DATE: 09/03/2015
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT calculateSum
+
+DECLS
+   CONST INTEGER SIZE = 10
+	INTEGER i --counter
+	INTEGER result = 0 -- variable with the addition of all values 
+	INTEGER numbersToSum[SIZE] = {1,2,3,4,5,6,7,8,9,10} --vector of values
+
+BODY
+
+	result = 0 --reset result
+	WRITE("\nTOTAL ADDITION\n")
+	FOR( i=1; i <= SIZE; i = i+1) //Run all the members of the vector
+	 
+	   IF ( i == 1) THEN
+   	   WRITE("  %i\n", numbersToSum[i]) //Show the first number of the addition
+		ELSE
+   		WRITE("+ %i\n", numbersToSum[i]) //Show plus symbol in the following numbers
+		END IF
+
+		result = numbersToSum[i] + result
+	END FOR
+	
+	WRITE("-----\n" )
+	WRITE("  %i\n", result )
+	
+	result = 0 --reset result
+	WRITE("\nTOTAL ADDITION OF EVEN POSITIONS\n")
+	FOR( i=2; i <= SIZE; i = i+2)//Run all the even positions of the vector
+	
+	   IF ( i == 1) THEN
+   	   WRITE("  %i\n", numbersToSum[i])
+		ELSE
+   		WRITE("+ %i\n", numbersToSum[i])
+		END IF
+		
+		result = numbersToSum[i] + result
+	END FOR
+
+	WRITE("-----\n" )
+	WRITE("  %i\n", result )
+	
+	result = 0 --reset result
+	WRITE("\nTOTAL ADDITION OF ODD POSITIONS\n")
+	i=1
+	WHILE( i <= SIZE) //Run all the odd positions of the vector
+	
+ 	 	IF ( i == 1) THEN
+   	   WRITE("  %i\n", numbersToSum[i])
+		ELSE
+   		WRITE("+ %i\n", numbersToSum[i])
+		END IF
+		
+		result = numbersToSum[i] + result
+		
+		i = i+2
+	END WHILE
+
+	WRITE("-----\n" )
+	WRITE("  %i\n", result )
+	
+
+END EXPERIMENT

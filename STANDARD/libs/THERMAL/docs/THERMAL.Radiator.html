@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL.Radiator<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Radiator">Radiator</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/THERMAL.Radiator.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">2D thermal model of a radiator</font><br/>
+<br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>nx&nbsp;</td><td>INTEGER &nbsp;</td><td>5&nbsp;</td><td>Number of nodes in cross direction&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>ny&nbsp;</td><td>INTEGER &nbsp;</td><td>5&nbsp;</td><td>Number of nodes in tube direction&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>tp_1&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Thermal port to sink 1&nbsp;</td></tr>
+
+<tr><td>tp_2&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Thermal port to sink 2&nbsp;</td></tr>
+
+<tr><td>tp_in&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = ny) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Radiator array of thermal inlets ports&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>F1&nbsp;</td><td>REAL &nbsp;</td><td>0.9&nbsp;</td><td>&nbsp;</td><td>Average view factor of sink node 1 from side 1&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>F2&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Average view factor of sink node 2 from side 2&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Lx&nbsp;</td><td>REAL &nbsp;</td><td>0.2&nbsp;</td><td>&nbsp;</td><td>Length of the fin&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Ly&nbsp;</td><td>REAL &nbsp;</td><td>5&nbsp;</td><td>&nbsp;</td><td>Width of the fin&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>TemperatureDependance&nbsp;</td><td>BOOLEAN &nbsp;</td><td> TRUE &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>To&nbsp;</td><td>REAL &nbsp;</td><td>290&nbsp;</td><td>&nbsp;</td><td>Initial temperature&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>alpha1&nbsp;</td><td>REAL &nbsp;</td><td>0.25&nbsp;</td><td>&nbsp;</td><td>Solar absorptance of side 1 of the fin&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>alpha2&nbsp;</td><td>REAL &nbsp;</td><td>0.25&nbsp;</td><td>&nbsp;</td><td>Solar absorptance of side 2 of the fin&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>beta1&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Incidence angle of the sun in side 1&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>beta2&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Incidence angle of the sun in side 2&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>cp&nbsp;</td><td>REAL &nbsp;</td><td>500&nbsp;</td><td>&nbsp;</td><td>Radiator specific heat if material is None&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>e&nbsp;</td><td>REAL &nbsp;</td><td>0.012&nbsp;</td><td>&nbsp;</td><td>Thickness of the fin&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>emiss1&nbsp;</td><td>REAL &nbsp;</td><td>0.85&nbsp;</td><td>&nbsp;</td><td>Emissivity of side 1 of the fin&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>emiss2&nbsp;</td><td>REAL &nbsp;</td><td>0.85&nbsp;</td><td>&nbsp;</td><td>Emissivity of side 2 of the fin&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Radiator conductivity if material is None&nbsp;</td><td>W/(m·K)&nbsp;</td></tr>
+
+<tr><td>mat&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for radiator&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>n_fin&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>1,2&nbsp;</td><td>Number of fins&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>rho&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Radiator density if material is None&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Fin area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>Ax&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>OX - Cross Area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>Ay&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>OY - Cross Area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>C_x[nx + 1,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Equivalent conductance in the cross direction between the thermal nodes&nbsp;</td><td>W/K&nbsp;</td></tr>
+
+<tr><td>C_y[nx,ny + 1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Equivalent conductance in the tube direction between the thermal nodes&nbsp;</td><td>W/K&nbsp;</td></tr>
+
+<tr><td>T[nx,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal temperatures&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>Tsink1&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Equivalent sink temperature for side 1&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>Tsink2&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Equivalent sink temperature for side 2&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>cp_var[nx,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Specific heat of nodes&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>dx&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Node length in cross direction&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>dy&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Node length in tube direcction&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>icpk[nx,ny]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Last pointer to speed up nodal interpolations&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>it0&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pointer to To&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>k_var[nx,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Thermal conductivities of nodes&nbsp;</td><td>W/(m·K)&nbsp;</td></tr>
+
+<tr><td>q_rad_1[nx,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat flow radiated by each node in side 1&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>q_rad_2[nx,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat flow radiated by each node in side 2&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>q_tot_fluid&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total heat flow received from fluid by radiator&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>q_tot_rad_1&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total heat flow radiated by side 1&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>q_tot_rad_2&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total heat flow radiated by side 2&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>q_tot_sun&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total solar heat flow received by radiator&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>qx[nx + 1,ny]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Cross direction heat flow through nodes&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>qy[nx,ny + 1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tube direction heat flow through nodes&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>rho_var&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Density of radiator material&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

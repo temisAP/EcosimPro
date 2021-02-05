@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="PHYSIOLOGICAL_EXAMPLES" component="physbe" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="Cava.vol"/>
+  <variable name="Lungs.vol"/>
+  <variable name="Head.vol"/>
+  <variable name="Aorta.vol"/>
+  <variable name="Ventricle_left.vol"/>
+  <variable name="Arms.vol"/>
+  <variable name="Ventricle_right.vol"/>
+  <variable name="Legs.vol"/>
+  <variable name="Trunk.vol"/>
+</dynamics>
+<residues>
+  <r id="1" value="Cava.vol' = Cava.p_in.w - Ventricle_right.p_in.w"/>
+  <r id="2" value="Lungs.vol' = Lungs.p_in.w - Ventricle_left.p_in.w"/>
+  <r id="3" value="Head.vol' = Head.p_in.w - Head.p_out.w"/>
+  <r id="4" value="Aorta.vol' = Aorta.p_in.w - Aorta.p_out.w"/>
+  <r id="5" value="Ventricle_left.vol' = Ventricle_left.p_in.w - Aorta.p_in.w"/>
+  <r id="6" value="Arms.vol' = Arms.p_in.w - Arms.p_out.w"/>
+  <r id="7" value="Ventricle_right.vol' = Ventricle_right.p_in.w - Lungs.p_in.w"/>
+  <r id="8" value="Legs.vol' = Legs.p_in.w - Legs.p_out.w"/>
+  <r id="9" value="Trunk.vol' = Trunk.p_in.w - Trunk.p_out.w"/>
+</residues>
+</partitionInfo>

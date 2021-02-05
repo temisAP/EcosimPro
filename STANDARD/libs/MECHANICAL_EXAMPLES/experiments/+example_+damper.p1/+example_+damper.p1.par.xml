@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="MECHANICAL_EXAMPLES" component="Example_Damper" partition="p1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<highIndexVars>
+  <variable name="damper1.s_rel"/>
+  <variable name="damper2.s_rel"/>
+</highIndexVars>
+<dynamics>
+  <variable name="mass2.s"/>
+  <variable name="mass2.v"/>
+  <variable name="mass1.s"/>
+  <variable name="mass1.v"/>
+  <variable name="mass3.s"/>
+  <variable name="mass3.v"/>
+</dynamics>
+<residues>
+  <r id="1" value="mass2.s' = mass2.v"/>
+  <r id="2" value="mass2.v' = mass2.a"/>
+  <r id="3" value="mass1.s' = mass1.v"/>
+  <r id="4" value="mass1.v' = mass1.a"/>
+  <r id="5" value="mass3.s' = mass3.v"/>
+  <r id="6" value="mass3.v' = mass3.a"/>
+</residues>
+</partitionInfo>

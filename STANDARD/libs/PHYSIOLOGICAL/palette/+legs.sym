@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Legs" >
+
+		<line id="Line_1" points="154.999,94.0001 139,94.0001" dx="4.9991" dy="-14.0001" lineColor="255,0,0"   />
+
+		<line id="Line_2" points="75.0009,94.0001 90.9998,94.0001" dx="4.9991" dy="-14.0001" lineColor="255,0,0"   />
+
+		<polygon id="Polygon_1" points="90.9998,78.0001 139,78.0001 147,174 131.001,174 115,102 98.9992,174 83.0003,174" dx="4.9991" dy="-14.0001" color="0,0,128"  />
+
+		<port id="p_in" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="40" dy="68" />
+		
+		</port>
+
+		<port id="p_out" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_out" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="164" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="rai"/>
+				<var name="rao"/>
+				<var name="comp"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="60" cy="98" sx="88" sy="12" variable="p_in.p"  headerText="p_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="71" cy="98" sx="110" sy="12" variable="p_in.w"  headerText="p_in.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="-40" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="62.5" cy="98" sx="93" sy="12" variable="p_out.p"  headerText="p_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="128" dy="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="73.5" cy="98" sx="115" sy="12" variable="p_out.w"  headerText="p_out.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="128" dy="-40" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

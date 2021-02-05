@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES.html">LPRES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES.functions.html">Functions</a> |
+	  <a class="qindexHL" href="LPRES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES.global.html">Global Variables</a></div>
+<h1 align="center">Enumerative Types<br /><small></small></h1><hr><br><br/>
+<a name="Enumerative List">Enumerative List</a><br/>
+<br/>
+Note: click [+] for accessing the source code file<br/>
+<br/>
+     <a href="#AngCoef">AngCoef</a><a href="../sources/LPRES_Common.el?item=AngCoef">&nbsp;[+]</a><br/>
+     <a href="#ChemName">ChemName</a><a href="../sources/LPRES_Common.el?item=ChemName">&nbsp;[+]</a><br/>
+     <a href="#ChemState">ChemState</a><a href="../sources/LPRES_Common.el?item=ChemState">&nbsp;[+]</a><br/>
+     <a href="#ConDiv">ConDiv</a><a href="../sources/LPRES_Common.el?item=ConDiv">&nbsp;[+]</a><br/>
+     <a href="#Gases">Gases</a><a href="../sources/LPRES_Common.el?item=Gases">&nbsp;[+]</a><br/>
+     <a href="#LV">LV</a><a href="../sources/LPRES_Common.el?item=LV">&nbsp;[+]</a><br/>
+     <a href="#Liquids">Liquids</a><a href="../sources/LPRES_Common.el?item=Liquids">&nbsp;[+]</a><br/>
+     <a href="#LiquidsGases">LiquidsGases</a><a href="../sources/LPRES_Common.el?item=LiquidsGases">&nbsp;[+]</a><br/>
+     <a href="#OnOffDesign">OnOffDesign</a><a href="../sources/LPRES_Common.el?item=OnOffDesign">&nbsp;[+]</a><br/>
+     <a href="#Type_All">Type_All</a><a href="../sources/LPRES_Common.el?item=Type_All">&nbsp;[+]</a><br/>
+     <a href="#Type_Cooling">Type_Cooling</a><a href="../sources/LPRES_Common.el?item=Type_Cooling">&nbsp;[+]</a><br/>
+     <a href="#Type_Inlet">Type_Inlet</a><a href="../sources/LPRES_Common.el?item=Type_Inlet">&nbsp;[+]</a><br/>
+     <a href="#Type_Regulator">Type_Regulator</a><a href="../sources/LPRES_Common.el?item=Type_Regulator">&nbsp;[+]</a><br/>
+     <a href="#Type_Turbine_liq">Type_Turbine_liq</a><a href="../sources/LPRES_Common.el?item=Type_Turbine_liq">&nbsp;[+]</a><br/>
+     <a href="#Type_Turbines">Type_Turbines</a><a href="../sources/LPRES_Common.el?item=Type_Turbines">&nbsp;[+]</a><br/>
+     <a href="#YesNo">YesNo</a><a href="../sources/LPRES_Common.el?item=YesNo">&nbsp;[+]</a><br/>
+<br/>
+<br/>
+<font size="5" color="black">Enumeratives Description</font><br/>
+<br/>
+<hr>ENUM <a name="AngCoef">AngCoef</a> = {Angles,Coefficients}<br/>
+<hr>DESCRIPTION: Names of available chemicals<br/>
+ENUM <a name="ChemName">ChemName</a> = {LOX,NTO,H2O2,HNO3,LF2,RP_1,LCH4,LH2,N2H4,UDMH,MMH,JP_10,Kerox,Oil,H2O,IPA,Air,Ar,CH4,CO,CO2,H2,He,N2,O2,MMH_vapour,Comb_prod,Comb_prod_M,Comb_prod_cp}<br/>
+<hr>DESCRIPTION: State of available chemicals<br/>
+ENUM <a name="ChemState">ChemState</a> = {Liquid,Gas}<br/>
+<hr>ENUM <a name="ConDiv">ConDiv</a> = {Convergent,Divergent}<br/>
+<hr>DESCRIPTION: Names of available gases<br/>
+SET_OF(ChemName ) <a name="Gases">Gases</a> = {Air,Ar,CH4,CO,CO2,H2,He,N2,O2,MMH_vapour}<br/>
+<hr>DESCRIPTION: Liquids that can be vaporised<br/>
+SET_OF(ChemName ) <a name="LV">LV</a> = {LOX,LCH4,LH2,MMH}<br/>
+<hr>DESCRIPTION: Names of available liquids<br/>
+SET_OF(ChemName ) <a name="Liquids">Liquids</a> = {LOX,NTO,H2O2,HNO3,LF2,RP_1,LCH4,LH2,N2H4,UDMH,MMH,JP_10,Kerox,Oil,H2O,IPA}<br/>
+<hr>DESCRIPTION: Names of available chemicals except Comb_prod<br/>
+SET_OF(ChemName ) <a name="LiquidsGases">LiquidsGases</a> = {LOX,NTO,H2O2,HNO3,LF2,RP_1,LCH4,LH2,N2H4,UDMH,MMH,JP_10,Kerox,Oil,H2O,IPA,Air,Ar,CH4,CO,CO2,H2,He,N2,O2,MMH_vapour}<br/>
+<hr>SET_OF(Type_All ) <a name="OnOffDesign">OnOffDesign</a> = {Design,Off_design}<br/>
+<hr>ENUM <a name="Type_All">Type_All</a> = {Design,Known_pi,Known_W,Off_design,Known_pt_out,Known_dp,Known_dpr,Darcy}<br/>
+<hr>SET_OF(Type_All ) <a name="Type_Cooling">Type_Cooling</a> = {Darcy,Known_dp}<br/>
+<hr>ENUM <a name="Type_Inlet">Type_Inlet</a> = {All,Unknown_W}<br/>
+<hr>SET_OF(Type_All ) <a name="Type_Regulator">Type_Regulator</a> = {Design,Known_pt_out,Known_dp,Known_dpr}<br/>
+<hr>SET_OF(Type_All ) <a name="Type_Turbine_liq">Type_Turbine_liq</a> = {Known_dp,Known_W,Off_design}<br/>
+<hr>SET_OF(Type_All ) <a name="Type_Turbines">Type_Turbines</a> = {Known_pi,Known_W,Off_design}<br/>
+<hr>ENUM <a name="YesNo">YesNo</a> = {Yes,No}<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:47)</font></p>
+</body>
+</html>

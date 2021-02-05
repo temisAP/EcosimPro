@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Example_Damper.p1.exp1_1" x="0" y="486" dx="1061" dy="243">
+				<plot id="Example_Damper.p1.exp1_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="5"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-10" max="15"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_Damper.p1.exp1_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="damper1.s_rel" nick="damper1.s_rel" lineColor="255,0,0"/>
+						<var name="damper2.s_rel" nick="damper2.s_rel" lineColor="0,204,153"/>
+						<var name="spring.s_rel" nick="spring.s_rel" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_Damper.p1.exp1_2" x="0" y="243" dx="1061" dy="243">
+				<plot id="Example_Damper.p1.exp1_2">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_Damper.p1.exp1_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="damper1.F" nick="damper1.F" lineColor="255,0,0"/>
+						<var name="damper2.F" nick="damper2.F" lineColor="0,204,153"/>
+						<var name="spring.F" nick="spring.F" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Example_Damper.p1.exp1_3" x="0" y="0" dx="1061" dy="243">
+				<plot id="Example_Damper.p1.exp1_3">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Example_Damper.p1.exp1_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="mass1.s" nick="mass1.s" lineColor="255,0,0"/>
+						<var name="mass2.s" nick="mass2.s" lineColor="0,204,153"/>
+						<var name="mass3.s" nick="mass3.s" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="274" visible="true">
+	</watch>
+	<outputWindow height="142" visible="true"/>
+</experiment>

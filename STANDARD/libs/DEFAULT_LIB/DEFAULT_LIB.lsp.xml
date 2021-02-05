@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="aircraftGear.el"/>
+  <file name="bouncingBall.el"/>
+  <file name="circuit.eds"/>
+  <file name="equation.el"/>
+  <file name="freezer.el"/>
+  <file name="lorentz.el"/>
+  <file name="particle.el"/>
+  <file name="pendulum.el"/>
+  <file name="waveFunctions.eds"/>
+  <file name="whenExample.el"/>
+  <file name="zoneExample.el"/>
+  <file name="xmlExample.el"/>
+ </filedeps>
+ <libdeps>
+  <lib name="MATH" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

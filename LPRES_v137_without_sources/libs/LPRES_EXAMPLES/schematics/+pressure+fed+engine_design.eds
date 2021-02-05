@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" sorting="alphabetic" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" connector-creation="true" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" />
+	</layers>
+	
+	<component id="Regulator" library="LPRES" type="Regulator" layer="1"  hotPort="f_in" >
+	
+		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="196" dy="-24" onLabel="true" />
+	
+		<label cx="31.5" cy="12" dx="383.5" dy="70" />
+	
+		<instanceData>
+			<datum id="Type" value="Known_pt_out" />
+			<datum id="pt_out" value="22e5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Tank_He" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="41.9706" dy="-10.0294" rotation="-90" onLabel="true" />
+	
+		<label cx="29" cy="12" dx="219" dy="103.971" />
+	
+		<instanceData>
+			<datum id="Tt" value="275" />
+			<datum id="pt" value="200e5" />
+			<datum id="fluid" value="He" />
+			<datum id="Type" value="Unknown_W" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Tank_MMH" library="LPRES" type="Tank" layer="1"  hotPort="g" >
+	
+		<symbol cx="190" cy="111.875" sx="133" sy="96.75" dx="544" dy="136" onLabel="true" />
+	
+		<label cx="36.5" cy="12" dx="694" dy="293.75" />
+	
+		<instanceData>
+			<datum id="fluid_l" value="MMH" />
+			<datum id="T_d" value="295" />
+			<datum id="p_d" value="20.4e5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Tank_NTO" library="LPRES" type="Tank" layer="1"  hotPort="g" >
+	
+		<symbol cx="190" cy="111.875" sx="133" sy="96.75" dx="292" dy="136" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="34" cy="12" dx="444.5" dy="293.75" />
+	
+		<instanceData>
+			<datum id="fluid_l" value="NTO" />
+			<datum id="T_d" value="295" />
+			<datum id="p_d" value="19.2e5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Injector_NTO" library="LPRES" type="Injector" layer="1"  hotPort="f_in" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="536" dy="304" onLabel="true" />
+	
+		<label cx="41.5" cy="12" dx="683.5" dy="462" />
+	
+		<instanceData>
+			<datum id="C_D" value="0.6" />
+			<datum id="W" value="10.08" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Injector_MMH" library="LPRES" type="Injector" layer="1"  hotPort="f_in" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="648" dy="304" onLabel="true" />
+	
+		<label cx="44" cy="12" dx="793" dy="462" />
+	
+		<instanceData>
+			<datum id="W" value="6.2" />
+		</instanceData>
+	
+	</component>
+
+	<component id="CC" library="LPRES" type="CombCha" layer="1"  hotPort="f_O" >
+	
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="572" dy="432" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="13" cy="12" dx="770.5" dy="670" />
+	
+		<instanceData>
+			<datum id="OF_st" value="2.5" />
+			<datum id="Q_comb" value="10500000" />
+			<datum id="cp_P" value="2250" />
+			<datum id="M_P" value="18.8" />
+			<datum id="AR" value="50" />
+			<datum id="Type" value="Off_design" />
+			<datum id="A_th" value="0.01767146" />
+			<datum id="Cooled" value="Yes" />
+			<datum id="AR_r" value="5" />
+			<datum id="Zone" value="Convergent" />
+			<datum id="A_wet" value="0.456" />
+		</instanceData>
+	
+	</component>
+
+	<component id="CJ" library="LPRES" type="CoolingJacket" layer="1"  hotPort="h" >
+	
+		<symbol cx="274" cy="138" sx="45" sy="117" dx="632" dy="476" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="11.5" cy="12" dx="886" dy="670" />
+	
+		<instanceData>
+			<datum id="L" value="0.6" />
+			<datum id="a" value="0.004" />
+			<datum id="b" value="0.005" />
+			<datum id="N" value="120" />
+		</instanceData>
+	
+	</component>
+
+	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1"  hotPort="g" >
+	
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="252" dy="520" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="43.5" cy="12" dx="513.5" dy="706" />
+	
+	</component>
+
+	<component id="FlowMeter_1" library="LPRES" type="FlowMeter" layer="1" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="720" dy="208" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="917" dy="370" />
+	
+	</component>
+
+	<component id="FlowMeter_2" library="LPRES" type="FlowMeter" layer="1"  hotPort="f_out" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="332" dy="276" rotation="90" flipY="true" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="529" dy="438" />
+	
+	</component>
+
+	<component id="ControlPanel" library="LPRES" type="ControlPanel" layer="1"  hotPort="i_Thrust" >
+	
+		<symbol cx="418" cy="226" sx="173" sy="93" dx="-200" dy="348" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="169.5" dy="618" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="Tank_He" sPort="f" eShape="Regulator" ePort="f_in" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_2" sShape="CC" sPort="h" eShape="CJ" ePort="h" dx="-32" dy="-1.17647e-05" lineColor="255,0,0"   />
+
+	<connector id="Connector_3" sShape="Injector_NTO" sPort="f_out" eShape="CC" ePort="f_O" points="760,496"  intermediate1="1" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_4" sShape="Tank_MMH" sPort="l" eShape="FlowMeter_1" ePort="f_in" points="1016,272"  intermediate2="1" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_5" sShape="FlowMeter_1" sPort="f_out" eShape="CJ" ePort="l" points="1016,696 956,696" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_6" sShape="CC" sPort="g" eShape="ThrustMonitor" ePort="g" points="816,668 816,712 728,712 728,616 608,616"  intermediate1="7" dx="-32" dy="-1.17647e-05" lineColor="170,0,127"   />
+
+	<connector id="Connector_7" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel" ePort="i_W" points="332,336"  intermediate1="2" dx="-32" dy="-1.17647e-05"  />
+
+	<connector id="Connector_8" sShape="CJ" sPort="g" eShape="Injector_MMH" ePort="f_in" points="936,384 872,384" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_9" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel" ePort="i_Thrust" points="128,684 128,576" dx="-32" dy="-1.17647e-05"  />
+
+	<connector id="Connector_10" sShape="Injector_MMH" sPort="f_out" eShape="CC" ePort="f_F" points="872,496" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_11" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel" ePort="i_W" points="608,560"  intermediate1="2" dx="-32" dy="-1.17647e-05"  />
+
+	<connector id="Connector_12" sShape="CC" sPort="i" eShape="ControlPanel" ePort="i_Comb" points="672,548 672,488 128,488 128,548" dx="-32" dy="-1.17647e-05"  />
+
+	<connector id="Connector_13" sShape="Tank_NTO" sPort="l" eShape="FlowMeter_2" ePort="f_in" points="452,384" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_17" sShape="FlowMeter_2" sPort="f_out" eShape="Injector_NTO" ePort="f_in" points="760,384"  intermediate1="2" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_14" sShape="Regulator" sPort="f_out" eShape="Tank_NTO" ePort="g" points="640,64 640,224" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<connector id="Connector_15" sShape="Regulator" sPort="f_out" eShape="Tank_MMH" ePort="g" points="640,64 640,224" dx="-32" dy="-1.17647e-05" lineColor="192,192,192"   />
+
+	<bodyEL>
+	<![CDATA[-- EL code of the schematic.
+-- The COMPONENT definition lines are blocked for edition.
+-- You can edit the parameters clicking over them.
+
+COMPONENT %NAME% 
+
+
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="LPRES" version="1.3.5" auto="true" />
+</schematic>

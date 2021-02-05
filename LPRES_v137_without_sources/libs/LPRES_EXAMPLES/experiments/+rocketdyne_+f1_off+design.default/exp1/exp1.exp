@@ -1,0 +1,89 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: Rocketdyne_F1_offDesign
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Rocketdyne_F1_offDesign.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 30000
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+		
+		-- SET_INIT_ACTIVE(FALSE)
+		-- RESTORE_STATE("..\..\+rocketdyne_+f1.design\exp1\Rocketdyne_F1_design_state.txt")
+		
+		Pump_O.A_in = 0.125397196
+		Pump_F.A_in = 0.0541868469
+		Pump_O.r_m = 0.477942772
+		Pump_F.r_m = 0.72263409
+		Turbine_ch.A_in = 0.00692409717
+		Nozzle.A = 0.346776149
+		Inj_O.A = 0.0489035601
+		Inj_F.A = 0.0143139263
+		CC.A_th = 0.637328951
+				
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Design height):")
+		PRINT(" ")
+		PRINT("	Oxidizer pump blade speed = $Pump_O.U ")		
+		PRINT("	Fuel pump blade speed = $Pump_F.U ")
+		
+		PRINT("	Turbine mass flow = $Turbine_ch.f_in.W")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")
+		
+      LPRES.Altitude = 0
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Sea level):")
+		PRINT(" ")
+		PRINT("	Turbine mass flow = $Turbine_ch.f_in.W")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")
+		
+      LPRES.Altitude = 1000000
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Vacuum):")
+		PRINT(" ")
+		PRINT("	Turbine mass flow = $Turbine_ch.f_in.W")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")
+
+END EXPERIMENT

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Gear" >
+
+		<closedBezier id="ClosedBezier_4" points="160,140 160,120 180,120 180,120 200,120 200,140 200,140 200,140 196,140 192,140 192,128 180,128 180,128 180,128 168,128 168,144 164,144 164,144 160,140" rotation="180" flipX="true" dx="-64" dy="-64" lineType="-1"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_3" points="160,140 160,120 180,120 180,120 200,120 200,140 200,140 192,140 200,140 192,140 192,128 180,128 180,128 180,128 168,128 168,140 168,140 160,140 164,140" dx="-64" dy="-80" lineType="-1"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<ellipse id="Ellipse_4" cx="52.069" cy="160.345" rx="20.069" ry="20.3448" dx="64" dy="-100" lineWidth="0.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_3" cx="44" cy="152" rx="12" ry="12" dx="72" dy="-92" lineWidth="0.5"  aliasing="true"  />
+
+		<rect id="Rectangle_16" cx="70" cy="140" sx="4" sy="8" rotation="-45.1002" dx="30.2451" dy="-64.5932" aliasing="true"  />
+
+		<rect id="Rectangle_17" cx="70" cy="140" sx="4" sy="8" rotation="225.1" flipY="true" dx="61.7549" dy="-64.5932" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<line id="Line_17" points="176.115,441.763 200.115,441.763"  start_arrow="true" dx="-108.115" dy="-361.763" lineColor="128,0,0"  aliasing="true"  />
+
+		<line id="Line_18" points="196.115,393.762 216.115,393.762"  start_arrow="true" dx="-60.115" dy="-345.762" lineColor="128,0,0"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="64,148 68.25,144 76,144 72,148" dx="44" dy="-108" lineWidth="0.5"   color="192,192,192" gradientColor="255,255,255" gradientType="GL" position="53" aliasing="true"  />
+
+		<polygon id="Polygon_2" points="72,152 76,148 76,144 72,148" dx="44" dy="-108" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<polygon id="Polygon_7" points="72.2759,196.138 76,192 76,188 72,192" dx="43.7241" dy="-108.138" lineWidth="0.5"  color="255,255,255" aliasing="true"  />
+
+		<polygon id="Polygon_8" points="44,168 48,164 52,164 48,168" dx="44" dy="-108" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_2" points="160,140 160,120 180,120 180,120 200,120 200,140 200,140 200,140 196,144 192,140 192,128 180,128 180,128 180,128 168,128 168,140 164,140 164,140 160,140" rotation="180" flipX="true" dx="-68" dy="-60" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_1" points="160,140 160,120 180,120 180,120 200,120 200,140 200,140 192,140 200,140 192,140 192,128 180,128 180,128 180,128 168,128 168,140 164,144 160,140 164,144" dx="-68" dy="-76" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<ellipse id="Ellipse_2" cx="44" cy="152" rx="12" ry="12" dx="68" dy="-88" lineWidth="0.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_5" cx="51.244" cy="159.935" rx="20" ry="20" dx="60.756" dy="-95.9345" lineWidth="0.5"  aliasing="true"  />
+
+		<rect id="Rectangle_6" cx="72" cy="140" sx="8" sy="8" dx="20" dy="-76" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_10" cx="68.5833" cy="140" sx="6.83336" sy="8" rotation="225.1" flipY="true" dx="28.1716" dy="-89.5897" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_3" cx="72" cy="144" sx="8" sy="8" dx="40" dy="-100" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_7" cx="68.5821" cy="140" sx="6.83583" sy="8" rotation="-45.1002" dx="57.6622" dy="-90.5888" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_5" cx="68.1875" cy="140" sx="8.375" sy="8" dx="63.625" dy="-76" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_9" cx="71.5318" cy="140" sx="7.06365" sy="8" rotation="225.1" flipY="true" dx="55.1418" dy="-61.6783" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_4" cx="72" cy="140" sx="8" sy="8" dx="40" dy="-56" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<rect id="Rectangle_8" cx="71.5318" cy="140" sx="7.06365" sy="8" rotation="-45.1002" dx="25.7945" dy="-61.6783" lineType="-1"  color="192,192,192" aliasing="true"  />
+
+		<line id="Line_6" points="95.17,84.625 92.125,88.25 97.375,93.125 100.795,90.25" rotation="180" flipY="true" dx="29.3919" dy="-9.875" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_2" points="108,44.5 108,40 116,40 116,44.75" rotation="180" flipX="true" dx="-0.137931" dy="43.5259" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_5" points="95.25,84.75 92.125,88.25 97.5302,93.6379 101.116,90.4655" dx="-0.012931" dy="-10.0517" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_4" points="92.6043,68.2759 88,68 88,60 92.5655,59.875" dx="-0.190476" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_7" points="94.9162,84.5673 92.1894,87.6923 97.375,93.125" rotation="180" flipX="true" dx="-0.291246" dy="-39.1322" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_1" points="107.875,44.875 108,40 116,40 116,44.875" lineWidth="0.5"  aliasing="true"  />
+
+		<rect id="Rectangle_19" cx="66.8833" cy="138.828" sx="8.04441" sy="5.65685" rotation="-135.1" dx="64.0204" dy="-93.9204" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<line id="Line_8" points="122.875,47.25 126,44" dx="0.195122" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_9" points="122.875,47.25 126,44" dx="5.75" dy="5.625" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_3" points="131.25,68 136.125,68" dx="-0.137931" lineWidth="0.5"  aliasing="true"  />
+
+		<polygon id="Polygon_4" points="92,168 92,176 96,172 96,164" dx="44" dy="-108" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<polygon id="Polygon_3" points="88,168 92,164 96,164 92,168" dx="44" dy="-108" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<line id="Line_10" points="131.25,68 136.125,68" dy="-8" lineWidth="0.5"  aliasing="true"  />
+
+		<rect id="Rectangle_18" cx="70" cy="139.164" sx="4" sy="6.32794" rotation="225.1" flipY="true" dx="30.6434" dy="-94.4954" lineWidth="0.5"   color="200,200,200" gradientColor="255,255,255" gradientType="GL" position="50" aliasing="true"  />
+
+		<port id="sh_in" library="TURBOJET" type="Shaft"  hotPort="sh_in" >
+		
+				<symbol dx="160" dy="48" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="172.5" dy="36" />
+		
+		</port>
+
+		<port id="sh_out" library="TURBOJET" type="Shaft"  hotPort="sh_out" >
+		
+				<symbol dx="64" dy="80" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="9.5" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="I1"/>
+				<var name="I2"/>
+				<var name="Nratio"/>
+				<var name="eff"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_5" cx="80.5" cy="70" sx="113" sy="12" variable="sh_out.Power"  headerText="sh_out.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="-16" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="76" cy="70" sx="104" sy="12" variable="sh_out.N"  headerText="sh_out.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="-16" dy="32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="78" cy="70" sx="108" sy="12" variable="sh_in.Power"  headerText="sh_in.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="116" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_9" cx="73.5" cy="70" sx="99" sy="12" variable="sh_in.N"  headerText="sh_in.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="116" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

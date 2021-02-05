@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="IdealTransformer" >
+
+		<rect id="Rectangle_1" cx="16" cy="575" sx="32" sy="48" dx="88" dy="-479" lineWidth="0.5"   />
+
+		<line id="Line_7" points="-18,198 -2,198" dx="98" dy="-86" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<line id="Line_9" points="-18,166 -2,166" dx="98" dy="-86" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<g id="Group_3" dx="29" dy="7.5" >
+		
+					<line id="Line_10" points="-14,117 -9,117" dx="111" dy="-36"  />
+		 />
+					<line id="Line_11" points="-14,117 -9,117" rotation="-90" dx="111" dy="-36"  />
+		 />
+		</g>
+
+		<g id="Group_4" dx="-19" dy="7.5" >
+		
+					<line id="Line_12" points="-14,117 -9,117" dx="111" dy="-36"  />
+		 />
+					<line id="Line_16" points="-14,117 -9,117" rotation="-90" dx="111" dy="-36"  />
+		 />
+		</g>
+
+		<line id="Line_17" points="30,116 34,116" dx="48" dy="-12"  />
+
+		<line id="Line_18" points="30,116 34,116" dx="96" dy="-12"  />
+
+		<line id="Line_19" points="-21,198 -5,198" dx="133" dy="-86" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<line id="Line_20" points="-26,166 -10,166" dx="138" dy="-86" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_3" points="216,200 224,200 224,208 212,208 224,208 224,216 212,216 224,216 224,224 212,224 224,224 224,232 216,232" dx="-120" dy="-120" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_4" points="216,200 224,200 224,208 212,208 224,208 224,216 212,216 224,216 224,224 212,224 224,224 224,232 216,232" rotation="180" flipY="true" dx="-108.769" dy="-120" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="68" />
+		
+		</port>
+
+		<port id="e_n1" library="PORTS_LIB" type="elec"  hotPort="e_n1" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="27" dy="101" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="137" dy="68" />
+		
+		</port>
+
+		<port id="e_n2" library="PORTS_LIB" type="elec"  hotPort="e_n2" >
+		
+				<symbol dx="128" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="139" dy="101" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="115" cy="155" sx="198" sy="30" variable="v1"  headerText="v1"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="115" cy="187" sx="198" sy="30" variable="v2"  headerText="v2"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="168" dy="-40" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="112" cy="187" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-12" dy="-16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="284" cy="175" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dy="-4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

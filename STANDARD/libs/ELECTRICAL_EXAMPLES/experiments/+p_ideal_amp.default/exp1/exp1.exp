@@ -1,0 +1,18 @@
+
+EXPERIMENT exp1 ON P_ideal_amp.default
+
+DECLS
+
+INIT    -- set initial values for variables
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+
+   TIME = 0
+   TSTOP = 15
+   CINT = 0.1
+   INTEG()
+END EXPERIMENT

@@ -1,0 +1,71 @@
+EXPERIMENT exp1 ON turbofan.transient
+   DECLS
+      TABLE_1D fuel_flow = {
+            {0., 1., 1.5, 20., 22.5, 50.},
+            {1., 1., 0.2, 0.2, 1. , 1.}
+         }
+
+   INIT
+      -- Dynamic variables
+      compressor.N = 12000.
+      fan.N = 4000.
+
+      -- Algebraic variables
+      compressor.beta = 0.7
+
+      fan.BPR = 6.
+      fan.beta = 0.7
+      fan.g_in.W = 6 * 25.
+
+      hp_turbine.g_out.T = 1500.
+
+      nozzle.g_in.T = 1200.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+      fuel_valve.s_flow.signal[1] = 0.76164 * timeTableInterp(TIME, fuel_flow)
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      ABS_ERROR = 5.e-4
+      REL_ERROR = 5.e-4
+
+      TIME = 0.
+
+      burner.GLP = 0.003259903624
+      burner.VOL = 0.006242896043
+
+      compressor.CG1 = 18.43105912
+      compressor.CG2 = 0.9095852489
+      compressor.CG4 = 1465.085308
+      compressor.ND = 12013.63466
+
+      fan.CG1 = 191.9698211
+      fan.CG2 = 0.9095852489
+      fan.CG4 = 208.5512345
+      fan.I = 20.
+      fan.ND = 4350.46582
+
+      hp_turbine.CG1 = 2.357836016
+      hp_turbine.CG2 = 0.92
+      hp_turbine.CG3 = 282.8427125
+      hp_turbine.CG4 = 266.6144404
+
+      lp_turbine.CG1 = 6.65200081
+      lp_turbine.CG2 = 0.92
+      lp_turbine.CG3 = 106.3967801
+      lp_turbine.CG4 = 274.6731309
+
+      nozzle.A_exit = 0.0805595186
+      nozzle_sec.A_exit = 0.3831870479
+
+      STEADY()
+
+      TSTOP = 30.
+      CINT = 0.2
+      INTEG()
+
+END EXPERIMENT

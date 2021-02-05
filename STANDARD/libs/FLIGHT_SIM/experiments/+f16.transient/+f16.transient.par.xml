@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="FLIGHT_SIM" component="F16" partition="transient">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="FLIGHT_SIM.Vwind[D]"/>
+  <variable name="FLIGHT_SIM.Vwind[E]"/>
+  <variable name="FLIGHT_SIM.Vwind[N]"/>
+  <variable name="s_aileron.signal[1]"/>
+  <variable name="s_elevator.signal[1]"/>
+  <variable name="s_rudder.signal[1]"/>
+  <variable name="s_throttle.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="Trimmer.elevator"/>
+  <variable name="Trimmer.aileron"/>
+  <variable name="Trimmer.rudder"/>
+  <variable name="Trimmer.throttle"/>
+  <variable name="El_Actuator.defl"/>
+  <variable name="Ail_Actuator.defl"/>
+  <variable name="Rdr_Actuator.defl"/>
+  <variable name="Engine.apow"/>
+  <variable name="Frame.V[x]"/>
+  <variable name="Frame.V[y]"/>
+  <variable name="Frame.V[z]"/>
+  <variable name="Frame.W[x]"/>
+  <variable name="Frame.W[y]"/>
+  <variable name="Frame.W[z]"/>
+  <variable name="Frame.dynAtt[1]"/>
+  <variable name="Frame.dynAtt[2]"/>
+  <variable name="Frame.dynAtt[3]"/>
+  <variable name="Frame.dynAtt[4]"/>
+  <variable name="Frame.R[N]"/>
+  <variable name="Frame.R[E]"/>
+  <variable name="Frame.R[D]"/>
+</dynamics>
+<residues>
+  <r id="1" value="Trimmer.elevator' = -(FLIGHT_SIM.Trim * (0.0174532925199433 * Trimmer.ClimbAngle_req - Trimmer.ClimbAngle))"/>
+  <r id="2" value="Trimmer.aileron' =  ZONE[1] (Trimmer.mode == Normal) FLIGHT_SIM.Trim * (0.0174532925199433 * Trimmer.dpsi_req - Trimmer.dpsi) ZONE[1] (Trimmer.mode == psi_alpha) FLIGHT_SIM.Trim * (0.0174532925199433 * Trimmer.alpha_req - state_out.alpha) ZONE[1] (Trimmer.mode == psi_R) FLIGHT_SIM.Trim * (1 / Trimmer.R_req - Trimmer.K)	  OTHERS 0"/>
+  <r id="3" value="Trimmer.rudder' = -(FLIGHT_SIM.Trim * (state_out.W[x] * state_out.V[z] - state_out.W[z] * state_out.V[x] + 9.806 * sin(state_out.phi) * cos(state_out.theta)))"/>
+  <r id="4" value="Trimmer.throttle' = -(FLIGHT_SIM.Trim * (Trimmer.VT_req - state_out.VT))"/>
+  <r id="5" value="El_Actuator.defl' =  ZONE[3] (abs(El_Actuator.cdefl) < (0.0174532925199433 * El_Actuator.DL)) El_Actuator.rdefl	  OTHERS 0"/>
+  <r id="6" value="Ail_Actuator.defl' =  ZONE[5] (abs(Ail_Actuator.cdefl) < (0.0174532925199433 * Ail_Actuator.DL)) Ail_Actuator.rdefl	  OTHERS 0"/>
+  <r id="7" value="Rdr_Actuator.defl' =  ZONE[7] (abs(Rdr_Actuator.cdefl) < (0.0174532925199433 * Rdr_Actuator.DL)) Rdr_Actuator.rdefl	  OTHERS 0"/>
+  <r id="8" value="Engine.apow' = Engine.Rtau * Engine.dpow"/>
+  <r id="9" value="Frame.V[x]' = Frame.W[z] * Frame.V[y] - Frame.W[y] * Frame.V[z] - 9.806 * sin(state_out.theta) + Frame.A[x]"/>
+  <r id="10" value="Frame.V[y]' = Frame.W[x] * Frame.V[z] - Frame.W[z] * Frame.V[x] + 9.806 * sin(state_out.phi) * cos(state_out.theta) + Frame.A[y]"/>
+  <r id="11" value="Frame.V[z]' = Frame.W[y] * Frame.V[x] - Frame.W[x] * Frame.V[y] + 9.806 * cos(state_out.phi) * cos(state_out.theta) + Frame.A[z]"/>
+  <r id="12" value="Frame.forces_in.M[x] = Frame.Ixx * Frame.W[x]' - Frame.Ixy * Frame.W[y]' - Frame.Ixz * Frame.W[z]' + Frame.Iyz * (Frame.W[z] ** 2 - Frame.W[y] ** 2) + (Frame.Izz - Frame.Iyy) * Frame.W[y] * Frame.W[z] + Frame.Ixy * Frame.W[x] * Frame.W[z] - Frame.Ixz * Frame.W[x] * Frame.W[y]"/>
+  <r id="13" value="Frame.forces_in.M[y] = -Frame.Ixy * Frame.W[x]' + Frame.Iyy * Frame.W[y]' - Frame.Iyz * Frame.W[z]' + Frame.Ixz * (Frame.W[x] ** 2 - Frame.W[z] ** 2) + (Frame.Ixx - Frame.Izz) * Frame.W[x] * Frame.W[z] + Frame.Iyz * Frame.W[x] * Frame.W[y] - Frame.Ixy * Frame.W[y] * Frame.W[z]"/>
+  <r id="14" value="Frame.forces_in.M[z] = -Frame.Ixz * Frame.W[x]' - Frame.Iyz * Frame.W[y]' + Frame.Izz * Frame.W[z]' + Frame.Ixy * (Frame.W[y] ** 2 - Frame.W[x] ** 2) + (Frame.Iyy - Frame.Ixx) * Frame.W[x] * Frame.W[y] + Frame.Ixz * Frame.W[y] * Frame.W[z] - Frame.Iyz * Frame.W[x] * Frame.W[z]"/>
+  <r id="15" value="Frame.dynAtt[1]' =  ZONE[13] (Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) Frame.dEuler[1]	  OTHERS Frame.dlambda[1]"/>
+  <r id="16" value="Frame.dynAtt[2]' =  ZONE[14] (Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) Frame.dEuler[2]	  OTHERS Frame.dlambda[2]"/>
+  <r id="17" value="Frame.dynAtt[3]' =  ZONE[15] (Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) Frame.dEuler[3]	  OTHERS Frame.dlambda[3]"/>
+  <r id="18" value="Frame.dynAtt[4]' =  ZONE[16] (Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) Frame.dEuler[4]	  OTHERS Frame.dlambda[4]"/>
+  <r id="19" value="Frame.R[N]' = (1 - FLIGHT_SIM.Trim) * Frame.Rdot[N] + FLIGHT_SIM.Trim * (Frame.R_o[N] - Frame.R[N])"/>
+  <r id="20" value="Frame.R[E]' = (1 - FLIGHT_SIM.Trim) * Frame.Rdot[E] + FLIGHT_SIM.Trim * (Frame.R_o[E] - Frame.R[E])"/>
+  <r id="21" value="Frame.R[D]' = (1 - FLIGHT_SIM.Trim) * Frame.Rdot[D] + FLIGHT_SIM.Trim * (Frame.R_o[D] - Frame.R[D])"/>
+</residues>
+</partitionInfo>

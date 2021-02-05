@@ -1,0 +1,29 @@
+EXPERIMENT exp1 ON freeBodies.default
+   INIT
+      -- Dynamic variables
+      OrbitalBody1.r[x] = 0.
+      OrbitalBody1.r[y] = 0.
+      OrbitalBody1.r[z] = 0.
+
+      OrbitalBody1.r[x]' = 0.
+      OrbitalBody1.r[y]' = 0.
+      OrbitalBody1.r[z]' = 0.
+
+      OrbitalBody2.r[x] = 2.507E-3
+      OrbitalBody2.r[y] = 0.
+      OrbitalBody2.r[z] = 0.
+
+      OrbitalBody2.r[x]' = 0.
+      OrbitalBody2.r[y]' = 1018. * MStoAUD
+      OrbitalBody2.r[z]' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 31.
+      CINT = 0.05
+      INTEG()
+
+END EXPERIMENT

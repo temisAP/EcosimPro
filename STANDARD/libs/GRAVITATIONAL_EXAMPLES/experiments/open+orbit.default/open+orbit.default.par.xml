@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="GRAVITATIONAL_EXAMPLES" component="openOrbit" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="CentralBody1.r[x]"/>
+  <variable name="CentralBody1.r[x]'"/>
+  <variable name="CentralBody1.r[y]"/>
+  <variable name="CentralBody1.r[y]'"/>
+  <variable name="CentralBody1.r[z]"/>
+  <variable name="CentralBody1.r[z]'"/>
+  <variable name="CentralBody2.r[x]"/>
+  <variable name="CentralBody2.r[x]'"/>
+  <variable name="CentralBody2.r[y]"/>
+  <variable name="CentralBody2.r[y]'"/>
+  <variable name="CentralBody2.r[z]"/>
+  <variable name="CentralBody2.r[z]'"/>
+  <variable name="OrbitalBody.r[x]"/>
+  <variable name="OrbitalBody.r[x]'"/>
+  <variable name="OrbitalBody.r[y]"/>
+  <variable name="OrbitalBody.r[y]'"/>
+  <variable name="OrbitalBody.r[z]"/>
+  <variable name="OrbitalBody.r[z]'"/>
+</dynamics>
+<residues>
+  <r id="1" value="CentralBody1.r[x]'. = CentralBody1.r[x]'"/>
+  <r id="2" value="CentralBody1.r[x]'' = CentralBody1.f[x]"/>
+  <r id="3" value="CentralBody1.r[y]'. = CentralBody1.r[y]'"/>
+  <r id="4" value="CentralBody1.r[y]'' = CentralBody1.f[y]"/>
+  <r id="5" value="CentralBody1.r[z]'. = CentralBody1.r[z]'"/>
+  <r id="6" value="CentralBody1.r[z]'' = CentralBody1.f[z]"/>
+  <r id="7" value="CentralBody2.r[x]'. = CentralBody2.r[x]'"/>
+  <r id="8" value="CentralBody2.r[x]'' = CentralBody2.f[x]"/>
+  <r id="9" value="CentralBody2.r[y]'. = CentralBody2.r[y]'"/>
+  <r id="10" value="CentralBody2.r[y]'' = CentralBody2.f[y]"/>
+  <r id="11" value="CentralBody2.r[z]'. = CentralBody2.r[z]'"/>
+  <r id="12" value="CentralBody2.r[z]'' = CentralBody2.f[z]"/>
+  <r id="13" value="OrbitalBody.r[x]'. = OrbitalBody.r[x]'"/>
+  <r id="14" value="OrbitalBody.r[x]'' = OrbitalBody.f[x]"/>
+  <r id="15" value="OrbitalBody.r[y]'. = OrbitalBody.r[y]'"/>
+  <r id="16" value="OrbitalBody.r[y]'' = OrbitalBody.f[y]"/>
+  <r id="17" value="OrbitalBody.r[z]'. = OrbitalBody.r[z]'"/>
+  <r id="18" value="OrbitalBody.r[z]'' = OrbitalBody.f[z]"/>
+</residues>
+</partitionInfo>

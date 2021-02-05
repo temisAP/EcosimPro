@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Plate" >
+
+		<line id="Line_1" points="136.092,499.883 162.675,500.315"  end_arrow="true" dx="-43.675" dy="-404.315" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="191.675,531.315 191.675,515.315"  end_arrow="true" dx="-47.675" dy="-406.315" lineColor="170,0,0"   />
+
+		<line id="Line_3" points="227.094,499.883 243.094,499.883"  end_arrow="true" dx="-58.094" dy="-403.883" lineColor="170,0,0"   />
+
+		<line id="Line_4" points="185.093,495.882 185.093,475.882"  end_arrow="true" dx="-41.093" dy="-405.882" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_1" cx="189.675" cy="500.733" sx="48" sy="24" dx="-45.675" dy="-404.733" lineWidth="1.5"  color="224,224,224"  />
+
+		<ellipse id="Ellipse_2" cx="131" cy="96" rx="6" ry="6" dx="13" dy="32" color="192,192,192"  />
+
+		<ellipse id="Ellipse_1" cx="131" cy="96" rx="6" ry="6" dx="-35" color="192,192,192"  />
+
+		<ellipse id="Ellipse_3" cx="131" cy="96" rx="6" ry="6" dx="13" dy="-32" color="192,192,192"  />
+
+		<ellipse id="Ellipse_4" cx="131" cy="96" rx="6" ry="6" dx="61" color="192,192,192"  />
+
+		<port id="tpy_in" library="PORTS_LIB" type="thermal"  hotPort="tpy_in" >
+		
+				<symbol dx="144" dy="128" onLabel="true" />
+		
+				<label cx="21.5" cy="12" dx="125" dy="130.502" />
+		
+		</port>
+
+		<port id="tpx_in" library="PORTS_LIB" type="thermal"  hotPort="tpx_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="21.5" cy="12" dx="48" dy="88" />
+		
+		</port>
+
+		<port id="tpx_out" library="PORTS_LIB" type="thermal"  hotPort="tpx_out" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="25.5" cy="12" dx="200" dy="84" />
+		
+		</port>
+
+		<port id="tpy_out" library="PORTS_LIB" type="thermal"  hotPort="tpy_out" >
+		
+				<symbol dx="144" dy="64" onLabel="true" />
+		
+				<label cx="25.5" cy="12" dx="117.5" dy="34.5" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="L"/>
+				<var name="TemperatureDependance"/>
+				<var name="To"/>
+				<var name="To_linear"/>
+				<var name="To_table"/>
+				<var name="W"/>
+				<var name="cp"/>
+				<var name="e"/>
+				<var name="init_mode"/>
+				<var name="k"/>
+				<var name="mat"/>
+				<var name="nx"/>
+				<var name="ny"/>
+				<var name="rho"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="102.5" cy="130" sx="93" sy="12" variable="tpx_in.Tk[1]"  headerText="tpx_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-12" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="100" cy="130" sx="88" sy="12" variable="tpx_in.q[1]"  headerText="tpx_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-12" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="105" cy="130" sx="98" sy="12" variable="tpx_out.Tk[1]"  headerText="tpx_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="112" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="102.5" cy="130" sx="93" sy="12" variable="tpx_out.q[1]"  headerText="tpx_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="112" dy="-44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="105" cy="130" sx="98" sy="12" variable="tpy_out.Tk[1]"  headerText="tpy_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="-88" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="102.5" cy="130" sx="93" sy="12" variable="tpy_out.q[1]"  headerText="tpy_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="-76" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="102.5" cy="130" sx="93" sy="12" variable="tpx_in.Tk[1]"  headerText="tpx_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="100" cy="130" sx="88" sy="12" variable="tpy_in.q[1]"  headerText="tpy_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="20" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.F16<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="F16">F16</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/FLIGHT_SIM.F16.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">F16 example</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>s_aileron&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>s_elevator&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>s_rudder&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>s_throttle&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>state_out&nbsp;</td><td><a href="FLIGHT_SIM.State.html">State</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Trimmer&nbsp;</td><td><a href="FLIGHT_SIM.Trimmer.html">Trimmer</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Sum_1&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>El_Actuator&nbsp;</td><td><a href="FLIGHT_SIM.Actuator.html">Actuator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Sum_2&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Ail_Actuator&nbsp;</td><td><a href="FLIGHT_SIM.Actuator.html">Actuator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Rdr_Actuator&nbsp;</td><td><a href="FLIGHT_SIM.Actuator.html">Actuator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Sum_3&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Addition_1&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Engine&nbsp;</td><td><a href="FLIGHT_SIM.F16Engine.html">F16Engine</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Frame&nbsp;</td><td><a href="FLIGHT_SIM.Frame.html">Frame</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Aero&nbsp;</td><td><a href="FLIGHT_SIM.F16Aerodynamics.html">F16Aerodynamics</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Addition_1.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of inputs and outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cl_vs_abs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Rolling aerodynamic moment coefficient (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Clp_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Rolling aerodynamic moment coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Clr_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Rolling aerodynamic moment coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cm_vs_elevator_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Pitching aerodynamic moment coefficient (-) vs elevator deflection (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cmq_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Pitching aerodynamic moment coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cn_vs_abs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Yawing aerodynamic moment coefficient (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cnp_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Yawing aerodynamic moment coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cnr_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Yawing aerodynamic moment coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cx_vs_elevator_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>X-axis aerodynamic force coefficient (-) vs elevator deflection (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cxq_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>X-axis aerodynamic force coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cyp_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Y-axis aerodynamic force coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cyr_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Y-axis aerodynamic force coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Cz_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Z-axis aerodynamic force coefficient (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.Czq_vs_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Z-axis aerodynamic force coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.S&nbsp;</td><td>27.871&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wing area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Aero.b&nbsp;</td><td>9.144&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wing span&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Aero.c&nbsp;</td><td>3.45&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wing mean geometric chord&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Aero.dCl_aileron_vs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Rolling aerodynamic moment coefficient due to ailerons (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCl_rudder_vs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Rolling aerodynamic moment coefficient due to rudder (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCn_aileron_vs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Yawing aerodynamic moment coefficient due to ailerons (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCn_rudder_vs_beta_alpha&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Yawing aerodynamic moment coefficient due to rudder (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCy_aileron&nbsp;</td><td>0.021&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Y-axis Aerodynamic force coefficients due to ailerons&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCy_beta&nbsp;</td><td>-0.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Y-axis Aerodynamic force coefficients due to beta&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.dCy_rudder&nbsp;</td><td>0.086&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Y-axis Aerodynamic force coefficients due to rudder&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.xcg&nbsp;</td><td>0.35&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Center of gravity location adimensionalised with the chord&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Aero.xr&nbsp;</td><td>0.35&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Reference CG location adimensionalised with the chord&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Ail_Actuator.DL&nbsp;</td><td>21.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator deflection limit&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Ail_Actuator.RL&nbsp;</td><td>80&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator rate limit&nbsp;</td><td>"deg/s"&nbsp;</td></tr>
+
+<tr><td>Ail_Actuator.Rtau&nbsp;</td><td>20.2&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inverse of the lag time constant&nbsp;</td><td>"1/s"&nbsp;</td></tr>
+
+<tr><td>El_Actuator.DL&nbsp;</td><td>25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator deflection limit&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>El_Actuator.RL&nbsp;</td><td>60&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator rate limit&nbsp;</td><td>"deg/s"&nbsp;</td></tr>
+
+<tr><td>El_Actuator.Rtau&nbsp;</td><td>20.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inverse of the lag time constant&nbsp;</td><td>"1/s"&nbsp;</td></tr>
+
+<tr><td>Engine.A&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Thrust for IDLE power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>"N"&nbsp;</td></tr>
+
+<tr><td>Engine.B&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Thrust for MILITARY power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>"N"&nbsp;</td></tr>
+
+<tr><td>Engine.C&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Thrust for MAXIMUM power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>"N"&nbsp;</td></tr>
+
+<tr><td>Engine.H&nbsp;</td><td>225&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>engine angular momentum assumed fixed at 160 slugs*ft^2/s&nbsp;</td><td>"kg·m^2/s"&nbsp;</td></tr>
+
+<tr><td>Frame.InitFlag&nbsp;</td><td> FALSE &nbsp;</td><td>DATA&nbsp;</td><td>BOOLEAN &nbsp;</td><td>Initialization method (TRUE=component DATA block/FALSE=experiment INIT block)&nbsp;</td><td>"TRUE=component DATA block/FALSE=ex"&nbsp;</td></tr>
+
+<tr><td>Frame.Ixx&nbsp;</td><td>28384&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia Ix&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.Ixy&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Product of inertia Pxy&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.Ixz&nbsp;</td><td>2935&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Product of inertia Pxz&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.Iyy&nbsp;</td><td>166832&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia Iy&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.Iyz&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Product of inertia Pyz&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.Izz&nbsp;</td><td>188610&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia Iz&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>Frame.R_o[EarthAxis]&nbsp;</td><td>{ 0,0,0} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial aircraft position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Frame.lambda_ERR&nbsp;</td><td>0.0001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Maximum allowed error for quaternions integration&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Frame.mass&nbsp;</td><td>9071.8&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass&nbsp;</td><td>"kg"&nbsp;</td></tr>
+
+<tr><td>Frame.phi_o&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial roll angle&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Frame.psi_o&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial yaw angle&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Frame.quater&nbsp;</td><td> FALSE &nbsp;</td><td>DATA&nbsp;</td><td>BOOLEAN &nbsp;</td><td>Integration method (TRUE=quaternions/FALSE=Euler angles)&nbsp;</td><td>"TRUE=quaternions/FALSE=Euler angles"&nbsp;</td></tr>
+
+<tr><td>Frame.theta_o&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial pitch angle&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Rdr_Actuator.DL&nbsp;</td><td>30&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator deflection limit&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Rdr_Actuator.RL&nbsp;</td><td>120&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Actuator rate limit&nbsp;</td><td>"deg/s"&nbsp;</td></tr>
+
+<tr><td>Rdr_Actuator.Rtau&nbsp;</td><td>20.2&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inverse of the lag time constant&nbsp;</td><td>"1/s"&nbsp;</td></tr>
+
+<tr><td>Sum_1.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of inputs and outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Sum_2.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of inputs and outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Sum_3.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of inputs and outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Trimmer.ClimbAngle_req&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Required climb angle&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Trimmer.R_req&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Required turn radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Trimmer.VT_req&nbsp;</td><td>100&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Required air speed&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>Trimmer.alpha_req&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Required angle of atack&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Trimmer.dpsi_req&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Required turn rate&nbsp;</td><td>"deg/s"&nbsp;</td></tr>
+
+<tr><td>Trimmer.mode&nbsp;</td><td>Normal&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="FLIGHT_SIM.enumerativeTypes.html#TrimmerMode">TrimmerMode</a>&nbsp;</td><td>Trimmer mode&nbsp;</td><td>""&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

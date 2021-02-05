@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<symcategories>
+ <category name="Nodes">
+  <symbol name="BNode"/>
+  <symbol name="DNodeMat"/>
+  <symbol name="DNodeRoom"/>
+  <symbol name="DNphases"/>
+ </category>
+ <category name="Free_convection">
+  <symbol name="FreeConvec_Horizontal_Cylinder"/>
+  <symbol name="FreeConvec_Plate"/>
+  <symbol name="FreeConvec_UserDefined"/>
+  <symbol name="FreeConvec_Wire"/>
+  <symbol name="FreeConvec_simple"/>
+ </category>
+ <category name="Basics">
+  <symbol name="BNode"/>
+  <symbol name="DNode"/>
+  <symbol name="DNodeMat"/>
+  <symbol name="DNodeRoom"/>
+  <symbol name="GL"/>
+  <symbol name="GL_mat"/>
+  <symbol name="GR"/>
+  <symbol name="Heater"/>
+  <symbol name="Insulation"/>
+  <symbol name="TD_GL"/>
+ </category>
+ <category name="Sensors">
+  <symbol name="Q_sensor"/>
+  <symbol name="T_sensor"/>
+ </category>
+</symcategories>

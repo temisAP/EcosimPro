@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="ELECTRICAL.html">ELECTRICAL&nbsp;Library</a> |
+	  <a class="qindex" href="ELECTRICAL.components.html">Components</a> |
+	  <a class="qindex" href="ELECTRICAL.ports.html">Ports</a> |
+	  <a class="qindex" href="ELECTRICAL.classes.html">Classes</a> |
+	  <a class="qindex" href="ELECTRICAL.functions.html">Functions</a> |
+	  <a class="qindex" href="ELECTRICAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="ELECTRICAL.global.html">Global Variables</a></div>
+<h1 align="center">ELECTRICAL.Ramp<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Ramp">Ramp</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Control component to generate ramp signals</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>s_out&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>duration&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Durations of ramps&nbsp;</td><td>s&nbsp;</td></tr>
+
+<tr><td>height&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Heights of ramp&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>offset&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Offsets of output signals&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>startTime&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Output = offset for time &lt; startTime&nbsp;</td><td>s&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>outsignal&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>state_const&nbsp;</td><td>BOOLEAN &nbsp;</td><td> FALSE &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>state_off&nbsp;</td><td>BOOLEAN &nbsp;</td><td> TRUE &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>state_rise&nbsp;</td><td>BOOLEAN &nbsp;</td><td> FALSE &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:10)</font></p>
+</body>
+</html>

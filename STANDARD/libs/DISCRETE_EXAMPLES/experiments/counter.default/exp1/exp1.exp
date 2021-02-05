@@ -1,0 +1,11 @@
+EXPERIMENT exp1 ON counter.default
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 20.
+      CINT = 0.1
+      INTEG()     
+
+END EXPERIMENT

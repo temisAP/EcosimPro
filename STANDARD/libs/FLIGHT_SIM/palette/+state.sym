@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="0" sy="0" >
+
+	<grid enabled="false" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecundary="243,243,243" numberCells="4" />
+
+	<portType id="State" color="85,85,255" >
+		<editor used="false">
+		</editor>
+
+	</portType>
+</palette>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+				</tab>
+	</experimentViews>
+	<watch width="557" height="192" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+				<var name="CombCha_1.A_th_d"/>
+				<var name="CoolingJacket_1.g.Tt"/>
+				<var name="CoolingJacket_1.g.pt"/>
+				<var name="CoolingJacket_1.l.Tt"/>
+				<var name="CoolingJacket_1.l.pt"/>
+				<var name="Injector_1.v_ideal"/>
+				<var name="Injector_2.v_ideal"/>
+				<var name="Turbine_ch_1.f_in.Tt"/>
+				<var name="Turbine_ch_1.f_in.pt"/>
+				<var name="Turbine_ch_1.f_out.Tt"/>
+				<var name="Turbine_ch_1.f_out.pt"/>
+				<var name="Turbine_ch_2.f_in.Tt"/>
+				<var name="Turbine_ch_2.f_in.pt"/>
+				<var name="Turbine_ch_2.f_out.Tt"/>
+				<var name="Turbine_ch_2.f_out.pt"/>
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="162"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

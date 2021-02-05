@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="T_sensor" >
+
+		<line id="Line_1" points="115,686.999 115,671"  end_arrow="true" dx="-3" dy="-545" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="115,639.001 115,629"  end_arrow="true" dx="-3" dy="-545" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_1" cx="115" cy="655" sx="32" sy="32" dx="-3" dy="-545" lineWidth="1.5"  color="255,128,0"  />
+
+		<text id="Text_1" cx="10" cy="15.5" sx="20" sy="31" dx="102" dy="95"  >
+			<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62;&#60;span style=&#34; font-family:&#39;Tahoma&#39;; font-size:14pt; font-weight:600; color:#000000;&#34;&#62;T&#60;/span&#62;&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+		</text>
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="112" dy="144" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="91.2143" dy="151.018" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="112" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="99" dy="54" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="bias"/>
+				<var name="gain"/>
+				<var name="in"/>
+				<var name="n"/>
+				<var name="n_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="20" dy="24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="20" dy="36" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

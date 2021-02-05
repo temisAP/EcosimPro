@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.qAutopilot<br /><small></small></h1><hr><br><font size="5" color="black">ABSTRACT COMPONENT <a name="qAutopilot">qAutopilot</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Abstract component for pitch-rate CAS (Control Augmentation System) autopilots</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>s_elevator&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Output commanded elevator deflection (rad) port&nbsp;</td></tr>
+
+<tr><td>s_q&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input commanded pitch rate (rad/s) port&nbsp;</td></tr>
+
+<tr><td>state_in&nbsp;</td><td><a href="FLIGHT_SIM.State.html">State</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input aircraft state port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>k_AOA&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>AOA control gain&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_Err&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Error control gain&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_Integ&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Integral control gain&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_qGyro&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitch rate control gain&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>k_AOA_aux[1]&nbsp;</td><td>REAL &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>AOA control gain - auxiliary variable&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_Err_aux[1]&nbsp;</td><td>REAL &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>Error control gain - auxiliary variable&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_Integ_aux[1]&nbsp;</td><td>REAL &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>Integral control gain - auxiliary variable&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>k_qGyro_aux[1]&nbsp;</td><td>REAL &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>Pitch rate control gain - auxiliary variable&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>q_GyroSensor&nbsp;</td><td><a href="FLIGHT_SIM.GyroSensor.html">GyroSensor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>AOASensor&nbsp;</td><td><a href="FLIGHT_SIM.AOASensor.html">AOASensor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>AOA_filter&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.TransferFunction.html">CONTROL.TransferFunction</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Integ&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Integrator.html">CONTROL.Integrator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>qGyro_gain&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Gain.html">CONTROL.Gain</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Error_gain&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Gain.html">CONTROL.Gain</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Integ_gain&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Gain.html">CONTROL.Gain</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>AOA_gain&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Gain.html">CONTROL.Gain</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Sum1&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Sum2&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Addition.html">CONTROL.Addition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Dif1&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Subtraction.html">CONTROL.Subtraction</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Dif2&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Subtraction.html">CONTROL.Subtraction</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>AOA_filter.n_den&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Order of the denominator polynomial&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>AOA_filter.n_num&nbsp;</td><td>0&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Order of the numerator polynomial&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>AOA_filter.p[n_num + 1]&nbsp;</td><td>{ 10} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Coefficients of numerator polynomial: p[1]*s^n+...+p[n+1]&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>AOA_filter.q[n_den + 1]&nbsp;</td><td>{ 1,10} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Coefficients of denominator polynomial: q[1]*s^n+...+q[n+1]&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>AOA_gain.k[n]&nbsp;</td><td>k_AOA_aux&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Gain&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Error_gain.k[n]&nbsp;</td><td>k_Err_aux&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Gain&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Integ_gain.k[n]&nbsp;</td><td>k_Integ_aux&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Gain&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>qGyro_gain.k[n]&nbsp;</td><td>k_qGyro_aux&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Gain&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>q_GyroSensor.CosDir[MovilAxis]&nbsp;</td><td>{ 0,1,0} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Cosines of the measurement axis&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

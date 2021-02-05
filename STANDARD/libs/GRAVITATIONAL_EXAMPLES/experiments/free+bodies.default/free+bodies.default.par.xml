@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="GRAVITATIONAL_EXAMPLES" component="freeBodies" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="OrbitalBody1.r[x]"/>
+  <variable name="OrbitalBody1.r[x]'"/>
+  <variable name="OrbitalBody1.r[y]"/>
+  <variable name="OrbitalBody1.r[y]'"/>
+  <variable name="OrbitalBody1.r[z]"/>
+  <variable name="OrbitalBody1.r[z]'"/>
+  <variable name="OrbitalBody2.r[x]"/>
+  <variable name="OrbitalBody2.r[x]'"/>
+  <variable name="OrbitalBody2.r[y]"/>
+  <variable name="OrbitalBody2.r[y]'"/>
+  <variable name="OrbitalBody2.r[z]"/>
+  <variable name="OrbitalBody2.r[z]'"/>
+</dynamics>
+<residues>
+  <r id="1" value="OrbitalBody1.r[x]'. = OrbitalBody1.r[x]'"/>
+  <r id="2" value="OrbitalBody1.r[x]'' = OrbitalBody1.f[x]"/>
+  <r id="3" value="OrbitalBody1.r[y]'. = OrbitalBody1.r[y]'"/>
+  <r id="4" value="OrbitalBody1.r[y]'' = OrbitalBody1.f[y]"/>
+  <r id="5" value="OrbitalBody1.r[z]'. = OrbitalBody1.r[z]'"/>
+  <r id="6" value="OrbitalBody1.r[z]'' = OrbitalBody1.f[z]"/>
+  <r id="7" value="OrbitalBody2.r[x]'. = OrbitalBody2.r[x]'"/>
+  <r id="8" value="OrbitalBody2.r[x]'' = OrbitalBody2.f[x]"/>
+  <r id="9" value="OrbitalBody2.r[y]'. = OrbitalBody2.r[y]'"/>
+  <r id="10" value="OrbitalBody2.r[y]'' = OrbitalBody2.f[y]"/>
+  <r id="11" value="OrbitalBody2.r[z]'. = OrbitalBody2.r[z]'"/>
+  <r id="12" value="OrbitalBody2.r[z]'' = OrbitalBody2.f[z]"/>
+</residues>
+</partitionInfo>

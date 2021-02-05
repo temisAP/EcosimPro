@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL.FreeConvec_Plate<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="FreeConvec_Plate">FreeConvec_Plate</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/THERMAL.FreeConvec_Plate.png"></p><br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>n&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>position&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#WallType">WallType</a>&nbsp;</td><td>wall&nbsp;</td><td>Film Type&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>thermal_fluid&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#ThFluids">ThFluids</a>&nbsp;</td><td>Air&nbsp;</td><td>Interface Fluid&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>tp_fluid&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>OUT &nbsp;</td><td>0,1&nbsp;</td><td>Thermal outlet port&nbsp;</td></tr>
+
+<tr><td>tp_surface&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>IN &nbsp;</td><td>0,1&nbsp;</td><td>Thermal inlet port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>0,Inf&nbsp;</td><td>Convective heat exchange area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>Grav&nbsp;</td><td>REAL &nbsp;</td><td>9.80665&nbsp;</td><td>&nbsp;</td><td>Gravity&nbsp;</td><td>m/s^2&nbsp;</td></tr>
+
+<tr><td>Lc&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>0,Inf&nbsp;</td><td>Height for vertical plate OR perimeter for floor and ceiling option&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>P&nbsp;</td><td>REAL &nbsp;</td><td>101325&nbsp;</td><td>0,Inf&nbsp;</td><td>Ambient pressure&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>B[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Beta factor&nbsp;</td><td>1/K&nbsp;</td></tr>
+
+<tr><td>Cp[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Specific heat&nbsp;</td><td>W/(kg·K)&nbsp;</td></tr>
+
+<tr><td>DT[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Temperature difference&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>Gr[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Grashof&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>K[n]&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>0,Inf&nbsp;</td><td>Thermal conductivity&nbsp;</td><td>W/(m·K)&nbsp;</td></tr>
+
+<tr><td>L[n]&nbsp;</td><td>REAL &nbsp;</td><td>0.001&nbsp;</td><td>0,Inf&nbsp;</td><td>Characteristic length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Nu[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Nusselt&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>Pr[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Prandtl&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>Ra[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Rayleigh&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>Tm[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Average Temperature&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>h[n]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>0,Inf&nbsp;</td><td>Convective Heat Transfert Coefficient&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>itab&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>q[n]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat flux&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>rho[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>0,Inf&nbsp;</td><td>Density&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+<tr><td>vis[n]&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>0,Inf&nbsp;</td><td>Viscosity&nbsp;</td><td>kg/(s·m)&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

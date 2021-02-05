@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="AfterBurner" >
+
+		<line id="Line_6" points="9.1077,-1.38858 9.1077,13.6116"  end_arrow="true" dx="118.892" dy="49.3886" lineColor="255,0,0"  aliasing="true"  />
+
+		<line id="Line_7" points="-38.8924,45.6115 -22.8922,45.6115"  end_arrow="true" dx="133.892" dy="50.3885" lineColor="0,0,255"  aliasing="true"  />
+
+		<rect id="Rectangle_2" cx="13.108" cy="45.6116" sx="64" sy="64" dx="130.892" dy="50.3884" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<line id="Line_8" points="-14.8923,17.6115 41.1077,17.6115" dx="130.892" dy="50.3885" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_9" points="-14.8923,73.6114 41.108,73.6116" dx="130.892" dy="50.3884" lineWidth="0.5"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="1.10752,25.6118 9.10752,21.6118 9.10752,29.6118" dx="114.892" dy="54.3882" lineWidth="0.5"  color="192,192,192" aliasing="true"  />
+
+		<line id="Line_10" points="-38.8924,45.6115 -26.8924,45.6115"  end_arrow="true" dx="214.892" dy="50.3885" lineColor="0,0,255"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_9" points="32,96 36,88 44,88 64,96 44,104 36,104 32,96" dx="92" dy="-16" lineWidth="0.5"   color="255,0,0" gradientColor="255,255,0" gradientType="GR" position="100"  />
+
+		<closedBezier id="ClosedBezier_10" points="40,96 44,92 52,92 60,96 52,100 44,100 40,96" dx="84" dy="-16" lineWidth="0.5"   color="255,255,0" gradientColor="255,0,0" gradientType="GR" position="100"  />
+
+		<closedBezier id="ClosedBezier_5" points="32,96 36,88 44,88 64,96 44,104 36,104 32,96" dx="92" lineWidth="0.5"   color="255,0,0" gradientColor="255,255,0" gradientType="GR" position="100"  />
+
+		<closedBezier id="ClosedBezier_6" points="40,96 44,92 52,92 60,96 52,100 44,100 40,96" dx="84" lineWidth="0.5"   color="255,255,0" gradientColor="255,0,0" gradientType="GR" position="100"  />
+
+		<closedBezier id="ClosedBezier_3" points="32,96 36,88 44,88 64,96 44,104 36,104 32,96" dx="92" dy="16" lineWidth="0.5"   color="255,0,0" gradientColor="255,255,0" gradientType="GR" position="100"  />
+
+		<closedBezier id="ClosedBezier_4" points="40,96 44,92 52,92 60,96 52,100 44,100 40,96" dx="84" dy="16" lineWidth="0.5"   color="255,255,0" gradientColor="255,0,0" gradientType="GR" position="100"  />
+
+		<polygon id="Polygon_2" points="-6.89248,25.6118 1.10752,21.6118 1.10752,29.6118" dx="122.892" dy="70.3882" lineWidth="0.5"  color="192,192,192" aliasing="true"  />
+
+		<polygon id="Polygon_3" points="1.10752,25.6118 9.10752,21.6118 9.10752,29.6118" dx="114.892" dy="86.3882" lineWidth="0.5"  color="192,192,192" aliasing="true"  />
+
+		<port id="g_in" library="TURBOJET" type="Gas"  hotPort="g_in" >
+		
+				<symbol dx="96.0003" dy="95.9998" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="56.0003" dy="83.9998" />
+		
+		</port>
+
+		<port id="f_in" library="TURBOJET" type="Fuel"  hotPort="f_in" >
+		
+				<symbol dx="128" dy="48" onLabel="true" />
+		
+				<label cx="14" cy="12" dx="114" dy="20" />
+		
+		</port>
+
+		<port id="g_out" library="TURBOJET" type="Gas"  hotPort="g_out" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="196" dy="84" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="Cd"/>
+				<var name="eta"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100" cy="106" sx="88" sy="12" variable="g_in.P"  headerText="g_in.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-20" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="105" cy="106" sx="98" sy="12" variable="g_in.W"  headerText="g_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-20" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="102.5" cy="106" sx="93" sy="12" variable="g_out.P"  headerText="g_out.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="120" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="107.5" cy="106" sx="103" sy="12" variable="g_out.W"  headerText="g_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="120" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="104.5" cy="106" sx="97" sy="12" variable="f_in.W"  headerText="f_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="36" dy="-68" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

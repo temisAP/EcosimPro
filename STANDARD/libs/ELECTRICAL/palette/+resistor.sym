@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Resistor" >
+
+		<line id="Line_4" points="56,78 62,78" dx="84" dy="-6"  />
+
+		<g id="Group_2" dx="5" dy="-12.5" >
+		
+					<line id="Line_12" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_19" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<line id="Line_1" points="76.339,112.979 76.339,120.979 84.339,124.979 68.339,128.979 84.339,132.979 68.339,136.979 84.339,140.979 68.339,144.979 84.339,148.979 68.339,152.979 84.339,156.979 68.339,160.979 84.339,164.979 76.339,168.979 76.339,176.979" rotation="270" flipY="true" dx="35.4052" dy="-65.2348" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="36.5" dy="73" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="152.5" dy="73" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="R"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="286" cy="123" sx="380" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" adjust="false" dx="-48" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="264" cy="155" sx="368" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" adjust="false" dx="-28" dy="-16" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

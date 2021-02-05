@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<customToolbar level="1">
+ <button id="ACTION_LEVEL_1_1" enable="FALSE">
+  <command file="" arguments="" type="" launch="NO" />
+  <description value="" />
+  <icon><![CDATA[]]></icon>
+ </button>
+ <button id="ACTION_LEVEL_1_2" enable="FALSE">
+  <command file="" arguments="" type="" launch="NO" />
+  <description value="" />
+  <icon><![CDATA[]]></icon>
+ </button>
+ <button id="ACTION_LEVEL_1_3" enable="FALSE">
+  <command file="" arguments="" type="" launch="NO" />
+  <description value="" />
+  <icon><![CDATA[]]></icon>
+ </button>
+ <button id="ACTION_LEVEL_1_4" enable="FALSE">
+  <command file="" arguments="" type="" launch="NO" />
+  <description value="" />
+  <icon><![CDATA[]]></icon>
+ </button>
+ <button id="ACTION_LEVEL_1_5" enable="FALSE">
+  <command file="" arguments="" type="" launch="NO" />
+  <description value="" />
+  <icon><![CDATA[]]></icon>
+ </button>
+</customToolbar>

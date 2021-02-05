@@ -1,0 +1,34 @@
+09:24:57.432 # Start debug file.
+
+09:24:57.434 # Arguments: 
+C:\Program Files\EcosimPro\EcosimPro_5.12.1\platform\win64_vc2017\monitor_win64_vc2017.exe
+EXP
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/experiments/+determinant_+tests_+execution.default/exp1/+determinant_+tests_+execution.default.exp1.win64_vc2015.dll
+ID
+C:/Program Files/EcosimPro/EcosimPro_5.12.1
+EXT_DLL
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/ALGEBRA/lib;G:/EASVN/trunk/libs/standard_demo/CONTAINERS/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/CONTAINERS/lib;G:/EASVN/trunk/libs/standard_demo/CONTROL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/CONTROL/lib;G:/EASVN/trunk/libs/standard_demo/CONTROL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/CONTROL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/DEFAULT_LIB/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/DEFAULT_LIB/lib;G:/EASVN/trunk/libs/standard_demo/DISCRETE_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/DISCRETE_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/DISCRETE_LIB/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/DISCRETE_LIB/lib;G:/EASVN/trunk/libs/standard_demo/ELECTRICAL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/ELECTRICAL/lib;G:/EASVN/trunk/libs/standard_demo/ELECTRICAL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/ELECTRICAL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/FLIGHT_SIM/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/FLIGHT_SIM/lib;G:/EASVN/trunk/libs/standard_demo/GRAVITATIONAL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/GRAVITATIONAL/lib;G:/EASVN/trunk/libs/standard_demo/GRAVITATIONAL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/GRAVITATIONAL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/HYDRAULIC/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/HYDRAULIC/lib;G:/EASVN/trunk/libs/standard_demo/HYDRAULIC_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/HYDRAULIC_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/MATH/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/MATH/lib;G:/EASVN/trunk/libs/standard_demo/MECHANICAL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/MECHANICAL/lib;G:/EASVN/trunk/libs/standard_demo/MECHANICAL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/MECHANICAL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/PHYSIOLOGICAL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/PHYSIOLOGICAL/lib;G:/EASVN/trunk/libs/standard_demo/PHYSIOLOGICAL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/PHYSIOLOGICAL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/PORTS_LIB/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/PORTS_LIB/lib;G:/EASVN/trunk/libs/standard_demo/THERMAL/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/THERMAL/lib;G:/EASVN/trunk/libs/standard_demo/THERMAL_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/THERMAL_EXAMPLES/lib;G:/EASVN/trunk/libs/standard_demo/TURBOJET/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/TURBOJET/lib;G:/EASVN/trunk/libs/standard_demo/TURBOJET_EXAMPLES/lib/win64_vc2015;G:/EASVN/trunk/libs/standard_demo/TURBOJET_EXAMPLES/lib;
+WORK_PATH
+
+USED_FILES_PATH
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/autocode/ALGEBRA.+determinant_+tests_+execution.default.exp1.siminfo.xml
+09:24:58.650 # MON_handler::deleteTrashDLL - In - Path:
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/experiments/+determinant_+tests_+execution.default/exp1
+
+09:24:58.652 # MON_handler::deleteTrashDLL - Out - Path:
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/experiments/+determinant_+tests_+execution.default/exp1
+
+09:25:38.671 # MON_handler::MON_handler - 1
+
+09:25:38.673 # MON_handler::deleteTrashDLL - In - Path:
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/experiments/+determinant_+tests_+execution.default/exp1/
+
+09:25:38.679 # MON_handler::deleteTrashDLL - Out - Path:
+G:/EASVN/trunk/libs/standard_demo/ALGEBRA/experiments/+determinant_+tests_+execution.default/exp1/
+
+09:25:38.680 # MON_handler::MON_handler - 2
+
+09:25:38.705 # MON_monitor::~MON_monitor - 1
+
+09:25:38.707 # MON_monitor::~MON_monitor - 2
+

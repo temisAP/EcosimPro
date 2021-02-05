@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.F16Aerodynamics<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="F16Aerodynamics">F16Aerodynamics</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/FLIGHT_SIM.F16Aerodynamics.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">F-16 aerodynamic response</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>forces_out&nbsp;</td><td><a href="FLIGHT_SIM.Forces.html">Forces</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Output aerodynamic forces port&nbsp;</td></tr>
+
+<tr><td>s_Mach&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Output mach number signal (-) port&nbsp;</td></tr>
+
+<tr><td>s_aileron&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input aileron deflection (rad) port&nbsp;</td></tr>
+
+<tr><td>s_elevator&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input elevator deflection (rad) port&nbsp;</td></tr>
+
+<tr><td>s_rudder&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input rudder deflection (rad) port&nbsp;</td></tr>
+
+<tr><td>state_in&nbsp;</td><td><a href="FLIGHT_SIM.State.html">State</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input aircraft state port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Cl_vs_abs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling aerodynamic moment coefficient (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Clp_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling aerodynamic moment coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Clr_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling aerodynamic moment coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cm_vs_elevator_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitching aerodynamic moment coefficient (-) vs elevator deflection (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cmq_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitching aerodynamic moment coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cn_vs_abs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing aerodynamic moment coefficient (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cnp_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing aerodynamic moment coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cnr_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing aerodynamic moment coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cx_vs_elevator_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X-axis aerodynamic force coefficient (-) vs elevator deflection (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cxq_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X-axis aerodynamic force coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cyp_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Y-axis aerodynamic force coefficient due to roll rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cyr_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Y-axis aerodynamic force coefficient due to yaw rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cz_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Z-axis aerodynamic force coefficient (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Czq_vs_alpha&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Z-axis aerodynamic force coefficient due to pitch rate (-) vs angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>S&nbsp;</td><td>REAL &nbsp;</td><td>27.871&nbsp;</td><td>&nbsp;</td><td>Wing area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>b&nbsp;</td><td>REAL &nbsp;</td><td>9.144&nbsp;</td><td>&nbsp;</td><td>Wing span&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>c&nbsp;</td><td>REAL &nbsp;</td><td>3.45&nbsp;</td><td>&nbsp;</td><td>Wing mean geometric chord&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>dCl_aileron_vs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling aerodynamic moment coefficient due to ailerons (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCl_rudder_vs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling aerodynamic moment coefficient due to rudder (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCn_aileron_vs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing aerodynamic moment coefficient due to ailerons (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCn_rudder_vs_beta_alpha&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing aerodynamic moment coefficient due to rudder (-) vs sideslip angle (deg) and angle of attack (deg)&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCy_aileron&nbsp;</td><td>REAL &nbsp;</td><td>0.021&nbsp;</td><td>&nbsp;</td><td>Y-axis Aerodynamic force coefficients due to ailerons&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCy_beta&nbsp;</td><td>REAL &nbsp;</td><td>-0.02&nbsp;</td><td>&nbsp;</td><td>Y-axis Aerodynamic force coefficients due to beta&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCy_rudder&nbsp;</td><td>REAL &nbsp;</td><td>0.086&nbsp;</td><td>&nbsp;</td><td>Y-axis Aerodynamic force coefficients due to rudder&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>xcg&nbsp;</td><td>REAL &nbsp;</td><td>0.35&nbsp;</td><td>&nbsp;</td><td>Center of gravity location adimensionalised with the chord&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>xr&nbsp;</td><td>REAL &nbsp;</td><td>0.35&nbsp;</td><td>&nbsp;</td><td>Reference CG location adimensionalised with the chord&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Cl_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling moment coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Clo&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Clt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total rolling moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cm_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitching moment coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cmo&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitching moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cmt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total pitching moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cn_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing moment coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cno&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cnt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total yawing moment coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cx_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>X-axis force coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cxt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total x-axis force coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cy_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Y-axis force coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cyt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total y-axis force coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Cz_damp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Z-axis force coeff. due to angular rate&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Czt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total z-axis force coeff.&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Mach&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>0,1&nbsp;</td><td>Mach number&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>T&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Temperature&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>VT&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Air speed&nbsp;</td><td>m/s&nbsp;</td></tr>
+
+<tr><td>Vsound&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Sound velocity&nbsp;</td><td>m/s&nbsp;</td></tr>
+
+<tr><td>aileron&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>-21.5,21.5&nbsp;</td><td>Ailerons deflection&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>alpha&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>-15,45&nbsp;</td><td>Angle of attack&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>altitude&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Altitude&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>beta&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>-30,30&nbsp;</td><td>Sideslip angle&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>dCl_aileron&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling moment coeff. due to ailerons&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCl_rudder&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rolling moment coeff. due to rudder&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCn_aileron&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing moment coeff. due to ailerons&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>dCn_rudder&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yawing moment coeff. due to rudder&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>elevator&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>-25,25&nbsp;</td><td>Elevator deflection&nbsp;</td><td>deg&nbsp;</td></tr>
+
+<tr><td>p&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Roll rate&nbsp;</td><td>rad/s&nbsp;</td></tr>
+
+<tr><td>p_dyn&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dynamic pressure&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+<tr><td>p_stat&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Static pressure&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+<tr><td>q&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pitch rate&nbsp;</td><td>rad/s&nbsp;</td></tr>
+
+<tr><td>r&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Yaw rate&nbsp;</td><td>rad/s&nbsp;</td></tr>
+
+<tr><td>rho&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Density&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+<tr><td>rudder&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>-30,30&nbsp;</td><td>Rudder deflection&nbsp;</td><td>deg&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL_EXAMPLES.html">THERMAL_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL_EXAMPLES.Wall_3<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Wall_3">Wall_3</a>
+</font><br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Environment&nbsp;</td><td><a href="../../THERMAL/docs/THERMAL.BNode.html">THERMAL.BNode</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>GR_1&nbsp;</td><td><a href="../../THERMAL/docs/THERMAL.GR.html">THERMAL.GR</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>layer1&nbsp;</td><td><a href="../../THERMAL/docs/THERMAL.Wall.html">THERMAL.Wall</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>layer2&nbsp;</td><td><a href="../../THERMAL/docs/THERMAL.Wall.html">THERMAL.Wall</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>layer3&nbsp;</td><td><a href="../../THERMAL/docs/THERMAL.Wall.html">THERMAL.Wall</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Environment.Label&nbsp;</td><td>"Node Label"&nbsp;</td><td>DATA&nbsp;</td><td>STRING &nbsp;</td><td>Node label&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Environment.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Environment.qi&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Impressed heat&nbsp;</td><td>"W"&nbsp;</td></tr>
+
+<tr><td>GR_1.REF&nbsp;</td><td>0.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Radiative exchange factor&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>GR_1.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer1.A&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area of the wall&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>layer1.TemperatureDependance&nbsp;</td><td> TRUE &nbsp;</td><td>DATA&nbsp;</td><td>BOOLEAN &nbsp;</td><td>Flag to consider temperature dependance of the material properties&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer1.To&nbsp;</td><td>290&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Constant initial temperature of nodes if init_mode = Constant_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer1.To_linear[2]&nbsp;</td><td>{ 290,290} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperatures at both side if init_mode = Linear_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer1.To_table&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table with initial wall temperature versus non-dimensional position if init_mode = Table_Temp (K)&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer1.cp&nbsp;</td><td>500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall Specific heat if material is None&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>layer1.e&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall thickness&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>layer1.init_mode&nbsp;</td><td>Constant_Temp&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#WALL_INIT_MODE" data-ajax='false'>THERMAL.WALL_INIT_MODE</a>&nbsp;</td><td>Option for the initiliazation of the nodal temperatures&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer1.k&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall conductivity if material is None&nbsp;</td><td>"W/(m·K)"&nbsp;</td></tr>
+
+<tr><td>layer1.mat&nbsp;</td><td>None&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#Material" data-ajax='false'>THERMAL.Material</a>&nbsp;</td><td>Material&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer1.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer1.nodes&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes of wall discretization&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer1.rho&nbsp;</td><td>1000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall density if material is None&nbsp;</td><td>"kg/m^3"&nbsp;</td></tr>
+
+<tr><td>layer2.A&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area of the wall&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>layer2.TemperatureDependance&nbsp;</td><td> TRUE &nbsp;</td><td>DATA&nbsp;</td><td>BOOLEAN &nbsp;</td><td>Flag to consider temperature dependance of the material properties&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer2.To&nbsp;</td><td>290&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Constant initial temperature of nodes if init_mode = Constant_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer2.To_linear[2]&nbsp;</td><td>{ 290,290} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperatures at both side if init_mode = Linear_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer2.To_table&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table with initial wall temperature versus non-dimensional position if init_mode = Table_Temp (K)&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer2.cp&nbsp;</td><td>500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall Specific heat if material is None&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>layer2.e&nbsp;</td><td>0.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall thickness&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>layer2.init_mode&nbsp;</td><td>Constant_Temp&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#WALL_INIT_MODE" data-ajax='false'>THERMAL.WALL_INIT_MODE</a>&nbsp;</td><td>Option for the initiliazation of the nodal temperatures&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer2.k&nbsp;</td><td>0.02&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall conductivity if material is None&nbsp;</td><td>"W/(m·K)"&nbsp;</td></tr>
+
+<tr><td>layer2.mat&nbsp;</td><td>None&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#Material" data-ajax='false'>THERMAL.Material</a>&nbsp;</td><td>Material&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer2.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer2.nodes&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes of wall discretization&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer2.rho&nbsp;</td><td>1000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall density if material is None&nbsp;</td><td>"kg/m^3"&nbsp;</td></tr>
+
+<tr><td>layer3.A&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area of the wall&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>layer3.TemperatureDependance&nbsp;</td><td> TRUE &nbsp;</td><td>DATA&nbsp;</td><td>BOOLEAN &nbsp;</td><td>Flag to consider temperature dependance of the material properties&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer3.To&nbsp;</td><td>290&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Constant initial temperature of nodes if init_mode = Constant_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer3.To_linear[2]&nbsp;</td><td>{ 290,290} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperatures at both side if init_mode = Linear_Temp&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer3.To_table&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table with initial wall temperature versus non-dimensional position if init_mode = Table_Temp (K)&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>layer3.cp&nbsp;</td><td>500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall Specific heat if material is None&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>layer3.e&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall thickness&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>layer3.init_mode&nbsp;</td><td>Constant_Temp&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#WALL_INIT_MODE" data-ajax='false'>THERMAL.WALL_INIT_MODE</a>&nbsp;</td><td>Option for the initiliazation of the nodal temperatures&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>layer3.k&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall conductivity if material is None&nbsp;</td><td>"W/(m·K)"&nbsp;</td></tr>
+
+<tr><td>layer3.mat&nbsp;</td><td>GCF&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/THERMAL/docs/THERMAL.enumerativeTypes.html#Material" data-ajax='false'>THERMAL.Material</a>&nbsp;</td><td>Material&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer3.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of thermal port&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer3.nodes&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes of wall discretization&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>layer3.rho&nbsp;</td><td>1000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Wall density if material is None&nbsp;</td><td>"kg/m^3"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:08)</font></p>
+</body>
+</html>

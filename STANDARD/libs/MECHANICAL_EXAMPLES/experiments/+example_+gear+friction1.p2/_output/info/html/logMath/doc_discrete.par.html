@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+gear+friction1.p2.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+gear+friction1.p2.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Discrete Blocks<br /></h2>
+ASSERT (abs(gear.trans_ratio) &gt; 0) FATAL "Error in initialization of GearFriction: i can not be zero"
+<br/>
+WHEN (gear.ideal)  THEN
+	gear.imode = 3
+	END WHEN<br/>
+WHEN (NOT gear.ideal)  THEN
+	gear.imode = 0
+	END WHEN<br/>
+WHEN (gear.imode == 1 AND gear.w &gt; 0)  THEN
+	gear.imode = 2
+	END WHEN<br/>
+WHEN (gear.imode == 2 AND gear.w &lt; 0)  THEN
+	gear.imode = 0
+	END WHEN<br/>
+WHEN (gear.imode == -1 AND gear.w &lt; 0)  THEN
+	gear.imode = -2
+	END WHEN<br/>
+WHEN (gear.imode == -2 AND gear.w &gt; 0)  THEN
+	gear.imode = 0
+	END WHEN<br/>
+WHEN (gear.imode == 0 AND <b><font color="green">gear.sa</font></b> &gt; gear.Tloss_max)  THEN
+	gear.imode = 1 AFTER 0
+	END WHEN<br/>
+WHEN (gear.imode == 0 AND <b><font color="green">gear.sa</font></b> &lt; gear.Tloss_min)  THEN
+	gear.imode = -1 AFTER 0
+	END WHEN<br/>
+</body></html>

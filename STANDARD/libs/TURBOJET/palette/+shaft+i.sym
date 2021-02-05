@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="ShaftI" >
+
+		<line id="Line_4" points="74.3773,885 86.3773,885"  start_arrow="true" dx="25.6227" dy="-789.001" lineColor="128,0,0"   />
+
+		<line id="Line_3" points="70.3773,885 86.3773,885"  start_arrow="true" dx="105.623" dy="-789.001" lineColor="128,0,0"   />
+
+		<polygon id="Polygon_4" points="70.3771,888.999 70.3771,881.001 6.37741,881.001 6.37741,888.999" dx="105.623" dy="-789.001" lineWidth="1.5"  color="128,0,0"  />
+
+		<port id="sh_in" library="TURBOJET" type="Shaft"  hotPort="sh_in" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="196.5" dy="84" />
+		
+		</port>
+
+		<port id="sh_out" library="TURBOJET" type="Shaft"  hotPort="sh_out" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="40.5" dy="84" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Geometry">
+				<var name="I"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="114" cy="42" sx="108" sy="12" variable="sh_in.Power"  headerText="sh_in.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="84" dy="32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="109.5" cy="42" sx="99" sy="12" variable="sh_in.N"  headerText="sh_in.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="84" dy="44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="116.5" cy="42" sx="113" sy="12" variable="sh_out.Power"  headerText="sh_out.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="-20" dy="68" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="112" cy="42" sx="104" sy="12" variable="sh_out.N"  headerText="sh_out.N"  tailText="rpm" family="MS Shell Dlg 2" points="6" dx="-20" dy="80" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

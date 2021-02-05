@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_4" x="499" y="327" dx="499" dy="327">
+				<plot id="Plot_4">
+					<axeX variableName="TIME">
+						<scale min="0" max="25"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="11700" max="12000"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="compressor.N" nick="compressor.N" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="327" dx="499" dy="327">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<scale min="0" max="25"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="0.5" max="0.75"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="compressor.beta" nick="compressor.beta" lineColor="255,0,0"/>
+						<var name="fan.beta" nick="fan.beta" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="499" y="0" dx="499" dy="327">
+				<plot id="Plot_3">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="fan.N" nick="fan.N" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="499" dy="327">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="25"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="0.9" max="1.04"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="fan.BPR" nick="fan.BPR" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

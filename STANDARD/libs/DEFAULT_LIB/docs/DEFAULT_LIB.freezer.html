@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="DEFAULT_LIB.html">DEFAULT_LIB&nbsp;Library</a> |
+	  <a class="qindex" href="DEFAULT_LIB.components.html">Components</a> |
+	  <a class="qindex" href="DEFAULT_LIB.ports.html">Ports</a> |
+	  <a class="qindex" href="DEFAULT_LIB.classes.html">Classes</a> |
+	  <a class="qindex" href="DEFAULT_LIB.functions.html">Functions</a> |
+	  <a class="qindex" href="DEFAULT_LIB.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="DEFAULT_LIB.global.html">Global Variables</a></div>
+<h1 align="center">DEFAULT_LIB.freezer<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="freezer">freezer</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Freezer example</font><br/>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>aka&nbsp;</td><td>REAL &nbsp;</td><td>0.18&nbsp;</td><td>&nbsp;</td><td>Heat transfer coeficient&nbsp;</td><td>kW/degC&nbsp;</td></tr>
+
+<tr><td>c0&nbsp;</td><td>REAL &nbsp;</td><td>0.5895&nbsp;</td><td>&nbsp;</td><td>Compressor characteristic 0&nbsp;</td><td>kW&nbsp;</td></tr>
+
+<tr><td>c1&nbsp;</td><td>REAL &nbsp;</td><td>0.010264&nbsp;</td><td>&nbsp;</td><td>Compressor characteristic 1&nbsp;</td><td>kW/degC&nbsp;</td></tr>
+
+<tr><td>c2&nbsp;</td><td>REAL &nbsp;</td><td>0.0002869&nbsp;</td><td>&nbsp;</td><td>Compressor characteristic 2&nbsp;</td><td>kW/degC^2&nbsp;</td></tr>
+
+<tr><td>carn&nbsp;</td><td>REAL &nbsp;</td><td>0.45&nbsp;</td><td>&nbsp;</td><td>Carnot efficiency&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>cpw&nbsp;</td><td>REAL &nbsp;</td><td>4.2&nbsp;</td><td>&nbsp;</td><td>Specific heat of water&nbsp;</td><td>kJ/(kg·degC)&nbsp;</td></tr>
+
+<tr><td>ec&nbsp;</td><td>REAL &nbsp;</td><td>0.7&nbsp;</td><td>&nbsp;</td><td>Coolant temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>flc&nbsp;</td><td>REAL &nbsp;</td><td>0.40334&nbsp;</td><td>&nbsp;</td><td>Coolant flow&nbsp;</td><td>kg/s&nbsp;</td></tr>
+
+<tr><td>qb&nbsp;</td><td>REAL &nbsp;</td><td>1.5&nbsp;</td><td>&nbsp;</td><td>Internal heat production&nbsp;</td><td>kW&nbsp;</td></tr>
+
+<tr><td>sf&nbsp;</td><td>REAL &nbsp;</td><td>13&nbsp;</td><td>&nbsp;</td><td>Size of compressor&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>ta&nbsp;</td><td>REAL &nbsp;</td><td>25&nbsp;</td><td>&nbsp;</td><td>Ambient temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>tc1&nbsp;</td><td>REAL &nbsp;</td><td>20&nbsp;</td><td>&nbsp;</td><td>Input coolant temperature &nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>ua&nbsp;</td><td>REAL &nbsp;</td><td>1.7&nbsp;</td><td>&nbsp;</td><td>Heat transfer coeficient&nbsp;</td><td>kW/degC&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>compressorON&nbsp;</td><td>BOOLEAN &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Compressor state (ON: TRUE / OFF: FALSE)&nbsp;</td><td>ON: TRUE / OFF: FALSE&nbsp;</td></tr>
+
+<tr><td>mc&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat capacity&nbsp;</td><td>J/degC&nbsp;</td></tr>
+
+<tr><td>qc&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Condenser heat&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>qe&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat transferred from the air&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>tc&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Condenser temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>tc2&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Output coolant temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>te&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Evaporator temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>tr&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Room temperature&nbsp;</td><td>degC&nbsp;</td></tr>
+
+<tr><td>wk&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Electric power&nbsp;</td><td>W&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:00)</font></p>
+</body>
+</html>

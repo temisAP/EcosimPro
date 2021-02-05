@@ -1,0 +1,22 @@
+EXPERIMENT exp1 ON LinearSystem.default
+   DECLS
+   INIT
+      -- initial values for state variables
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+   comparator.s_in_1.signal[1] = square(TIME, 5.)
+
+   summer_1.s_in_2.signal[1] = 0.
+   summer_2.s_in_2.signal[1] = 0.
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_TABLE("reportAll.rpt", "*",TRUE)
+      -- for example integrate the model 15 seconds (obtain results every 0.1 seconds)
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

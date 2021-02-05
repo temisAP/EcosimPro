@@ -1,0 +1,14 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: FUNCPOINTERS
+ COMPONENT: testFuncPtr11
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 15/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON testFuncPtr11.default
+   BODY
+		INTEG_TO(1,1)
+		WRITE("uu (solution is 401)= %g\n",uu)
+END EXPERIMENT

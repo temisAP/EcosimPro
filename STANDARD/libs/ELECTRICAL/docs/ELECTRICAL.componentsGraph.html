@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="ELECTRICAL.html">ELECTRICAL&nbsp;Library</a> |
+	  <a class="qindexHL" href="ELECTRICAL.components.html">Components</a> |
+	  <a class="qindex" href="ELECTRICAL.ports.html">Ports</a> |
+	  <a class="qindex" href="ELECTRICAL.classes.html">Classes</a> |
+	  <a class="qindex" href="ELECTRICAL.functions.html">Functions</a> |
+	  <a class="qindex" href="ELECTRICAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="ELECTRICAL.global.html">Global Variables</a></div>
+<div class="qindex"><a class="qindex" href="ELECTRICAL.components.html">Alphabetical</a> | 
+	  <a class="qindex" href="ELECTRICAL.componentsTree.html">Inheritance&nbsp;Tree</a> | 
+	  <a class="qindexHL" href="ELECTRICAL.componentsGraph.html">Inheritance&nbsp;Graph</a></div><h1 align="center">Components (Inheritance Graph)<br /><small></small></h1><hr><br>  <script type="text/javascript" src="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.js"></script>
+  <link href="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    #mynetwork {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<div id="mynetwork"></div>
+<script type="text/javascript">
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'ELECTRICAL.AbsoluteSensor'},
+    {id: 2, label: 'ELECTRICAL.CCCS'},
+    {id: 3, label: 'ELECTRICAL.CCVS'},
+    {id: 4, label: 'ELECTRICAL.Capacitor'},
+    {id: 5, label: 'ELECTRICAL.Conductor'},
+    {id: 6, label: 'ELECTRICAL.ControlledIdealCommutingSwitch'},
+    {id: 7, label: 'ELECTRICAL.ControlledIdealSwitch'},
+    {id: 8, label: 'ELECTRICAL.CoupledInductor'},
+    {id: 9, label: 'ELECTRICAL.CurrentConstant'},
+    {id: 10, label: 'ELECTRICAL.CurrentSignal'},
+    {id: 11, label: 'ELECTRICAL.CurrentSine'},
+    {id: 12, label: 'ELECTRICAL.Diode'},
+    {id: 13, label: 'ELECTRICAL.EMF'},
+    {id: 14, label: 'ELECTRICAL.ExpSine'},
+    {id: 15, label: 'ELECTRICAL.Exponentials'},
+    {id: 16, label: 'ELECTRICAL.Ground'},
+    {id: 17, label: 'ELECTRICAL.Gyrator'},
+    {id: 18, label: 'ELECTRICAL.IdealDiode'},
+    {id: 19, label: 'ELECTRICAL.IdealGTOThyristor'},
+    {id: 20, label: 'ELECTRICAL.IdealOpAmp'},
+    {id: 21, label: 'ELECTRICAL.IdealOpAmp3Pin'},
+    {id: 22, label: 'ELECTRICAL.IdealSwitch'},
+    {id: 23, label: 'ELECTRICAL.IdealThyristor'},
+    {id: 24, label: 'ELECTRICAL.IdealTransformer'},
+    {id: 25, label: 'ELECTRICAL.Inductor'},
+    {id: 26, label: 'ELECTRICAL.Line_LRCG'},
+    {id: 27, label: 'ELECTRICAL.Line_RC'},
+    {id: 28, label: 'ELECTRICAL.NMOS'},
+    {id: 29, label: 'ELECTRICAL.NPN'},
+    {id: 30, label: 'ELECTRICAL.OnePort'},
+    {id: 31, label: 'ELECTRICAL.PMOS'},
+    {id: 32, label: 'ELECTRICAL.PNP'},
+    {id: 33, label: 'ELECTRICAL.Ramp'},
+    {id: 34, label: 'ELECTRICAL.RelativeSensor'},
+    {id: 35, label: 'ELECTRICAL.Resistor'},
+    {id: 36, label: 'ELECTRICAL.SensorCurrent'},
+    {id: 37, label: 'ELECTRICAL.SensorPotential'},
+    {id: 38, label: 'ELECTRICAL.SensorVoltage'},
+    {id: 39, label: 'ELECTRICAL.Short'},
+    {id: 40, label: 'ELECTRICAL.Sine'},
+    {id: 41, label: 'ELECTRICAL.Trapezoid'},
+    {id: 42, label: 'ELECTRICAL.TwoPort'},
+    {id: 43, label: 'ELECTRICAL.VCCS'},
+    {id: 44, label: 'ELECTRICAL.VCVS'},
+    {id: 45, label: 'ELECTRICAL.VoltageConstant'},
+    {id: 46, label: 'ELECTRICAL.VoltageSignal'},
+    {id: 47, label: 'ELECTRICAL.VoltageSine'},
+  ]);
+  var edges = new vis.DataSet([
+    {from: 2, to: 42, arrows:'to'},
+    {from: 3, to: 42, arrows:'to'},
+    {from: 4, to: 30, arrows:'to'},
+    {from: 5, to: 30, arrows:'to'},
+    {from: 8, to: 42, arrows:'to'},
+    {from: 9, to: 30, arrows:'to'},
+    {from: 10, to: 30, arrows:'to'},
+    {from: 11, to: 30, arrows:'to'},
+    {from: 12, to: 30, arrows:'to'},
+    {from: 17, to: 42, arrows:'to'},
+    {from: 18, to: 30, arrows:'to'},
+    {from: 19, to: 30, arrows:'to'},
+    {from: 20, to: 42, arrows:'to'},
+    {from: 22, to: 30, arrows:'to'},
+    {from: 23, to: 30, arrows:'to'},
+    {from: 24, to: 42, arrows:'to'},
+    {from: 25, to: 30, arrows:'to'},
+    {from: 35, to: 30, arrows:'to'},
+    {from: 36, to: 34, arrows:'to'},
+    {from: 37, to: 1, arrows:'to'},
+    {from: 38, to: 34, arrows:'to'},
+    {from: 39, to: 30, arrows:'to'},
+    {from: 43, to: 42, arrows:'to'},
+    {from: 44, to: 42, arrows:'to'},
+    {from: 45, to: 30, arrows:'to'},
+    {from: 46, to: 30, arrows:'to'},
+    {from: 47, to: 30, arrows:'to'},
+  ]);
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {physics:{enabled:true},interaction:{navigationButtons:true,keyboard:true}};
+  var network = new vis.Network(container, data, options);
+</script>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:10)</font></p>
+</body>
+</html>

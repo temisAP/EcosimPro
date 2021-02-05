@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+damper.p1.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+damper.p1.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 24<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>damper2.s_rel = Fixed2.s0 - <b><font color="red">mass2.s</font></b><br/>
+<a name="e2">[E-2] </a>mass2.s' = <b><font color="red">mass2.v</font></b><br/>
+<a name="e3">[E-3] </a>damper2.s_rel' = -<b><font color="red">mass2.s</font></b>'<br/>
+<a name="e4">[E-4] </a>damper2.v_rel = damper2.s_rel'<br/>
+<a name="e5">[E-5] </a>damper2.F = -damper2.k * (damper2.s_rel - damper2.s_rel0) - damper2.d * damper2.v_rel<br/>
+<a name="e6">[E-6] </a>damper2.m_in.F = -damper2.F<br/>
+<a name="e7">[E-7] </a>force2.s_in.signal[1] =  ZONE[1] (TIME &lt; ForceNull.Tstart) ForceNull.Offset ZONE[1] (ForceNull.source == Source_Constant) ForceNull.Amp + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Sine) ForceNull.Amp * sin(6.28318530717959 / ForceNull.Period * (TIME - ForceNull.Tstart) + ForceNull.Phase) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Pulse) ForceNull.Amp * pulse(TIME - ForceNull.Tstart, ForceNull.Period, ForceNull.pulseWidth, 1) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Step) ForceNull.Amp * step(TIME, ForceNull.Tstart, 2) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_SawTooth) ForceNull.Amp * ramp(TIME - ForceNull.Tstart, ForceNull.Period, 3) / ForceNull.Period + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Square) ForceNull.Amp * square(TIME - ForceNull.Tstart, ForceNull.Period, 4) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Ramp) ForceNull.Amp / ForceNull.rampDuration * (TIME - ForceNull.Tstart) * (1 - step(TIME, ForceNull.Tstart + ForceNull.rampDuration, 5)) + ForceNull.Amp * step(TIME, ForceNull.Tstart + ForceNull.rampDuration, 6) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Table AND ForceNull.tabmethod == LinearInterpWithEvents) ForceNull.Amp * timeTableInterp(TIME - ForceNull.Tstart, ForceNull.timeTable, 7) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Table AND ForceNull.tabmethod == LinearInterpWithoutEvents) ForceNull.Amp * linearInterp1D(ForceNull.timeTable, TIME - ForceNull.Tstart) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Table AND ForceNull.tabmethod == SplineInterp) ForceNull.Amp * splineInterp1D(ForceNull.timeTable, TIME - ForceNull.Tstart) + ForceNull.Offset ZONE[1] (ForceNull.source == Source_Table AND ForceNull.tabmethod == StepConnect) ForceNull.Amp * timeTableStep(TIME - ForceNull.Tstart, ForceNull.timeTable, 8) + ForceNull.Offset	  OTHERS 0<br/>
+<a name="e8">[E-8] </a>mass3.m_in.F = force2.s_in.signal[1]<br/>
+<a name="e9">[E-9] </a>mass2.a = (mass3.m_in.F + damper2.m_in.F) / mass2.m<br/>
+<a name="e10">[E-10] </a>mass2.v' = mass2.a<br/>
+<a name="e11">[E-11] </a>mass1.s' = <b><font color="red">mass1.v</font></b><br/>
+<a name="e12">[E-12] </a>damper1.s_rel' = -<b><font color="red">mass1.s</font></b>'<br/>
+<a name="e13">[E-13] </a>damper1.v_rel = damper1.s_rel'<br/>
+<a name="e14">[E-14] </a>damper1.F = -damper1.d * damper1.v_rel<br/>
+<a name="e15">[E-15] </a>damper1.m_in.F = -damper1.F<br/>
+<a name="e16">[E-16] </a>mass1.a = (mass3.m_in.F + damper1.m_in.F) / mass1.m<br/>
+<a name="e17">[E-17] </a>mass1.v' = mass1.a<br/>
+<a name="e18">[E-18] </a>damper1.s_rel = Fixed1.s0 - <b><font color="red">mass1.s</font></b><br/>
+<a name="e19">[E-19] </a>mass3.s' = <b><font color="red">mass3.v</font></b><br/>
+<a name="e20">[E-20] </a>spring.s_rel = Fixed3.s0 - <b><font color="red">mass3.s</font></b><br/>
+<a name="e21">[E-21] </a>spring.F = -spring.k * (spring.s_rel - spring.s_rel0)<br/>
+<a name="e22">[E-22] </a>spring.m_in.F = -spring.F<br/>
+<a name="e23">[E-23] </a>mass3.a = (mass3.m_in.F + spring.m_in.F) / mass3.m<br/>
+<a name="e24">[E-24] </a>mass3.v' = mass3.a<br/>
+</body></html>

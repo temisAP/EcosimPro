@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Aero.alpha">
+						<scale min="4" max="16"/>
+						<titleAxe value="Aero.alpha"/>
+					</axeX>
+					<axeY>
+						<scale min="1" max="1.4"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Frame.phi" nick="Frame.phi" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Aero.alpha">
+						<scale min="4" max="16"/>
+						<titleAxe value="Aero.alpha"/>
+					</axeX>
+					<axeY>
+						<scale min="0.1" max="0.35"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Frame.dpsi" nick="Frame.dpsi" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_3">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Aero.alpha">
+						<scale min="4" max="16"/>
+						<titleAxe value="Aero.alpha"/>
+					</axeX>
+					<axeY>
+						<scale min="-50" max="20"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Frame.A[x]" nick="Frame.A[x]" lineColor="255,0,0"/>
+						<var name="Frame.A[z]" nick="Frame.A[z]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_4">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Aero.alpha">
+						<scale min="4" max="16"/>
+						<titleAxe value="Aero.alpha"/>
+					</axeX>
+					<axeY>
+						<scale min="-7" max="1"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.aileron" nick="Aero.aileron" lineColor="255,0,0"/>
+						<var name="Aero.elevator" nick="Aero.elevator" lineColor="0,204,153"/>
+						<var name="Aero.rudder" nick="Aero.rudder" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

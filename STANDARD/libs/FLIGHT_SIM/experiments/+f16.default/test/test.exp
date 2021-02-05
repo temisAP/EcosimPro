@@ -1,0 +1,53 @@
+EXPERIMENT test ON F16.default
+   INIT
+      -- Dynamic variables
+      Frame.R[N] = 1000.* FTtoM
+      Frame.R[E] = 900.* FTtoM
+      Frame.R[D] = -10000.* FTtoM
+
+      Frame.V[x] = 500. * FTtoM * cos(-0.2) * cos(0.5)
+      Frame.V[y] = 500. * FTtoM * sin(-0.2)
+      Frame.V[z] = 500. * FTtoM * cos(-0.2) * sin(0.5)
+
+      Frame.dynAtt[1] = -1.
+      Frame.dynAtt[2] = 1.
+      Frame.dynAtt[3] = -1.
+      Frame.dynAtt[4] = 0.
+
+      Frame.W[x] = 0.7
+      Frame.W[y] = -0.8
+      Frame.W[z] = 0.9
+
+      Engine.apow = 90.
+
+      Trimmer.elevator = 0.
+      Trimmer.aileron = 0.
+      Trimmer.rudder = 0.
+      Trimmer.throttle = 0.
+
+      El_Actuator.defl = 0.
+      Ail_Actuator.defl = 0.
+      Rdr_Actuator.defl = 0.
+
+   BOUNDS
+      FLIGHT_SIM.Vwind[D] = 0.
+      FLIGHT_SIM.Vwind[E] = 0.
+      FLIGHT_SIM.Vwind[N] = 0.
+
+      s_elevator.signal[1] = 20. * DtoR
+      s_aileron.signal[1] = -15. * DtoR
+      s_rudder.signal[1] = -20. * DtoR
+      s_throttle.signal[1] = 0.9
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      Aero.xcg = 0.30
+
+      TSTOP = 10.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

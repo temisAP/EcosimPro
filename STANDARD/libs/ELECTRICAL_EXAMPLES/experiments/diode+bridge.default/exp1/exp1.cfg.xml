@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<font family="Arial"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font family="Arial"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="
+				" isShowed="false">
+						<font family="Arial" size="8" bold="false"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="C1.v" nick="C1.v" lineColor="255,0,0"/>
+						<var name="D1.v" nick="D1.v" lineColor="0,204,153"/>
+						<var name="D2.v" nick="D2.v" lineColor="0,0,255"/>
+						<var name="D3.v" nick="D3.v" lineColor="0,102,0"/>
+						<var name="D4.v" nick="D4.v" lineColor="51,204,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="192" visible="true" pos="right" >
+	</watch>
+	<outputWindow height="192" width="1280" visible="true" pos="bottom" />
+</experiment>

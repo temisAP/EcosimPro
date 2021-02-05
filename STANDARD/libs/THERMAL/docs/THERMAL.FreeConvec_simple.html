@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL.FreeConvec_simple<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="FreeConvec_simple">FreeConvec_simple</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/THERMAL.FreeConvec_simple.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Natural convection from a surface to a simplified fluid</font><br/>
+<br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>n&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>s_fluid_tem&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td> (n = 1) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Fluid temperature signal&nbsp;</td></tr>
+
+<tr><td>tp_in&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = n) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Inlet thermal ports&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Convective heat exchange area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>Lc&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Characteristic length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>b_l&nbsp;</td><td>REAL &nbsp;</td><td>1.32&nbsp;</td><td>&nbsp;</td><td>Coefficient b in hc = b * (DT/Lc)^0.25 for laminar regime&nbsp;</td><td>W/m^1.75 K^1.25&nbsp;</td></tr>
+
+<tr><td>b_t&nbsp;</td><td>REAL &nbsp;</td><td>1.24&nbsp;</td><td>&nbsp;</td><td>Coefficient b in hc = b * DT**0.3333   for turbulent regime&nbsp;</td><td>W/m^2 K^1.333&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>DT[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Temperature difference&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>T_fluid&nbsp;</td><td>REAL &nbsp;</td><td>293.15&nbsp;</td><td>&nbsp;</td><td>Fluid Temperature&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>hc[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Heat transfer coefficient&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>hc_l[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Laminar heat transfer coefficient&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>hc_t[n]&nbsp;</td><td>REAL &nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>Turbulent heat transfer coefficient&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>n_exp&nbsp;</td><td>CONST REAL &nbsp;</td><td>20&nbsp;</td><td>&nbsp;</td><td>Exponent for laminar turbulent transition&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

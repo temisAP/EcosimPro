@@ -1,0 +1,37 @@
+EXPERIMENT exp3 ON openOrbit.default
+   INIT
+      -- Dynamic variables
+      CentralBody1.r[x] = -3.
+      CentralBody1.r[y] = 0.
+      CentralBody1.r[z] = 0.
+
+      CentralBody1.r[x]' = 0.
+      CentralBody1.r[y]' = 0.
+      CentralBody1.r[z]' = 0.
+
+      CentralBody2.r[x] = 3.
+      CentralBody2.r[y] = 0.
+      CentralBody2.r[z] = 0.
+
+      CentralBody2.r[x]' = 0.
+      CentralBody2.r[y]' = 0.
+      CentralBody2.r[z]' = 0.
+
+      OrbitalBody.r[x] = 5.
+      OrbitalBody.r[y] = 0.
+      OrbitalBody.r[z] = 0.
+
+      OrbitalBody.r[x]' = 0.
+      OrbitalBody.r[y]' = 2.
+      OrbitalBody.r[z]' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 130.
+      CINT = 0.05
+      INTEG()
+
+END EXPERIMENT

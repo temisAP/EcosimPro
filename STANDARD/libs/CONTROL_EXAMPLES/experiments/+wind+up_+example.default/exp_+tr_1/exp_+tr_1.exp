@@ -1,0 +1,25 @@
+
+EXPERIMENT exp_Tr_1 ON WindUp_Example.default
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+   PI.vi[1] = 0
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+   PI.s_set.signal[1] = step(TIME, 1.)
+
+
+
+BODY
+   REPORT_TABLE("reportAll", " * ")
+
+   TIME = 0.
+
+   PI.gamma[1] = 1.
+
+   TSTOP = 100.
+   CINT = 1.
+   INTEG()
+END EXPERIMENT

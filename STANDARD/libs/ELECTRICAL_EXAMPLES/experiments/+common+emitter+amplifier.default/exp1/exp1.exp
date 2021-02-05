@@ -1,0 +1,22 @@
+
+EXPERIMENT exp1 ON CommonEmitterAmplifier.default
+
+DECLS
+INIT
+   NPN_1.vbc = 0
+   NPN_1.e_C.v = 0
+   NPN_1.vbe = 0
+   Cin.v = 0
+   Cout.v = 0
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+   REPORT_TABLE("reportAll", " * ")
+   TIME = 0
+   TSTOP = 0.2
+   CINT = 0.0001
+   INTEG()
+END EXPERIMENT

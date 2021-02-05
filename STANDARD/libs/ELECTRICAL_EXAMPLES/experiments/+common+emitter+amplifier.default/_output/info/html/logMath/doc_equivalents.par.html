@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+common+emitter+amplifier.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+common+emitter+amplifier.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>Cin.e_n.i&nbsp;</td><td>R0.e_n.i, VoltageSine_1.e_p.i, VoltageSine_1.i, VoltageSine_1.voltage.e_p.i, VoltageSine_1.voltage.i&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>Cin.e_n.v&nbsp;</td><td>R0.e_p.v&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>Cin.e_p.v&nbsp;</td><td>VoltageSine_1.e_p.v, VoltageSine_1.source.outsignal, VoltageSine_1.v, VoltageSine_1.voltage.e_p.v, VoltageSine_1.voltage.v&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>Cout.e_n.i&nbsp;</td><td>Rload.e_n.i&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>Cout.e_n.v&nbsp;</td><td>Rload.e_p.v, Rload.v&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>Cout.e_p.i&nbsp;</td><td>Cout.i, Rload.e_p.i, Rload.i&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>Ground_1.e_p.v&nbsp;</td><td>R2.e_n.v, Re.e_n.v, Rload.e_n.v, VoltageConstant_1.e_n.v, VoltageSine_1.e_n.v, VoltageSine_1.voltage.e_n.v&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>NPN_1.e_B.v&nbsp;</td><td>R0.e_n.v, R1.e_n.v, R2.e_p.v, R2.v&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>NPN_1.e_C.v&nbsp;</td><td>Cout.e_p.v, Rc.e_n.v&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>NPN_1.e_E.v&nbsp;</td><td>Re.e_p.v, Re.v&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>R1.e_p.i&nbsp;</td><td>R1.i&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>R2.e_p.i&nbsp;</td><td>R2.i&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>Rc.e_p.i&nbsp;</td><td>Rc.i&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>Rc.e_p.v&nbsp;</td><td>R1.e_p.v, VoltageConstant_1.e_p.v&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>Re.e_n.i&nbsp;</td><td>NPN_1.e_E.i&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>Re.e_p.i&nbsp;</td><td>Re.i&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>VoltageConstant_1.V&nbsp;</td><td>VoltageConstant_1.v&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>VoltageConstant_1.e_p.i&nbsp;</td><td>VoltageConstant_1.i&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>VoltageSine_1.Voffset&nbsp;</td><td>VoltageSine_1.source.offset&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>VoltageSine_1.Vpeak&nbsp;</td><td>VoltageSine_1.source.amplitude&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>VoltageSine_1.e_n.i&nbsp;</td><td>Cin.e_p.i, Cin.i, R0.e_p.i, R0.i, VoltageSine_1.voltage.e_n.i&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>VoltageSine_1.freqHz&nbsp;</td><td>VoltageSine_1.source.freqHz&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>VoltageSine_1.phase&nbsp;</td><td>VoltageSine_1.source.phase&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>VoltageSine_1.startTime&nbsp;</td><td>VoltageSine_1.source.startTime&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>VoltageSine_1.voltage.s_in.signal&nbsp;</td><td>VoltageSine_1.source.s_out.signal&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

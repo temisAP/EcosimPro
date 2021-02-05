@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="DEFAULT_LIB" component="aircraftGear" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="y3"/>
+  <variable name="y3'"/>
+  <variable name="y2"/>
+  <variable name="y2'"/>
+  <variable name="x"/>
+  <variable name="x'"/>
+</dynamics>
+<residues>
+  <r id="1" value="y3'. = y3'"/>
+  <r id="2" value="y3'' = (fk2 - fdrag) / m3"/>
+  <r id="3" value="y2'. = y2'"/>
+  <r id="4" value="y2'' = (2 * fk1 - fk2) / m2"/>
+  <r id="5" value="x'. = x'"/>
+  <r id="6" value="x'' = -2 * fk1 * sinetheta / m1"/>
+</residues>
+</partitionInfo>

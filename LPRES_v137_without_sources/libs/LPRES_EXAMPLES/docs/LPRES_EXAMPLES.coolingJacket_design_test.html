@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES_EXAMPLES.html">LPRES_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">LPRES_EXAMPLES.coolingJacket_design_test<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="coolingJacket_design_test">coolingJacket_design_test</a>
+</font><br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>CC&nbsp;</td><td><a href="../../LPRES/docs/LPRES.CombCha.html">LPRES.CombCha</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>CJ&nbsp;</td><td><a href="../../LPRES/docs/LPRES.CoolingJacket.html">LPRES.CoolingJacket</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Injector_F&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Injector.html">LPRES.Injector</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Injector_O&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Injector.html">LPRES.Injector</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Inlet_F&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Inlet_O&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>HeadLoss&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>CC.AR&nbsp;</td><td>5.706&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>CC.AR_r&nbsp;</td><td>1.2&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area at the characteristic section of heat exchange divided by the throat area&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>CC.A_th&nbsp;</td><td>0.0539&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Throat area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>CC.A_wet&nbsp;</td><td>0.92&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Nozzle wet area of the cooled zone&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>CC.Cooled&nbsp;</td><td>Yes&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#YesNo" data-ajax='false'>LPRES.YesNo</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>CC.M_P&nbsp;</td><td>16.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Molar mass of the products using a stoichiometric mixture&nbsp;</td><td>"g/mol"&nbsp;</td></tr>
+
+<tr><td>CC.OF_st&nbsp;</td><td>8&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Stoichiometric mixture ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>CC.Q_comb&nbsp;</td><td>14700000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Heat of combustion per oxidant mass flow unit&nbsp;</td><td>"J/kg"&nbsp;</td></tr>
+
+<tr><td>CC.T_c0&nbsp;</td><td>4000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial combustion temperature for iterative calculations&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>CC.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>CC.W_F0&nbsp;</td><td>20&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial fuel mass flow for iterative calculations&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>CC.Zone&nbsp;</td><td>Convergent&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#ConDiv" data-ajax='false'>LPRES.ConDiv</a>&nbsp;</td><td>Convergent if the characteristic section of heat exchange is placed in the convergent zone of the nozzle, Divergent if it is placed in the divergent zone&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>CC.cp_P&nbsp;</td><td>3250&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Specific heat at constant pressure of the products using a stoichiometric mixture&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>CC.eta_d&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design combustion efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>CC.p_c&nbsp;</td><td>5000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design combustion pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>CC.p_c0&nbsp;</td><td>5000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial combustion pressure for iterative calculations&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>CJ.L&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>CJ.N&nbsp;</td><td>360&nbsp;</td><td>DATA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of channels&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>CJ.Type&nbsp;</td><td>Darcy&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Cooling" data-ajax='false'>LPRES.Type_Cooling</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>CJ.a&nbsp;</td><td>0.0023&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average width of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>CJ.b&nbsp;</td><td>0.004&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average height of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>CJ.dp&nbsp;</td><td>100000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop if Type=Known_dp&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>CJ.k_w&nbsp;</td><td>370&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Thermal conductivity of the nozzle wall material&nbsp;</td><td>"W/(m·K)"&nbsp;</td></tr>
+
+<tr><td>CJ.rug&nbsp;</td><td>5e-05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Absolute rugosity&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>CJ.t_w&nbsp;</td><td>0.003&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Nozzle wall thickness&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>HeadLoss.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>HeadLoss.dp&nbsp;</td><td>3000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>HeadLoss.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>HeadLoss.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>HeadLoss.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Injector_F.A&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Output area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Injector_F.C_D&nbsp;</td><td>0.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge coefficient (used only in liquid state)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Injector_F.Type&nbsp;</td><td>Design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Injector_F.W&nbsp;</td><td>22.061&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Injector_O.A&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Output area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Injector_O.C_D&nbsp;</td><td>0.6&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge coefficient (used only in liquid state)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Injector_O.Type&nbsp;</td><td>Design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Injector_O.W&nbsp;</td><td>163.042&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Inlet_F.Tt&nbsp;</td><td>53.6&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Inlet_F.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet_F.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Inlet_F.fluid&nbsp;</td><td>LH2&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet_F.pt&nbsp;</td><td>14310000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Inlet_O.Tt&nbsp;</td><td>98.4&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Inlet_O.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet_O.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Inlet_O.fluid&nbsp;</td><td>LOX&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet_O.pt&nbsp;</td><td>13440000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:56)</font></p>
+</body>
+</html>

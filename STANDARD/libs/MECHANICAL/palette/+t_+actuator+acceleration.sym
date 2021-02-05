@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="T_ActuatorAcceleration" >
+
+		<line id="Line_1" points="54,507.001 66,507.001"  end_arrow="true" dx="90" dy="-411.001" lineColor="192,192,192"   />
+
+		<polygon id="Polygon_1" points="22,499 22,515 38.001,515 38.001,523 54,507.001 38.001,490.999 38.001,499" dx="90" dy="-411.001" lineWidth="1.5"  color="220,220,220"  />
+
+		<line id="Line_2" points="6,507.001 22,507.001"  end_arrow="true" dx="90" dy="-411.001" lineColor="255,128,0"   />
+
+		<text id="Text_1" cx="7" cy="10.5" sx="14" sy="21" dx="120" dy="64"  >
+			<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62;&#60;span style=&#34; font-family:&#39;MS Shell Dlg 2&#39;; font-size:8pt;&#34;&#62;a&#60;/span&#62;&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+		</text>
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal"  hotPort="s_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="58" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_trans" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_3" cx="210.5" cy="122" sx="93" sy="12" variable="m_out.F"  headerText="m_out.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="211.5" cy="142" sx="95" sy="12" variable="m_out.s"  headerText="m_out.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-1" dy="-10" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

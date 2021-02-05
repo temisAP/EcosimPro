@@ -1,0 +1,25 @@
+
+EXPERIMENT exp1 ON Example_GearFriction2.p2
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+   inertia2.w = 0
+     -- Algebraic variables
+   bearingFriction.sa = 0
+   gear.sa = 0
+   inertia2.w' = 0
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+
+   REPORT_MODE = IS_STEP
+   TIME = 0
+   TSTOP = 2.5
+   CINT = 0.01
+   INTEG()
+END EXPERIMENT

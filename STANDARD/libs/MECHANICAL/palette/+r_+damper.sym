@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_Damper" >
+
+		<line id="Line_2" points="11.3938,191.758 23.3938,191.758"  end_arrow="true" dx="132.606" dy="-95.758" lineColor="100,100,100"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_3" points="128,100 128,84 112,84 112,84 96,84 96,100 96,100 104,100 104,100 104,100 104,92 112,92 112,92 120,92 120,100 120,100" rotation="90" dx="24" dy="4" lineColor="220,220,220" lineWidth="1.5"  color="220,220,220" aliasing="true"  />
+
+		<bezier id="Bezier_4" points="304,440 320,440 320,424 320,424 320,424 320,408 304,408" dx="-176" dy="-328" lineWidth="1.5"  aliasing="true"  />
+
+		<bezier id="Bezier_5" points="308,432 316,432 316,424 316,424 316,424 316,416 308,416" dx="-180" dy="-328" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_4" points="260,384 260,392" dx="-132" dy="-280" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_5" points="266.419,371.163 272.744,365.953" dx="-132" dy="-280" lineWidth="1.5"  aliasing="true"  />
+
+		<bezier id="Bezier_3" points="144.323,103.496 144.196,103.496 156.196,103.496 156.196,115.496 156,125.63 149.63,125.481 152,125.481" rotation="-90" dx="-23.2692" dy="-24.5622" aliasing="true"  />
+
+		<line id="Line_3" points="115.792,79.2113 99.7924,79.2113" dx="12.2076" dy="16.7887"  />
+
+		<line id="Line_1" points="7.6014,192.546 23.6014,192.546"  end_arrow="true" dx="88.3986" dy="-96.546" lineColor="100,100,100"  aliasing="true"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_rot"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="167" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="145.5" cy="110" sx="99" sy="12" variable="m_in.T"  headerText="m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-44" dy="-60" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="144.5" cy="118" sx="97" sy="12" variable="m_in.n"  headerText="m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-44" dy="-52" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="228" cy="114" sx="104" sy="12" variable="m_out.T"  headerText="m_out.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-24" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="227" cy="130" sx="102" sy="12" variable="m_out.n"  headerText="m_out.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-24" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

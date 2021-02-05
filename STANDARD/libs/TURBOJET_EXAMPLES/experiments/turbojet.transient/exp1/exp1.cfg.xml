@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_4" x="499" y="327" dx="499" dy="327">
+				<plot id="Plot_4">
+					<axeX variableName="TIME">
+						<scale min="0" max="16"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="0" max="1.2e+06"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="burner.g_out.P" nick="burner.g_out.P" lineColor="255,0,0"/>
+						<var name="compressor.g_in.P" nick="compressor.g_in.P" lineColor="0,204,153"/>
+						<var name="compressor.g_out.P" nick="compressor.g_out.P" lineColor="0,0,255"/>
+						<var name="turbine.g_out.P" nick="turbine.g_out.P" lineColor="255,255,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="327" dx="499" dy="327">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<scale min="0" max="16"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="400" max="1800"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="burner.g_out.T" nick="burner.g_out.T" lineColor="255,0,0"/>
+						<var name="compressor.g_out.T" nick="compressor.g_out.T" lineColor="0,204,153"/>
+						<var name="turbine.g_in.T" nick="turbine.g_in.T" lineColor="0,0,255"/>
+						<var name="turbine.g_out.T" nick="turbine.g_out.T" lineColor="255,255,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="499" y="0" dx="499" dy="327">
+				<plot id="Plot_3">
+					<axeX variableName="compressor.WRJ">
+						<titleAxe value="compressor.WRJ"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="compressor.PQ" nick="compressor.PQ" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="499" dy="327">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="16"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="11100" max="11600"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="compressor.N" nick="compressor.N" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

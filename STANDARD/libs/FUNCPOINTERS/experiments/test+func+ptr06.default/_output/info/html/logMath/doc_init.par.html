@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../test+func+ptr06.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../test+func+ptr06.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Init Blocks<br /></h2>
+<br/>
+Note 1: Variables called "__aux_int_..." are internal integer variables, used to iterate<br/>
+Note 2: FOR statements are converted to WHILE statements<br/>
+<br/>
+  -- init(datum-to-variable,p1.datum1,0)<br/>
+p1.datum1 = FUNCPOINTERS.print41()<br/>
+  -- init(datum-to-variable,p1.fptr,0)<br/>
+p1.fptr = print42<br/>
+  -- init(datum-to-variable,p2[1,1].fptr,0)<br/>
+p2[1,1].fptr = print41<br/>
+  -- init(datum-to-variable,p2[1,2].fptr,0)<br/>
+p2[1,2].fptr = print41<br/>
+  -- init(datum-to-variable,p2[1,3].fptr,0)<br/>
+p2[1,3].fptr = print41<br/>
+  -- init(datum-to-variable,p2[2,1].fptr,0)<br/>
+p2[2,1].fptr = print41<br/>
+  -- init(datum-to-variable,p2[2,2].fptr,0)<br/>
+p2[2,2].fptr = print41<br/>
+  -- init(datum-to-variable,p2[2,3].fptr,0)<br/>
+p2[2,3].fptr = print41<br/>
+  -- init(datum-to-variable,p2[3,1].fptr,0)<br/>
+p2[3,1].fptr = print41<br/>
+  -- init(datum-to-variable,p2[3,2].fptr,0)<br/>
+p2[3,2].fptr = print41<br/>
+  -- init(datum-to-variable,p2[3,3].fptr,0)<br/>
+p2[3,3].fptr = print41<br/>
+</body></html>

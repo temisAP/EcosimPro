@@ -1,0 +1,30 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: RL10A_3_3A
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON RL10A_3_3A.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Split_Frac.f_in.Tt = 260
+      Combustion_Chamber.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 51160
+
+   BODY	
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()		
+		
+		SAVE_STATE("design.txt")
+
+END EXPERIMENT

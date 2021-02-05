@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="SourcebPulse" >
+
+		<line id="Line_4" points="26,45 38,45"  end_arrow="true" dx="86" dy="51" lineColor="255,192,0"   />
+
+		<rect id="Rectangle_1" cx="105" cy="32" sx="32" sy="32" dx="-9" dy="64" lineWidth="1.5"  color="255,192,0"  />
+
+		<line id="Line_1" points="96,798 96,822 120,822" dx="-12" dy="-714" lineColor="170,0,0"   />
+
+		<line id="Line_3" points="168,820 168,800 172,800 172,820 176,820 176,800 180,800 180,820 184,820 184,800 188,800 188,820" dx="-81" dy="-712" lineWidth="1.5"  aliasing="true"  />
+
+		<port id="s_out" library="PORTS_LIB" type="bool_signal"  hotPort="s_out" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="135" dy="88" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Period"/>
+				<var name="Tstart"/>
+				<var name="n_out"/>
+				<var name="pulseWidth"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="183" cy="114" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

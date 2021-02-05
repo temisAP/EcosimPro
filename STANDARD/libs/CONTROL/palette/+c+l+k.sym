@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="CLK" >
+
+		<ellipse id="Ellipse_2" cx="173" cy="225" rx="16" ry="16" dx="-77" dy="-129" lineWidth="1.5"  color="255,192,0" aliasing="true"  />
+
+		<line id="Line_3" points="90,50 90,60 100,55" dx="6" dy="38" lineWidth="2"  aliasing="true"  />
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Period"/>
+				<var name="Tstart"/>
+				<var name="pulseWidth"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="166.5" cy="131" sx="173" sy="14" variable="CONTROL.Clock_signal"  headerText="CONTROL.Clock_signal"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-40" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

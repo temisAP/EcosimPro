@@ -1,0 +1,87 @@
+EXPERIMENT exp_deck ON turbojet.prediction
+   DECLS
+   REAL deck_TIME
+   REAL deck_CINT
+   REAL deck_TSTOP
+   STRING SwitchBranch="TRANSIENT"
+   INIT
+
+      -- Dynamic variables
+   	   --compressor.N = 12000.
+
+      -- Algebraic variables
+         -- compressor.beta = 0.7
+         -- compressor.g_in.W = 100.
+       	--fuelmeter.f_in.W = 0.5
+         -- turbine.g_out.T = 1500.
+
+   BOUNDS
+    
+        -- TURBOJET.Altitude =0.
+        -- TURBOJET.Mach = 0
+        
+   BODY 
+--    REPORT_TABLE("reportAll", " * ")
+-------------------------------------------------------------
+-- Variables without possibility of modification for customer deck:
+
+			burner.GLP = 0.002773234272
+     		burner.VOL = 0.05260683639
+
+      	compressor.CG1 = 27.4242601
+      	compressor.CG2 = 0.9095852489
+      	compressor.CG4 = 1207.284802
+      	compressor.ND = 13051.39746
+
+      	turbine.CG1 = 5.51235636
+      	turbine.CG2 = 0.9
+      	turbine.CG3 = 282.8427125
+      	turbine.CG4 = 185.2109198
+
+     		nozzle.A_exit = 0.0482178271
+-------------------------------------------------------------
+
+		IF (SwitchBranch=="STEADY") THEN
+			--turbine.g_in.T = 1500.	
+    		
+			STEADY()
+   		
+   		PRINT(" ")
+         PRINT("   turbine.g_in.T = $turbine.g_in.T")
+         PRINT("   Thrust = $monitor.thrust.F")
+         PRINT("   SFC = $monitor.SFC")
+         
+         
+		  ELSEIF (SwitchBranch=="TRANSIENT") THEN
+
+      --	turbine.g_in.T = 1800.	
+			TIME	= deck_TIME
+   		CINT	= deck_CINT
+ 			TSTOP = deck_TSTOP
+			
+			--	TIME=0
+			--	TSTOP=10
+	   	--	CINT=0.1
+		
+		   INTEG()
+
+		  ELSEIF (SwitchBranch=="PARAMETRIC") THEN
+
+      -- Changing the step to 50 does not converge
+      	  FOR (i IN 0,20)
+         turbine.g_in.T = 1800. - i * 25.
+
+         STEADY()
+
+         PRINT(" ")
+         PRINT("   turbine.g_in.T = $turbine.g_in.T")
+         PRINT("   Thrust = $monitor.thrust.F")
+         PRINT("   SFC = $monitor.SFC")
+
+          END FOR
+
+		END IF
+
+
+
+END EXPERIMENT

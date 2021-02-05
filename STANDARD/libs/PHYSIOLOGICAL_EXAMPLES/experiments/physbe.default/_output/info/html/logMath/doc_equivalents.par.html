@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../physbe.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../physbe.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>Aorta.comp&nbsp;</td><td>Aorta.vcomp&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>Aorta.p_in.p&nbsp;</td><td>Ventricle_left.p_out.p&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>Aorta.p_in.w&nbsp;</td><td>Ventricle_left.p_out.w&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>Aorta.rai&nbsp;</td><td>Aorta.vrai&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>Aorta.rao&nbsp;</td><td>Aorta.vrao&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>Arms.comp&nbsp;</td><td>Arms.vcomp&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>Arms.rai&nbsp;</td><td>Arms.vrai&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>Arms.rao&nbsp;</td><td>Arms.vrao&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>Cava.comp&nbsp;</td><td>Cava.vcomp&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>Cava.p_in.p&nbsp;</td><td>Arms.p_out.p, Head.p_out.p, Legs.p_out.p, Trunk.p_out.p&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>Cava.rai&nbsp;</td><td>Cava.vrai&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>Cava.rao&nbsp;</td><td>Cava.vrao&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>Head.comp&nbsp;</td><td>Head.vcomp&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>Head.rai&nbsp;</td><td>Head.vrai&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>Head.rao&nbsp;</td><td>Head.vrao&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>Legs.comp&nbsp;</td><td>Legs.vcomp&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>Legs.p_in.p&nbsp;</td><td>Aorta.p_out.p, Arms.p_in.p, Head.p_in.p, Trunk.p_in.p&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>Legs.rai&nbsp;</td><td>Legs.vrai&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>Legs.rao&nbsp;</td><td>Legs.vrao&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>Lungs.comp&nbsp;</td><td>Lungs.vcomp&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>Lungs.p_in.p&nbsp;</td><td>Ventricle_right.p_out.p&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>Lungs.p_in.w&nbsp;</td><td>Ventricle_right.p_out.w&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>Lungs.rai&nbsp;</td><td>Lungs.vrai&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>Lungs.rao&nbsp;</td><td>Lungs.vrao&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>Trunk.comp&nbsp;</td><td>Trunk.vcomp&nbsp;</td></tr>
+<tr><td>26&nbsp;</td><td>Trunk.rai&nbsp;</td><td>Trunk.vrai&nbsp;</td></tr>
+<tr><td>27&nbsp;</td><td>Trunk.rao&nbsp;</td><td>Trunk.vrao&nbsp;</td></tr>
+<tr><td>28&nbsp;</td><td>Ventricle_left.p_in.p&nbsp;</td><td>Lungs.p_out.p&nbsp;</td></tr>
+<tr><td>29&nbsp;</td><td>Ventricle_left.p_in.w&nbsp;</td><td>Lungs.p_out.w&nbsp;</td></tr>
+<tr><td>30&nbsp;</td><td>Ventricle_right.p_in.p&nbsp;</td><td>Cava.p_out.p&nbsp;</td></tr>
+<tr><td>31&nbsp;</td><td>Ventricle_right.p_in.w&nbsp;</td><td>Cava.p_out.w&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Selector" >
+
+		<line id="Line_4" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="13.98" dy="40.3061" lineColor="255,128,0"   />
+
+		<line id="Line_5" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.3061" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_1" cx="105" cy="32" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0"  />
+
+		<line id="Line_3" points="90.8038,70.6163 110.013,80.6963" dx="10.9474" dy="9.2632" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_1" points="97.75,68.625 116.71,78.5045" dx="4.25" dy="1.375" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_2" points="94.6362,87.5346 113.026,68.285" dx="7.3638" dy="2.4654" lineWidth="1.5"  aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="63.6296" cy="129.778" rx="2" ry="2" dx="38.3704" dy="-59.778" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_7" cx="65.6296" cy="133.778" rx="2" ry="2" dx="36.3704" dy="-43.778" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_8" cx="65.6296" cy="133.778" rx="2" ry="2" dx="36.3704" dy="-53.778" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_5" cx="63.6296" cy="129.778" rx="2" ry="2" dx="57.3704" dy="-59.778" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_6" cx="65.6296" cy="133.778" rx="2" ry="2" dx="55.3704" dy="-43.778" color="0,0,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_9" cx="65.6296" cy="133.778" rx="2" ry="2" dx="55.3704" dy="-53.778" color="0,0,0" aliasing="true"  />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="42" dy="72" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="72" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="SelElements"/>
+				<var name="n_in"/>
+				<var name="n_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="88.5" cy="46" sx="97" sy="12" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="4" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="199" cy="86" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="4" dy="20" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

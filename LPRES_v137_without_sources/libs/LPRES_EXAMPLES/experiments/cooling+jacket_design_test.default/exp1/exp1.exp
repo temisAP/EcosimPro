@@ -1,0 +1,48 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: coolingJacket_design_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON coolingJacket_design_test.default
+   DECLS
+		REAL M_comb				"Products molar mass (g/mol)"
+		REAL cp_comb			"Products specific heat at constant pressure (J/(kg·K))"
+		
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      CC.p_out_ch = 100
+
+   BOUNDS
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")
+		
+		PRINT("	Fuel injector area = $Injector_F.A_d")	
+		PRINT("	Oxidant injector area = $Injector_O.A_d")	
+		
+		PRINT("	Combustion pressure = $CC.g.pt")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		
+		M_comb = M(CC.g.fluid)
+		cp_comb = cp(CC.g.fluid)
+		
+		PRINT("	Combustion products molar mass (g/mol) = $M_comb")	
+		PRINT("	Combustion products specific heat at constant pressure (J/(kg·K)) = $cp_comb")
+		PRINT(" ")
+
+END EXPERIMENT

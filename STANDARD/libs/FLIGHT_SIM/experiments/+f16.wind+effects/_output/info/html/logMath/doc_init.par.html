@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16.wind+effects.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16.wind+effects.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Init Blocks<br /></h2>
+<br/>
+Note 1: Variables called "__aux_int_..." are internal integer variables, used to iterate<br/>
+Note 2: FOR statements are converted to WHILE statements<br/>
+<br/>
+  -- init(Frame.Frame,0)<br/>
+IF Frame.InitFlag ==  TRUE  THEN
+	_vi2 = 1
+	WHILE ( _vi2 <= setofSize(FLIGHT_SIM.EarthAxis) )
+	_vi3 = setofElem(FLIGHT_SIM.EarthAxis, _vi2)
+	Frame.R[_vi2] = Frame.R_o[_vi2]
+	_vi2 += 1
+	END WHILE
+	state_out.psi = 0.0174532925199433 * Frame.psi_o
+	state_out.theta = 0.0174532925199433 * Frame.theta_o
+	state_out.phi = 0.0174532925199433 * Frame.phi_o
+	FLIGHT_SIM.EulerToQuater(state_out.psi, state_out.theta, state_out.phi, Frame.lambda)
+	IF Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1 THEN
+	Frame.dynAtt[1] = state_out.psi
+	Frame.dynAtt[2] = state_out.theta
+	Frame.dynAtt[3] = state_out.phi
+	Frame.dynAtt[4] = 0
+	Frame.quater_d =  FALSE 
+	ELSE
+	_vi4 = 1
+	WHILE ( _vi4 <= 4 )
+	Frame.dynAtt[_vi4] = Frame.lambda[_vi4]
+	_vi4 += 1
+	END WHILE
+	Frame.quater_d =  TRUE 
+	END IF
+	END IF<br/>
+</body></html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="Lever2" >
+
+		<line id="Line_1" points="31.1787,23.5601 31.1787,38.5601"  end_arrow="true" dx="104.821" dy="56.4399" lineColor="161,161,161"   />
+
+		<line id="Line_2" points="25.1787,64.5601 25.1787,46.5601"  end_arrow="true" dx="94.8213" dy="63.4399" lineColor="100,100,100"   />
+
+		<line id="Line_3" points="53.1787,23.5601 53.1787,38.5601"  end_arrow="true" dx="114.821" dy="56.4399" lineColor="161,161,161"   />
+
+		<rect id="Rectangle_2" cx="16.4167" cy="44.4967" sx="80" sy="12" dx="119.583" dy="57.5033" lineWidth="1.5"  color="220,220,220"  />
+
+		<port id="load1" library="PORTS_LIB" type="mech_trans"  hotPort="load1" >
+		
+				<symbol dx="136" dy="80" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="93.5" dy="69" />
+		
+		</port>
+
+		<port id="fulcrum" library="PORTS_LIB" type="mech_rot"  hotPort="fulcrum" >
+		
+				<symbol dx="120" dy="128" onLabel="true" />
+		
+				<label cx="25" cy="12" dx="68" dy="117" />
+		
+		</port>
+
+		<port id="load2" library="PORTS_LIB" type="mech_trans"  hotPort="load2" >
+		
+				<symbol dx="168" dy="80" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="173.5" dy="70" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+</palette>

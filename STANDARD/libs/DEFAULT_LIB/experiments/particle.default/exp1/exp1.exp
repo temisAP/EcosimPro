@@ -1,0 +1,11 @@
+EXPERIMENT exp1 ON particle.default
+   BODY
+      REPORT_TABLE("reportAll", "*")
+
+      TIME = 0.
+
+      TSTOP = 10.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

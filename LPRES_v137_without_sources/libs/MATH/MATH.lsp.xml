@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="MATH_Units.el"/>
+  <file name="MATH_Common.el"/>
+  <file name="MATH_f_Basics.el"/>
+  <file name="MATH_f_Equations.el"/>
+  <file name="MATH_f_Polynomials.el"/>
+  <file name="MATH_f_Randoms.el"/>
+  <file name="MATH_f_Fluids.el"/>
+  <file name="MATH_CompTables.el"/>
+  <file name="MATH_Fun_Ecua3.el"/>
+ </filedeps>
+ <libdeps>
+ </libdeps>
+ <otherdeps>
+  <otherFile name="./lib/linux_gcc32v4_4/math.a"/>
+  <otherFile name="./lib/linux_gcc32v4_7/math.a"/>
+  <otherFile name="./lib/linux_gcc64v4_9/math.a"/>
+  <otherFile name="./lib/win32_gcc32v4_4/math.a"/>
+  <otherFile name="./lib/win32_gcc32v4_4/math.dll"/>
+  <otherFile name="./lib/win32_gcc32v4_7/math.a"/>
+  <otherFile name="./lib/win32_gcc32v4_7/math.dll"/>
+  <otherFile name="./lib/win32_vc2008/math.dll"/>
+  <otherFile name="./lib/win32_vc2008/math.lib"/>
+  <otherFile name="./lib/win32_vc2010/math.dll"/>
+  <otherFile name="./lib/win32_vc2010/math.lib"/>
+  <otherFile name="./lib/win64_gcc64v4_9/math.a"/>
+  <otherFile name="./lib/win64_gcc64v4_9/math.dll"/>
+  <otherFile name="./lib/win64_vc2010/math.dll"/>
+  <otherFile name="./lib/win64_vc2010/math.lib"/>
+  <otherFile name="./lib/win64_vc2013/math.dll"/>
+  <otherFile name="./lib/win64_vc2013/math.lib"/>
+  <otherFile name="./lib/win64_vc2015/math.dll"/>
+  <otherFile name="./lib/win64_vc2015/math.lib"/>
+ </otherdeps>
+</library>

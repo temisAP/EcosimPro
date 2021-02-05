@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="MECHANICAL_EXAMPLES.html">MECHANICAL_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">MECHANICAL_EXAMPLES.Example_Damper<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Example_Damper">Example_Damper</a>
+</font><br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>damper2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_SpringDamper.html">MECHANICAL.T_SpringDamper</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>mass2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_SlidingMass.html">MECHANICAL.T_SlidingMass</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>ForceNull&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>mass1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_SlidingMass.html">MECHANICAL.T_SlidingMass</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>damper1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_Damper.html">MECHANICAL.T_Damper</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>mass3&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_SlidingMass.html">MECHANICAL.T_SlidingMass</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>force2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_ActuatorForce.html">MECHANICAL.T_ActuatorForce</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>force3&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_ActuatorForce.html">MECHANICAL.T_ActuatorForce</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>force1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_ActuatorForce.html">MECHANICAL.T_ActuatorForce</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>spring&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_Spring.html">MECHANICAL.T_Spring</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Fixed2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_FixedPosition.html">MECHANICAL.T_FixedPosition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Fixed1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_FixedPosition.html">MECHANICAL.T_FixedPosition</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Fixed3&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.T_FixedPosition.html">MECHANICAL.T_FixedPosition</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Fixed1.s0&nbsp;</td><td>4.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fixed offset position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Fixed2.s0&nbsp;</td><td>4.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fixed offset position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Fixed3.s0&nbsp;</td><td>4.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fixed offset position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>ForceNull.Amp&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>ForceNull.Offset&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>ForceNull.Period&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>ForceNull.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>ForceNull.Tstart&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>ForceNull.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>ForceNull.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>ForceNull.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>ForceNull.source&nbsp;</td><td>Source_Constant&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>ForceNull.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>ForceNull.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>damper1.d&nbsp;</td><td>25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Damping constant&nbsp;</td><td>"N·s/m"&nbsp;</td></tr>
+
+<tr><td>damper2.d&nbsp;</td><td>25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Damping constant&nbsp;</td><td>"N·s/m"&nbsp;</td></tr>
+
+<tr><td>damper2.k&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Spring constant&nbsp;</td><td>"N/m"&nbsp;</td></tr>
+
+<tr><td>damper2.s_rel0&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Distance between ports for unloaded spring&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>mass1.m&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass of body&nbsp;</td><td>"kg"&nbsp;</td></tr>
+
+<tr><td>mass1.s0&nbsp;</td><td>3.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>mass1.v0&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body velocity&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>mass2.m&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass of body&nbsp;</td><td>"kg"&nbsp;</td></tr>
+
+<tr><td>mass2.s0&nbsp;</td><td>3.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>mass2.v0&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body velocity&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>mass3.m&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass of body&nbsp;</td><td>"kg"&nbsp;</td></tr>
+
+<tr><td>mass3.s0&nbsp;</td><td>3.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body position&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>mass3.v0&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial body velocity&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>spring.k&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Spring constant&nbsp;</td><td>"N/m"&nbsp;</td></tr>
+
+<tr><td>spring.s_rel0&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Distance between ports for unloaded spring&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:48)</font></p>
+</body>
+</html>

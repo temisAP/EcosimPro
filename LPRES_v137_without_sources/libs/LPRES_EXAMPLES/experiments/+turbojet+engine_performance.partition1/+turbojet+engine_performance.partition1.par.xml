@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="TurbojetEngine_performance" partition="partition1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="GG.OF"/>
+</noDatas>
+<boundaries>
+  <variable name="GG.OF"/>
+  <variable name="LPRES.Altitude"/>
+</boundaries>
+<algebraics>
+  <variable name="GG.W_F"/>
+  <variable name="HPC.f_in.pt"/>
+  <variable name="HPT.f_in.pt"/>
+  <variable name="Nozzle.g.Tt"/>
+  <variable name="HPC.M_in"/>
+  <variable name="HPC.U"/>
+  <variable name="LPC.M_in"/>
+  <variable name="LPC.U"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

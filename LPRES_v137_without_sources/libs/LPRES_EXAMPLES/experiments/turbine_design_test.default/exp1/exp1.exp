@@ -1,0 +1,67 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: turbine_design_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 14/03/2016
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON turbine_design_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+      Turbine.m.Power = 1940000
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine.M = 0.8):")
+		PRINT(" ")
+		PRINT("	Discharge area = $Nozzle.A_d")		
+		PRINT("	Turbine average radius = $Turbine.r_m_d")		
+		PRINT("	Turbine input area = $Turbine.A_in_d")		
+		PRINT("	Mass flow = $Turbine.f_in.W")
+		PRINT("	Turbine phi = $Turbine.phi")		
+		PRINT("	Turbine psi = $Turbine.psi")
+		PRINT(" ")
+		
+		Turbine.M = 1
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine.M = 1):")
+		PRINT(" ")
+		PRINT("	Discharge area = $Nozzle.A_d")		
+		PRINT("	Turbine average radius = $Turbine.r_m_d")		
+		PRINT("	Turbine input area = $Turbine.A_in_d")		
+		PRINT("	Mass flow = $Turbine.f_in.W")
+		PRINT(" ")
+		
+		Turbine.M = 1.5
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine.M = 1.5):")
+		PRINT(" ")
+		PRINT("	Discharge area = $Nozzle.A_d")		
+		PRINT("	Turbine average radius = $Turbine.r_m_d")		
+		PRINT("	Turbine input area = $Turbine.A_in_d")		
+		PRINT("	Mass flow = $Turbine.f_in.W")
+		PRINT(" ")
+
+END EXPERIMENT

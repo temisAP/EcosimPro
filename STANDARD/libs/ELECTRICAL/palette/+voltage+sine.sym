@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="VoltageSine" >
+
+		<line id="Line_1" points="-14,1052 -25,1052" dx="104" dy="-972" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="47,1052 37,1052" dx="83" dy="-972" lineColor="0,192,0"   />
+
+		<ellipse id="Ellipse_1" cx="-2.6299" cy="319.876" rx="16.0001" ry="16" dx="106.63" dy="-239.876" lineWidth="1.5"  color="0,192,0" aliasing="true"  />
+
+		<g id="Group_2" dx="28" dy="-9.5" >
+		
+					<line id="Line_12" points="-14,117 -9,117" dx="111" dy="-36"  />
+		 />
+					<line id="Line_13" points="-14,117 -9,117" rotation="-90" dx="111" dy="-36"  />
+		 />
+		</g>
+
+		<line id="Line_15" points="30,116 34,116" dx="48" dy="-45"  />
+
+		<bezier id="Bezier_2" points="100,100 100,90 110,90 110,100 110,110 120,110 120,100" dx="-6" dy="-20" lineColor="255,255,255" lineWidth="2"  aliasing="true"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="137.5" dy="67" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="34.5" dy="69" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Voffset"/>
+				<var name="Vpeak"/>
+				<var name="freqHz"/>
+				<var name="phase"/>
+				<var name="startTime"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="160.5" cy="123" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-24" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="145.5" cy="155" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-4" dy="-8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

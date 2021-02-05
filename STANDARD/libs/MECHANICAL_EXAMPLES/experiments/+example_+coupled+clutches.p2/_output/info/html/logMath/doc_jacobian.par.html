@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+coupled+clutches.p2.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+coupled+clutches.p2.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Jacobian Matrix Information<br /></h2>
+<br/>
+<font size="4" color="black">Jacobian Independent Variables</font><br/>
+<table border="1" cellspacing="0"><tr><td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>VARIABLE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>CATEGORY&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION&nbsp;</b></color></td>
+<td><color="black"><b>BOX
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v9" data-ajax='false'><font color="red">J1.w</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v9" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad/s&nbsp;</td><td>Absolute angular velocity (rad/s)&nbsp;</td><td>&nbsp;</td><td>J1.w' = J1.a&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v67" data-ajax='false'><font color="red">clutch1.phi_rel</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v67" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad&nbsp;</td><td>Angular distance between ports&nbsp;</td><td>&nbsp;</td><td>clutch1.phi_rel'. = clutch1.phi_rel'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v20" data-ajax='false'><font color="red">J2.w</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v20" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad/s&nbsp;</td><td>Absolute angular velocity (rad/s)&nbsp;</td><td>&nbsp;</td><td>J2.w' = J2.a&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v100" data-ajax='false'><font color="red">clutch2.phi_rel</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v100" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad&nbsp;</td><td>Angular distance between ports&nbsp;</td><td>&nbsp;</td><td>clutch2.phi_rel'. = clutch2.phi_rel'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v31" data-ajax='false'><font color="red">J3.w</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v31" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad/s&nbsp;</td><td>Absolute angular velocity (rad/s)&nbsp;</td><td>&nbsp;</td><td>J3.w' = J3.a&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v133" data-ajax='false'><font color="red">clutch3.phi_rel</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v133" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad&nbsp;</td><td>Angular distance between ports&nbsp;</td><td>&nbsp;</td><td>clutch3.phi_rel'. = clutch3.phi_rel'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v42" data-ajax='false'><font color="red">J4.w</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v42" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rad/s&nbsp;</td><td>Absolute angular velocity (rad/s)&nbsp;</td><td>&nbsp;</td><td>J4.w' = J4.a&nbsp;</td><td>1&nbsp;</td></tr>
+<br/>
+<tr><td>8&nbsp;</td><td><a href="doc_vars.par.html#v71" data-ajax='false'><font color="green">clutch1.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v71" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-34] MECHANICAL.fun_R_AbsFriction(clutch1.imode, clutch1.a_rel, <b><font color="green">clutch1.sa</font></b>, clutch1.tau0) = 0&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td><a href="doc_vars.par.html#v104" data-ajax='false'><font color="green">clutch2.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v104" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-42] MECHANICAL.fun_R_AbsFriction(clutch2.imode, clutch2.a_rel, <b><font color="green">clutch2.sa</font></b>, clutch2.tau0) = 0&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td><a href="doc_vars.par.html#v137" data-ajax='false'><font color="green">clutch3.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v137" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-48] MECHANICAL.fun_R_AbsFriction(clutch3.imode, clutch3.a_rel, <b><font color="green">clutch3.sa</font></b>, clutch3.tau0) = 0&nbsp;</td><td>1&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

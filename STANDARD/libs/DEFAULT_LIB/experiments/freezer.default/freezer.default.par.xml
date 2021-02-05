@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="DEFAULT_LIB" component="freezer" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="mc"/>
+</boundaries>
+<dynamics>
+  <variable name="tr"/>
+</dynamics>
+<algebraics>
+  <variable name="qc"/>
+  <variable name="te"/>
+</algebraics>
+<residues>
+  <r id="1" value="tr' = (qb + aka * (ta - tr) - qe) / mc"/>
+  <r id="2" value="qc = wk * carn * (tc + 273.15) / (tc - te)"/>
+  <r id="3" value="te = tr - qe / ua"/>
+</residues>
+</partitionInfo>

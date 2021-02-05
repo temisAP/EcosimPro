@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="turbine_ch_performance_test" partition="partition1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="Nozzle.A"/>
+</noDatas>
+<boundaries>
+  <variable name="LPRES.Altitude"/>
+  <variable name="Nozzle.A"/>
+  <variable name="Turbine_ch.m.N"/>
+</boundaries>
+<algebraics>
+  <variable name="Nozzle.g.pt"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

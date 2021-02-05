@@ -1,0 +1,67 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: PressureFedEngine_offDesign
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON PressureFedEngine_offDesign.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		CC.M_r = 100
+      Tank_MMH.M_g = 0.1
+      Tank_NTO.M_g = 0.1
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+      LPRES.Altitude = 0
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      ThrustMonitor.p_amb = 300
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-06 
+		
+/*		SET_INIT_ACTIVE(FALSE)
+		RESTORE_STATE("..\..\+pressure+fed+engine.design\exp1\PressureFedEngine_design_state.txt")
+		
+		Tank_NTO.A_g = 2e-005
+		Tank_MMH.A_g = 2.5e-005
+		Injector_NTO.A = 0.0006
+		Injector_MMH.A = 0.0015		*/
+		
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")
+		PRINT("	Pressurisation gas mass flow = $Tank_He.f.W")
+		PRINT("	NTO tank pressure = $Tank_NTO.p_g")
+		PRINT("	MMH tank pressure = $Tank_MMH.p_g")
+		PRINT("	NTO tank gas Mach number = $Tank_NTO.M_g")
+		PRINT("	MMH tank gas Mach number = $Tank_MMH.M_g")
+		
+		PRINT("	NTO mass flow = $Injector_NTO.f_in.W")	
+		PRINT("	MMH mass flow = $Injector_MMH.f_in.W")	
+		
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")		
+		
+		PRINT("	Combustion pressure = $CC.g.pt")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")	
+
+END EXPERIMENT

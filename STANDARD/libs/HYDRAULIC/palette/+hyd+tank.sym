@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="HydTank" >
+
+		<line id="Line_12" points="55.936,798.558 91.936,798.558"  end_arrow="true" dx="95.064" dy="-734.558" lineColor="255,128,0"  aliasing="true"  />
+
+		<ellipse id="Ellipse_8" cx="70.968" cy="1737.59" rx="6" ry="6" dx="98.032" dy="-1673.59" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<text id="Text_3" cx="7" cy="9" sx="14" sy="18" aliasing="true" dx="162" dy="55"  >
+			<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62;&#60;span style=&#34; font-size:6pt; color:#000000;&#34;&#62;LI&#60;/span&#62;&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+		</text>
+
+		<closedBezier id="ClosedBezier_6" points="60,88 60,88 60,144 60,144 60,156 124,156 124,144 124,128 124,108 124,88 124,88 60,88 60,88" dx="32" dy="-40" lineWidth="1.5"   color="0,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_7" points="228,120 228,112 292,112 292,120 292,128 228,128 228,120" dx="-136" dy="-72" lineWidth="0.5"   color="0,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_8" points="88.1138,191.983 88.1138,191.983 88.1195,195.983 88.1252,199.983 88.1252,199.983 100.125,199.966 100.125,199.966 100.119,195.966 100.114,191.966 100.114,191.966 100.108,187.966 88.1081,187.983 88.1138,191.983" rotation="90.0815" flipY="true" flipX="true" dx="61.8834" dy="-97.9745" lineWidth="1.5"   color="0,170,255" gradientColor="255,255,255" gradientType="GL" position="49" aliasing="true"  />
+
+		<ellipse id="Ellipse_4" cx="174" cy="127.948" rx="4" ry="6" flipY="true" dx="-11" dy="-31.948" lineWidth="1.5"   color="0,170,255" gradientColor="200,200,200" gradientType="GR" position="100" aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_9" points="224,120 224,112 288,112 288,120 288,128 224,128 224,120" dx="-132" dy="-100" lineWidth="1.5"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_10" points="92.1195,195.977 92.1195,195.977 92.1252,199.977 92.1309,203.977 96.1252,199.971 100.125,199.966 104.131,203.96 104.125,199.96 104.12,195.96 104.12,195.96 104.114,191.96 92.1138,191.977 92.1195,195.977" rotation="90.0815" dx="-6.12242" dy="-101.969" lineWidth="1.5"   color="0,170,255" gradientColor="255,255,255" gradientType="GL" position="49" aliasing="true"  />
+
+		<ellipse id="Ellipse_5" cx="174" cy="123.948" rx="4" ry="6" flipY="true" dx="-89" dy="-27.948" lineWidth="1.5"   color="0,170,255" gradientColor="200,200,200" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_9" points="263,184 282,184"  end_arrow="true" dx="-199" dy="-88" aliasing="true"  />
+
+		<line id="Line_11" points="247,190 271,190"  end_arrow="true" dx="-83" dy="-94" aliasing="true"  />
+
+		<bezier id="Bezier_2" points="200,64 200,56 264,56 264,64" dx="-108" dy="40" lineWidth="0.5" lineType="2"  aliasing="true"  />
+
+		<line id="Line_5" points="147,86 147,154" dx="9" dy="-66" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_8" points="143,157.065 143,225.065" dx="-51" dy="-137.065" lineWidth="1.5"  aliasing="true"  />
+
+		<port id="hp_in" library="HYDRAULIC" type="Hydraulic"  hotPort="hp_in" >
+		
+				<symbol dx="64" dy="96" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="20.5" dy="85" />
+		
+		</port>
+
+		<port id="hp_out" library="HYDRAULIC" type="Hydraulic"  hotPort="hp_out" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="200.5" dy="85" />
+		
+		</port>
+
+		<port id="s_level" library="PORTS_LIB" type="analog_signal"  hotPort="s_level" >
+		
+				<symbol dx="192" dy="64" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="192" dy="40" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="p0"/>
+				<var name="z_in"/>
+				<var name="z_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="106.5" cy="110" sx="101" sy="12" variable="hp_in.w"  headerText="hp_in.w"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-44" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="102" cy="110" sx="92" sy="12" variable="hp_in.p"  headerText="hp_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="-44" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="109" cy="110" sx="106" sy="12" variable="hp_out.w"  headerText="hp_out.w"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="87" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="104.5" cy="110" sx="97" sy="12" variable="hp_out.p"  headerText="hp_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="87" dy="20" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

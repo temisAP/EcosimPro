@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Peltier" >
+
+		<line id="Line_1" points="55,483.881 55,499.882" dx="104.999" dy="-419.883" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="23.001,483.881 23.001,499.882" dx="104.999" dy="-419.883" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="71.0011,515.883 83.0011,515.883"  end_arrow="true" dx="103.999" dy="-419.883" lineColor="170,0,0"   />
+
+		<line id="Line_4" points="-8,515.883 7,515.883"  end_arrow="true" dx="104" dy="-419.883" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_1" cx="23.001" cy="515.883" sx="31.9999" sy="31.9999" dx="104.999" dy="-419.883" lineWidth="1.5"  color="224,224,224"  />
+
+		<rect id="Rectangle_2" cx="55" cy="515.883" sx="31.9999" sy="31.9999" dx="104.999" dy="-419.883" lineWidth="1.5"  color="128,128,128"  />
+
+		<line id="Line_5" points="61.001,475.882 65.001,475.882" dx="106.999" dy="-403.882"  />
+
+		<line id="Line_6" points="10.999,476.881 14.999,476.881" dx="108" dy="-405.882"  />
+
+		<line id="Line_7" points="13,474.882 13,478.882" dx="108" dy="-405.882"  />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="50" dy="84.501" />
+		
+		</port>
+
+		<port id="tp_out" library="PORTS_LIB" type="thermal"  hotPort="tp_out" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="198.5" dy="84.501" />
+		
+		</port>
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="128" dy="64" onLabel="true" />
+		
+				<label cx="14.5" cy="12" dx="116.5" dy="38.0021" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="160" dy="64" onLabel="true" />
+		
+				<label cx="14.5" cy="12" dx="148.501" dy="38.0021" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="G"/>
+				<var name="NTE"/>
+				<var name="a_coef"/>
+				<var name="k_coef"/>
+				<var name="n"/>
+				<var name="r_coef"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="103" cy="130" sx="94" sy="12" variable="tp_out.Tk[1]"  headerText="tp_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="120" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="100.5" cy="130" sx="89" sy="12" variable="tp_out.q[1]"  headerText="tp_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="120" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

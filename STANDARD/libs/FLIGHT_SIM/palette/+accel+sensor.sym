@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="AccelSensor" >
+
+		<line id="Line_1" points="76.9092,38 60.909,38" dx="82.0909" dy="42" lineColor="255,128,0"   />
+
+		<line id="Line_2" points="-3.09089,38 12.9091,38" dx="82.0909" dy="42" lineColor="85,85,255"   />
+
+		<ellipse id="Ellipse_1" cx="36.9092" cy="38" rx="23.0001" ry="23.0001" dx="82.0909" dy="42" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<polygon id="Polygon_1" points="28.909,58.0001 28.909,17.9999 44.9092,17.9999 44.9092,58.0001" dx="82.0909" dy="42" color="232,232,232"  />
+
+		<line id="Line_3" points="36.6145,18.4386 40.9089,22.0002 32.9092,22.0002 40.9089,26.0001 32.9092,26.0001 40.9089,30 32.9092,30 36.9092,34.0001" dx="82.0909" dy="42" aliasing="true"  />
+
+		<line id="Line_4" points="36.9092,41.9999 40.9089,46 32.9092,46 40.9089,49.9999 32.9092,49.9999 40.9089,53.9998 32.9092,53.9998 36.9092,58.0001" dx="82.0909" dy="42" aliasing="true"  />
+
+		<line id="Line_5" points="37.9091,38 53.9091,38"  end_arrow="true" dx="82.0909" dy="42"  />
+
+		<polygon id="Polygon_3" points="32.9092,41.9999 32.9092,34.0001 40.9089,34.0001 40.9089,41.9999" dx="82.0909" dy="42" color="128,128,128"  />
+
+		<port id="state_in" library="FLIGHT_SIM" type="State" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="21" dy="69" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="159" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="163" dy="69" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="CosDir"/>
+				<var name="Pos"/>
+				<var name="bias"/>
+				<var name="gain"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

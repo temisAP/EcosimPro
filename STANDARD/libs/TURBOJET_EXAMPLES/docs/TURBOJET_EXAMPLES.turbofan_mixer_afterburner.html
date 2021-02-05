@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="TURBOJET_EXAMPLES.html">TURBOJET_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="TURBOJET_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">TURBOJET_EXAMPLES.turbofan_mixer_afterburner<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="turbofan_mixer_afterburner">turbofan_mixer_afterburner</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Turbofan with mixer and afterburner example</font><br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>inlet&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Inlet.html">TURBOJET.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>afterburner&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.AfterBurner.html">TURBOJET.AfterBurner</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>burner&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Burner.html">TURBOJET.Burner</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>compressor&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Compressor.html">TURBOJET.Compressor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>fan&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Fan.html">TURBOJET.Fan</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>valve_afterburner&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.FuelValve.html">TURBOJET.FuelValve</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>fuelmeter&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Fuelmeter.html">TURBOJET.Fuelmeter</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>valve_burner&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.FuelValve.html">TURBOJET.FuelValve</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>lp_turbine&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Turbine.html">TURBOJET.Turbine</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>hp_turbine&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Turbine.html">TURBOJET.Turbine</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>split2&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.SplitFrac.html">TURBOJET.SplitFrac</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>split1&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.SplitFrac.html">TURBOJET.SplitFrac</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>mixer&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Mixer.html">TURBOJET.Mixer</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>monitor&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Monitor.html">TURBOJET.Monitor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>nozzle&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.Nozzle_Var.html">TURBOJET.Nozzle_Var</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>sh_end_hp_tur&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.ShaftEnd.html">TURBOJET.ShaftEnd</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>sh_end_lp_tur&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.ShaftEnd.html">TURBOJET.ShaftEnd</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>sh_end_fan&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.ShaftEnd.html">TURBOJET.ShaftEnd</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>sh_end_comp&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.ShaftEnd.html">TURBOJET.ShaftEnd</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>fuel_tank&nbsp;</td><td><a href="../../TURBOJET/docs/TURBOJET.FuelTank.html">TURBOJET.FuelTank</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>afterburner.A&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Cross sectional area (m^2)&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>afterburner.Cd&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Drag coefficient (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>afterburner.eta&nbsp;</td><td>0.98&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Combustion efficiency (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>burner.CX[6]&nbsp;</td><td>{ 99.7,-0.004568246,0.000...&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Coefficients for efficiency calculation from air loading&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>burner.GLP&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Loss coefficient&nbsp;</td><td>"s/kg"&nbsp;</td></tr>
+
+<tr><td>burner.VOL&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Chamber volume&nbsp;</td><td>"m^3"&nbsp;</td></tr>
+
+<tr><td>compressor.CG1&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for corrected mass flow&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>compressor.CG2&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>compressor.CG4&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for compression work&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>compressor.F1&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Compression work (J/kg*K) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>compressor.F2&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Efficiency (-) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>compressor.F3&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Corrected mass flow (kg/s) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>compressor.I&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inertial moment&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>compressor.ND&nbsp;</td><td>10000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+<tr><td>fan.CG1&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for corrected mass flow&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.CG2&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.CG4&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for compression work&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.DH_ratio&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Scalar for primary flow compression work&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.EPD_ratio&nbsp;</td><td>0.9&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Scalar for primary flow efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.F1&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Compression work (J/kg*K) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>fan.F2&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Efficiency (-) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>fan.F3&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Corrected mass flow (kg/s) vs adimensional speed (-) and beta parameter (-)&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>fan.I&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inertial moment&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>fan.ND&nbsp;</td><td>10000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+<tr><td>fuel_tank.FHV&nbsp;</td><td>43200&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fuel heat value&nbsp;</td><td>"kJ/kg"&nbsp;</td></tr>
+
+<tr><td>fuel_tank.X[FuelComp]&nbsp;</td><td>{ 0.25,0.75,0} &nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass fractions of H, C, and S in fuel&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>hp_turbine.CG1&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for corrected mass flow&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.CG2&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.CG3&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for rotational speed&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.CG4&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for power&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.G1&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Corrected mass flow (kg/s) vs power (J/kg*K) and corrected rotational speed (rpm)&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.G2&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Efficiency (-) vs power (J/kg*K) and corrected rotational speed (rpm)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>hp_turbine.I&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inertial moment&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>inlet.ERAM&nbsp;</td><td>FromData&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/TURBOJET/docs/TURBOJET.enumerativeTypes.html#PressLossMode" data-ajax='false'>TURBOJET.PressLossMode</a>&nbsp;</td><td>Efficiency calculation mode&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>inlet.Rhum&nbsp;</td><td>30&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Relative humidity&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>inlet.dTamb&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Delta temperature with respect to ISA&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>inlet.eramxx&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Efficiency vs corrected mass flow kg/s&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>inlet.zeram&nbsp;</td><td>0.99&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.CG1&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for corrected mass flow&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.CG2&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.CG3&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for rotational speed&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.CG4&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Correction coefficient for power&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.G1&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Corrected mass flow (kg/s) vs power (J/kg*K) and corrected rotational speed (rpm)&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.G2&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_2D &nbsp;</td><td>Efficiency (-) vs power (J/kg*K) and corrected rotational speed (rpm)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>lp_turbine.I&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inertial moment&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>mixer.A1&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Primary cross sectional area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>mixer.A2&nbsp;</td><td>2&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Secondary cross sectional area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>nozzle.A_exit&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Exit area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>split1.k&nbsp;</td><td>0.04&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Branch mass flow fraction&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>split2.k&nbsp;</td><td>0.03&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Branch mass flow fraction&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>valve_afterburner.k&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Valve coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>valve_burner.k&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Valve coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:15)</font></p>
+</body>
+</html>

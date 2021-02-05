@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="SDLSensor" >
+
+		<line id="Line_1" points="75.0001,347.003 91.0007,347.003" dx="4.9999" dy="-267.003" lineColor="0,85,255"   />
+
+		<line id="Line_2" points="154.999,347.003 138.999,347.003" dx="4.9999" dy="-267.003" lineColor="255,128,0"   />
+
+		<ellipse id="Ellipse_1" cx="115.001" cy="347.003" rx="23.0002" ry="23.0002" dx="4.9999" dy="-267.003" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<text id="Text_1" cx="11.5" cy="19" sx="23" sy="38" dx="109.501" dy="57.9998"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Symbol'; font-size:18pt; font-weight:600; color:#000000;">b</span></p></body></html>]]>
+		</text>
+
+		<port id="state_in" library="FLIGHT_SIM" type="State"  hotPort="state_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="21" dy="68" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="164" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="bias"/>
+				<var name="gain"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

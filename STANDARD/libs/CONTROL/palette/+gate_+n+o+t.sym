@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Gate_NOT" >
+
+		<line id="Line_9" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,192,0"   />
+
+		<line id="Line_2" points="84,424 99,424"  end_arrow="true" dx="-4" dy="-344" lineColor="255,192,0"   />
+
+		<polygon id="Polygon_1" points="100,408 100,440 132,424" dx="-4" dy="-344" lineWidth="1.5"  color="255,192,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="288" cy="421.981" rx="4" ry="4" rotation="90" dx="-163" dy="-341.981" lineWidth="1.5"  color="255,255,127" aliasing="true"  />
+
+		<port id="s_out" library="PORTS_LIB" type="bool_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="76" />
+		
+		</port>
+
+		<port id="s_in" library="PORTS_LIB" type="bool_signal" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="42" dy="76" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="92.5" cy="50" sx="97" sy="12" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="195" cy="98" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="-40" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

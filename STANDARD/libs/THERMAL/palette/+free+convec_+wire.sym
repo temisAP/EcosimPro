@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FreeConvec_Wire" >
+
+		<bezier id="Bezier_5" points="201.275,320.039 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" dx="-49.275" dy="-224.039" lineColor="170,0,0"  aliasing="true"  />
+
+		<bezier id="Bezier_9" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-75" dy="-224" lineColor="170,0,0"  aliasing="true"  />
+
+		<bezier id="Bezier_19" points="200,320 216,320 216,316 200,316 192,316 192,312 200,312 216,312 216,308 200,308" rotation="180" flipY="true" dx="-102" dy="-224" lineColor="170,0,0"  aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="2.74899" cy="285.569" rx="2" ry="8" dx="97.251" dy="-181.569" lineWidth="1.5"  color="222,222,222"  />
+
+		<rect id="Rectangle_1" cx="37.4797" cy="285.569" sx="53.3764" sy="16" dx="89.8321" dy="-181.569" lineColor="222,222,222" lineWidth="1.5"  color="222,222,222"  />
+
+		<ellipse id="Ellipse_2" cx="71.7496" cy="285.569" rx="2" ry="8" dx="84.2504" dy="-181.569" lineWidth="1.5"  color="222,222,222"  />
+
+		<line id="Line_1" points="6.03075,277.569 62.2244,277.569" dx="93.251" dy="-181.569" lineWidth="1.5"   />
+
+		<line id="Line_2" points="10.3725,294.569 66.2244,294.569" dx="89.251" dy="-182.569" lineWidth="1.5"   />
+
+		<port id="tp_fluid" library="PORTS_LIB" type="thermal"  hotPort="tp_fluid" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="24.5" cy="12" dx="107.5" dy="55" />
+		
+		</port>
+
+		<port id="tp_surface" library="PORTS_LIB" type="thermal"  hotPort="tp_surface" >
+		
+				<symbol dx="128" dy="112" onLabel="true" />
+		
+				<label cx="34" cy="12" dx="89" dy="120" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Grav"/>
+				<var name="L"/>
+				<var name="P"/>
+				<var name="d"/>
+				<var name="n"/>
+				<var name="position"/>
+				<var name="thermal_fluid"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="110.5" cy="130" sx="109" sy="12" variable="tp_surface.Tk[1]"  headerText="tp_surface.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="108" cy="130" sx="104" sy="12" variable="tp_surface.q[1]"  headerText="tp_surface.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="105" cy="130" sx="98" sy="12" variable="tp_fluid.Tk[1]"  headerText="tp_fluid.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="-72" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="102.5" cy="130" sx="93" sy="12" variable="tp_fluid.q[1]"  headerText="tp_fluid.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="-60" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

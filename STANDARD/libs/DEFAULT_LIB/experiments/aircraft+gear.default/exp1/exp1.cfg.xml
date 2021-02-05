@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="x" nick="x" lineColor="255,0,0"/>
+						<var name="y1" nick="y1" lineColor="0,204,153"/>
+						<var name="y3" nick="y3" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="fdrag" nick="fdrag" lineColor="255,0,0"/>
+						<var name="fk1" nick="fk1" lineColor="0,204,153"/>
+						<var name="fk2" nick="fk2" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_3">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="x" nick="x" lineColor="255,0,0"/>
+						<var name="x'" nick="x'" lineColor="0,204,153"/>
+						<var name="x''" nick="x''" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="270" visible="true">
+		<var name="m1"/>
+		<var name="m2"/>
+		<var name="m3"/>
+		<var name="h"/>
+		<var name="k1"/>
+		<var name="k2"/>
+		<var name="y3"/>
+		<var name="y2"/>
+		<var name="x"/>
+		<var name="fk1"/>
+		<var name="y1"/>
+		<var name="fk2"/>
+		<var name="fdrag"/>
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

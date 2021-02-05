@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindexHL" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">Global Variable List<br /><small></small></h1><hr><br><br/>
+<a name="Global Variable List">Global Variable List</a><br/>
+<br/>
+Note: click [+] for accessing the source code file<br/>
+<br/>
+     FluidFileName<a href="../sources/TH_FuncsPureFluids.el?item=FluidFileName">&nbsp;[+]</a><br/>
+     IdMat<a href="../sources/TH_CommonProp.el?item=IdMat">&nbsp;[+]</a><br/>
+     IdProp<a href="../sources/TH_CommonProp.el?item=IdProp">&nbsp;[+]</a><br/>
+     Mat_internal_name<a href="../sources/TH_CommonProp.el?item=Mat_internal_name">&nbsp;[+]</a><br/>
+     Orbit_Period<a href="../sources/TH_Common.el?item=Orbit_Period">&nbsp;[+]</a><br/>
+     PRINT_TEMP<a href="../sources/TH_Common.el?item=PRINT_TEMP">&nbsp;[+]</a><br/>
+     PathFlProps<a href="../sources/TH_FuncsPureFluids.el?item=PathFlProps">&nbsp;[+]</a><br/>
+     SOLAR_CONSTANT<a href="../sources/TH_Common.el?item=SOLAR_CONSTANT">&nbsp;[+]</a><br/>
+     ier_fl_ma<a href="../sources/TH_FuncsPureFluids.el?item=ier_fl_ma">&nbsp;[+]</a><br/>
+     ier_fl_mi<a href="../sources/TH_FuncsPureFluids.el?item=ier_fl_mi">&nbsp;[+]</a><br/>
+     ier_ma<a href="../sources/TH_CommonProp.el?item=ier_ma">&nbsp;[+]</a><br/>
+     ier_mi<a href="../sources/TH_CommonProp.el?item=ier_mi">&nbsp;[+]</a><br/>
+     path_tables<a href="../sources/TH_CommonProp.el?item=path_tables">&nbsp;[+]</a><br/>
+     posFluid<a href="../sources/TH_FuncsPureFluids.el?item=posFluid">&nbsp;[+]</a><br/>
+     setRaleighWarnings<a href="../sources/TH_FunFreeConvec.el?item=setRaleighWarnings">&nbsp;[+]</a><br/>
+<br/>
+<br/>
+<font size="5" color="black">GLOBAL VARIABLES:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>FluidFileName[ThFluids]&nbsp;</td><td>CONST STRING &nbsp;</td><td>{ "Air","Nitrogen","Oxyge...&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>IdMat[Material]&nbsp;</td><td>INTEGER &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>Position of the material in the static structure of tables&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>IdProp[PropSolid]&nbsp;</td><td>INTEGER &nbsp;</td><td>{ 1,2,3,1,2} &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>Mat_internal_name[Material]&nbsp;</td><td>CONST STRING &nbsp;</td><td>{ "None","Aluminum","AL22...&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>Orbit_Period&nbsp;</td><td>REAL &nbsp;</td><td>2 * 3600&nbsp;</td><td>&nbsp;</td><td>Orbit period to determine cyclic temperature dynamics in nodes&nbsp;</td><td>s&nbsp;</td></tr>
+
+<tr><td>PRINT_TEMP&nbsp;</td><td>BOOLEAN &nbsp;</td><td> FALSE &nbsp;</td><td>&nbsp;</td><td>Flag for print name label and temperature of nodes&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>PathFlProps&nbsp;</td><td>CONST FILEPATH &nbsp;</td><td>"@THERMAL@\/tables\/Simple_Fluids\/"&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>SOLAR_CONSTANT&nbsp;</td><td>REAL &nbsp;</td><td>1410&nbsp;</td><td>&nbsp;</td><td>Solar power received at earth orbit&nbsp;</td><td>W/m^2&nbsp;</td></tr>
+
+<tr><td>ier_fl_ma[ThFluids]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tmax error identifier&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ier_fl_mi[ThFluids]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tmin error identifier&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ier_ma[Material]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tmax error identifier&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ier_mi[Material]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Tmin error identifier&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>path_tables&nbsp;</td><td>FILEPATH &nbsp;</td><td>"@THERMAL@\\TABLES\\"&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>posFluid[ThFluids]&nbsp;</td><td>INTEGER &nbsp;</td><td>-1&nbsp;</td><td>&nbsp;</td><td>Position of the fluid in the static structure of tables&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>setRaleighWarnings&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Put this variable to 1 to test validity ranges&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

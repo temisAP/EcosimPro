@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Regenerator" >
+
+		<polygon id="Polygon_4" points="32.8537,566.776 32.8537,598.776 96.8537,598.776 96.8537,566.776" dx="79.1463" dy="-478.776" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_7" points="148,646 160,646"  start_arrow="true" dx="-48" dy="-550" lineColor="0,0,255"  aliasing="true"  />
+
+		<line id="Line_8" points="160,646 168,646 172.001,641.999 179.999,650.001 188.001,641.999 195.999,650.001 204.001,641.999 211.999,650.001 216,646 224,646" dx="-48" dy="-550" lineColor="255,0,0"  aliasing="true"  />
+
+		<line id="Line_9" points="160,662 168,662 172.001,657.999 179.999,666.001 188.001,657.999 195.999,666.001 204.001,657.999 211.999,666.001 216,662 224,662" dx="-48" dy="-550" lineColor="0,0,255"  aliasing="true"  />
+
+		<line id="Line_10" points="240,646 224,646"  end_arrow="true" dx="-48" dy="-550" lineColor="0,0,255"  aliasing="true"  />
+
+		<line id="Line_11" points="214,652 226,652"  end_arrow="true" dx="-38" dy="-540" lineColor="0,0,255"  aliasing="true"  />
+
+		<line id="Line_12" points="214,652 226,652"  end_arrow="true" dx="-115" dy="-540" lineColor="0,0,255"  aliasing="true"  />
+
+		<port id="g_gas_in" library="TURBOJET" type="Gas"  hotPort="g_gas_in" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="30" cy="12" dx="202" dy="84" />
+		
+		</port>
+
+		<port id="g_cold_in" library="TURBOJET" type="Gas"  hotPort="g_cold_in" >
+		
+				<symbol dx="96" dy="112" onLabel="true" />
+		
+				<label cx="31.5" cy="12" dx="25" dy="100" />
+		
+		</port>
+
+		<port id="g_gas_out" library="TURBOJET" type="Gas"  hotPort="g_gas_out" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="34" cy="12" dx="22" dy="84" />
+		
+		</port>
+
+		<port id="g_cold_out" library="TURBOJET" type="Gas"  hotPort="g_cold_out" >
+		
+				<symbol dx="192" dy="112" onLabel="true" />
+		
+				<label cx="35.5" cy="12" dx="197" dy="100" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="110.5" cy="106" sx="109" sy="12" variable="g_gas_out.P"  headerText="g_gas_out.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="-32" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="115.5" cy="106" sx="119" sy="12" variable="g_gas_out.W"  headerText="g_gas_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-32" dy="-32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="109" cy="106" sx="106" sy="12" variable="g_cold_in.P"  headerText="g_cold_in.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="-32" dy="32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="114" cy="106" sx="116" sy="12" variable="g_cold_in.W"  headerText="g_cold_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-32" dy="20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="108" cy="106" sx="104" sy="12" variable="g_gas_in.P"  headerText="g_gas_in.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="100" dy="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="113" cy="106" sx="114" sy="12" variable="g_gas_in.W"  headerText="g_gas_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="100" dy="-36" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="111.5" cy="106" sx="111" sy="12" variable="g_cold_out.P"  headerText="g_cold_out.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="100" dy="32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="116.5" cy="106" sx="121" sy="12" variable="g_cold_out.W"  headerText="g_cold_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="100" dy="20" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Monitor" >
+
+		<line id="Line_5" points="169.006,529.249 169.006,513.248"  end_arrow="true" dx="-89.006" dy="-401.249" lineColor="128,0,0"  aliasing="true"  />
+
+		<line id="Line_6" points="213.005,529.249 213.005,513.249"  end_arrow="true" dx="-101.005" dy="-401.249" lineColor="255,128,0"  aliasing="true"  />
+
+		<rect id="Rectangle_2" cx="169.004" cy="481.246" sx="64" sy="32" dx="-73.0039" dy="-385.246" color="192,192,192" aliasing="true"  />
+
+		<ellipse id="Ellipse_5" cx="192" cy="228" rx="12" ry="12" rotation="-90" flipY="true" dx="-112" dy="-132" color="255,255,255"  />
+
+		<ellipse id="Ellipse_7" cx="153" cy="283" rx="9" ry="9" rotation="-90" flipY="true" dx="-73" dy="-187" lineWidth="0.5" lineType="2"   />
+
+		<line id="Line_20" points="112,240 120,244" rotation="-90" flipY="true" dx="-38" dy="-150"  />
+
+		<line id="Line_25" points="116,209.91 116,216" rotation="-90" flipY="true" dx="-31.045" dy="-116.955" lineColor="255,0,0"   />
+
+		<ellipse id="Ellipse_10" cx="193" cy="177" rx="1" ry="1" rotation="-90" flipY="true" dx="-113" dy="-81" color="0,0,0"  />
+
+		<ellipse id="Ellipse_1" cx="192" cy="228" rx="12" ry="12" rotation="-90" flipX="true" dx="-80" dy="-132" color="255,255,255"  />
+
+		<ellipse id="Ellipse_2" cx="153" cy="283" rx="9" ry="9" rotation="-90" flipX="true" dx="-41" dy="-187" lineWidth="0.5" lineType="2"   />
+
+		<line id="Line_1" points="112,240 120,244" rotation="-90" flipX="true" dx="-2" dy="-142"  />
+
+		<line id="Line_2" points="116,209.91 116,216" rotation="-90" flipX="true" dx="-8.955" dy="-116.955" lineColor="255,0,0"   />
+
+		<ellipse id="Ellipse_3" cx="193" cy="177" rx="1" ry="1" rotation="-90" flipX="true" dx="-81" dy="-81" color="0,0,0"  />
+
+		<port id="s_fuel" library="PORTS_LIB" type="analog_signal"  hotPort="s_fuel" >
+		
+				<symbol dx="112" dy="128" onLabel="true" />
+		
+				<label cx="21" cy="12" dx="91" dy="132" />
+		
+		</port>
+
+		<port id="thrust" library="TURBOJET" type="Force"  hotPort="thrust" >
+		
+				<symbol dx="80" dy="128" onLabel="true" />
+		
+				<label cx="20.5" cy="12" dx="59" dy="132" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="82" cy="134" sx="92" sy="12" variable="thrust.F"  headerText="thrust.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="4" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="172" cy="122" sx="104" sy="12" variable="s_fuel.signal[1]"  headerText="s_fuel.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

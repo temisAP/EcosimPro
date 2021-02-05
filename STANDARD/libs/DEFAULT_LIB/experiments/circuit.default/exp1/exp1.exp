@@ -1,0 +1,15 @@
+EXPERIMENT exp1 ON circuit.default
+   INIT
+      -- Dynamic variables
+      C.v = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 0.2
+      CINT = 0.001
+      INTEG()
+
+END EXPERIMENT

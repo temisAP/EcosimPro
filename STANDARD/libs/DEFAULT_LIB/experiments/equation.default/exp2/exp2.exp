@@ -1,0 +1,20 @@
+EXPERIMENT exp2 ON equation.default
+   INIT
+      -- Dynamic variables
+      y = 0.
+
+   BOUNDS
+      x = 1.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      tau = 2.
+
+      TSTOP = 15.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

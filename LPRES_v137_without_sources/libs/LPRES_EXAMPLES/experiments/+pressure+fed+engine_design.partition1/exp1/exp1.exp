@@ -1,0 +1,68 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: PressureFedEngine_design
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON PressureFedEngine_design.partition1
+   DECLS
+		REAL M_comb	
+		REAL cp_comb
+		
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+      Tank_MMH.M_g = 0.1
+      Tank_NTO.M_g = 0.1
+      LPRES.Altitude = 0
+		
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      ThrustMonitor.p_amb = 300
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")
+		PRINT("	Pressurisation gas mass flow = $Tank_He.f.W")
+		PRINT("	NTO tank gas input area = $Tank_NTO.A_g_d")
+		PRINT("	MMH tank gas input area = $Tank_MMH.A_g_d")
+		PRINT("	NTO tank gas Mach number = $Tank_NTO.M_g")
+		PRINT("	MMH tank gas Mach number = $Tank_MMH.M_g")
+		
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")	
+		
+		PRINT("	NTO injector area = $Injector_NTO.A_d")	
+		PRINT("	MMH injector area = $Injector_MMH.A_d")		
+		
+		PRINT("	Combustion pressure = $CC.g.pt")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		
+		M_comb = M(CC.g.fluid)
+		cp_comb = cp(CC.g.fluid)
+		
+		PRINT("	Combustion products molar mass (g/mol) = $M_comb")	
+		PRINT("	Combustion products specific heat at constant pressure (J/(kg·K)) = $cp_comb")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")	
+		
+		SAVE_STATE("PressureFedEngine_design_state.txt")
+
+END EXPERIMENT

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Cylinder" >
+
+		<closedBezier id="ClosedBezier_3" points="120.827,37.3573 128.828,25.3572 136.828,37.3573 136.828,45.3573 136.828,53.3574 128.828,65.3573 120.827,53.3574 100.826,53.3574 100.826,53.3574 80.8267,53.3574 88.8266,65.3573 96.8262,53.3574 96.8262,45.3573 96.8262,37.3573 88.8266,25.3572 80.8267,37.3573" dx="21.1733" dy="50.6427" color="128,128,128"  />
+
+		<polygon id="Polygon_1" points="76.8268,33.3573 80.8267,37.3573 120.827,37.3573 116.827,33.3573" dx="21.1733" dy="50.6427" color="192,192,192"  />
+
+		<closedBezier id="ClosedBezier_4" points="76.8268,33.3573 78.8268,29.3574 82.8266,25.3572 88.8266,25.3572 104.826,25.3572 104.826,25.3572 128.828,25.3572 122.826,25.3572 118.826,29.3574 116.827,33.3573" dx="21.1733" dy="50.6427" color="224,224,224"  />
+
+		<closedBezier id="ClosedBezier_5" points="76.8268,57.3572 78.8268,61.3571 82.8266,65.3573 88.8266,65.3573 104.826,65.3573 104.826,65.3573 128.828,65.3573 122.826,65.3573 118.826,61.3571 116.827,57.3572" dx="21.1733" dy="50.6427" color="128,128,128"  />
+
+		<polygon id="Polygon_2" points="80.8267,53.3574 76.8268,57.3572 116.827,57.3572 120.827,53.3574" dx="21.1733" dy="50.6427" color="192,192,192"  />
+
+		<closedBezier id="ClosedBezier_6" points="116.827,33.3573 128.828,15.3573 142.827,31.3572 142.827,45.3573 142.827,59.3573 128.828,75.3572 116.827,57.3572 118.826,55.3573 118.826,55.3573 120.827,53.3574 128.828,65.3573 136.828,53.3574 136.828,45.3573 136.828,37.3573 128.828,25.3572 120.827,37.3573" dx="21.1733" dy="50.6427" color="192,192,192"  />
+
+		<line id="Line_2" points="79.8267,45.3573 98.8267,45.3573"  end_arrow="true" dx="21.1733" dy="50.6427" lineColor="170,0,0"   />
+
+		<line id="Line_3" points="126.827,45.3573 146.827,45.3573"  end_arrow="true" dx="21.1733" dy="50.6427" lineColor="170,0,0"   />
+
+		<ellipse id="Ellipse_2" cx="131" cy="96" rx="6" ry="6" dx="-3" dy="-32" color="192,192,192"  />
+
+		<ellipse id="Ellipse_1" cx="131" cy="96" rx="6" ry="6" dx="-3" color="192,192,192"  />
+
+		<line id="Line_1" points="102.959,22.3458 102.959,38.3458"  end_arrow="true" rotation="180" flipX="true" dx="25.0415" dy="49.6542" lineColor="170,0,0"   />
+
+		<ellipse id="Ellipse_3" cx="131" cy="96" rx="6" ry="6" dx="45" color="192,192,192"  />
+
+		<ellipse id="Ellipse_4" cx="131" cy="96" rx="6" ry="6" dx="-35" color="192,192,192"  />
+
+		<port id="tpr_out" library="PORTS_LIB" type="thermal"  hotPort="tpr_out" >
+		
+				<symbol dx="128" dy="64" onLabel="true" />
+		
+				<label cx="24" cy="12" dx="76" dy="52" />
+		
+		</port>
+
+		<port id="tpz_out" library="PORTS_LIB" type="thermal"  hotPort="tpz_out" >
+		
+				<symbol dx="176" dy="96" onLabel="true" />
+		
+				<label cx="25.5" cy="12" dx="180" dy="84" />
+		
+		</port>
+
+		<port id="tpr_in" library="PORTS_LIB" type="thermal"  hotPort="tpr_in" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="108" dy="96" />
+		
+		</port>
+
+		<port id="tpz_in" library="PORTS_LIB" type="thermal"  hotPort="tpz_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="21.5" cy="12" dx="48" dy="84" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Di"/>
+				<var name="Do"/>
+				<var name="L"/>
+				<var name="TemperatureDependance"/>
+				<var name="To"/>
+				<var name="To_linear"/>
+				<var name="To_table"/>
+				<var name="cp"/>
+				<var name="init_mode"/>
+				<var name="k"/>
+				<var name="mat"/>
+				<var name="nr"/>
+				<var name="num"/>
+				<var name="nz"/>
+				<var name="rho"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="78.5" cy="134" sx="93" sy="12" variable="tpz_in.Tk[1]"  headerText="tpz_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-20" dy="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="76" cy="134" sx="88" sy="12" variable="tpz_in.q[1]"  headerText="tpz_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-20" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="78" cy="134" sx="92" sy="12" variable="tpr_in.Tk[1]"  headerText="tpr_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="68" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="75.5" cy="134" sx="87" sy="12" variable="tpr_in.q[1]"  headerText="tpr_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="68" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="81" cy="134" sx="98" sy="12" variable="tpz_out.Tk[1]"  headerText="tpz_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="132" dy="-60" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="78.5" cy="134" sx="93" sy="12" variable="tpz_out.q[1]"  headerText="tpz_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="132" dy="-48" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_7" cx="78" cy="134" sx="92" sy="12" variable="tpr_in.Tc[1]"  headerText="tpr_in.Tc[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="68" dy="-92" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_8" cx="80.5" cy="134" sx="97" sy="12" variable="tpr_out.Tk[1]"  headerText="tpr_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="68" dy="-80" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

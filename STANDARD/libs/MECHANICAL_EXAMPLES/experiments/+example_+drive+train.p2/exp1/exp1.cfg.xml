@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Test_Brake.p1.exp2_1" x="530" y="365" dx="530" dy="365">
+				<plot id="Test_Brake.p1.exp2_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="2"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-1" max="0.6"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Test_Brake.p1.exp2_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="spring.phi_rel" nick="spring.phi_rel" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Test_Brake.p1.exp2_2" x="530" y="0" dx="530" dy="365">
+				<plot id="Test_Brake.p1.exp2_2">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Test_Brake.p1.exp2_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="inertia1.w" nick="inertia1.w" lineColor="255,0,0"/>
+						<var name="inertia2.w" nick="inertia2.w" lineColor="0,204,153"/>
+						<var name="inertia3.w" nick="inertia3.w" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Test_Brake.p1.exp2_3" x="0" y="365" dx="530" dy="365">
+				<plot id="Test_Brake.p1.exp2_3">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Test_Brake.p1.exp2_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="clutch.imode" nick="clutch.imode" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Test_Brake.p1.exp2_4" x="0" y="0" dx="530" dy="365">
+				<plot id="Test_Brake.p1.exp2_4">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Test_Brake.p1.exp2_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="brake.imode" nick="brake.imode" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="274" visible="true">
+	</watch>
+	<outputWindow height="142" visible="true"/>
+</experiment>

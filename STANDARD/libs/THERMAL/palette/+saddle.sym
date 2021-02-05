@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Saddle" >
+
+		<line id="Line_1" points="193,604.999 193,589"  end_arrow="true" dx="-65" dy="-460.999" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="193,568 193,549"  end_arrow="true" dx="-65" dy="-464" lineColor="170,0,0"   />
+
+		<closedBezier id="ClosedBezier_1" points="197.001,565 205,565 217,565 220.999,565 220.999,573 220.999,585 220.999,589 211,589 189,589 181,589 181,587.001 181,583 181,581.001 191.001,581.001 197.001,571 197.001,565" dx="-65" dy="-469" lineWidth="1.5"  color="128,128,128"  />
+
+		<rect id="Rectangle_1" cx="169" cy="581" sx="24" sy="32" dx="-65" dy="-469" lineWidth="1.5"  color="128,128,128"  />
+
+		<closedBezier id="ClosedBezier_2" points="189,565 189,575.001 199,581.001 205,581.001 214.999,581.001 220.999,571 220.999,565 223,565 227,565 229,565 229,573 229,585 229,597 217,597 193,597 181,597 181,581.001 181,569.001 181,565 183,565 187,565 189,565" dx="-65" dy="-469" lineWidth="1.5"  color="192,192,192"  />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="128" dy="144" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="111.584" dy="152.365" />
+		
+		</port>
+
+		<port id="tp_out" library="PORTS_LIB" type="thermal"  hotPort="tp_out" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="132.365" dy="39.7402" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="G"/>
+				<var name="TemperatureDependance"/>
+				<var name="To"/>
+				<var name="cp"/>
+				<var name="k"/>
+				<var name="l"/>
+				<var name="mat"/>
+				<var name="n"/>
+				<var name="rho"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_3" cx="103" cy="130" sx="94" sy="12" variable="tp_out.Tk[1]"  headerText="tp_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="-72" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="100.5" cy="130" sx="89" sy="12" variable="tp_out.q[1]"  headerText="tp_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="-60" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="32" dy="36" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

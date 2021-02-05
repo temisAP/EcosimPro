@@ -1,0 +1,93 @@
+EXPERIMENT exp1 ON turbofan.design
+   DECLS
+      INTEGER i
+
+   INIT
+      -- Dynamic variables
+      compressor.N = 12000.
+      fan.N = 4000.
+
+      -- Algebraic variables
+      split1.g_in.T = 500.
+
+      hp_turbine.g_in.W = 25.
+
+      nozzle_sec.g_in.T = 500.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+      burner.AL = 2.5
+      burner.PQ = 0.96
+
+      compressor.DN = 0.
+      compressor.EPD = 0.92
+      compressor.PCNR = 92.
+      compressor.g_out.P = 28.e+5
+      compressor.beta = 0.7
+
+      fan.DN = 0.
+      fan.EPD = 0.92
+      fan.PCNR = 92.
+      fan.BPR = 6.
+      fan.PQ = 1.8
+      fan.beta = 0.7
+      fan.g_pr.W = 25.
+
+      hp_turbine.DHQTJ = 1.
+      hp_turbine.EPD = 0.92
+      hp_turbine.NRJ = 1.
+      hp_turbine.g_in.T = 1800.
+
+      lp_turbine.DHQTJ = 1.
+      lp_turbine.EPD = 0.92
+      lp_turbine.NRJ = 1.
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      FREEZE(fan.N)
+      FREEZE(compressor.N)
+
+      STEADY()
+
+      PRINT(" ")
+      PRINT("   N = $compressor.sh_out.N")
+      PRINT("   burner.f_in.W = $burner.f_in.W")
+      PRINT("   burner.GLP = $burner.GLP")
+      PRINT("   burner.VOL = $burner.VOL")
+      PRINT("   compressor.CG1 = $compressor.CG1")
+      PRINT("   compressor.CG2 = $compressor.CG2")
+      PRINT("   compressor.CG4 = $compressor.CG4")
+      PRINT("   compressor.ND = $compressor.ND")
+      PRINT("   fan.CG1 = $fan.CG1")
+      PRINT("   fan.CG2 = $fan.CG2")
+      PRINT("   fan.CG4 = $fan.CG4")
+      PRINT("   fan.ND = $fan.ND")
+      PRINT("   hp_turbine.CG1 = $hp_turbine.CG1")
+      PRINT("   hp_turbine.CG2 = $hp_turbine.CG2")
+      PRINT("   hp_turbine.CG3 = $hp_turbine.CG3")
+      PRINT("   hp_turbine.CG4 = $hp_turbine.CG4")
+      PRINT("   lp_turbine.CG1 = $lp_turbine.CG1")
+      PRINT("   lp_turbine.CG2 = $lp_turbine.CG2")
+      PRINT("   lp_turbine.CG3 = $lp_turbine.CG3")
+      PRINT("   lp_turbine.CG4 = $lp_turbine.CG4")
+      PRINT("   nozzle.A_exit = $nozzle.A_exit")
+      PRINT("   nozzle_sec.A_exit = $nozzle_sec.A_exit")
+
+      FOR (i IN 0,24)
+         fan.PQ = 1.3 + i * 0.05
+
+         STEADY()
+
+         PRINT(" ")
+         PRINT("   fan_PQ = $fan.PQ")
+         PRINT("   monitor.SFC = $monitor.SFC")
+         PRINT("   nozzle.A_exit = $nozzle.A_exit")
+
+      END FOR
+
+END EXPERIMENT

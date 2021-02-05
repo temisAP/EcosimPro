@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="VoltageConstant" >
+
+		<line id="Line_1" points="11,988 11,972" dx="69" dy="-892" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="12,1010 12,994" dx="68" dy="-882" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="-12,988 28,988" dx="72" dy="-892" lineColor="0,192,0" lineWidth="3"   />
+
+		<rect id="Rectangle_1" cx="67" cy="99" sx="32" sy="8" dx="13" dy="9" lineColor="0,192,0"  color="0,192,0"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="60.5" dy="48" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="80" dy="128" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="62.5" dy="129" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="V"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="220.5" cy="91" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-4" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="217.5" cy="107" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

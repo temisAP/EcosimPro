@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="NPN" >
+
+		<line id="Line_1" points="3,688 3,736" dx="101" dy="-632" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_3" points="11,705 19,689 36,689" dx="93" dy="-625" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_4" points="12,721 20,737" dx="92" dy="-641" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_5" points="-3,713 -27,713" dx="107" dy="-633" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_6" points="1,718 13,718"  end_arrow="true" dx="111" dy="-622" lineColor="0,192,0"  aliasing="true"  />
+
+		<port id="e_C" library="PORTS_LIB" type="elec"  hotPort="e_C" >
+		
+				<symbol dx="128" dy="64" onLabel="true" />
+		
+				<label cx="19" cy="14" dx="136.5" dy="45" />
+		
+		</port>
+
+		<port id="e_B" library="PORTS_LIB" type="elec"  hotPort="e_B" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="18.5" cy="14" dx="34.5" dy="74" />
+		
+		</port>
+
+		<port id="e_E" library="PORTS_LIB" type="elec"  hotPort="e_E" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="18.5" cy="14" dx="136.5" dy="93" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Bf"/>
+				<var name="Br"/>
+				<var name="Ccs"/>
+				<var name="Cjc"/>
+				<var name="Cje"/>
+				<var name="Gbc"/>
+				<var name="Gbe"/>
+				<var name="Is"/>
+				<var name="Mc"/>
+				<var name="Me"/>
+				<var name="Phic"/>
+				<var name="Phie"/>
+				<var name="Tauf"/>
+				<var name="Taur"/>
+				<var name="Vak"/>
+				<var name="Vt"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="185" cy="155" sx="210" sy="30" variable="vbe"  headerText="vbe"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="108" dy="-52" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="200.5" cy="191" sx="209" sy="30" variable="vbc"  headerText="vbc"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="92" dy="-136" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

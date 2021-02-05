@@ -1,0 +1,13 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DEFAULT_LIB
+ COMPONENT: testStl
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 16/03/2016
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON vectorTest.default
+   BODY
+		EXEC_INIT()
+END EXPERIMENT 

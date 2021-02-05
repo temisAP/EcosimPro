@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="Mux3" >
+
+		<line id="Line_1" points="26,45 38,45"  end_arrow="true" dx="102" dy="51" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_5" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_2" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="72.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<rect id="Rectangle_3" cx="105" cy="48" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<ellipse id="Ellipse_1" cx="190" cy="191" rx="3" ry="3" rotation="90" dx="-79" dy="-95" color="0,0,0" aliasing="true"  />
+
+		<line id="Line_15" points="332,200 316,200 300,216 300,184 316,200 316,200" dx="-204" dy="-104" lineWidth="0.5"  aliasing="true"  />
+
+		<line id="Line_3" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="56.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_4" points="112,96 96,96" aliasing="true"  />
+
+		<port id="s_in[1]" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="27.5" dy="73" />
+		
+		</port>
+
+		<port id="s_in[2]" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="96" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="27.5" dy="89" />
+		
+		</port>
+
+		<port id="s_in[3]" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="27.5" dy="105" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="89" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="dim_in"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="TURBOJET_EXAMPLES" component="turbojet" partition="prediction">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="TURBOJET.Altitude"/>
+  <variable name="TURBOJET.Mach"/>
+  <variable name="turbine.g_in.T"/>
+</boundaries>
+<dynamics>
+  <variable name="compressor.N"/>
+</dynamics>
+<algebraics>
+  <variable name="compressor.beta"/>
+  <variable name="compressor.g_in.W"/>
+  <variable name="fuelmeter.f_in.W"/>
+  <variable name="turbine.g_out.T"/>
+</algebraics>
+<residues>
+  <r id="1" value="compressor.N' = compressor.DN"/>
+  <r id="2" value="IMPL(compressor.beta) compressor.g_in.W * ssqrt(compressor.theta) / compressor.delta = compressor.CG1 * compressor.WRJ"/>
+  <r id="3" value="IMPL(turbine.g_out.T) turbine.WR - turbine.CG1 * turbine.WRJ = 0"/>
+  <r id="4" value="0 = nozzle.A_exit - nozzle.g_in.W / (nozzle.Ps_out / (nozzle.Rgas * nozzle.Ts_out) * nozzle.v_out)"/>
+  <r id="5" value="burner.eta = MATH.poly(burner.AL, 6, burner.CX) / 100"/>
+</residues>
+</partitionInfo>

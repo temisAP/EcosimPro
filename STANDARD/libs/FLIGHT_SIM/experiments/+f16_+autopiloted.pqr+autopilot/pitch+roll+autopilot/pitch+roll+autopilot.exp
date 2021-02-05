@@ -1,0 +1,104 @@
+USE MATH
+
+EXPERIMENT pitchRollAutopilot ON F16_Autopiloted.pqrAutopilot
+   INIT
+      -- Dynamic variables
+      F16.Frame.R[N] = 0.
+      F16.Frame.R[E] = 0.
+      F16.Frame.R[D] = 0.
+
+      F16.Frame.V[x] = 153.
+      F16.Frame.V[y] = 0.
+      F16.Frame.V[z] = 0.
+
+      F16.Frame.dynAtt[1] = 0.
+      F16.Frame.dynAtt[2] = 0.
+      F16.Frame.dynAtt[3] = 0.
+      F16.Frame.dynAtt[4] = 0.
+
+      F16.Frame.W[x] = 0.
+      F16.Frame.W[y] = 0.
+      F16.Frame.W[z] = 0.
+
+      F16.Engine.apow = 0.
+
+      F16.Trimmer.elevator = 0.
+      F16.Trimmer.aileron = 0.
+      F16.Trimmer.rudder = 0.
+      F16.Trimmer.throttle = 0.
+
+      F16.El_Actuator.defl = 0.
+      F16.Ail_Actuator.defl = 0.
+      F16.Rdr_Actuator.defl = 0.
+
+      qAutopilot.AOA_filter.z[1] = 0.
+      qAutopilot.Integ.s_out.signal[1] = 0.
+
+      prAutopilot.AOA_filter.z[1] = 0.
+      prAutopilot.yaw_control.z[1] = 0.
+
+   BOUNDS
+      FLIGHT_SIM.Vwind[D] = 0.
+      FLIGHT_SIM.Vwind[E] = 0.
+      FLIGHT_SIM.Vwind[N] = 0.
+
+      prAutopilot.s_p.signal[1] = DtoR * 150. * (step(TIME, 15.) - step(TIME, 17.3))
+      qAutopilot.s_q.signal[1] = DtoR * 15. * step(TIME, 5.)
+      prAutopilot.s_r.signal[1] = 0.
+
+      s_thtl.signal[1] = (1. - F16.Trimmer.throttle) * step (TIME, 5.)
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      F16.Aero.xcg = 0.3
+
+      ------------------------------------------------------------------------
+      -- Maneuver using actuators without limiters
+      ------------------------------------------------------------------------
+      F16.El_Actuator.RL = Inf
+      F16.El_Actuator.DL = Inf
+
+      F16.Ail_Actuator.RL = Inf
+      F16.Ail_Actuator.DL = Inf
+
+      F16.Rdr_Actuator.RL = Inf
+      F16.Rdr_Actuator.DL = Inf
+
+      ------------------------------------------------------------------------
+      -- Initial state conditions for:
+      ------------------------------------------------------------------------
+      --   VT = 153 m/s
+      --   ClimbAngle = 0 deg
+      --   psi' = 0 deg/s
+      ------------------------------------------------------------------------
+      Trim = 1
+
+      F16.Trimmer.VT_req = 153.
+      F16.Trimmer.ClimbAngle_req = 0.
+      F16.Trimmer.dpsi_req = 0.
+
+      STEADY()
+
+      ------------------------------------------------------------------------
+      -- Pitch, roll, and yaw autopilot manouver
+      ------------------------------------------------------------------------
+      Trim = 0
+
+      F16.Frame.quater = TRUE
+
+      TSTOP = 15.
+      CINT = 1.
+      INTEG()
+
+      TSTOP = 22.
+      CINT = 0.1
+      CONTINUE()
+
+      TSTOP = 30.
+      CINT = 1.
+      CONTINUE()
+
+END EXPERIMENT

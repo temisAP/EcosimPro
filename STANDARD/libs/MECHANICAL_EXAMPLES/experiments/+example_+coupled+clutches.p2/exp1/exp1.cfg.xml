@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="CoupledClutches.p1.exp1_2" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="CoupledClutches.p1.exp1_2">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="CoupledClutches.p1.exp1_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="clutch1.imode" nick="clutch1.imode" lineColor="255,0,0"/>
+						<var name="clutch2.imode" nick="clutch2.imode" lineColor="0,204,153"/>
+						<var name="clutch3.imode" nick="clutch3.imode" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="CoupledClutches.p1.exp2_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="CoupledClutches.p1.exp2_1">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="CoupledClutches.p1.exp2_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="clutch1.imode" nick="clutch1.imode" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="CoupledClutches.p1.exp2_2" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="CoupledClutches.p1.exp2_2">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="CoupledClutches.p1.exp2_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="clutch2.imode" nick="clutch2.imode" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="CoupledClutches.p1.exp2_3" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="CoupledClutches.p1.exp2_3">
+					<axeX variableName="TIME">
+						<font color="255,255,255"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<font color="255,255,255"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="CoupledClutches.p1.exp2_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="clutch3.imode" nick="clutch3.imode" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="CoupledClutches.p1.exp1_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="CoupledClutches.p1.exp1_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="CoupledClutches.p1.exp1_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="J1.w" nick="J1.w" lineColor="255,0,0"/>
+						<var name="J2.w" nick="J2.w" lineColor="0,204,153"/>
+						<var name="J3.w" nick="J3.w" lineColor="0,0,255"/>
+						<var name="J4.w" nick="J4.w" lineColor="255,255,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="137" visible="true">
+	</watch>
+	<outputWindow height="252" visible="true"/>
+</experiment>

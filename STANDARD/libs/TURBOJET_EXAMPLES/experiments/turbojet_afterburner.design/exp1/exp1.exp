@@ -1,0 +1,64 @@
+EXPERIMENT exp1 ON turbojet_afterburner.design
+   INIT
+      -- Dynamic variables
+      turbine.N = 12000.
+
+      -- Algebraic variables
+      split1.g_in.T = 500.
+
+      turbine.g_in.W = 25.
+
+      afterburner.A = 0.1
+
+      nozzle.g_in.W = 26.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+      afterburner.M_in = 0.20
+
+      burner.AL = 2.5
+      burner.PQ = 0.96
+
+      compressor.DN = 0.
+      compressor.EPD = 0.92
+      compressor.PCNR = 92.
+      compressor.PQ = 12.
+      compressor.beta = 0.7
+
+      inlet.g_out.W = 25.
+
+      nozzle.g_in.T = 2000.
+      nozzle.s_Area.signal[1] = 1.
+
+      turbine.DHQTJ = 1.
+      turbine.EPD = 0.9
+      turbine.NRJ = 1.
+      turbine.g_in.T = 1800.
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      STEADY()
+
+      PRINT(" ")
+      PRINT("   N = $compressor.sh_out.N")
+      PRINT("   afterburner.A = $afterburner.A")    
+      PRINT("   afterburner.f_in.W = $afterburner.f_in.W")
+      PRINT("   burner.GLP = $burner.GLP")
+      PRINT("   burner.VOL = $burner.VOL")
+      PRINT("   burner.f_in.W = $burner.f_in.W")
+      PRINT("   compressor.CG1 = $compressor.CG1")
+      PRINT("   compressor.CG2 = $compressor.CG2")
+      PRINT("   compressor.CG4 = $compressor.CG4")
+      PRINT("   compressor.ND = $compressor.ND")
+      PRINT("   nozzle.A_exit = $nozzle.A_exit")
+      PRINT("   turbine.CG1 = $turbine.CG1")
+      PRINT("   turbine.CG2 = $turbine.CG2")
+      PRINT("   turbine.CG3 = $turbine.CG3")
+      PRINT("   turbine.CG4 = $turbine.CG4")
+
+END EXPERIMENT

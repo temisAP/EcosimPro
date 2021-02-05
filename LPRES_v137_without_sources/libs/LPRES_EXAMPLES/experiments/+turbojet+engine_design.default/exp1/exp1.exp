@@ -1,0 +1,53 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: TurbojetEngine_design
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 19/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON TurbojetEngine_design.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      HPC.M_in = 0.001
+      LPC.M_in = 0.001
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006			
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")
+		PRINT("	LPC average radius = $LPC.r_m_d")		
+		PRINT("	HPC average radius = $HPC.r_m_d")
+		PRINT("	LPC input area = $LPC.A_in_d")		
+		PRINT("	HPC input area = $HPC.A_in_d")
+		PRINT("	HPT input area = $HPT.A_in_d")
+		PRINT("	LPT input area = $LPT.A_in_d")
+		PRINT("	Nozzle discharge area = $Nozzle.A_d")
+		
+		PRINT("	Combustion temperature = $GG.T_c")
+		PRINT("	HPT pressure ratio = $pi_HPT")
+		PRINT("	LPT pressure ratio = $pi_LPT")
+		PRINT("	HPT temperature ratio = $HPT.alpha")
+		PRINT("	LPT temperature ratio = $LPT.alpha")
+		PRINT("	Nozzle outlet pressure = $Nozzle.p_out")		
+		PRINT("	Ambient pressure = $Nozzle.p_amb")
+		
+		PRINT("	Thrust = $Nozzle.Thrust")
+		PRINT(" ")
+		
+		SAVE_STATE("TurbojetEngine_design_state.txt")
+
+END EXPERIMENT

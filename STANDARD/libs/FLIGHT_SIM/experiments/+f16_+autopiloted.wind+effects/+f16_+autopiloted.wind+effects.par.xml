@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="FLIGHT_SIM" component="F16_Autopiloted" partition="windEffects">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="FLIGHT_SIM.Vwind[D]"/>
+  <variable name="FLIGHT_SIM.Vwind[E]"/>
+  <variable name="FLIGHT_SIM.Vwind[N]"/>
+  <variable name="prAutopilot.s_p.signal[1]"/>
+  <variable name="prAutopilot.s_r.signal[1]"/>
+  <variable name="qAutopilot.s_q.signal[1]"/>
+  <variable name="s_thtl.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="prAutopilot.AOA_filter.z[1]"/>
+  <variable name="prAutopilot.yaw_control.z[1]"/>
+  <variable name="qAutopilot.AOA_filter.z[1]"/>
+  <variable name="qAutopilot.Integ.s_out.signal[1]"/>
+  <variable name="F16.Trimmer.elevator"/>
+  <variable name="F16.Trimmer.aileron"/>
+  <variable name="F16.Trimmer.rudder"/>
+  <variable name="F16.Trimmer.throttle"/>
+  <variable name="F16.El_Actuator.defl"/>
+  <variable name="F16.Ail_Actuator.defl"/>
+  <variable name="F16.Rdr_Actuator.defl"/>
+  <variable name="F16.Engine.apow"/>
+  <variable name="F16.Frame.V[x]"/>
+  <variable name="F16.Frame.V[y]"/>
+  <variable name="F16.Frame.V[z]"/>
+  <variable name="F16.Frame.W[x]"/>
+  <variable name="F16.Frame.W[y]"/>
+  <variable name="F16.Frame.W[z]"/>
+  <variable name="F16.Frame.dynAtt[1]"/>
+  <variable name="F16.Frame.dynAtt[2]"/>
+  <variable name="F16.Frame.dynAtt[3]"/>
+  <variable name="F16.Frame.dynAtt[4]"/>
+  <variable name="F16.Frame.R[N]"/>
+  <variable name="F16.Frame.R[E]"/>
+  <variable name="F16.Frame.R[D]"/>
+</dynamics>
+<residues>
+  <r id="1" value="prAutopilot.AOA_filter.z[1]' = (prAutopilot.AOA_filter.s_in.signal[1] - prAutopilot.AOA_filter.q[2] * prAutopilot.AOA_filter.z[1]) / prAutopilot.AOA_filter.q[1]"/>
+  <r id="2" value="prAutopilot.yaw_control.z[1]' = (prAutopilot.yaw_control.s_in.signal[1] - prAutopilot.yaw_control.q[2] * prAutopilot.yaw_control.z[1]) / prAutopilot.yaw_control.q[1]"/>
+  <r id="3" value="qAutopilot.AOA_filter.z[1]' = (qAutopilot.AOA_filter.s_in.signal[1] - qAutopilot.AOA_filter.q[2] * qAutopilot.AOA_filter.z[1]) / qAutopilot.AOA_filter.q[1]"/>
+  <r id="4" value="qAutopilot.Integ.s_out.signal[1]' = qAutopilot.Error_gain.s_in.signal[1]"/>
+  <r id="5" value="F16.Trimmer.elevator' = -(FLIGHT_SIM.Trim * (0.0174532925199433 * F16.Trimmer.ClimbAngle_req - F16.Trimmer.ClimbAngle))"/>
+  <r id="6" value="F16.Trimmer.aileron' =  ZONE[2] (F16.Trimmer.mode == Normal) FLIGHT_SIM.Trim * (0.0174532925199433 * F16.Trimmer.dpsi_req - F16.Trimmer.dpsi) ZONE[2] (F16.Trimmer.mode == psi_alpha) FLIGHT_SIM.Trim * (0.0174532925199433 * F16.Trimmer.alpha_req - qAutopilot.q_GyroSensor.state_in.alpha) ZONE[2] (F16.Trimmer.mode == psi_R) FLIGHT_SIM.Trim * (1 / F16.Trimmer.R_req - F16.Trimmer.K)	  OTHERS 0"/>
+  <r id="7" value="F16.Trimmer.rudder' = -(FLIGHT_SIM.Trim * (qAutopilot.q_GyroSensor.state_in.W[x] * qAutopilot.q_GyroSensor.state_in.V[z] - qAutopilot.q_GyroSensor.state_in.W[z] * qAutopilot.q_GyroSensor.state_in.V[x] + 9.806 * sin(qAutopilot.q_GyroSensor.state_in.phi) * cos(qAutopilot.q_GyroSensor.state_in.theta)))"/>
+  <r id="8" value="F16.Trimmer.throttle' = -(FLIGHT_SIM.Trim * (F16.Trimmer.VT_req - qAutopilot.q_GyroSensor.state_in.VT))"/>
+  <r id="9" value="F16.El_Actuator.defl' =  ZONE[4] (abs(F16.El_Actuator.cdefl) < (0.0174532925199433 * F16.El_Actuator.DL)) F16.El_Actuator.rdefl	  OTHERS 0"/>
+  <r id="10" value="F16.Ail_Actuator.defl' =  ZONE[6] (abs(F16.Ail_Actuator.cdefl) < (0.0174532925199433 * F16.Ail_Actuator.DL)) F16.Ail_Actuator.rdefl	  OTHERS 0"/>
+  <r id="11" value="F16.Rdr_Actuator.defl' =  ZONE[8] (abs(F16.Rdr_Actuator.cdefl) < (0.0174532925199433 * F16.Rdr_Actuator.DL)) F16.Rdr_Actuator.rdefl	  OTHERS 0"/>
+  <r id="12" value="F16.Engine.apow' = F16.Engine.Rtau * F16.Engine.dpow"/>
+  <r id="13" value="F16.Frame.V[x]' = F16.Frame.W[z] * F16.Frame.V[y] - F16.Frame.W[y] * F16.Frame.V[z] - 9.806 * sin(qAutopilot.q_GyroSensor.state_in.theta) + F16.Frame.A[x]"/>
+  <r id="14" value="F16.Frame.V[y]' = F16.Frame.W[x] * F16.Frame.V[z] - F16.Frame.W[z] * F16.Frame.V[x] + 9.806 * sin(qAutopilot.q_GyroSensor.state_in.phi) * cos(qAutopilot.q_GyroSensor.state_in.theta) + F16.Frame.A[y]"/>
+  <r id="15" value="F16.Frame.V[z]' = F16.Frame.W[y] * F16.Frame.V[x] - F16.Frame.W[x] * F16.Frame.V[y] + 9.806 * cos(qAutopilot.q_GyroSensor.state_in.phi) * cos(qAutopilot.q_GyroSensor.state_in.theta) + F16.Frame.A[z]"/>
+  <r id="16" value="F16.Frame.forces_in.M[x] = F16.Frame.Ixx * F16.Frame.W[x]' - F16.Frame.Ixy * F16.Frame.W[y]' - F16.Frame.Ixz * F16.Frame.W[z]' + F16.Frame.Iyz * (F16.Frame.W[z] ** 2 - F16.Frame.W[y] ** 2) + (F16.Frame.Izz - F16.Frame.Iyy) * F16.Frame.W[y] * F16.Frame.W[z] + F16.Frame.Ixy * F16.Frame.W[x] * F16.Frame.W[z] - F16.Frame.Ixz * F16.Frame.W[x] * F16.Frame.W[y]"/>
+  <r id="17" value="F16.Frame.forces_in.M[y] = -F16.Frame.Ixy * F16.Frame.W[x]' + F16.Frame.Iyy * F16.Frame.W[y]' - F16.Frame.Iyz * F16.Frame.W[z]' + F16.Frame.Ixz * (F16.Frame.W[x] ** 2 - F16.Frame.W[z] ** 2) + (F16.Frame.Ixx - F16.Frame.Izz) * F16.Frame.W[x] * F16.Frame.W[z] + F16.Frame.Iyz * F16.Frame.W[x] * F16.Frame.W[y] - F16.Frame.Ixy * F16.Frame.W[y] * F16.Frame.W[z]"/>
+  <r id="18" value="F16.Frame.forces_in.M[z] = -F16.Frame.Ixz * F16.Frame.W[x]' - F16.Frame.Iyz * F16.Frame.W[y]' + F16.Frame.Izz * F16.Frame.W[z]' + F16.Frame.Ixy * (F16.Frame.W[y] ** 2 - F16.Frame.W[x] ** 2) + (F16.Frame.Iyy - F16.Frame.Ixx) * F16.Frame.W[x] * F16.Frame.W[y] + F16.Frame.Ixz * F16.Frame.W[y] * F16.Frame.W[z] - F16.Frame.Iyz * F16.Frame.W[x] * F16.Frame.W[z]"/>
+  <r id="19" value="F16.Frame.dynAtt[1]' =  ZONE[14] (F16.Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) F16.Frame.dEuler[1]	  OTHERS F16.Frame.dlambda[1]"/>
+  <r id="20" value="F16.Frame.dynAtt[2]' =  ZONE[15] (F16.Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) F16.Frame.dEuler[2]	  OTHERS F16.Frame.dlambda[2]"/>
+  <r id="21" value="F16.Frame.dynAtt[3]' =  ZONE[16] (F16.Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) F16.Frame.dEuler[3]	  OTHERS F16.Frame.dlambda[3]"/>
+  <r id="22" value="F16.Frame.dynAtt[4]' =  ZONE[17] (F16.Frame.quater ==  FALSE  OR FLIGHT_SIM.Trim == 1) F16.Frame.dEuler[4]	  OTHERS F16.Frame.dlambda[4]"/>
+  <r id="23" value="F16.Frame.R[N]' = (1 - FLIGHT_SIM.Trim) * F16.Frame.Rdot[N] + FLIGHT_SIM.Trim * (F16.Frame.R_o[N] - F16.Frame.R[N])"/>
+  <r id="24" value="F16.Frame.R[E]' = (1 - FLIGHT_SIM.Trim) * F16.Frame.Rdot[E] + FLIGHT_SIM.Trim * (F16.Frame.R_o[E] - F16.Frame.R[E])"/>
+  <r id="25" value="F16.Frame.R[D]' = (1 - FLIGHT_SIM.Trim) * F16.Frame.Rdot[D] + FLIGHT_SIM.Trim * (F16.Frame.R_o[D] - F16.Frame.R[D])"/>
+</residues>
+</partitionInfo>

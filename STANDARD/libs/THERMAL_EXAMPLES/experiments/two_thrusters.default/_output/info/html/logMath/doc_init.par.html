@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../two_thrusters.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../two_thrusters.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Init Blocks<br /></h2>
+<br/>
+Note 1: Variables called "__aux_int_..." are internal integer variables, used to iterate<br/>
+Note 2: FOR statements are converted to WHILE statements<br/>
+<br/>
+  -- init(thruster1.N1.Node,0)<br/>
+thruster1.N1.Tmin = MATH.TMAX<br/>
+thruster1.N1.Tmax = 0<br/>
+  -- init(thruster1.N1.ADNode,0)<br/>
+<b><font color="red">thruster1.N1.T</font></b> = thruster1.N1.To<br/>
+  -- init(thruster1.N2.Node,0)<br/>
+thruster1.N2.Tmin = MATH.TMAX<br/>
+thruster1.N2.Tmax = 0<br/>
+  -- init(thruster1.N2.ADNode,0)<br/>
+<b><font color="red">thruster1.N2.T</font></b> = thruster1.N2.To<br/>
+  -- init(thruster1.N3.Node,0)<br/>
+thruster1.N3.Tmin = MATH.TMAX<br/>
+thruster1.N3.Tmax = 0<br/>
+  -- init(thruster1.N3.ADNode,0)<br/>
+<b><font color="red">thruster1.N3.T</font></b> = thruster1.N3.To<br/>
+  -- init(thruster1.N4.Node,0)<br/>
+thruster1.N4.Tmin = MATH.TMAX<br/>
+thruster1.N4.Tmax = 0<br/>
+  -- init(thruster1.N4.ADNode,0)<br/>
+<b><font color="red">thruster1.N4.T</font></b> = thruster1.N4.To<br/>
+  -- init(thruster1.N5.Node,0)<br/>
+thruster1.N5.Tmin = MATH.TMAX<br/>
+thruster1.N5.Tmax = 0<br/>
+  -- init(thruster1.N5.ADNode,0)<br/>
+<b><font color="red">thruster1.N5.T</font></b> = thruster1.N5.To<br/>
+  -- init(thruster1.N6.Node,0)<br/>
+thruster1.N6.Tmin = MATH.TMAX<br/>
+thruster1.N6.Tmax = 0<br/>
+  -- init(thruster1.N6.ADNode,0)<br/>
+<b><font color="red">thruster1.N6.T</font></b> = thruster1.N6.To<br/>
+  -- init(thruster1.N7.Node,0)<br/>
+thruster1.N7.Tmin = MATH.TMAX<br/>
+thruster1.N7.Tmax = 0<br/>
+  -- init(thruster1.N7.ADNode,0)<br/>
+<b><font color="red">thruster1.N7.T</font></b> = thruster1.N7.To<br/>
+  -- init(thruster1.N8.Node,0)<br/>
+thruster1.N8.Tmin = MATH.TMAX<br/>
+thruster1.N8.Tmax = 0<br/>
+  -- init(thruster1.N8.ADNode,0)<br/>
+<b><font color="red">thruster1.N8.T</font></b> = thruster1.N8.To<br/>
+  -- init(thruster1.N9.Node,0)<br/>
+thruster1.N9.Tmin = MATH.TMAX<br/>
+thruster1.N9.Tmax = 0<br/>
+  -- init(thruster1.N9.ADNode,0)<br/>
+<b><font color="red">thruster1.N9.T</font></b> = thruster1.N9.To<br/>
+  -- init(thruster1.N10.Node,0)<br/>
+thruster1.N10.Tmin = MATH.TMAX<br/>
+thruster1.N10.Tmax = 0<br/>
+  -- init(thruster1.N10.ADNode,0)<br/>
+<b><font color="red">thruster1.N10.T</font></b> = thruster1.N10.To<br/>
+  -- init(thruster1.N11.Node,0)<br/>
+thruster1.N11.Tmin = MATH.TMAX<br/>
+thruster1.N11.Tmax = 0<br/>
+  -- init(thruster1.N11.ADNode,0)<br/>
+<b><font color="red">thruster1.N11.T</font></b> = thruster1.N11.To<br/>
+  -- init(thruster1.N12.Node,0)<br/>
+thruster1.N12.Tmin = MATH.TMAX<br/>
+thruster1.N12.Tmax = 0<br/>
+  -- init(thruster1.N12.ADNode,0)<br/>
+<b><font color="red">thruster1.N12.T</font></b> = thruster1.N12.To<br/>
+  -- init(thruster1.N13.Node,0)<br/>
+thruster1.N13.Tmin = MATH.TMAX<br/>
+thruster1.N13.Tmax = 0<br/>
+  -- init(thruster1.N13.ADNode,0)<br/>
+<b><font color="red">thruster1.N13.T</font></b> = thruster1.N13.To<br/>
+  -- init(thruster1.N14.Node,0)<br/>
+thruster1.N14.Tmin = MATH.TMAX<br/>
+thruster1.N14.Tmax = 0<br/>
+  -- init(thruster1.N14.ADNode,0)<br/>
+<b><font color="red">thruster1.N14.T</font></b> = thruster1.N14.To<br/>
+  -- init(thruster1.N15.Node,0)<br/>
+thruster1.N15.Tmin = MATH.TMAX<br/>
+thruster1.N15.Tmax = 0<br/>
+  -- init(thruster1.N15.ADNode,0)<br/>
+<b><font color="red">thruster1.N15.T</font></b> = thruster1.N15.To<br/>
+  -- init(thruster1.N105.Node,0)<br/>
+thruster1.N105.Tmin = MATH.TMAX<br/>
+thruster1.N105.Tmax = 0<br/>
+  -- init(datum-to-variable,thruster1.TD_GL1.k_table,0)<br/>
+thruster1.TD_GL1.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL2.k_table,0)<br/>
+thruster1.TD_GL2.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL3.k_table,0)<br/>
+thruster1.TD_GL3.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL4.k_table,0)<br/>
+thruster1.TD_GL4.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL5.k_table,0)<br/>
+thruster1.TD_GL5.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL6.k_table,0)<br/>
+thruster1.TD_GL6.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL7.k_table,0)<br/>
+thruster1.TD_GL7.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL8.k_table,0)<br/>
+thruster1.TD_GL8.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL9.k_table,0)<br/>
+thruster1.TD_GL9.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL10.k_table,0)<br/>
+thruster1.TD_GL10.k_table = thruster1.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster1.TD_GL11.k_table,0)<br/>
+thruster1.TD_GL11.k_table = thruster1.Cond_Tab<br/>
+  -- init(thruster2.N1.Node,0)<br/>
+thruster2.N1.Tmin = MATH.TMAX<br/>
+thruster2.N1.Tmax = 0<br/>
+  -- init(thruster2.N1.ADNode,0)<br/>
+<b><font color="red">thruster2.N1.T</font></b> = thruster2.N1.To<br/>
+  -- init(thruster2.N2.Node,0)<br/>
+thruster2.N2.Tmin = MATH.TMAX<br/>
+thruster2.N2.Tmax = 0<br/>
+  -- init(thruster2.N2.ADNode,0)<br/>
+<b><font color="red">thruster2.N2.T</font></b> = thruster2.N2.To<br/>
+  -- init(thruster2.N3.Node,0)<br/>
+thruster2.N3.Tmin = MATH.TMAX<br/>
+thruster2.N3.Tmax = 0<br/>
+  -- init(thruster2.N3.ADNode,0)<br/>
+<b><font color="red">thruster2.N3.T</font></b> = thruster2.N3.To<br/>
+  -- init(thruster2.N4.Node,0)<br/>
+thruster2.N4.Tmin = MATH.TMAX<br/>
+thruster2.N4.Tmax = 0<br/>
+  -- init(thruster2.N4.ADNode,0)<br/>
+<b><font color="red">thruster2.N4.T</font></b> = thruster2.N4.To<br/>
+  -- init(thruster2.N5.Node,0)<br/>
+thruster2.N5.Tmin = MATH.TMAX<br/>
+thruster2.N5.Tmax = 0<br/>
+  -- init(thruster2.N5.ADNode,0)<br/>
+<b><font color="red">thruster2.N5.T</font></b> = thruster2.N5.To<br/>
+  -- init(thruster2.N6.Node,0)<br/>
+thruster2.N6.Tmin = MATH.TMAX<br/>
+thruster2.N6.Tmax = 0<br/>
+  -- init(thruster2.N6.ADNode,0)<br/>
+<b><font color="red">thruster2.N6.T</font></b> = thruster2.N6.To<br/>
+  -- init(thruster2.N7.Node,0)<br/>
+thruster2.N7.Tmin = MATH.TMAX<br/>
+thruster2.N7.Tmax = 0<br/>
+  -- init(thruster2.N7.ADNode,0)<br/>
+<b><font color="red">thruster2.N7.T</font></b> = thruster2.N7.To<br/>
+  -- init(thruster2.N8.Node,0)<br/>
+thruster2.N8.Tmin = MATH.TMAX<br/>
+thruster2.N8.Tmax = 0<br/>
+  -- init(thruster2.N8.ADNode,0)<br/>
+<b><font color="red">thruster2.N8.T</font></b> = thruster2.N8.To<br/>
+  -- init(thruster2.N9.Node,0)<br/>
+thruster2.N9.Tmin = MATH.TMAX<br/>
+thruster2.N9.Tmax = 0<br/>
+  -- init(thruster2.N9.ADNode,0)<br/>
+<b><font color="red">thruster2.N9.T</font></b> = thruster2.N9.To<br/>
+  -- init(thruster2.N10.Node,0)<br/>
+thruster2.N10.Tmin = MATH.TMAX<br/>
+thruster2.N10.Tmax = 0<br/>
+  -- init(thruster2.N10.ADNode,0)<br/>
+<b><font color="red">thruster2.N10.T</font></b> = thruster2.N10.To<br/>
+  -- init(thruster2.N11.Node,0)<br/>
+thruster2.N11.Tmin = MATH.TMAX<br/>
+thruster2.N11.Tmax = 0<br/>
+  -- init(thruster2.N11.ADNode,0)<br/>
+<b><font color="red">thruster2.N11.T</font></b> = thruster2.N11.To<br/>
+  -- init(thruster2.N12.Node,0)<br/>
+thruster2.N12.Tmin = MATH.TMAX<br/>
+thruster2.N12.Tmax = 0<br/>
+  -- init(thruster2.N12.ADNode,0)<br/>
+<b><font color="red">thruster2.N12.T</font></b> = thruster2.N12.To<br/>
+  -- init(thruster2.N13.Node,0)<br/>
+thruster2.N13.Tmin = MATH.TMAX<br/>
+thruster2.N13.Tmax = 0<br/>
+  -- init(thruster2.N13.ADNode,0)<br/>
+<b><font color="red">thruster2.N13.T</font></b> = thruster2.N13.To<br/>
+  -- init(thruster2.N14.Node,0)<br/>
+thruster2.N14.Tmin = MATH.TMAX<br/>
+thruster2.N14.Tmax = 0<br/>
+  -- init(thruster2.N14.ADNode,0)<br/>
+<b><font color="red">thruster2.N14.T</font></b> = thruster2.N14.To<br/>
+  -- init(thruster2.N15.Node,0)<br/>
+thruster2.N15.Tmin = MATH.TMAX<br/>
+thruster2.N15.Tmax = 0<br/>
+  -- init(thruster2.N15.ADNode,0)<br/>
+<b><font color="red">thruster2.N15.T</font></b> = thruster2.N15.To<br/>
+  -- init(thruster2.N105.Node,0)<br/>
+thruster2.N105.Tmin = MATH.TMAX<br/>
+thruster2.N105.Tmax = 0<br/>
+  -- init(datum-to-variable,thruster2.TD_GL1.k_table,0)<br/>
+thruster2.TD_GL1.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL2.k_table,0)<br/>
+thruster2.TD_GL2.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL3.k_table,0)<br/>
+thruster2.TD_GL3.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL4.k_table,0)<br/>
+thruster2.TD_GL4.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL5.k_table,0)<br/>
+thruster2.TD_GL5.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL6.k_table,0)<br/>
+thruster2.TD_GL6.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL7.k_table,0)<br/>
+thruster2.TD_GL7.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL8.k_table,0)<br/>
+thruster2.TD_GL8.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL9.k_table,0)<br/>
+thruster2.TD_GL9.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL10.k_table,0)<br/>
+thruster2.TD_GL10.k_table = thruster2.Cond_Tab<br/>
+  -- init(datum-to-variable,thruster2.TD_GL11.k_table,0)<br/>
+thruster2.TD_GL11.k_table = thruster2.Cond_Tab<br/>
+  -- init(Space.Node,0)<br/>
+Space.Tmin = MATH.TMAX<br/>
+Space.Tmax = 0<br/>
+</body></html>

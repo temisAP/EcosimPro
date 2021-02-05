@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Nozzle_ConDiv" >
+
+		<line id="Line_3" points="142.182,560.616 142.182,575.616"  start_arrow="true" dx="1.818" dy="-508.616" lineColor="128,0,0"  aliasing="true"  />
+
+		<line id="Line_4" points="78.1819,560.616 94.1813,560.616"  end_arrow="true" dx="17.8181" dy="-496.616" lineColor="0,0,255"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_2" points="94.1813,592.615 94.1813,576.615 94.1813,560.615 94.1813,544.615 118.181,544.615 110.181,568.615 142.181,556.615 142.181,560.615 142.181,576.615 142.181,580.615 110.181,568.615 118.181,592.615 94.1813,592.615" dx="17.8187" dy="-496.615" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GL" position="100" aliasing="true"  />
+
+		<port id="g_in" library="TURBOJET" type="Gas"  hotPort="g_in" >
+		
+				<symbol dx="96" dy="64" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="56" dy="52" />
+		
+		</port>
+
+		<port id="thrust" library="TURBOJET" type="Force"  hotPort="thrust" >
+		
+				<symbol dx="144" dy="48" onLabel="true" />
+		
+				<label cx="20.5" cy="12" dx="123" dy="20" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Geometry">
+				<var name="A_exit"/>
+				<var name="A_throat"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100" cy="106" sx="88" sy="12" variable="g_in.P"  headerText="g_in.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" dx="-20" dy="-16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="105" cy="106" sx="98" sy="12" variable="g_in.W"  headerText="g_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-20" dy="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="198" cy="78" sx="92" sy="12" variable="thrust.F"  headerText="thrust.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-4" dy="-24" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

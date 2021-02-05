@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="BookExamples.el"/>
+  <file name="Adjoints_Test.el"/>
+  <file name="Basic_Operations.el"/>
+  <file name="bungee_jumper.el"/>
+  <file name="Determinants_Tests.el"/>
+  <file name="Electric_Circuit.el"/>
+  <file name="GetMethods_Tests.el"/>
+  <file name="Inverse_Examples.el"/>
+  <file name="Linear_solver_example1.el"/>
+  <file name="MatrixMultipleOperations.el"/>
+  <file name="Reactors.el"/>
+  <file name="SetMethods_Tests.el"/>
+  <file name="Test1_EIGEN.el"/>
+  <file name="Test2_EIGEN.el"/>
+  <file name="Truss.el"/>
+  <file name="Using_Methods.el"/>
+  <file name="Using_Methods_2.el"/>
+  <file name="matlabVsEigen.el"/>
+ </filedeps>
+ <libdeps>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

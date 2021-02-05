@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------
+-- Used to show the behaviour of square and ramp functions
+--------------------------------------------------------------------------------
+EXPERIMENT exp2 ON waveFunctions.default
+   INIT
+      -- Dynamic variables
+      C1.v = 0.
+
+   BOUNDS
+      R1.e_p.v = square(TIME, 2.5)
+      R2.e_p.v = ramp(TIME, 3.)
+      R4.e_n.v = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 15.
+      CINT = 0.4
+      INTEG()
+
+END EXPERIMENT

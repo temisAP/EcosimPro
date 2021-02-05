@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="Clock" library="DISCRETE_LIB" type="Clock" layer="1" elPosition="7"  hotPort="po" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="64" dy="208" />
+	
+		<label cx="20.5" cy="12" dx="149.25" dy="325" />
+	
+	</component>
+
+	<component id="Reset" library="DISCRETE_LIB" type="Reset" layer="1" elPosition="16"  hotPort="po" >
+	
+		<symbol cx="105.125" cy="104" sx="54.75" sy="33.5" dx="64" dy="120" />
+	
+		<label cx="21" cy="12" dx="148.125" dy="254.5" />
+	
+	</component>
+
+	<component id="T_flip_flop3" library="DISCRETE_LIB" type="T_flip_flop" layer="1" elPosition="17"  hotPort="clock" >
+	
+		<symbol cx="112" cy="82.25" sx="73" sy="77.5" dx="832" dy="336" />
+	
+		<label cx="36" cy="12" dx="908" dy="459.5" />
+	
+	</component>
+
+	<component id="T_flip_flop2" library="DISCRETE_LIB" type="T_flip_flop" layer="1" elPosition="18"  hotPort="pi" >
+	
+		<symbol cx="112" cy="82.25" sx="73" sy="77.5" dx="560" dy="336" />
+	
+		<label cx="36" cy="12" dx="636" dy="459.5" />
+	
+	</component>
+
+	<component id="T_flip_flop1" library="DISCRETE_LIB" type="T_flip_flop" layer="1" elPosition="19"  hotPort="reset" >
+	
+		<symbol cx="112" cy="82.25" sx="73" sy="77.5" dx="272" dy="336" />
+	
+		<label cx="36" cy="12" dx="348" dy="459.5" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="T_flip_flop3" sPort="po" eShape="T_flip_flop3" ePort="pi" points="960,480 960,400 864,400 864,480" elPosition="0" dx="32" dy="-64" lineColor="0,85,255"   />
+
+	<connector id="Connector_2" sShape="T_flip_flop2" sPort="po" eShape="T_flip_flop3" ePort="clock" points="672,512" elPosition="1" dx="32" dy="-64" lineColor="0,170,0" lineType="1"   />
+
+	<connector id="Connector_3" sShape="Reset" sPort="po" eShape="T_flip_flop3" ePort="reset" points="912,288" elPosition="2" dx="32" dy="-64" lineColor="255,0,0"   />
+
+	<connector id="Connector_4" sShape="T_flip_flop2" sPort="po" eShape="T_flip_flop2" ePort="pi" points="688,480 688,400 592,400 592,480" elPosition="3" dx="32" dy="-64" lineColor="0,85,255"   />
+
+	<connector id="Connector_5" sShape="T_flip_flop1" sPort="po" eShape="T_flip_flop2" ePort="clock" points="384,512" elPosition="4" dx="32" dy="-64" lineColor="0,170,0" lineType="1"   />
+
+	<connector id="Connector_6" sShape="Reset" sPort="po" eShape="T_flip_flop2" ePort="reset" points="640,288" elPosition="5" dx="32" dy="-64" lineColor="255,0,0"   />
+
+	<connector id="Connector_7" sShape="T_flip_flop1" sPort="po" eShape="T_flip_flop1" ePort="pi" points="400,480 400,400 304,400 304,480" elPosition="6" dx="32" dy="-64" lineColor="0,85,255"   />
+
+	<connector id="Connector_8" sShape="Clock" sPort="po" eShape="T_flip_flop1" ePort="clock" points="160,512" elPosition="7" dx="32" dy="-64" lineColor="0,170,0" lineType="1"   />
+
+	<connector id="Connector_9" sShape="Reset" sPort="po" eShape="T_flip_flop1" ePort="reset" points="352,288" elPosition="8" dx="32" dy="-64" lineColor="255,0,0"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME%
+&#34;Counter example&#34;
+
+END COMPONENT]]>
+	</bodyEL>
+
+	<usedLibrary name="DISCRETE_LIB" version="3.1" auto="false" />
+</schematic>

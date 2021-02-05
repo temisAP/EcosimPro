@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+t_+stop.p1.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+t_+stop.p1.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 13<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>T_Stop.s' = <b><font color="red">T_Stop.v</font></b><br/>
+<a name="e2">[E-2] </a>position.s_in.signal[1] =  ZONE[2] (TIME &lt; SignalPosition.Tstart) SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Constant) SignalPosition.Amp + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Sine) SignalPosition.Amp * sin(6.28318530717959 / SignalPosition.Period * (TIME - SignalPosition.Tstart) + SignalPosition.Phase) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Pulse) SignalPosition.Amp * pulse(TIME - SignalPosition.Tstart, SignalPosition.Period, SignalPosition.pulseWidth, 1) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Step) SignalPosition.Amp * step(TIME, SignalPosition.Tstart, 2) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_SawTooth) SignalPosition.Amp * ramp(TIME - SignalPosition.Tstart, SignalPosition.Period, 3) / SignalPosition.Period + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Square) SignalPosition.Amp * square(TIME - SignalPosition.Tstart, SignalPosition.Period, 4) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Ramp) SignalPosition.Amp / SignalPosition.rampDuration * (TIME - SignalPosition.Tstart) * (1 - step(TIME, SignalPosition.Tstart + SignalPosition.rampDuration, 5)) + SignalPosition.Amp * step(TIME, SignalPosition.Tstart + SignalPosition.rampDuration, 6) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Table AND SignalPosition.tabmethod == LinearInterpWithEvents) SignalPosition.Amp * timeTableInterp(TIME - SignalPosition.Tstart, SignalPosition.timeTable, 7) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Table AND SignalPosition.tabmethod == LinearInterpWithoutEvents) SignalPosition.Amp * linearInterp1D(SignalPosition.timeTable, TIME - SignalPosition.Tstart) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Table AND SignalPosition.tabmethod == SplineInterp) SignalPosition.Amp * splineInterp1D(SignalPosition.timeTable, TIME - SignalPosition.Tstart) + SignalPosition.Offset ZONE[2] (SignalPosition.source == Source_Table AND SignalPosition.tabmethod == StepConnect) SignalPosition.Amp * timeTableStep(TIME - SignalPosition.Tstart, SignalPosition.timeTable, 8) + SignalPosition.Offset	  OTHERS 0<br/>
+<a name="e3">[E-3] </a>spring.s_rel = <b><font color="red">T_Stop.s</font></b> - position.s_in.signal[1]<br/>
+<a name="e4">[E-4] </a>T_Stop.m_in.F = -spring.k * (spring.s_rel - spring.s_rel0)<br/>
+<a name="e5">[E-5] </a>spring.m_in.F = -T_Stop.m_in.F<br/>
+<a name="e6">[E-6] </a>force.s_in.signal[1] =  ZONE[3] (TIME &lt; ForceNull.Tstart) ForceNull.Offset ZONE[3] (ForceNull.source == Source_Constant) ForceNull.Amp + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Sine) ForceNull.Amp * sin(6.28318530717959 / ForceNull.Period * (TIME - ForceNull.Tstart) + ForceNull.Phase) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Pulse) ForceNull.Amp * pulse(TIME - ForceNull.Tstart, ForceNull.Period, ForceNull.pulseWidth, 9) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Step) ForceNull.Amp * step(TIME, ForceNull.Tstart, 10) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_SawTooth) ForceNull.Amp * ramp(TIME - ForceNull.Tstart, ForceNull.Period, 11) / ForceNull.Period + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Square) ForceNull.Amp * square(TIME - ForceNull.Tstart, ForceNull.Period, 12) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Ramp) ForceNull.Amp / ForceNull.rampDuration * (TIME - ForceNull.Tstart) * (1 - step(TIME, ForceNull.Tstart + ForceNull.rampDuration, 13)) + ForceNull.Amp * step(TIME, ForceNull.Tstart + ForceNull.rampDuration, 14) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Table AND ForceNull.tabmethod == LinearInterpWithEvents) ForceNull.Amp * timeTableInterp(TIME - ForceNull.Tstart, ForceNull.timeTable, 15) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Table AND ForceNull.tabmethod == LinearInterpWithoutEvents) ForceNull.Amp * linearInterp1D(ForceNull.timeTable, TIME - ForceNull.Tstart) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Table AND ForceNull.tabmethod == SplineInterp) ForceNull.Amp * splineInterp1D(ForceNull.timeTable, TIME - ForceNull.Tstart) + ForceNull.Offset ZONE[3] (ForceNull.source == Source_Table AND ForceNull.tabmethod == StepConnect) ForceNull.Amp * timeTableStep(TIME - ForceNull.Tstart, ForceNull.timeTable, 16) + ForceNull.Offset	  OTHERS 0<br/>
+<a name="e7">[E-7] </a>T_Stop.f = -force.s_in.signal[1] - spring.m_in.F<br/>
+<a name="e8">[E-8] </a>T_Stop.fr = T_Stop.F_prop * <b><font color="red">T_Stop.v</font></b> + MATH.sign(<b><font color="red">T_Stop.v</font></b>) * T_Stop.F_Stribeck * exp(-T_Stop.fexp * abs(<b><font color="red">T_Stop.v</font></b>)) - MATH.rev_fri(<b><font color="red">T_Stop.v</font></b>, T_Stop.F_Coulomb, T_Stop.F_Coulomb)<br/>
+<a name="e9">[E-9] </a>T_Stop.a =  ZONE[1] (((<b><font color="red">T_Stop.s</font></b> - T_Stop.smin) / (T_Stop.smax - T_Stop.smin)) <= 0 AND ((T_Stop.f - T_Stop.fr) / T_Stop.m) &lt; 0) 0 ZONE[1] (((<b><font color="red">T_Stop.s</font></b> - T_Stop.smin) / (T_Stop.smax - T_Stop.smin)) >= 1 AND ((T_Stop.f - T_Stop.fr) / T_Stop.m) &gt; 0) 0	  OTHERS (T_Stop.f - T_Stop.fr) / T_Stop.m<br/>
+<a name="e10">[E-10] </a>T_Stop.v' = T_Stop.a<br/>
+<a name="e11">[E-11] </a>force.m_out.F = force.s_in.signal[1]<br/>
+<a name="e12">[E-12] </a>spring.m_in.s = position.s_in.signal[1]<br/>
+<a name="e13">[E-13] </a>T_Stop.m_out.F = -force.m_out.F<br/>
+</body></html>

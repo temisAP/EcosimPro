@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xmlExample version="1.0" type="testType">
+   <node1 att1_a="val1.a" att1_b="val1.b"/>
+   <node2 att2_a="val2.a" att2_b="val2.b">
+      <node2_1 att2_1_a="val2.1.a" att2_1_b="val2.1.b"/>
+      <node2_2 att2_2_a="val2.2.a" att2_2_b="val2.2.b"/>
+   </node2>
+
+   <node3 att3_a="val3.a">
+      <node3_1 att3_1_a="val3.1.a">
+         <node3_1_1 att3_1_1_a="val3.1.1.a"/>
+         <node3_1_2 att3_1_2_a="val3.1.2.a"/>
+      </node3_1>
+
+      <node3_2 att3_2_a="val3.2.a"/>
+   </node3>
+
+   <isoNode_é_è isoAtt_á_â="valúe"/>
+</xmlExample>
+

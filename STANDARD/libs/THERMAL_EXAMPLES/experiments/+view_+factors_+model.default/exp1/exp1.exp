@@ -1,0 +1,24 @@
+
+EXPERIMENT exp1 ON View_Factors_Model.default
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+--   N1.T = 800 - 273.15
+--   N2.T = 600 - 273.15
+--   N3.T = 950 - 273.15
+
+   N1.s_temperature.signal[1] = 800
+   N2.s_temperature.signal[1] = 600
+   N3.s_temperature.signal[1] = 950
+
+
+BODY
+   TIME = 0
+   TSTOP = 15
+   CINT = 0.1
+   INTEG()
+END EXPERIMENT

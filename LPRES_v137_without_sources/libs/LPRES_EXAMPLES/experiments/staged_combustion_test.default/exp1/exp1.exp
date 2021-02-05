@@ -1,0 +1,101 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: staged_combustion_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 14/03/2016
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON staged_combustion_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      CC.p_out_ch = 100
+
+   BOUNDS
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+				
+		GG.OF = 16
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (GG.OF = 16):")
+		PRINT(" ")		
+		
+		PRINT("*******************")
+		PRINT("$GG.g.fluid[LOX]")
+		PRINT("$GG.g.fluid[LH2]")
+		PRINT("$GG.g.fluid[Comb_prod]")
+		PRINT("*******************")	
+		PRINT("$CC.fluid_O[LOX]")
+		PRINT("$CC.fluid_O[LH2]")
+		PRINT("$CC.fluid_O[Comb_prod]")
+		PRINT("******************")		
+		PRINT("$CC.fluid_F[LOX]")
+		PRINT("$CC.fluid_F[LH2]")
+		PRINT("$CC.fluid_F[Comb_prod]")
+		PRINT("******************")	
+		PRINT("$CC.fluid_P[LOX]")
+		PRINT("$CC.fluid_P[LH2]")
+		PRINT("$CC.fluid_P[Comb_prod]")
+		PRINT("******************")	
+		PRINT("$CC.g.fluid[LOX]")
+		PRINT("$CC.g.fluid[LH2]")
+		PRINT("$CC.g.fluid[Comb_prod]")
+		PRINT("******************")			
+		PRINT("	Combustion in the gas generator = $GG.Combustion")
+		PRINT("	Effective heat of combustion in the gas generator = $GG.Q_comb_effective")
+		PRINT("	Combustion in the combustion chamber = $CC.Combustion")
+		PRINT("	Effective heat of combustion in the combustion chamber = $CC.Q_comb_effective")			
+		PRINT("******************")			
+		PRINT("	Gas generator combustion temperature = $GG.T_c")
+		PRINT("	Gas generator outlet total temperature = $GG.g.Tt")
+		PRINT("	Combustion chamber combustion temperature = $CC.T_c")
+		PRINT("	Combustion chamber outlet total temperature = $CC.g.Tt")
+		
+		PRINT(" ")		
+
+		GG.OF = 8
+		STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (GG.OF = 8):")
+		PRINT(" ")		
+		
+		PRINT("*******************")
+		PRINT("$GG.g.fluid[LOX]")
+		PRINT("$GG.g.fluid[LH2]")
+		PRINT("$GG.g.fluid[Comb_prod]")
+		PRINT("*******************")	
+		PRINT("$CC.fluid_O[LOX]")
+		PRINT("$CC.fluid_O[LH2]")
+		PRINT("$CC.fluid_O[Comb_prod]")
+		PRINT("******************")		
+		PRINT("$CC.fluid_F[LOX]")
+		PRINT("$CC.fluid_F[LH2]")
+		PRINT("$CC.fluid_F[Comb_prod]")
+		PRINT("******************")	
+		PRINT("$CC.fluid_P[LOX]")
+		PRINT("$CC.fluid_P[LH2]")
+		PRINT("$CC.fluid_P[Comb_prod]")
+		PRINT("******************")	
+		PRINT("$CC.g.fluid[LOX]")
+		PRINT("$CC.g.fluid[LH2]")
+		PRINT("$CC.g.fluid[Comb_prod]")
+		PRINT("******************")		
+		PRINT("	Combustion in the gas generator = $GG.Combustion")
+		PRINT("	Effective heat of combustion in the gas generator = $GG.Q_comb_effective")
+		PRINT("	Combustion in the combustion chamber = $CC.Combustion")
+		PRINT("	Effective heat of combustion in the combustion chamber = $CC.Q_comb_effective")		
+		
+		PRINT(" ")
+		
+END EXPERIMENT

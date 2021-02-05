@@ -1,0 +1,27 @@
+
+EXPERIMENT exp1 ON Example_CoupledClutches.p2
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+   J1.w = 0
+   J2.w = 0
+   J3.w = 0
+   J4.w = 0
+     -- Algebraic variables
+   clutch1.sa = 0
+   clutch2.sa = 0
+   clutch3.sa = 0
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+   REPORT_MODE = IS_STEP
+   TIME = 0
+   TSTOP = 2
+   CINT = 0.005 --0.01
+   INTEG()
+END EXPERIMENT

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="MECHANICAL_EXAMPLES" component="Example_CoupledClutches" partition="p2">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<highIndexVars>
+  <variable name="clutch1.phi_rel'"/>
+  <variable name="clutch1.w_rel"/>
+  <variable name="clutch2.phi_rel'"/>
+  <variable name="clutch2.w_rel"/>
+  <variable name="clutch3.phi_rel'"/>
+  <variable name="clutch3.w_rel"/>
+</highIndexVars>
+<dynamics>
+  <variable name="J1.w"/>
+  <variable name="clutch1.phi_rel"/>
+  <variable name="J2.w"/>
+  <variable name="clutch2.phi_rel"/>
+  <variable name="J3.w"/>
+  <variable name="clutch3.phi_rel"/>
+  <variable name="J4.w"/>
+</dynamics>
+<algebraics>
+  <variable name="clutch1.sa"/>
+  <variable name="clutch2.sa"/>
+  <variable name="clutch3.sa"/>
+</algebraics>
+<residues>
+  <r id="1" value="J1.w' = J1.a"/>
+  <r id="2" value="clutch1.phi_rel'. = clutch1.phi_rel'"/>
+  <r id="3" value="J2.w' = J2.a"/>
+  <r id="4" value="clutch2.phi_rel'. = clutch2.phi_rel'"/>
+  <r id="5" value="J3.w' = J3.a"/>
+  <r id="6" value="clutch3.phi_rel'. = clutch3.phi_rel'"/>
+  <r id="7" value="J4.w' = J4.a"/>
+  <r id="8" value="MECHANICAL.fun_R_AbsFriction(clutch1.imode, clutch1.a_rel, clutch1.sa, clutch1.tau0) = 0"/>
+  <r id="9" value="MECHANICAL.fun_R_AbsFriction(clutch2.imode, clutch2.a_rel, clutch2.sa, clutch2.tau0) = 0"/>
+  <r id="10" value="MECHANICAL.fun_R_AbsFriction(clutch3.imode, clutch3.a_rel, clutch3.sa, clutch3.tau0) = 0"/>
+</residues>
+</partitionInfo>

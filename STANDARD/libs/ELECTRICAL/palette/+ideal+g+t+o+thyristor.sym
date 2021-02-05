@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="IdealGTOThyristor" >
+
+		<line id="Line_9" points="31,437 31,445 23,453" dx="97" dy="-373" lineColor="255,192,0"   />
+
+		<line id="Line_1" points="35,283 35,313" dx="85" dy="-218" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="40,297 60,297" dx="80" dy="-217" lineColor="0,192,0"   />
+
+		<line id="Line_10" points="-7,297 -17,297" dx="97" dy="-217" lineColor="0,192,0"   />
+
+		<line id="Line_11" points="-5.5,5 -1,5" dx="143.5" dy="84"  />
+
+		<g id="Group_1" dx="-6.25" dy="-25.5" >
+		
+					<line id="Line_12" points="-5.5,5 -1,5" dx="89.75" dy="109.75"  />
+		 />
+					<line id="Line_13" points="-5.5,5 -1,5" rotation="-90" dx="89.75" dy="109.75"  />
+		 />
+		</g>
+
+		<line id="Line_2" points="28,423 18,423" dx="105" dy="-351" lineColor="255,192,0"   />
+
+		<polygon id="Polygon_1" points="-9,281 -9,313 23,297" dx="97" dy="-217" lineWidth="1.5"  color="0,192,0"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="36.5" dy="71" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="152.5" dy="71" />
+		
+		</port>
+
+		<port id="b_fire" library="PORTS_LIB" type="bool_signal"  hotPort="b_fire" >
+		
+				<symbol dx="128" dy="64" onLabel="true" />
+		
+				<label cx="25" cy="14" dx="101.5" dy="32" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Gon"/>
+				<var name="Roff"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="172.5" cy="123" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-44" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="153.5" cy="155" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-24" dy="-8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

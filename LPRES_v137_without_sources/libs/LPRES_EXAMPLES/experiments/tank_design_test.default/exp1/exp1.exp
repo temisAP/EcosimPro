@@ -1,0 +1,36 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: tank_design_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON tank_design_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Tank.M_g = 0.1
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Tank.l.W = 100
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")	
+		PRINT("	Pressurisation gas input area = $Tank.A_g_d")
+		PRINT("	Pressurisation gas mass flow = $Tank.g.W")
+		PRINT("	Pressurisation gas Mach number = $Tank.M_g")
+		PRINT(" ")	
+
+END EXPERIMENT

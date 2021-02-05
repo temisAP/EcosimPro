@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workspace version="1.3" wsVersion="2.0.2"  wsDate="23/01/2019"  wsAuthor="EA"  wsDescription="Libraries bundled with ECOSIMPRO/PROOSIS installation">
+ <library name="ALGEBRA" version="1.1.1" dir="../../libs/ALGEBRA" dirType="REL_WORKSPACE"/>
+ <library name="CONTAINERS" version="1.1.1" dir="../../libs/CONTAINERS" dirType="REL_WORKSPACE"/>
+ <library name="MATH" version="3.2.7" dir="../../libs/MATH" dirType="REL_WORKSPACE"/>
+ <library name="PHYSIOLOGICAL" version="3.1.4" dir="../../libs/PHYSIOLOGICAL" dirType="REL_WORKSPACE"/>
+ <library name="PHYSIOLOGICAL_EXAMPLES" version="3.1.5" dir="../../libs/PHYSIOLOGICAL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="GRAVITATIONAL" version="3.1.3" dir="../../libs/GRAVITATIONAL" dirType="REL_WORKSPACE"/>
+ <library name="GRAVITATIONAL_EXAMPLES" version="3.1.4" dir="../../libs/GRAVITATIONAL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="DISCRETE_LIB" version="3.1.4" dir="../../libs/DISCRETE_LIB" dirType="REL_WORKSPACE"/>
+ <library name="DISCRETE_EXAMPLES" version="3.1.5" dir="../../libs/DISCRETE_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="PORTS_LIB" version="1.1.4" dir="../../libs/PORTS_LIB" dirType="REL_WORKSPACE"/>
+ <library name="TURBOJET" version="3.1.5" dir="../../libs/TURBOJET" dirType="REL_WORKSPACE"/>
+ <library name="TURBOJET_EXAMPLES" version="3.1.6" dir="../../libs/TURBOJET_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="ELECTRICAL" version="3.1.4" dir="../../libs/ELECTRICAL" dirType="REL_WORKSPACE"/>
+ <library name="ELECTRICAL_EXAMPLES" version="3.1.5" dir="../../libs/ELECTRICAL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="DEFAULT_LIB" version="3.2.1" dir="../../libs/DEFAULT_LIB" dirType="REL_WORKSPACE"/>
+ <library name="CONTROL" version="4.0.7" dir="../../libs/CONTROL" dirType="REL_WORKSPACE"/>
+ <library name="THERMAL" version="3.5.7" dir="../../libs/THERMAL" dirType="REL_WORKSPACE"/>
+ <library name="THERMAL_EXAMPLES" version="3.1.7" dir="../../libs/THERMAL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="MECHANICAL" version="3.1.6" dir="../../libs/MECHANICAL" dirType="REL_WORKSPACE"/>
+ <library name="MECHANICAL_EXAMPLES" version="3.1.6" dir="../../libs/MECHANICAL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="HYDRAULIC" version="3.1.5" dir="../../libs/HYDRAULIC" dirType="REL_WORKSPACE"/>
+ <library name="HYDRAULIC_EXAMPLES" version="3.1.5" dir="../../libs/HYDRAULIC_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="FLIGHT_SIM" version="3.1.6" dir="../../libs/FLIGHT_SIM" dirType="REL_WORKSPACE"/>
+ <library name="CONTROL_EXAMPLES" version="3.1.5" dir="../../libs/CONTROL_EXAMPLES" dirType="REL_WORKSPACE"/>
+ <library name="FUNCPOINTERS" version="1.0" dir="../../libs/FUNCPOINTERS" dirType="REL_WORKSPACE"/>
+ <setLibrariesPath value=""/>
+</workspace>

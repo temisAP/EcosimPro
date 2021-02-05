@@ -1,0 +1,45 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DEFAULT_LIB
+ COMPONENT: _LIBRARY_MISC
+ PARTITION: experiments
+ EXPERIMENT: writeInFile
+ TEMPLATE: EXPERIMENT STANDALONE
+ CREATION DATE: 01/07/2015
+-----------------------------------------------------------------------------------------*/
+
+--Global variables used
+CONST INTEGER SIZE = 10
+INTEGER   i=0 --counter
+STRING    path = "myFile.txt" -- path of file (same directory as the experiment)
+REAL      numbers[SIZE] = {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1}
+INTEGER   times[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	
+-- Function to write arrays in the standard output
+FUNCTION NO_TYPE writeInOutput()
+BODY  
+
+	//Write in the output
+	WRITE("TIME\tNUMBER\n", numbers[i])
+	FOR( i=1; i <= SIZE; i = i+1) //Run all the members of the vector
+  	   WRITE("%i\t%f\n", times[i], numbers[i]) //Write in a table format
+	END FOR
+	
+END FUNCTION
+
+--STANDALONE EXPERIMENT 
+EXPERIMENT writeInFile
+DECLS
+BODY
+
+	//Write in a file
+	WRITEF(path, "TIME\tNUMBER\n", numbers[i])
+	FOR( i=1; i <= SIZE; i = i+1) //Run all the members of the vector
+  	   WRITEF(path, "%i\t%f\n", times[i], numbers[i]) //Write in a table format
+	END FOR
+
+	CLOSEF(path)
+	
+	//Write in the standard output
+	writeInOutput()
+
+END EXPERIMENT

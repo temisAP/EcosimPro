@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="THERMAL_EXAMPLES" component="Wall_3" partition="Part0">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<highIndexVars>
+  <variable name="layer2.T[1]."/>
+  <variable name="layer2.tp_in.Tc[1]."/>
+  <separator/>
+  <variable name="layer3.T[1]."/>
+  <variable name="layer3.tp_in.Tc[1]."/>
+</highIndexVars>
+<boundaries>
+  <variable name="Environment.s_temperature.signal[1]"/>
+  <variable name="layer1.tp_in.q[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="layer1.T[2]"/>
+  <variable name="layer1.T[1]"/>
+  <variable name="layer1.T[3]"/>
+  <variable name="layer2.T[2]"/>
+  <variable name="layer2.T[3]"/>
+  <variable name="layer3.T[2]"/>
+  <variable name="layer3.T[3]"/>
+</dynamics>
+<residues>
+  <r id="1" value="layer1.T[2]' = (layer1.q[1] - layer1.q[2]) / (layer1.rho_var * layer1.cp_var[2] * layer1.A * layer1.e * 0.9999)"/>
+  <r id="2" value="layer1.T[1]' = (layer1.tp_in.q[1] - layer1.q[1]) / (layer1.rho_var * layer1.cp_var[1] * layer1.A * layer1.e * 5e-05)"/>
+  <r id="3" value="layer1.rho_var * layer1.cp_var[3] * layer1.A * layer1.e * 5e-05 * layer1.T[3]' = layer1.q[2] - layer2.tp_in.q[1]"/>
+  <r id="4" value="layer2.T[2]' = (layer2.q[1] - layer2.q[2]) / (layer2.rho_var * layer2.cp_var[2] * layer2.A * layer2.e * 0.9999)"/>
+  <r id="5" value="layer2.rho_var * layer2.cp_var[3] * layer2.A * layer2.e * 5e-05 * layer2.T[3]' = layer2.q[2] - layer3.tp_in.q[1]"/>
+  <r id="6" value="layer3.T[2]' = (layer3.q[1] - layer3.q[2]) / (layer3.rho_var * layer3.cp_var[2] * layer3.A * layer3.e * 0.9999)"/>
+  <r id="7" value="layer3.T[3]' = (layer3.q[2] - GR_1.tp_in.q[1]) / (layer3.rho_var * layer3.cp_var[3] * layer3.A * layer3.e * 5e-05)"/>
+</residues>
+</partitionInfo>

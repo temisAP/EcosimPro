@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot1" x="538" y="486" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot1" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="u" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot2" x="538" y="243" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot2" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="v" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot4" x="538" y="0" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot4" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="w" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot3" x="0" y="486" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot3" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="x" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot5" x="0" y="243" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot5" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="y" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot6" x="0" y="0" dx="538" dy="243">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="Plot6" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="z" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="200" visible="true">
+		<var name="u"/>
+		<var name="v"/>
+		<var name="w"/>
+		<var name="x"/>
+		<var name="y"/>
+		<var name="z"/>
+	</watch>
+	<outputWindow height="112" visible="true"/>
+</experiment>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot1" x="0" y="0" dx="1002" dy="739">
+				<plot id="Plot1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="comparator.s_in_1.signal[1]" nick="comparator.s_in_1.signal[1]" lineColor="255,0,0"/>
+						<var name="process_plant.s_out.signal[1]" nick="process_plant.s_out.signal[1]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="266" height="112" visible="true" pos="right" >
+	</watch>
+	<outputWindow height="112" width="1280" visible="true" pos="bottom" />
+</experiment>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../physbe.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../physbe.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 44<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>Head.p = <b><font color="red">Head.vol</font></b> / Head.comp<br/>
+<a name="e2">[E-2] </a>Legs.p = <b><font color="red">Legs.vol</font></b> / Legs.comp<br/>
+<a name="e3">[E-3] </a>Trunk.p = <b><font color="red">Trunk.vol</font></b> / Trunk.comp<br/>
+<a name="e4">[E-4] </a>Arms.p = <b><font color="red">Arms.vol</font></b> / Arms.comp<br/>
+<a name="e5">[E-5] </a>Cava.p = <b><font color="red">Cava.vol</font></b> / Cava.comp<br/>
+<br/>
+<hr>BOX 1 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v19" data-ajax='false'>Arms.p_out.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v19" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v29" data-ajax='false'>Cava.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v29" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v30" data-ajax='false'>Cava.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v30" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v45" data-ajax='false'>Head.p_out.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v45" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v58" data-ajax='false'>Legs.p_out.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v58" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v84" data-ajax='false'>Trunk.p_out.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v84" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e6">[E-6] </a>Cava.p_in.w = (Cava.p_in.p - Cava.p) / Cava.rai	{L@Cava.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e7">[E-7] </a>Arms.p_out.w = (Arms.p - Cava.p_in.p) / Arms.rao	{L@Cava.p_in.p}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e8">[E-8] </a>Arms.p_out.w + Head.p_out.w + Legs.p_out.w + Trunk.p_out.w = Cava.p_in.w	{L@Arms.p_out.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e9">[E-9] </a>Trunk.p_out.w = (Trunk.p - Cava.p_in.p) / Trunk.rao	{L@Trunk.p_out.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e10">[E-10] </a>Legs.p_out.w = (Legs.p - Cava.p_in.p) / Legs.rao	{L@Legs.p_out.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e11">[E-11] </a>Head.p_out.w = (Head.p - Cava.p_in.p) / Head.rao	{L@Head.p_out.w}<br/>
+<hr>END OF BOX 1<hr><a name="e12">[E-12] </a>Ventricle_right.vcomp = 1 / periodTimeTableInterp(TIME, Ventricle_right.rec_comp, Ventricle_right.period, 2)<br/>
+<a name="e13">[E-13] </a>Ventricle_right.p = <b><font color="red">Ventricle_right.vol</font></b> / Ventricle_right.vcomp<br/>
+<a name="e14">[E-14] </a>Ventricle_right.vrai =  ZONE[3] (Ventricle_right.p_in.p &gt; Ventricle_right.p) Ventricle_right.rai	  OTHERS 100000<br/>
+<br/>
+<hr>BOX 2 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v107" data-ajax='false'>Ventricle_right.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v107" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v108" data-ajax='false'>Ventricle_right.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v108" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e15">[E-15] </a>Ventricle_right.p_in.w = (Cava.p - Ventricle_right.p_in.p) / Cava.rao	{L@Ventricle_right.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e16">[E-16] </a>IMPL(Ventricle_right.p_in.w) Ventricle_right.p_in.w = (Ventricle_right.p_in.p - Ventricle_right.p) / Ventricle_right.vrai	{L@Ventricle_right.p_in.p}<br/>
+<hr>END OF BOX 2<hr><a name="e17">[E-17] </a>Cava.vol' = Cava.p_in.w - Ventricle_right.p_in.w<br/>
+<a name="e18">[E-18] </a>Ventricle_right.vrao =  ZONE[4] (Ventricle_right.p &gt; Lungs.p_in.p) Ventricle_right.rai	  OTHERS 100000<br/>
+<a name="e19">[E-19] </a>Lungs.p = <b><font color="red">Lungs.vol</font></b> / Lungs.comp<br/>
+<br/>
+<hr>BOX 3 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v68" data-ajax='false'>Lungs.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v68" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v69" data-ajax='false'>Lungs.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v69" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e20">[E-20] </a>Lungs.p_in.w = (Lungs.p_in.p - Lungs.p) / Lungs.rai	{L@Lungs.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e21">[E-21] </a>IMPL(Lungs.p_in.w) Lungs.p_in.w = (Ventricle_right.p - Lungs.p_in.p) / Ventricle_right.vrao	{L@Lungs.p_in.p}<br/>
+<hr>END OF BOX 3<hr><a name="e22">[E-22] </a>Ventricle_left.vcomp = 1 / periodTimeTableInterp(TIME, Ventricle_left.rec_comp, Ventricle_left.period, 1)<br/>
+<a name="e23">[E-23] </a>Ventricle_left.p = <b><font color="red">Ventricle_left.vol</font></b> / Ventricle_left.vcomp<br/>
+<a name="e24">[E-24] </a>Ventricle_left.vrai =  ZONE[1] (Ventricle_left.p_in.p &gt; Ventricle_left.p) Ventricle_left.rai	  OTHERS 100000<br/>
+<br/>
+<hr>BOX 4 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v93" data-ajax='false'>Ventricle_left.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v93" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v94" data-ajax='false'>Ventricle_left.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v94" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e25">[E-25] </a>Ventricle_left.p_in.w = (Lungs.p - Ventricle_left.p_in.p) / Lungs.rao	{L@Ventricle_left.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e26">[E-26] </a>IMPL(Ventricle_left.p_in.w) Ventricle_left.p_in.w = (Ventricle_left.p_in.p - Ventricle_left.p) / Ventricle_left.vrai	{L@Ventricle_left.p_in.p}<br/>
+<hr>END OF BOX 4<hr><a name="e27">[E-27] </a>Lungs.vol' = Lungs.p_in.w - Ventricle_left.p_in.w<br/>
+<a name="e28">[E-28] </a>Aorta.p = <b><font color="red">Aorta.vol</font></b> / Aorta.comp<br/>
+<br/>
+<hr>BOX 5 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v6" data-ajax='false'>Aorta.p_out.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v6" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v17" data-ajax='false'>Arms.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v17" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v43" data-ajax='false'>Head.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v43" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v55" data-ajax='false'>Legs.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v55" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v56" data-ajax='false'>Legs.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v56" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v82" data-ajax='false'>Trunk.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v82" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e29">[E-29] </a>Head.p_in.w = (Legs.p_in.p - Head.p) / Head.rai	{L@Head.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e30">[E-30] </a>Aorta.p_out.w = (Aorta.p - Legs.p_in.p) / Aorta.rao	{L@Legs.p_in.p}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e31">[E-31] </a>Aorta.p_out.w = Arms.p_in.w + Head.p_in.w + Legs.p_in.w + Trunk.p_in.w	{L@Aorta.p_out.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e32">[E-32] </a>Trunk.p_in.w = (Legs.p_in.p - Trunk.p) / Trunk.rai	{L@Trunk.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e33">[E-33] </a>Legs.p_in.w = (Legs.p_in.p - Legs.p) / Legs.rai	{L@Legs.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e34">[E-34] </a>Arms.p_in.w = (Legs.p_in.p - Arms.p) / Arms.rai	{L@Arms.p_in.w}<br/>
+<hr>END OF BOX 5<hr><a name="e35">[E-35] </a>Head.vol' = Head.p_in.w - Head.p_out.w<br/>
+<a name="e36">[E-36] </a>Ventricle_left.vrao =  ZONE[2] (Ventricle_left.p &gt; Aorta.p_in.p) Ventricle_left.rai	  OTHERS 100000<br/>
+<br/>
+<hr>BOX 6 IS LINEAR<hr><table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>LINEAR VARIABLES&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a href="doc_vars.par.html#v3" data-ajax='false'>Aorta.p_in.p</a>&nbsp;</td><td><a href="doc_vars.par.html#v3" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Pressure&nbsp;</td></tr>
+<tr><td><a href="doc_vars.par.html#v4" data-ajax='false'>Aorta.p_in.w</a>&nbsp;</td><td><a href="doc_vars.par.html#v4" data-ajax='false'></a>&nbsp;</td><td>cm^3/s&nbsp;</td><td>Mass flow&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e37">[E-37] </a>Aorta.p_in.w = (Aorta.p_in.p - Aorta.p) / Aorta.rai	{L@Aorta.p_in.w}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e38">[E-38] </a>IMPL(Aorta.p_in.w) Aorta.p_in.w = (Ventricle_left.p - Aorta.p_in.p) / Ventricle_left.vrao	{L@Aorta.p_in.p}<br/>
+<hr>END OF BOX 6<hr><a name="e39">[E-39] </a>Aorta.vol' = Aorta.p_in.w - Aorta.p_out.w<br/>
+<a name="e40">[E-40] </a>Ventricle_left.vol' = Ventricle_left.p_in.w - Aorta.p_in.w<br/>
+<a name="e41">[E-41] </a>Arms.vol' = Arms.p_in.w - Arms.p_out.w<br/>
+<a name="e42">[E-42] </a>Ventricle_right.vol' = Ventricle_right.p_in.w - Lungs.p_in.w<br/>
+<a name="e43">[E-43] </a>Legs.vol' = Legs.p_in.w - Legs.p_out.w<br/>
+<a name="e44">[E-44] </a>Trunk.vol' = Trunk.p_in.w - Trunk.p_out.w<br/>
+</body></html>

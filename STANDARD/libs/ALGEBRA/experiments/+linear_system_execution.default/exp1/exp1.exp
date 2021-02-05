@@ -1,0 +1,14 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: ALGEBRA
+ COMPONENT: Linear_system_execution
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 05/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Linear_system_execution.default
+
+   BODY
+     EXEC_INIT()
+END EXPERIMENT

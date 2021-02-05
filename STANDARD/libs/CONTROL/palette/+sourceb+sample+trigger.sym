@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="SourcebSampleTrigger" >
+
+		<line id="Line_1" points="26,45 38,45"  end_arrow="true" dx="86" dy="51" lineColor="255,192,0"   />
+
+		<rect id="Rectangle_2" cx="105" cy="32" sx="32" sy="32" dx="-9" dy="64" lineWidth="1.5"  color="255,192,0"  />
+
+		<line id="Line_6" points="96,798 96,822 120,822" dx="-12" dy="-714" lineColor="170,0,0"   />
+
+		<line id="Line_8" points="120,72 120,52" dx="-32" dy="36" lineWidth="2"   />
+
+		<line id="Line_9" points="120,72 120,52" dx="-24" dy="36" lineWidth="2"   />
+
+		<line id="Line_10" points="120,72 120,52" dx="-16" dy="36" lineWidth="2"   />
+
+		<port id="s_out" library="PORTS_LIB" type="bool_signal"  hotPort="s_out" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="135" dy="88" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Period"/>
+				<var name="Tstart"/>
+				<var name="n_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="183" cy="114" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-12" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

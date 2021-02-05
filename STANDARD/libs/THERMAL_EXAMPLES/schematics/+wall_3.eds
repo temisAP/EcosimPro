@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" sorting="customized" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="GR_1" sPort="tp_out" eShape="Environment" ePort="tp_in" elPosition="7"  />
+
+	<connector id="Connector_5" sShape="layer1" sPort="tp_out" eShape="layer2" ePort="tp_in" elPosition="11"  />
+
+	<connector id="Connector_6" sShape="layer2" sPort="tp_out" eShape="layer3" ePort="tp_in" elPosition="12"  />
+
+	<connector id="Connector_2" sShape="layer3" sPort="tp_out" eShape="GR_1" ePort="tp_in" elPosition="13"  />
+
+	<component id="Environment" library="THERMAL" type="BNode" layer="1" elPosition="1"  hotPort="tp_in" >
+	
+		<symbol cx="79.375" cy="98.125" sx="18.75" sy="45.25" dx="784" dy="240" />
+	
+		<label cx="39.5" cy="12" dx="826.5" dy="355.4" />
+	
+	</component>
+
+	<component id="GR_1" library="THERMAL" type="GR" layer="1" elPosition="8"  hotPort="tp_in" >
+	
+		<symbol cx="136" cy="96" sx="89" sy="17.5001" dx="576" dy="256" />
+	
+		<label cx="20.5" cy="12" dx="688" dy="368" />
+	
+		<instanceData>
+			<datum id="REF" value="0.5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="layer1" library="THERMAL" type="Wall" layer="1" elPosition="12"  hotPort="tp_in" >
+	
+		<symbol cx="136" cy="96" sx="89" sy="69" dx="96" dy="256" />
+	
+		<label cx="21.5" cy="12" dx="210.5" dy="385" />
+	
+		<instanceData>
+			<datum id="nodes" value="1" />
+			<datum id="e" value="0.001" />
+			<datum id="k" value="0.001" />
+		</instanceData>
+	
+	</component>
+
+	<component id="layer2" library="THERMAL" type="Wall" layer="1" elPosition="13"  hotPort="tp_in" >
+	
+		<symbol cx="136" cy="96" sx="89" sy="69" dx="256" dy="256" />
+	
+		<label cx="21.5" cy="12" dx="368" dy="384" />
+	
+		<instanceData>
+			<datum id="nodes" value="1" />
+			<datum id="e" value="0.02" />
+			<datum id="k" value="0.02" />
+		</instanceData>
+	
+	</component>
+
+	<component id="layer3" library="THERMAL" type="Wall" layer="1" elPosition="14"  hotPort="tp_in" >
+	
+		<symbol cx="136" cy="96" sx="89" sy="69" dx="416" dy="256" />
+	
+		<label cx="21.5" cy="12" dx="528" dy="384" />
+	
+		<instanceData>
+			<datum id="nodes" value="1" />
+			<datum id="e" value="0.001" />
+			<datum id="k" value="0.001" />
+			<datum id="mat" value="GCF" />
+		</instanceData>
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[
+COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="THERMAL" version="3.5" auto="false" />
+</schematic>

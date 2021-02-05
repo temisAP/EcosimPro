@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="TD_GL" >
+
+		<rect id="Rectangle_1" cx="46" cy="345.999" sx="48" sy="16.0001" dx="90" dy="-249.999" lineWidth="1.5"  color="224,224,224"  />
+
+		<line id="Line_1" points="69.999,345.999 65.999,345.999 61.999,341.999 57.999,349.999 53.999,341.999 49.999,349.999 46,342.001 41.999,350 38,342.001 34,350 29.999,341.999 26,345.999 21.999,345.999" dx="90.001" dy="-249.999" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="596,560 584,560"  start_arrow="true" dx="-424" dy="-464" lineColor="170,0,0"   />
+
+		<line id="Line_3" points="536,560 524,560"  start_arrow="true" dx="-424" dy="-464" lineColor="170,0,0"   />
+
+		<line id="Line_4" points="353,491 373,455"  end_arrow="true" dx="-225" dy="-379" lineColor="170,0,0"   />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="36.2947" dy="91.902" />
+		
+		</port>
+
+		<port id="tp_out" library="PORTS_LIB" type="thermal"  hotPort="tp_out" >
+		
+				<symbol dx="176" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="191.596" dy="86.6759" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="F"/>
+				<var name="k_table"/>
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-4" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-4" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="103" cy="130" sx="94" sy="12" variable="tp_out.Tk[1]"  headerText="tp_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="100.5" cy="130" sx="89" sy="12" variable="tp_out.q[1]"  headerText="tp_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

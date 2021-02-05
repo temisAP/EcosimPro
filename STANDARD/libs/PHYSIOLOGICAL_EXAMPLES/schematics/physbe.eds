@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="Ventricle_left" sPort="p_out" eShape="Aorta" ePort="p_in" elPosition="0" lineColor="255,0,0"   />
+
+	<connector id="Connector_2" sShape="Aorta" sPort="p_out" eShape="Legs" ePort="p_in" points="896,512" elPosition="1" lineColor="255,0,0"   />
+
+	<connector id="Connector_3" sShape="Aorta" sPort="p_out" eShape="Head" ePort="p_in" points="960,416 960,192" elPosition="2" lineColor="255,0,0"   />
+
+	<connector id="Connector_4" sShape="Legs" sPort="p_out" eShape="Cava" ePort="p_in" points="192,512" elPosition="3" lineColor="255,0,0"   />
+
+	<connector id="Connector_5" sShape="Head" sPort="p_out" eShape="Cava" ePort="p_in" points="128,192 128,416" elPosition="4" lineColor="255,0,0"   />
+
+	<connector id="Connector_6" sShape="Cava" sPort="p_out" eShape="Ventricle_right" ePort="p_in" elPosition="5" lineColor="255,0,0"   />
+
+	<connector id="Connector_7" sShape="Ventricle_right" sPort="p_out" eShape="Lungs" ePort="p_in" elPosition="6" lineColor="255,0,0"   />
+
+	<connector id="Connector_8" sShape="Lungs" sPort="p_out" eShape="Ventricle_left" ePort="p_in" elPosition="7" lineColor="255,0,0"   />
+
+	<connector id="Connector_9" sShape="Aorta" sPort="p_out" eShape="Trunk" ePort="p_in" points="928,416 928,256" elPosition="8" lineColor="255,0,0"   />
+
+	<connector id="Connector_10" sShape="Trunk" sPort="p_out" eShape="Cava" ePort="p_in" points="160,256 160,416" elPosition="9" lineColor="255,0,0"   />
+
+	<connector id="Connector_11" sShape="Aorta" sPort="p_out" eShape="Arms" ePort="p_in" points="896,320" elPosition="10" lineColor="255,0,0"   />
+
+	<connector id="Connector_12" sShape="Arms" sPort="p_out" eShape="Cava" ePort="p_in" points="192,320" elPosition="11" lineColor="255,0,0"   />
+
+	<component id="Cava" library="PHYSIOLOGICAL" type="Cava" layer="1" elPosition="0"  hotPort="p_in" >
+	
+		<symbol cx="112" cy="80.0001" sx="73" sy="16.0002" dx="112" dy="336" onLabel="true" />
+	
+		<label cx="18" cy="12" dx="206.116" dy="435.48" />
+	
+		<instanceData>
+			<datum id="comp" value="250" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Lungs" library="PHYSIOLOGICAL" type="Lungs" layer="1" elPosition="1"  hotPort="p_in" >
+	
+		<symbol cx="136" cy="81.7478" sx="121" sy="100.498" dx="416" dy="336" onLabel="true" />
+	
+		<label cx="21.5" cy="12" dx="531.501" dy="462.616" />
+	
+		<instanceData>
+			<datum id="rao" value="0.1875" />
+			<datum id="comp" value="10" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Head" library="PHYSIOLOGICAL" type="Head" layer="1" elPosition="2"  hotPort="p_out" >
+	
+		<symbol cx="119.999" cy="69.7033" sx="88.997" sy="52.4066" dx="432" dy="112" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="19" cy="12" dx="532.998" dy="212" />
+	
+		<instanceData>
+			<datum id="rai" value="2.58" />
+			<datum id="rao" value="5" />
+			<datum id="comp" value="1.21" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Aorta" library="PHYSIOLOGICAL" type="Aorta" layer="1" elPosition="3"  hotPort="p_in" >
+	
+		<symbol cx="112" cy="80" sx="73" sy="16.0004" dx="752" dy="336" onLabel="true" />
+	
+		<label cx="19.5" cy="12" dx="844.616" dy="435.48" />
+	
+		<instanceData>
+			<datum id="comp" value="1.01" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Ventricle_left" library="PHYSIOLOGICAL" type="Ventricle" layer="1" elPosition="4"  hotPort="p_in" >
+	
+		<symbol cx="112" cy="75.999" sx="73" sy="40" dx="592" dy="336" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="663" dy="436.05" />
+	
+		<instanceData>
+			<datum id="rai" value="0.0275" />
+			<datum id="rao" value="0.006" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Arms" library="PHYSIOLOGICAL" type="Arms" layer="1" elPosition="5"  hotPort="p_out" >
+	
+		<symbol cx="168" cy="85.9584" sx="185" sy="28.916" dx="384" dy="240" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="19.5" cy="12" dx="532.499" dy="340" />
+	
+		<instanceData>
+			<datum id="rai" value="5.15" />
+			<datum id="rao" value="10" />
+			<datum id="comp" value="34" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Ventricle_right" library="PHYSIOLOGICAL" type="Ventricle" layer="1" elPosition="6"  hotPort="p_in" >
+	
+		<symbol cx="112" cy="75.999" sx="73" sy="40" dx="288" dy="336" onLabel="true" />
+	
+		<label cx="45" cy="12" dx="355" dy="436.05" />
+	
+		<instanceData>
+			<datum id="rai" value="0.003" />
+			<datum id="rao" value="0.003" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Legs" library="PHYSIOLOGICAL" type="Legs" layer="1" elPosition="7"  hotPort="p_out" >
+	
+		<symbol cx="120" cy="112" sx="89" sy="96.9999" dx="432" dy="432" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="18" cy="12" dx="534.999" dy="596" />
+	
+		<instanceData>
+			<datum id="rai" value="2.58" />
+			<datum id="rao" value="5" />
+			<datum id="comp" value="11.1" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Trunk" library="PHYSIOLOGICAL" type="Trunk" layer="1" elPosition="8"  hotPort="p_out" >
+	
+		<symbol cx="120" cy="71.9995" sx="89.0005" sy="48.999" dx="432.001" dy="176" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="20" cy="12" dx="532" dy="276" />
+	
+		<instanceData>
+			<datum id="rai" value="0.67" />
+			<datum id="rao" value="1.42" />
+			<datum id="comp" value="34" />
+		</instanceData>
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+&#34;Human body physiological example&#34;
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="PHYSIOLOGICAL" version="3.1" auto="false" />
+</schematic>

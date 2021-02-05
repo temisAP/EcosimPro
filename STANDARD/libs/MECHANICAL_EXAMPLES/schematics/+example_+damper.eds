@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="Fixed2" sPort="m_out" eShape="damper2" ePort="m_out" elPosition="0" lineColor="151,161,158"   />
+
+	<connector id="Connector_2" sShape="Fixed1" sPort="m_out" eShape="damper1" ePort="m_out" elPosition="1" lineColor="151,161,158"   />
+
+	<connector id="Connector_3" sShape="mass1" sPort="m_out" eShape="damper1" ePort="m_in" elPosition="2" lineColor="151,161,158"   />
+
+	<connector id="Connector_4" sShape="mass2" sPort="m_out" eShape="damper2" ePort="m_in" elPosition="3" lineColor="151,161,158"   />
+
+	<connector id="Connector_5" sShape="force2" sPort="m_out" eShape="mass2" ePort="m_in" elPosition="4" lineColor="151,161,158"   />
+
+	<connector id="Connector_6" sShape="force1" sPort="m_out" eShape="mass1" ePort="m_in" elPosition="5" lineColor="151,161,158"   />
+
+	<connector id="Connector_7" sShape="force3" sPort="m_out" eShape="mass3" ePort="m_in" elPosition="6" lineColor="151,161,158"   />
+
+	<connector id="Connector_8" sShape="ForceNull" sPort="s_out" eShape="force2" ePort="s_in" elPosition="7" lineColor="255,128,0"   />
+
+	<connector id="Connector_9" sShape="ForceNull" sPort="s_out" eShape="force1" ePort="s_in" points="192,224" elPosition="8" lineColor="255,128,0"   />
+
+	<connector id="Connector_10" sShape="ForceNull" sPort="s_out" eShape="force3" ePort="s_in" points="192,544" elPosition="9" lineColor="255,128,0"   />
+
+	<connector id="Connector_11" sShape="Fixed3" sPort="m_out" eShape="spring" ePort="m_out" elPosition="10" lineColor="151,161,158"   />
+
+	<connector id="Connector_12" sShape="mass3" sPort="m_out" eShape="spring" ePort="m_in" elPosition="11" lineColor="151,161,158"   />
+
+	<component id="damper2" library="MECHANICAL" type="T_SpringDamper" layer="1" elPosition="0"  hotPort="m_in" >
+	
+		<symbol cx="120" cy="82.8751" sx="89" sy="63.2501" dx="592" dy="304" />
+	
+		<label cx="29" cy="12" dx="672" dy="416" />
+	
+		<instanceData>
+			<datum id="d" value="25" />
+			<datum id="k" value="1" />
+			<datum id="s_rel0" value="1" />
+		</instanceData>
+	
+	</component>
+
+	<component id="mass2" library="MECHANICAL" type="T_SlidingMass" layer="1" elPosition="1"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.4999" dx="448" dy="288" />
+	
+		<label cx="23.5" cy="12" dx="560" dy="416" />
+	
+		<instanceData>
+			<datum id="s0" value="3.5" />
+			<datum id="v0" value="10" />
+		</instanceData>
+	
+	</component>
+
+	<component id="ForceNull" library="CONTROL" type="AnalogSource" layer="1" elPosition="2"  hotPort="s_out" >
+	
+		<symbol cx="105.875" cy="96" sx="53.25" sy="33.5" dx="64" dy="288" />
+	
+		<label cx="31.5" cy="12" dx="127.125" dy="413" />
+	
+		<instanceData>
+			<datum id="Amp" value="0" />
+		</instanceData>
+	
+	</component>
+
+	<component id="mass1" library="MECHANICAL" type="T_SlidingMass" layer="1" elPosition="3"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.4999" dx="448" dy="128" />
+	
+		<label cx="23.5" cy="12" dx="560" dy="256" />
+	
+		<instanceData>
+			<datum id="s0" value="3.5" />
+			<datum id="v0" value="10" />
+		</instanceData>
+	
+	</component>
+
+	<component id="damper1" library="MECHANICAL" type="T_Damper" layer="1" elPosition="4"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73.001" sy="37.0006" dx="576" dy="128" />
+	
+		<label cx="29" cy="12" dx="672" dy="256" />
+	
+		<instanceData>
+			<datum id="d" value="25" />
+		</instanceData>
+	
+	</component>
+
+	<component id="mass3" library="MECHANICAL" type="T_SlidingMass" layer="1" elPosition="5"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="33.4999" dx="448" dy="448" />
+	
+		<label cx="23.5" cy="12" dx="560" dy="576" />
+	
+		<instanceData>
+			<datum id="s0" value="3.5" />
+			<datum id="v0" value="10" />
+		</instanceData>
+	
+	</component>
+
+	<component id="force2" library="MECHANICAL" type="T_ActuatorForce" layer="1" elPosition="6"  hotPort="s_in" >
+	
+		<symbol cx="128" cy="88.2647" sx="73" sy="48.5293" dx="320" dy="288" />
+	
+		<label cx="21.5" cy="12" dx="416" dy="416.088" />
+	
+	</component>
+
+	<component id="force3" library="MECHANICAL" type="T_ActuatorForce" layer="1" elPosition="7"  hotPort="s_in" >
+	
+		<symbol cx="128" cy="88.2647" sx="73" sy="48.5293" dx="320" dy="448" />
+	
+		<label cx="21.5" cy="12" dx="416" dy="576.088" />
+	
+	</component>
+
+	<component id="force1" library="MECHANICAL" type="T_ActuatorForce" layer="1" elPosition="8"  hotPort="s_in" >
+	
+		<symbol cx="128" cy="88.2647" sx="73" sy="48.5293" dx="320" dy="128" />
+	
+		<label cx="21.5" cy="12" dx="416" dy="256.088" />
+	
+	</component>
+
+	<component id="spring" library="MECHANICAL" type="T_Spring" layer="1" elPosition="9"  hotPort="m_in" >
+	
+		<symbol cx="128" cy="96" sx="73" sy="17.5" dx="576" dy="448" />
+	
+		<label cx="21.5" cy="12" dx="688" dy="576" />
+	
+		<instanceData>
+			<datum id="k" value="1" />
+			<datum id="s_rel0" value="1" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Fixed2" library="MECHANICAL" type="T_FixedPosition" layer="1" elPosition="10"  hotPort="m_out" >
+	
+		<symbol cx="105.875" cy="95.9604" sx="53.25" sy="33.4208" dx="748.25" dy="288" rotation="180" flipY="true" />
+	
+		<label cx="23.5" cy="12" dx="832.124" dy="414.989" />
+	
+		<instanceData>
+			<datum id="s0" value="4.5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Fixed1" library="MECHANICAL" type="T_FixedPosition" layer="1" elPosition="11"  hotPort="m_out" >
+	
+		<symbol cx="105.875" cy="95.9604" sx="53.25" sy="33.4208" dx="748.25" dy="128" rotation="180" flipY="true" />
+	
+		<label cx="23.5" cy="12" dx="832.124" dy="254.989" />
+	
+		<instanceData>
+			<datum id="s0" value="4.5" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Fixed3" library="MECHANICAL" type="T_FixedPosition" layer="1" elPosition="12"  hotPort="m_out" >
+	
+		<symbol cx="105.875" cy="95.9604" sx="53.25" sy="33.4208" dx="748.25" dy="448" rotation="180" flipY="true" />
+	
+		<label cx="23.5" cy="12" dx="832.124" dy="574.989" />
+	
+		<instanceData>
+			<datum id="s0" value="4.5" />
+		</instanceData>
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+	<usedLibrary name="MECHANICAL" version="3.1" auto="false" />
+</schematic>

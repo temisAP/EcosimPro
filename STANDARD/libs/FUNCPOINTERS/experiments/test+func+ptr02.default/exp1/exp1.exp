@@ -1,0 +1,16 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: FUNCPOINTERS
+ COMPONENT: testFuncPtr02
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 15/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON testFuncPtr02.default
+   BODY
+		TIME = 0
+		TSTOP = 10
+		CINT = 0.1
+		INTEG()
+END EXPERIMENT

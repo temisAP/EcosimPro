@@ -1,0 +1,82 @@
+MATHEMATICAL MODEL VIEW
+==========================================================
+ Model: CONTAINERS.dictionary+test.default
+ Internal Version: 6.0
+ Date and Time: 17/01/2019 01:32:12.141000
+ Library: CONTAINERS
+ Library dependency list: CONTAINERS V1.1 
+ Software: EcosimPro V5.12.1
+
+==========================================================
+Statistics
+INFO	VALUE
+Number of equations	0
+Number of boxes (coupled subsystems of equations)	0
+Number of linear boxes	0
+Number of nonlinear boxes	0
+Number of input DATA	0
+Number of input BOUNDARIES	0
+Number of output EXPLICIT	0
+Number of output DYNAMICS or DERIVATIVES	0
+Number of output ALGEBRAICS	0
+Size of Jacobian matrix (DYNAMIC+ALGEBRAIC).	0x0
+Default integration method	DASSL
+
+Type of Variables
+TYPE	VARIABLE	DATA	CONSTANT
+REAL	0	0	0
+INTEGER	0	0	0
+STRING	0	0	0
+TABLE	0	0	0
+
+Partition Settings
+SETTING	VALUE
+Remove derivatives	FALSE
+Use automatic reduction of equations	TRUE
+Remove unused variables	FALSE
+Advanced residue generation	disabled
+Generate a class associated to the partition	FALSE
+Generate code to check mathematical functions	FALSE
+Generate code to analyse the performance of the simulation	FALSE
+Obfuscate C++ generated code	FALSE
+Generate mathematical view (HTML)	TRUE
+Generate mathematical view in other formats (TXT and XML)	TRUE
+Use maximum number of digits for representing real constants	FALSE
+
+Types
+No types defined.
+
+Variables
+No variables defined.
+
+
+No equivalent variables detected.
+
+No discrete statement detected.
+
+No design variables defined.
+
+No high index problems detected.
+
+No boundary variables detected.
+
+No Jacobian variables detected.
+
+
+Note 1: Variables called "__aux_int_..." are internal integer variables, used to iterate
+Note 2: FOR statements are converted to WHILE statements
+
+  -- init(dictionaryTest,0)
+CONTAINERS.testDictionaryReal()
+CONTAINERS.testDictionaryFriends()
+CONTAINERS.testDictionaryMatrixVectorFriends()
+CONTAINERS.testDictionaryFriendsPtr()
+
+
+Equations: 0
+
+
+No differences with last validation detected.
+
+
+

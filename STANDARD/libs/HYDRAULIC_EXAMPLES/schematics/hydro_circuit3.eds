@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="HydFlowMeter1" library="HYDRAULIC" type="HydFlowMeter" layer="1" elPosition="16"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="72" sx="41" sy="57" dx="512" dy="288" onLabel="true" />
+	
+		<label cx="49" cy="12" dx="576" dy="400" />
+	
+		<instanceData>
+			<datum id="gain" value="{ 1}" />
+			<datum id="bias" value="{ 0}" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_1" sShape="HydFlowMeter1" sPort="s_out" eShape="Cntrl_pid1" ePort="s_var" points="624,232" elPosition="18" lineColor="255,85,0"   />
+
+	<component id="HydTank1" library="HYDRAULIC" type="HydTank" layer="1" elPosition="19"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="64" sx="137" sy="104" dy="288" onLabel="true" />
+	
+		<label cx="32.5" cy="12" dx="96" dy="430" />
+	
+	</component>
+
+	<component id="HydTank2" library="HYDRAULIC" type="HydTank" layer="1" elPosition="20"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="64" sx="137" sy="104" dx="832" dy="288" onLabel="true" />
+	
+		<label cx="32.5" cy="12" dx="928" dy="430" />
+	
+	</component>
+
+	<component id="HydValve1" library="HYDRAULIC" type="HydValve" layer="1" elPosition="21"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="76.125" sx="73" sy="65.25" dx="352" dy="288" onLabel="true" />
+	
+		<label cx="34" cy="12" dx="448" dy="400" />
+	
+	</component>
+
+	<connector id="Connector_2" sShape="Cntrl_pid1" sPort="s_out" eShape="HydValve1" ePort="s_position" points="480,224" elPosition="27" lineColor="255,85,0"   />
+
+	<connector id="Connector_3" sShape="HydValve1" sPort="hp_out" eShape="HydFlowMeter1" ePort="hp_in" elPosition="28" lineColor="0,170,255" lineWidth="4"   />
+
+	<component id="HydPipe2" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="22"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="624" dy="303.999" onLabel="true" />
+	
+		<label cx="32" cy="12" dx="736" dy="352" />
+	
+	</component>
+
+	<component id="HydPipe1" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="23"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="176" dy="303.999" onLabel="true" />
+	
+		<label cx="32" cy="12" dx="288" dy="352" />
+	
+	</component>
+
+	<connector id="Connector_4" sShape="HydFlowMeter1" sPort="hp_out" eShape="HydPipe2" ePort="hp_in" elPosition="29" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_5" sShape="HydPipe2" sPort="hp_out" eShape="HydTank2" ePort="hp_in" elPosition="30" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_6" sShape="HydTank1" sPort="hp_out" eShape="HydPipe1" ePort="hp_in" elPosition="31" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_7" sShape="HydPipe1" sPort="hp_out" eShape="HydValve1" ePort="hp_in" elPosition="32" lineColor="0,170,255" lineWidth="4"   />
+
+	<component id="Cntrl_pid1" library="CONTROL" type="Cntrl_PID" layer="1" elPosition="6"  hotPort="s_out" >
+	
+		<symbol cx="112" cy="87.375" sx="73" sy="34.75" dx="432" dy="137.25" flipY="true" flipX="true" onLabel="true" />
+	
+		<label cx="33" cy="12" dx="512" dy="176" />
+	
+		<instanceData>
+			<datum id="k" value="{ 1}" />
+			<datum id="u_min" value="{ 0}" />
+			<datum id="u_max" value="{ 1}" />
+			<datum id="Ti" value="{ 100}" />
+			<datum id="gamma" value="{ 0.01}" />
+			<datum id="beta" value="{ 1}" />
+			<datum id="Td" value="{ 0.1}" />
+			<datum id="alpha" value="{ 0.1}" />
+		</instanceData>
+	
+	</component>
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+&#34;Controlled hydraulic circuit example&#34;
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="CONTROL" version="4.0" auto="false" />
+	<usedLibrary name="HYDRAULIC" version="3.1" auto="false" />
+</schematic>

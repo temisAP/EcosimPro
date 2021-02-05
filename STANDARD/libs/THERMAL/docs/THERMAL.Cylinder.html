@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL.Cylinder<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Cylinder">Cylinder</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/THERMAL.Cylinder.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">2D thermal model of a cylinder wall</font><br/>
+<br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>nz&nbsp;</td><td>INTEGER &nbsp;</td><td>5&nbsp;</td><td>Number of axial nodes&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>nr&nbsp;</td><td>INTEGER &nbsp;</td><td>3&nbsp;</td><td>Number of radial nodes&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>tpr_in&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = nz) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Radial inlet port&nbsp;</td></tr>
+
+<tr><td>tpr_out&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = nz) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Radial outlet port&nbsp;</td></tr>
+
+<tr><td>tpz_in&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = nr) &nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Axial inlet port&nbsp;</td></tr>
+
+<tr><td>tpz_out&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = nr) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Axial outlet port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Di&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Inside diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Do&nbsp;</td><td>REAL &nbsp;</td><td>0.12&nbsp;</td><td>&nbsp;</td><td>Outside diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>L&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>TemperatureDependance&nbsp;</td><td>BOOLEAN &nbsp;</td><td> TRUE &nbsp;</td><td>&nbsp;</td><td>Option to consider or not the temperature depence on the material properties&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>To&nbsp;</td><td>REAL &nbsp;</td><td>290&nbsp;</td><td>&nbsp;</td><td>Constant initial temperature of nodes if init_mode = Constant_Temp&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>To_linear[2]&nbsp;</td><td>REAL &nbsp;</td><td>{ 290,290} &nbsp;</td><td>&nbsp;</td><td>Initial temperatures at both side if init_mode = Linear_Temp&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>To_table&nbsp;</td><td>TABLE_1D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Table with initial wall temperature versus non-dimensional position if init_mode = Table_Temp (K)&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>cp&nbsp;</td><td>REAL &nbsp;</td><td>500&nbsp;</td><td>&nbsp;</td><td>Wall Specific heat if mat=None&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>init_mode&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#WALL_INIT_MODE">WALL_INIT_MODE</a>&nbsp;</td><td>Constant_Temp&nbsp;</td><td>&nbsp;</td><td>Option for the initiliazation of the nodal temperatures&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>k&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Wall conductivity if mat=None&nbsp;</td><td>W/(m·K)&nbsp;</td></tr>
+
+<tr><td>mat&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>num&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Number of parallel tubes&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>rho&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Wall density if mat=None&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>C_axi[nr,nz + 1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Axial equivalent conductance between the thermal nodes&nbsp;</td><td>W/K&nbsp;</td></tr>
+
+<tr><td>C_rad[nr + 1,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Radial equivalent conductance between the thermal nodes&nbsp;</td><td>W/K&nbsp;</td></tr>
+
+<tr><td>F&nbsp;</td><td>CONST REAL &nbsp;</td><td>0.0001&nbsp;</td><td>&nbsp;</td><td>Thermal capacity ratio assigned to the surface&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>T[nr,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal temperature&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>V[nr,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal volume&nbsp;</td><td>m^3&nbsp;</td></tr>
+
+<tr><td>cp_tpr[2,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal specific heat of outer-inner skin&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>cp_tpz[nr,2]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal specific heat of first-last section skin&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>cp_var[nr,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal specific heat&nbsp;</td><td>J/(kg·K)&nbsp;</td></tr>
+
+<tr><td>dr&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal distance in r&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>dz&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal distance in z&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>icpk[nr,nz]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pointer to last interpolation interval for each node&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>icpk_tpr[2,nz]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pointer to last interpolation interval for each radial port node&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>icpk_tpz[nr,2]&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pointer to last interpolation interval for each axial port node&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ito&nbsp;</td><td>INTEGER &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pointer to time interval for To in Property Tables&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>k_var[nr,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Nodal thermal conductivities&nbsp;</td><td>W/(m·K)&nbsp;</td></tr>
+
+<tr><td>qr[nr + 1,nz]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat flows between nodes in radial direction&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>qz[nr,nz + 1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Heat flows between nodes in axial direction&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>rho_var&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Density of wall material&nbsp;</td><td>kg/m^3&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

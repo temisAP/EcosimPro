@@ -1,0 +1,102 @@
+//--------------------------------------------------------------------------------------------------
+// Experiment to illustrate the use of the iternal XML parser
+// File exp3.exp
+// Company: EEAA
+// Date: 11-03-2011
+//--------------------------------------------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------------------------------------------
+// Recursive function to go through all nodes and attributtes of the XML DOM document
+// \param in: Input XML object
+// \param out: Output XML object
+// \return TRUE if success
+//--------------------------------------------------------------------------------------------------
+FUNCTION BOOLEAN goThroughNodes(OUT XMLParser in, OUT XMLParser out)
+	DECLS 
+		STRING attName
+		STRING attValue
+		STRING nodeName
+		
+	BODY
+		in.firstAttribute(attName, attValue)
+
+		WHILE( attName != "" )
+			out.setAttribute(attName, attValue)
+			in.nextAttribute(attName, attValue)
+		END WHILE
+
+		// Go through children
+		nodeName = in.firstChild()
+
+		IF( nodeName != "" ) THEN
+			// Go into a child
+			out.addNode(nodeName)
+			WRITE( "Added node '%s'.\n", out.nodeName() )
+			goThroughNodes(in, out)
+		ELSE
+			// Node has no child
+			RETURN TRUE
+		END IF
+	
+		// Go a sibling node
+		nodeName = in.nextSibling()
+	
+		WHILE( nodeName != "" )
+			// Go to out node parent
+			out.nodeParent()
+	
+			out.addNode(nodeName)
+			WRITE( "Added node '%s'.\n", out.nodeName() )
+
+			goThroughNodes(in, out)
+	
+			nodeName = in.nextSibling()
+		END WHILE
+	
+		// Return to calling node
+		in.nodeParent()
+		out.nodeParent()
+
+		RETURN TRUE
+END FUNCTION
+
+
+//----------------------------------------------------------------------------------------------
+// Experiment
+//----------------------------------------------------------------------------------------------
+EXPERIMENT exp3 ON xmlExample.default
+   DECLS
+   	STRING inFileName = "exampleInput.xml"
+   	STRING outFileName = "exampleOutput.xml"
+   	STRING type = "xmlExample"
+   OBJECTS
+   	XMLParser out
+   INIT
+   BOUNDS
+   BODY
+  		// Load input XML file
+		IF( NOT in.loadFile(inFileName, type, "") ) THEN
+			STOP "Could not load file." 
+		END IF
+
+		// Create root node for output object
+		IF ( NOT out.createRootParent(type) ) THEN
+			STOP "Could not create root node."
+		END IF
+
+		// Set format to 'ISO-8859-1'
+		IF ( NOT out.setISO_8859_1() ) THEN
+			STOP "Could not change format."
+		END IF
+		
+		IF ( NOT goThroughNodes(in, out) ) THEN
+			STOP "Could not go through nodes."
+		END IF
+
+		IF ( NOT out.saveFile(outFileName) ) THEN
+			STOP "Could not save file."
+		END IF
+	
+END EXPERIMENT

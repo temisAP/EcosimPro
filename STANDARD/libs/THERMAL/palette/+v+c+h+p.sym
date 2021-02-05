@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="VCHP" >
+
+		<rect id="Rectangle_6" cx="155.002" cy="667" sx="16" sy="8.00001" dx="-35.002" dy="-539" lineWidth="0.5"  color="255,255,255"  />
+
+		<rect id="Rectangle_7" cx="155.002" cy="667" sx="16" sy="8.00001" dx="12.9981" dy="-539" lineWidth="0.5"  color="255,255,255"  />
+
+		<line id="Line_2" points="139.001,662 139.001,643"  end_arrow="true" dx="4.9991" dy="-542" lineColor="170,0,0"   />
+
+		<line id="Line_1" points="139.001,662 139.001,643"  end_arrow="true" dx="-43.0009" dy="-542" lineColor="170,0,0"   />
+
+		<line id="Line_3" points="259.001,650.998 259.001,634.998"  end_arrow="true" dx="-67.001" dy="-534.998" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_1" cx="131" cy="667" sx="32" sy="16" dx="-35" dy="-538.998" lineWidth="1.5"  color="192,192,192"  />
+
+		<rect id="Rectangle_2" cx="195.001" cy="667" sx="32.0001" sy="16" dx="-51.0009" dy="-539" lineWidth="1.5"  color="192,192,192"  />
+
+		<rect id="Rectangle_3" cx="271.001" cy="667" sx="32" sy="24" dx="-79.0009" dy="-543" lineWidth="1.5"  color="192,192,192"  />
+
+		<rect id="Rectangle_4" cx="131" cy="667" sx="32" sy="8.00001" dx="-35" dy="-538.998" color="170,0,0"  />
+
+		<rect id="Rectangle_5" cx="195.001" cy="667" sx="32.0001" sy="8.00001" dx="-51.0009" dy="-539" color="0,0,255"  />
+
+		<port id="tp_evap" library="PORTS_LIB" type="thermal"  hotPort="tp_evap" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="26" cy="12" dx="40" dy="84" />
+		
+		</port>
+
+		<port id="tp_cond" library="PORTS_LIB" type="thermal"  hotPort="tp_cond" >
+		
+				<symbol dx="144" dy="96" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="121.894" dy="63.1036" />
+		
+		</port>
+
+		<port id="tp_rese" library="PORTS_LIB" type="thermal"  hotPort="tp_rese" >
+		
+				<symbol dx="192" dy="96" onLabel="true" />
+		
+				<label cx="25.5" cy="12" dx="196" dy="84" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Evaporator">
+				<var name="A_vap_evap"/>
+				<var name="D_i_evap"/>
+				<var name="D_o_evap"/>
+				<var name="N_evap"/>
+				<var name="h_evap"/>
+				<var name="l_evap"/>
+				<var name="mat_evap"/>
+				<var name="T_gas_o"/>
+				<var name="T_vap_o"/>
+				<var name="To"/>
+			</tab>
+			<tab name="Evap-Cond">
+				<var name="mat_ec"/>
+				<var name="h_ec"/>
+				<var name="l_ec"/>
+				<var name="D_o_ec"/>
+				<var name="D_i_ec"/>
+				<var name="A_vap_ec"/>
+				<var name="N_ec"/>
+			</tab>
+			<tab name="Condenser">
+				<var name="A_vap_cond"/>
+				<var name="D_i_cond"/>
+				<var name="D_o_cond"/>
+				<var name="N_cond"/>
+				<var name="h_cond"/>
+				<var name="l_cond"/>
+				<var name="mat_cond"/>
+			</tab>
+			<tab name="Cond-Rese">
+				<var name="A_vap_cr"/>
+				<var name="D_i_cr"/>
+				<var name="D_o_cr"/>
+				<var name="N_cr"/>
+				<var name="h_cr"/>
+				<var name="l_cr"/>
+				<var name="mat_cr"/>
+			</tab>
+			<tab name="Reservoir">
+				<var name="A_vap_rese"/>
+				<var name="D_i_rese"/>
+				<var name="D_o_rese"/>
+				<var name="N_rese"/>
+				<var name="h_rese"/>
+				<var name="l_rese"/>
+				<var name="mat_rese"/>
+			</tab>
+			<tab name="General">
+				<var name="Design"/>
+				<var name="l_vap_o"/>
+				<var name="C_vap"/>
+				<var name="n_gas_o"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="105.5" cy="130" sx="99" sy="12" variable="tp_evap.Tk[1]"  headerText="tp_evap.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-4" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="103" cy="130" sx="94" sy="12" variable="tp_evap.q[1]"  headerText="tp_evap.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-4" dy="-44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="105.5" cy="130" sx="99" sy="12" variable="tp_cond.Tk[1]"  headerText="tp_cond.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="103" cy="130" sx="94" sy="12" variable="tp_cond.q[1]"  headerText="tp_cond.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="48" dy="28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="105" cy="130" sx="98" sy="12" variable="tp_rese.Tk[1]"  headerText="tp_rese.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="102.5" cy="130" sx="93" sy="12" variable="tp_rese.q[1]"  headerText="tp_rese.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

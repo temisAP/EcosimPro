@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Inductor" >
+
+		<bezier id="Bezier_2" points="105,90 105,74 117,74 117,90" dx="-23" dy="-10" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_5" points="117.5,90.75 117.5,74.75 121.5,74.75 121.5,90.75" rotation="180" flipX="true" dx="-27.5" dy="1.25" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_3" points="104.125,90.375 104.125,74.375 116.125,74.375 116.125,90.375" dx="-14.125" dy="-10.375" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_4" points="119.125,91 119.125,75 123.125,75 123.125,91" rotation="180" flipX="true" dx="-21.125" dy="1" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_7" points="118.267,89.8667 118.267,73.8667 122.267,73.8667 122.267,89.8667" rotation="180" flipX="true" dx="-12.267" dy="2.1333" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<line id="Line_7" points="-5.5,5 -1,5" dx="123.5" dy="83"  />
+
+		<g id="Group_2" dx="-6.25" dy="-26.5" >
+		
+					<line id="Line_8" points="-5.5,5 -1,5" dx="89.75" dy="109.75"  />
+		 />
+					<line id="Line_9" points="-5.5,5 -1,5" rotation="-90" dx="89.75" dy="109.75"  />
+		 />
+		</g>
+
+		<bezier id="Bezier_1" points="104.125,90.375 104.125,74.375 116.125,74.375 116.125,90.375" dx="-6.125" dy="-10.375" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_6" points="104.125,90.375 104.125,74.375 116.125,74.375 116.125,90.375" dx="1.875" dy="-10.375" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_8" points="118.267,89.8667 118.267,73.8667 122.267,73.8667 122.267,89.8667" rotation="180" flipX="true" dx="-4.267" dy="2.1333" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<bezier id="Bezier_9" points="104.125,90.375 104.125,74.375 116.125,74.375 116.125,90.375" dx="9.875" dy="-10.375" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="36.5" dy="70" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="128" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="136.5" dy="70" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="L"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="172.5" cy="123" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-40" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="169.5" cy="151" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-36" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

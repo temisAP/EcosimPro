@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<connector id="Connector_1" sShape="G" sPort="e_p" eShape="V" ePort="e_n" points="544,560 128,560" elPosition="1" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_2" sShape="A" sPort="e_p1" eShape="V" ePort="e_p" points="128,79.5" elPosition="6" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_3" sShape="A" sPort="e_n2" eShape="G" ePort="e_p" points="544,128" elPosition="8" dy="32" lineColor="0,170,0"   />
+
+	<component id="V" library="ELECTRICAL" type="VoltageSine" layer="1" elPosition="0"  hotPort="e_n" >
+	
+		<symbol cx="104" cy="80" sx="57" sy="33.5" dx="24" dy="328" rotation="-90" onLabel="true" />
+	
+		<label cx="9" cy="12" dx="100" dy="398" />
+	
+		<instanceData>
+			<datum id="freqHz" value="0.25" />
+		</instanceData>
+	
+	</component>
+
+	<component id="G" library="ELECTRICAL" type="Ground" layer="1" elPosition="1"  hotPort="e_p" >
+	
+		<symbol cx="80" cy="91.5" sx="35" sy="32" dx="464" dy="592" onLabel="true" />
+	
+		<label cx="9" cy="12" dx="563.5" dy="686" />
+	
+	</component>
+
+	<component id="A" library="ELECTRICAL" type="IdealOpAmp" layer="1" elPosition="5"  hotPort="e_p1" >
+	
+		<symbol cx="106.75" cy="105.7" sx="62.5" sy="68.6" dx="352" dy="32" onLabel="true" />
+	
+		<label cx="8.5" cy="12" dx="434" dy="158.5" />
+	
+	</component>
+
+	<component id="RI" library="ELECTRICAL" type="Resistor" layer="1" elPosition="6"  hotPort="e_n" >
+	
+		<symbol cx="112" cy="77.5532" sx="73" sy="22.1064" dx="210.447" dy="338.447" rotation="90" onLabel="true" />
+	
+		<label cx="10" cy="12" dx="335.5" dy="414.5" />
+	
+		<instanceData>
+			<datum id="R" value="100" />
+		</instanceData>
+	
+	</component>
+
+	<component id="RF" library="ELECTRICAL" type="Resistor" layer="1" elPosition="7"  hotPort="e_n" >
+	
+		<symbol cx="112" cy="77.5532" sx="73" sy="22.1064" dx="626.447" dy="178.447" rotation="90" onLabel="true" />
+	
+		<label cx="12.5" cy="12" dx="749.5" dy="254" />
+	
+		<instanceData>
+			<datum id="R" value="400" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Ra" library="ELECTRICAL" type="Resistor" layer="1" elPosition="8"  hotPort="e_n" >
+	
+		<symbol cx="112" cy="77.5532" sx="73" sy="22.1064" dx="720" dy="48" onLabel="true" />
+	
+		<label cx="12" cy="12" dx="814" dy="94" />
+	
+		<instanceData>
+			<datum id="R" value="0.1" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_4" sShape="RF" sPort="e_n" eShape="RI" ePort="e_p" points="736,352" elPosition="9" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_5" sShape="A" sPort="e_n1" eShape="RI" ePort="e_p" points="320,111.5" elPosition="10" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_6" sShape="G" sPort="e_p" eShape="RI" ePort="e_n" points="544,560 320,560" elPosition="11" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_7" sShape="A" sPort="e_p2" eShape="RF" ePort="e_p" points="736,96" elPosition="12" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_8" sShape="A" sPort="e_p2" eShape="Ra" ePort="e_p" points="594,96" elPosition="13" dy="32" lineColor="0,170,0"   />
+
+	<connector id="Connector_9" sShape="G" sPort="e_p" eShape="Ra" ePort="e_n" points="544,560 960,560 960,96" elPosition="14" dy="32" lineColor="0,170,0"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="ELECTRICAL" version="3.1" auto="false" />
+</schematic>

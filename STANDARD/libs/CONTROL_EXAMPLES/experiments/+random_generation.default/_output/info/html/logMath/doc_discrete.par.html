@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+random_generation.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+random_generation.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Discrete Blocks<br /></h2>
+WHEN (Unif.Sample ==  TRUE )  THEN
+	Unif.Sample =  FALSE 
+	Unif.Sample =  TRUE  AFTER Unif.dt
+	IF  TRUE  THEN
+	Unif.x = MATH.ran1(Unif.i_array, Unif.r_array)
+		ELSEIF  FALSE  THEN
+	Unif.x = MATH.bnldev(Unif.i_array, Unif.r_array)
+
+		ELSEIF  FALSE  THEN
+	Unif.x = MATH.expdev(Unif.i_array, Unif.r_array)
+
+		ELSEIF  FALSE  THEN
+	Unif.x = MATH.gamdev(Unif.i_array, Unif.r_array)
+
+		ELSEIF  FALSE  THEN
+	Unif.x = MATH.gasdev(Unif.i_array, Unif.r_array)
+
+		ELSEIF  FALSE  THEN
+	Unif.x = MATH.poidev(Unif.i_array, Unif.r_array)
+
+	END IF
+	END WHEN<br/>
+WHEN (Gauss.Sample ==  TRUE )  THEN
+	Gauss.Sample =  FALSE 
+	Gauss.Sample =  TRUE  AFTER Gauss.dt
+	IF  FALSE  THEN
+	Gauss.x = MATH.ran1(Gauss.i_array, Gauss.r_array)
+		ELSEIF  FALSE  THEN
+	Gauss.x = MATH.bnldev(Gauss.i_array, Gauss.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gauss.x = MATH.expdev(Gauss.i_array, Gauss.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gauss.x = MATH.gamdev(Gauss.i_array, Gauss.r_array)
+
+		ELSEIF  TRUE  THEN
+	Gauss.x = MATH.gasdev(Gauss.i_array, Gauss.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gauss.x = MATH.poidev(Gauss.i_array, Gauss.r_array)
+
+	END IF
+	END WHEN<br/>
+WHEN (Expon.Sample ==  TRUE )  THEN
+	Expon.Sample =  FALSE 
+	Expon.Sample =  TRUE  AFTER Expon.dt
+	IF  FALSE  THEN
+	Expon.x = MATH.ran1(Expon.i_array, Expon.r_array)
+		ELSEIF  FALSE  THEN
+	Expon.x = MATH.bnldev(Expon.i_array, Expon.r_array)
+
+		ELSEIF  TRUE  THEN
+	Expon.x = MATH.expdev(Expon.i_array, Expon.r_array)
+
+		ELSEIF  FALSE  THEN
+	Expon.x = MATH.gamdev(Expon.i_array, Expon.r_array)
+
+		ELSEIF  FALSE  THEN
+	Expon.x = MATH.gasdev(Expon.i_array, Expon.r_array)
+
+		ELSEIF  FALSE  THEN
+	Expon.x = MATH.poidev(Expon.i_array, Expon.r_array)
+
+	END IF
+	END WHEN<br/>
+WHEN (Pois.Sample ==  TRUE )  THEN
+	Pois.Sample =  FALSE 
+	Pois.Sample =  TRUE  AFTER Pois.dt
+	IF  FALSE  THEN
+	Pois.x = MATH.ran1(Pois.i_array, Pois.r_array)
+		ELSEIF  FALSE  THEN
+	Pois.x = MATH.bnldev(Pois.i_array, Pois.r_array)
+
+		ELSEIF  FALSE  THEN
+	Pois.x = MATH.expdev(Pois.i_array, Pois.r_array)
+
+		ELSEIF  FALSE  THEN
+	Pois.x = MATH.gamdev(Pois.i_array, Pois.r_array)
+
+		ELSEIF  FALSE  THEN
+	Pois.x = MATH.gasdev(Pois.i_array, Pois.r_array)
+
+		ELSEIF  TRUE  THEN
+	Pois.x = MATH.poidev(Pois.i_array, Pois.r_array)
+
+	END IF
+	END WHEN<br/>
+WHEN (Gamm.Sample ==  TRUE )  THEN
+	Gamm.Sample =  FALSE 
+	Gamm.Sample =  TRUE  AFTER Gamm.dt
+	IF  FALSE  THEN
+	Gamm.x = MATH.ran1(Gamm.i_array, Gamm.r_array)
+		ELSEIF  FALSE  THEN
+	Gamm.x = MATH.bnldev(Gamm.i_array, Gamm.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gamm.x = MATH.expdev(Gamm.i_array, Gamm.r_array)
+
+		ELSEIF  TRUE  THEN
+	Gamm.x = MATH.gamdev(Gamm.i_array, Gamm.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gamm.x = MATH.gasdev(Gamm.i_array, Gamm.r_array)
+
+		ELSEIF  FALSE  THEN
+	Gamm.x = MATH.poidev(Gamm.i_array, Gamm.r_array)
+
+	END IF
+	END WHEN<br/>
+WHEN (Binom.Sample ==  TRUE )  THEN
+	Binom.Sample =  FALSE 
+	Binom.Sample =  TRUE  AFTER Binom.dt
+	IF  FALSE  THEN
+	Binom.x = MATH.ran1(Binom.i_array, Binom.r_array)
+		ELSEIF  TRUE  THEN
+	Binom.x = MATH.bnldev(Binom.i_array, Binom.r_array)
+
+		ELSEIF  FALSE  THEN
+	Binom.x = MATH.expdev(Binom.i_array, Binom.r_array)
+
+		ELSEIF  FALSE  THEN
+	Binom.x = MATH.gamdev(Binom.i_array, Binom.r_array)
+
+		ELSEIF  FALSE  THEN
+	Binom.x = MATH.gasdev(Binom.i_array, Binom.r_array)
+
+		ELSEIF  FALSE  THEN
+	Binom.x = MATH.poidev(Binom.i_array, Binom.r_array)
+
+	END IF
+	END WHEN<br/>
+</body></html>

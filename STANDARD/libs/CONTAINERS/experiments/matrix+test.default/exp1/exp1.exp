@@ -1,0 +1,14 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: CONTAINERS
+ COMPONENT: matrixTest
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 29/03/2016
+-----------------------------------------------------------------------------------------*/
+
+
+EXPERIMENT exp1 ON matrixTest.default
+   BODY
+		EXEC_INIT()
+END EXPERIMENT

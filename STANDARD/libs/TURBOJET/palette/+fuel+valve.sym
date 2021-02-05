@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FuelValve" >
+
+		<line id="Line_4" points="4.232,1323.58 36.231,1323.58"  end_arrow="true" dx="91.768" dy="-1227.58" aliasing="true"  />
+
+		<line id="Line_2" points="70.0005,205 6.0003,205" dx="73.9995" dy="-125" aliasing="true"  />
+
+		<line id="Line_3" points="37.9983,169 37.9983,191"  end_arrow="true" dx="74.0017" dy="-139" lineColor="255,128,0"  aliasing="true"  />
+
+		<polygon id="Polygon_4" points="12.0003,213 12.0003,189 52.0003,213 52.0003,189" dx="80.0007" dy="-121" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_8" points="37.999,207 37.9983,191" dx="74.0017" dy="-127" lineWidth="1.5"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_1" points="25.9998,205 25.9998,189 49.9998,189 49.9998,205" dx="74.0002" dy="-141" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<port id="f_in" library="TURBOJET" type="Fuel"  hotPort="f_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="14" cy="12" dx="42" dy="68" />
+		
+		</port>
+
+		<port id="s_flow" library="PORTS_LIB" type="analog_signal"  hotPort="s_flow" >
+		
+				<symbol dx="112" dy="32" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="90" dy="4.001" />
+		
+		</port>
+
+		<port id="f_out" library="TURBOJET" type="Fuel"  hotPort="f_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="150" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="k"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="96.5" cy="118" sx="97" sy="12" variable="f_in.W"  headerText="f_in.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dx="-28" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="183" cy="54" sx="102" sy="12" variable="f_out.W"  headerText="f_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

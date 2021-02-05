@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="THERMAL_EXAMPLES" component="two_thrusters" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="Space.s_temperature.signal[1]"/>
+  <variable name="thruster1.N105.s_temperature.signal[1]"/>
+  <variable name="thruster2.N105.s_temperature.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="thruster1.N1.T"/>
+  <variable name="thruster1.N2.T"/>
+  <variable name="thruster1.N3.T"/>
+  <variable name="thruster1.N4.T"/>
+  <variable name="thruster1.N5.T"/>
+  <variable name="thruster1.N6.T"/>
+  <variable name="thruster1.N7.T"/>
+  <variable name="thruster1.N8.T"/>
+  <variable name="thruster1.N9.T"/>
+  <variable name="thruster1.N10.T"/>
+  <variable name="thruster1.N11.T"/>
+  <variable name="thruster1.N12.T"/>
+  <variable name="thruster1.N13.T"/>
+  <variable name="thruster1.N14.T"/>
+  <variable name="thruster1.N15.T"/>
+  <variable name="thruster2.N1.T"/>
+  <variable name="thruster2.N2.T"/>
+  <variable name="thruster2.N3.T"/>
+  <variable name="thruster2.N4.T"/>
+  <variable name="thruster2.N5.T"/>
+  <variable name="thruster2.N6.T"/>
+  <variable name="thruster2.N7.T"/>
+  <variable name="thruster2.N8.T"/>
+  <variable name="thruster2.N9.T"/>
+  <variable name="thruster2.N10.T"/>
+  <variable name="thruster2.N11.T"/>
+  <variable name="thruster2.N12.T"/>
+  <variable name="thruster2.N13.T"/>
+  <variable name="thruster2.N14.T"/>
+  <variable name="thruster2.N15.T"/>
+</dynamics>
+<residues>
+  <r id="1" value="thruster1.N1.T' =  ZONE[1] (thruster1.N1.Boundary) 0	  OTHERS thruster1.N1.q / thruster1.N1.C"/>
+  <r id="2" value="thruster1.N2.T' =  ZONE[2] (thruster1.N2.Boundary) 0	  OTHERS thruster1.N2.q / thruster1.N2.C"/>
+  <r id="3" value="thruster1.N3.T' =  ZONE[3] (thruster1.N3.Boundary) 0	  OTHERS thruster1.N3.q / thruster1.N3.C"/>
+  <r id="4" value="thruster1.N4.T' =  ZONE[4] (thruster1.N4.Boundary) 0	  OTHERS thruster1.N4.q / thruster1.N4.C"/>
+  <r id="5" value="thruster1.N5.T' =  ZONE[5] (thruster1.N5.Boundary) 0	  OTHERS thruster1.N5.q / thruster1.N5.C"/>
+  <r id="6" value="thruster1.N6.T' =  ZONE[6] (thruster1.N6.Boundary) 0	  OTHERS thruster1.N6.q / thruster1.N6.C"/>
+  <r id="7" value="thruster1.N7.T' =  ZONE[7] (thruster1.N7.Boundary) 0	  OTHERS thruster1.N7.q / thruster1.N7.C"/>
+  <r id="8" value="thruster1.N8.T' =  ZONE[8] (thruster1.N8.Boundary) 0	  OTHERS thruster1.N8.q / thruster1.N8.C"/>
+  <r id="9" value="thruster1.N9.T' =  ZONE[9] (thruster1.N9.Boundary) 0	  OTHERS thruster1.N9.q / thruster1.N9.C"/>
+  <r id="10" value="thruster1.N10.T' =  ZONE[10] (thruster1.N10.Boundary) 0	  OTHERS thruster1.N10.q / thruster1.N10.C"/>
+  <r id="11" value="thruster1.N11.T' =  ZONE[11] (thruster1.N11.Boundary) 0	  OTHERS thruster1.N11.q / thruster1.N11.C"/>
+  <r id="12" value="thruster1.N12.T' =  ZONE[12] (thruster1.N12.Boundary) 0	  OTHERS thruster1.N12.q / thruster1.N12.C"/>
+  <r id="13" value="thruster1.N13.T' =  ZONE[13] (thruster1.N13.Boundary) 0	  OTHERS thruster1.N13.q / thruster1.N13.C"/>
+  <r id="14" value="thruster1.N14.T' =  ZONE[14] (thruster1.N14.Boundary) 0	  OTHERS thruster1.N14.q / thruster1.N14.C"/>
+  <r id="15" value="thruster1.N15.T' =  ZONE[15] (thruster1.N15.Boundary) 0	  OTHERS thruster1.N15.q / thruster1.N15.C"/>
+  <r id="16" value="thruster2.N1.T' =  ZONE[16] (thruster2.N1.Boundary) 0	  OTHERS thruster2.N1.q / thruster2.N1.C"/>
+  <r id="17" value="thruster2.N2.T' =  ZONE[17] (thruster2.N2.Boundary) 0	  OTHERS thruster2.N2.q / thruster2.N2.C"/>
+  <r id="18" value="thruster2.N3.T' =  ZONE[18] (thruster2.N3.Boundary) 0	  OTHERS thruster2.N3.q / thruster2.N3.C"/>
+  <r id="19" value="thruster2.N4.T' =  ZONE[19] (thruster2.N4.Boundary) 0	  OTHERS thruster2.N4.q / thruster2.N4.C"/>
+  <r id="20" value="thruster2.N5.T' =  ZONE[20] (thruster2.N5.Boundary) 0	  OTHERS thruster2.N5.q / thruster2.N5.C"/>
+  <r id="21" value="thruster2.N6.T' =  ZONE[21] (thruster2.N6.Boundary) 0	  OTHERS thruster2.N6.q / thruster2.N6.C"/>
+  <r id="22" value="thruster2.N7.T' =  ZONE[22] (thruster2.N7.Boundary) 0	  OTHERS thruster2.N7.q / thruster2.N7.C"/>
+  <r id="23" value="thruster2.N8.T' =  ZONE[23] (thruster2.N8.Boundary) 0	  OTHERS thruster2.N8.q / thruster2.N8.C"/>
+  <r id="24" value="thruster2.N9.T' =  ZONE[24] (thruster2.N9.Boundary) 0	  OTHERS thruster2.N9.q / thruster2.N9.C"/>
+  <r id="25" value="thruster2.N10.T' =  ZONE[25] (thruster2.N10.Boundary) 0	  OTHERS thruster2.N10.q / thruster2.N10.C"/>
+  <r id="26" value="thruster2.N11.T' =  ZONE[26] (thruster2.N11.Boundary) 0	  OTHERS thruster2.N11.q / thruster2.N11.C"/>
+  <r id="27" value="thruster2.N12.T' =  ZONE[27] (thruster2.N12.Boundary) 0	  OTHERS thruster2.N12.q / thruster2.N12.C"/>
+  <r id="28" value="thruster2.N13.T' =  ZONE[28] (thruster2.N13.Boundary) 0	  OTHERS thruster2.N13.q / thruster2.N13.C"/>
+  <r id="29" value="thruster2.N14.T' =  ZONE[29] (thruster2.N14.Boundary) 0	  OTHERS thruster2.N14.q / thruster2.N14.C"/>
+  <r id="30" value="thruster2.N15.T' =  ZONE[30] (thruster2.N15.Boundary) 0	  OTHERS thruster2.N15.q / thruster2.N15.C"/>
+</residues>
+</partitionInfo>

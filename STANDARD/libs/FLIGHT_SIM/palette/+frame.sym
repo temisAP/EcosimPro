@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Frame" >
+
+		<line id="Line_1" points="144.999,269 161.001,269" dx="-65.001" dy="-189" lineColor="128,0,0"   />
+
+		<line id="Line_2" points="237.001,269 217.001,269" dx="-77.001" dy="-189" lineColor="85,85,255"   />
+
+		<polygon id="Polygon_2" points="159.646,230.314 159.646,174.314 211.646,202.314" dx="-67.646" dy="-122.314" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<port id="forces_in" library="FLIGHT_SIM" type="Forces" >
+		
+				<symbol dx="79.998" dy="80" onLabel="true" />
+		
+				<label cx="30" cy="12" dx="9.998" dy="68" />
+		
+		</port>
+
+		<port id="state_out" library="FLIGHT_SIM" type="State"  hotPort="state_out" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="31" cy="12" dx="169" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Geometry">
+				<var name="mass"/>
+				<var name="Ixx"/>
+				<var name="Ixy"/>
+				<var name="Ixz"/>
+				<var name="Iyy"/>
+				<var name="Iyz"/>
+				<var name="Izz"/>
+			</tab>
+			<tab name="Initial Conditions">
+				<var name="R_o"/>
+				<var name="phi_o"/>
+				<var name="psi_o"/>
+				<var name="theta_o"/>
+			</tab>
+			<tab name="Calculation options">
+				<var name="InitFlag"/>
+				<var name="lambda_ERR"/>
+				<var name="quater"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="117.5" cy="26" sx="99" sy="12" variable="forces_in.F[1]"  headerText="forces_in.F[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="118.5" cy="38" sx="101" sy="12" variable="forces_in.M[1]"  headerText="forces_in.M[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

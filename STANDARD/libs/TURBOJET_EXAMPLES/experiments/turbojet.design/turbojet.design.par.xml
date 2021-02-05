@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="TURBOJET_EXAMPLES" component="turbojet" partition="design">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="burner.GLP"/>
+  <variable name="burner.VOL"/>
+  <variable name="compressor.CG1"/>
+  <variable name="compressor.CG2"/>
+  <variable name="compressor.CG4"/>
+  <variable name="compressor.ND"/>
+  <variable name="nozzle.A_exit"/>
+  <variable name="turbine.CG1"/>
+  <variable name="turbine.CG2"/>
+  <variable name="turbine.CG3"/>
+  <variable name="turbine.CG4"/>
+</noDatas>
+<boundaries>
+  <variable name="TURBOJET.Altitude"/>
+  <variable name="TURBOJET.Mach"/>
+  <variable name="burner.AL"/>
+  <variable name="burner.PQ"/>
+  <variable name="compressor.DN"/>
+  <variable name="compressor.EPD"/>
+  <variable name="compressor.PCNR"/>
+  <variable name="compressor.PQ"/>
+  <variable name="compressor.beta"/>
+  <variable name="compressor.g_in.W"/>
+  <variable name="turbine.DHQTJ"/>
+  <variable name="turbine.EPD"/>
+  <variable name="turbine.NRJ"/>
+  <variable name="turbine.g_in.T"/>
+</boundaries>
+<dynamics>
+  <variable name="compressor.N"/>
+</dynamics>
+<algebraics>
+  <variable name="split1.g_in.T"/>
+  <variable name="turbine.g_in.W"/>
+</algebraics>
+<residues>
+  <r id="1" value="compressor.N' = compressor.DN"/>
+  <r id="2" value="(TURBOJET.Phi_T_FAR(split1.g_in.T, compressor.g_in.FAR) - TURBOJET.Phi_T_FAR(compressor.g_in.T, compressor.g_in.FAR)) * compressor.EPD = TURBOJET.R_FAR(compressor.g_in.FAR) * log(compressor.PQ)"/>
+  <r id="3" value="burner.g_out.W * burner.g_out.H = burner.g_in.W * split1.g_in.H + burner.eta * fuelmeter.f_in.W * fuel_tank.FHV * 1000"/>
+</residues>
+</partitionInfo>

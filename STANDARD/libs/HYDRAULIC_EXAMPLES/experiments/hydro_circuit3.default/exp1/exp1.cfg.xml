@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.2.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_3" x="0" y="436" dx="998" dy="218">
+				<plot id="Plot_3">
+					<axeX variableName="TIME">
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="HydTank1.H[1]" nick="HydTank1.H[1]" lineColor="255,0,0"/>
+						<var name="HydTank2.H[1]" nick="HydTank2.H[1]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="218" dx="998" dy="218">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="HydValve1.Av" nick="HydValve1.Av" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="998" dy="218">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-1" max="1" autoRange="true"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="HydFlowMeter1.hp_out.w" nick="HydFlowMeter1.hp_out.w" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="319" height="152" visible="true" pos="right" >
+		<var name="Cntrl_pid1.s_set.signal[1]" code="0"/>
+	</watch>
+	<outputWindow height="152" width="1280" visible="true" pos="bottom" />
+</experiment>

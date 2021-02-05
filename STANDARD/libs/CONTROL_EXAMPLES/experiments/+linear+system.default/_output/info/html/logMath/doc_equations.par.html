@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+linear+system.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+linear+system.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 16<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>compensator.z[1] = <b><font color="red">compensator.z[1].</font></b><br/>
+<a name="e2">[E-2] </a>compensator.z[2] = <b><font color="red">compensator.z[2].</font></b><br/>
+<a name="e3">[E-3] </a>process_plant.z[1] = <b><font color="red">process_plant.z[1].</font></b><br/>
+<a name="e4">[E-4] </a>process_plant.z[2] = <b><font color="red">process_plant.z[2].</font></b><br/>
+<a name="e5">[E-5] </a>process_plant.z[3] = <b><font color="red">process_plant.z[3].</font></b><br/>
+<a name="e6">[E-6] </a>comparator.s_in_2.signal[1] = process_plant.p[1] * process_plant.z[1]<br/>
+<a name="e7">[E-7] </a>amplifier.s_in.signal[1] = comparator.s_in_1.signal[1] - comparator.s_in_2.signal[1]<br/>
+<a name="e8">[E-8] </a>summer_1.s_in_1.signal[1] = amplifier.k[1] * amplifier.s_in.signal[1]<br/>
+<a name="e9">[E-9] </a>compensator.s_in.signal[1] = summer_1.s_in_1.signal[1] + summer_1.s_in_2.signal[1]<br/>
+<a name="e10">[E-10] </a>compensator.z[1]' = compensator.z[2]<br/>
+<a name="e11">[E-11] </a>compensator.z[2]' = (compensator.s_in.signal[1] - (compensator.q[3] * compensator.z[1] + compensator.q[2] * compensator.z[2])) / compensator.q[1]<br/>
+<a name="e12">[E-12] </a>summer_2.s_in_1.signal[1] = compensator.p[3] * compensator.z[1] + compensator.p[2] * compensator.z[1]' + compensator.p[1] * compensator.z[2]'<br/>
+<a name="e13">[E-13] </a>process_plant.s_in.signal[1] = summer_2.s_in_1.signal[1] + summer_2.s_in_2.signal[1]<br/>
+<a name="e14">[E-14] </a>process_plant.z[1]' = process_plant.z[2]<br/>
+<a name="e15">[E-15] </a>process_plant.z[2]' = process_plant.z[3]<br/>
+<a name="e16">[E-16] </a>process_plant.z[3]' = (process_plant.s_in.signal[1] - (process_plant.q[4] * process_plant.z[1] + process_plant.q[3] * process_plant.z[2] + process_plant.q[2] * process_plant.z[3])) / process_plant.q[1]<br/>
+</body></html>

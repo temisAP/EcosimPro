@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="HydTank1" library="HYDRAULIC" type="HydTank" layer="1" elPosition="11"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="64" sx="137" sy="104" dy="288" />
+	
+		<label cx="32.5" cy="12" dx="96" dy="400" />
+	
+	</component>
+
+	<component id="HydTank3" library="HYDRAULIC" type="HydTank" layer="1" elPosition="12"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="64" sx="137" sy="104" dx="800" dy="544" />
+	
+		<label cx="32.5" cy="12" dx="896" dy="656" />
+	
+	</component>
+
+	<component id="HydTank2" library="HYDRAULIC" type="HydTank" layer="1" elPosition="13"  hotPort="hp_in" >
+	
+		<symbol cx="128" cy="64" sx="137" sy="104" dx="800" dy="32" />
+	
+		<label cx="32.5" cy="12" dx="896" dy="144" />
+	
+	</component>
+
+	<component id="HydPipe4" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="14"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="560" dy="559.999" />
+	
+		<label cx="32" cy="12" dx="672" dy="656" />
+	
+	</component>
+
+	<component id="HydPipe1" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="15"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="144" dy="303.999" />
+	
+		<label cx="32" cy="12" dx="256" dy="400" />
+	
+	</component>
+
+	<component id="HydPipe2" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="16"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="336" dy="303.999" />
+	
+		<label cx="32" cy="12" dx="448" dy="400" />
+	
+	</component>
+
+	<component id="HydPipe3" library="HYDRAULIC" type="HydPipe" layer="1" elPosition="17"  hotPort="hp_in" >
+	
+		<symbol cx="144" cy="80" sx="137" sy="17.5" dx="560" dy="47.9994" />
+	
+		<label cx="32" cy="12" dx="672" dy="144" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="HydPipe2" sPort="hp_out" eShape="HydPipe4" ePort="hp_in" points="544,640" elPosition="0" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_2" sShape="HydPipe4" sPort="hp_out" eShape="HydTank3" ePort="hp_in" points="768,640" elPosition="1" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_3" sShape="HydTank1" sPort="hp_out" eShape="HydPipe1" ePort="hp_in" elPosition="2" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_4" sShape="HydPipe1" sPort="hp_out" eShape="HydPipe2" ePort="hp_in" points="352,384" elPosition="3" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_5" sShape="HydPipe2" sPort="hp_out" eShape="HydPipe3" ePort="hp_in" points="544,128" elPosition="4" lineColor="0,170,255" lineWidth="4"   />
+
+	<connector id="Connector_6" sShape="HydPipe3" sPort="hp_out" eShape="HydTank2" ePort="hp_in" elPosition="5" lineColor="0,170,255" lineWidth="4"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+&#34;Simple hydraulic circuit example 2&#34;
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="HYDRAULIC" version="3.1" auto="false" />
+</schematic>

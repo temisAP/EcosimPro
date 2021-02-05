@@ -1,0 +1,26 @@
+
+EXPERIMENT exp1 ON Example_DriveTrain.p2
+
+DECLS
+
+INIT    -- set initial values for variables
+     -- Dynamic variables
+   inertia3.w = 0
+   inertia2.w = 0
+   brake.w = 0
+     -- Algebraic variables
+   clutch.sa = 0
+   brake.sa = 0
+   brake.w' = 0
+
+BOUNDS    -- set expressions for boundary variables: v = f(t,...)
+
+
+
+BODY
+   REPORT_MODE = IS_STEP
+   TIME = 0
+   TSTOP = 2
+   CINT = 0.01
+   INTEG()
+END EXPERIMENT

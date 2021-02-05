@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="ZeroOrderHold" >
+
+		<line id="Line_1" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="40.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_2" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,128,0"  aliasing="true"  />
+
+		<rect id="Rectangle_1" cx="105" cy="32" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<line id="Line_3" points="261,1043 261,1035 261,1031 269,1031 269,1039 273,1039 273,1023 277,1023 277,1043 281,1043 285,1043 285,1031" dx="-161" dy="-954" lineWidth="2"  aliasing="true"  />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="42" dy="72" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="72" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="dt"/>
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="84.5" cy="46" sx="97" sy="12" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="211" cy="98" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-24" dy="4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

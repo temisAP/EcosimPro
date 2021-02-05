@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16_+autopiloted.wind+effects.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+f16_+autopiloted.wind+effects.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>F16.Addition_1.s_in_2.signal&nbsp;</td><td>F16.Trimmer.s_throttle.signal&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>F16.Aero.altitude&nbsp;</td><td>F16.Engine.altitude&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>F16.Aero.s_aileron.signal&nbsp;</td><td>F16.Ail_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>F16.Aero.s_elevator.signal&nbsp;</td><td>F16.El_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>F16.Aero.s_rudder.signal&nbsp;</td><td>F16.Rdr_Actuator.s_out.signal&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>F16.Ail_Actuator.s_in.signal&nbsp;</td><td>F16.Sum_2.s_out.signal&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>F16.El_Actuator.s_in.signal&nbsp;</td><td>F16.Sum_1.s_out.signal&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>F16.Engine.s_Mach.signal&nbsp;</td><td>F16.Aero.s_Mach.signal, F16.Engine.Mach&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>F16.Engine.s_throttle.signal&nbsp;</td><td>F16.Addition_1.s_out.signal, F16.Engine.throttle&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>F16.Rdr_Actuator.s_in.signal&nbsp;</td><td>F16.Sum_3.s_out.signal&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>F16.Sum_1.s_in_1.signal&nbsp;</td><td>F16.s_elevator.signal, qAutopilot.Dif2.s_out.signal, qAutopilot.s_elevator.signal&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>F16.Sum_1.s_in_2.signal&nbsp;</td><td>F16.Trimmer.s_elevator.signal&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>F16.Sum_2.s_in_1.signal&nbsp;</td><td>F16.s_aileron.signal, prAutopilot.k_ARI.s_in_1.signal, prAutopilot.pGyro_gain.s_out.signal, prAutopilot.s_aileron.signal&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>F16.Sum_2.s_in_2.signal&nbsp;</td><td>F16.Trimmer.s_aileron.signal&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>F16.Sum_3.s_in_1.signal&nbsp;</td><td>F16.s_rudder.signal, prAutopilot.Sum2.s_out.signal, prAutopilot.s_rudder.signal&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>F16.Sum_3.s_in_2.signal&nbsp;</td><td>F16.Trimmer.s_rudder.signal&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>prAutopilot.AOA_filter.s_in.signal&nbsp;</td><td>prAutopilot.AOASensor.s_out.signal&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>prAutopilot.Dif1.s_in_2.signal&nbsp;</td><td>prAutopilot.Mult.s_in_1.signal, prAutopilot.p_GyroSensor.s_out.signal&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>prAutopilot.Dif2.s_in_2.signal&nbsp;</td><td>prAutopilot.Sum1.s_out.signal&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>prAutopilot.Dif3.s_in_1.signal&nbsp;</td><td>prAutopilot.r_GyroSensor.s_out.signal&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>prAutopilot.Dif3.s_in_2.signal&nbsp;</td><td>prAutopilot.Mult.s_out.signal&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>prAutopilot.Sum1.s_in_1.signal&nbsp;</td><td>prAutopilot.rGyro_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>prAutopilot.Sum1.s_in_2.signal&nbsp;</td><td>prAutopilot.yAccel_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>prAutopilot.Sum2.s_in_1.signal&nbsp;</td><td>prAutopilot.Dif2.s_out.signal&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>prAutopilot.Sum2.s_in_2.signal&nbsp;</td><td>prAutopilot.k_ARI.s_out.signal&nbsp;</td></tr>
+<tr><td>26&nbsp;</td><td>prAutopilot.k_ARI.s_in_2.signal&nbsp;</td><td>prAutopilot.AOA_filter.s_out.signal, prAutopilot.Mult.s_in_2.signal&nbsp;</td></tr>
+<tr><td>27&nbsp;</td><td>prAutopilot.k_pGyro_aux&nbsp;</td><td>prAutopilot.pGyro_gain.k&nbsp;</td></tr>
+<tr><td>28&nbsp;</td><td>prAutopilot.k_rGyro_aux&nbsp;</td><td>prAutopilot.rGyro_gain.k&nbsp;</td></tr>
+<tr><td>29&nbsp;</td><td>prAutopilot.k_yAccel_aux&nbsp;</td><td>prAutopilot.yAccel_gain.k&nbsp;</td></tr>
+<tr><td>30&nbsp;</td><td>prAutopilot.pGyro_gain.s_in.signal&nbsp;</td><td>prAutopilot.Dif1.s_out.signal&nbsp;</td></tr>
+<tr><td>31&nbsp;</td><td>prAutopilot.rGyro_gain.s_in.signal&nbsp;</td><td>prAutopilot.yaw_control.s_out.signal&nbsp;</td></tr>
+<tr><td>32&nbsp;</td><td>prAutopilot.s_p.signal&nbsp;</td><td>prAutopilot.Dif1.s_in_1.signal&nbsp;</td></tr>
+<tr><td>33&nbsp;</td><td>prAutopilot.s_r.signal&nbsp;</td><td>prAutopilot.Dif2.s_in_1.signal&nbsp;</td></tr>
+<tr><td>34&nbsp;</td><td>prAutopilot.yAccel_gain.s_in.signal&nbsp;</td><td>prAutopilot.y_AccelSensor.s_out.signal&nbsp;</td></tr>
+<tr><td>35&nbsp;</td><td>prAutopilot.yaw_control.s_in.signal&nbsp;</td><td>prAutopilot.Dif3.s_out.signal&nbsp;</td></tr>
+<tr><td>36&nbsp;</td><td>qAutopilot.AOA_filter.s_in.signal&nbsp;</td><td>qAutopilot.AOASensor.s_out.signal&nbsp;</td></tr>
+<tr><td>37&nbsp;</td><td>qAutopilot.AOA_gain.s_in.signal&nbsp;</td><td>qAutopilot.AOA_filter.s_out.signal&nbsp;</td></tr>
+<tr><td>38&nbsp;</td><td>qAutopilot.Dif1.s_in_2.signal&nbsp;</td><td>qAutopilot.qGyro_gain.s_in.signal, qAutopilot.q_GyroSensor.s_out.signal&nbsp;</td></tr>
+<tr><td>39&nbsp;</td><td>qAutopilot.Dif2.s_in_1.signal&nbsp;</td><td>qAutopilot.Sum1.s_out.signal&nbsp;</td></tr>
+<tr><td>40&nbsp;</td><td>qAutopilot.Dif2.s_in_2.signal&nbsp;</td><td>qAutopilot.Sum2.s_out.signal&nbsp;</td></tr>
+<tr><td>41&nbsp;</td><td>qAutopilot.Error_gain.s_in.signal&nbsp;</td><td>qAutopilot.Dif1.s_out.signal, qAutopilot.Integ.s_in.signal&nbsp;</td></tr>
+<tr><td>42&nbsp;</td><td>qAutopilot.Integ.s_out.signal&nbsp;</td><td>qAutopilot.Integ_gain.s_in.signal&nbsp;</td></tr>
+<tr><td>43&nbsp;</td><td>qAutopilot.Sum1.s_in_1.signal&nbsp;</td><td>qAutopilot.Error_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>44&nbsp;</td><td>qAutopilot.Sum1.s_in_2.signal&nbsp;</td><td>qAutopilot.Integ_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>45&nbsp;</td><td>qAutopilot.Sum2.s_in_1.signal&nbsp;</td><td>qAutopilot.qGyro_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>46&nbsp;</td><td>qAutopilot.Sum2.s_in_2.signal&nbsp;</td><td>qAutopilot.AOA_gain.s_out.signal&nbsp;</td></tr>
+<tr><td>47&nbsp;</td><td>qAutopilot.k_AOA_aux&nbsp;</td><td>qAutopilot.AOA_gain.k&nbsp;</td></tr>
+<tr><td>48&nbsp;</td><td>qAutopilot.k_Err_aux&nbsp;</td><td>qAutopilot.Error_gain.k&nbsp;</td></tr>
+<tr><td>49&nbsp;</td><td>qAutopilot.k_Integ_aux&nbsp;</td><td>qAutopilot.Integ_gain.k&nbsp;</td></tr>
+<tr><td>50&nbsp;</td><td>qAutopilot.k_qGyro_aux&nbsp;</td><td>qAutopilot.qGyro_gain.k&nbsp;</td></tr>
+<tr><td>51&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.A&nbsp;</td><td>F16.Aero.state_in.A, F16.Engine.state_in.A, F16.Frame.state_out.A, F16.Trimmer.state_in.A, F16.state_out.A, prAutopilot.AOASensor.state_in.A, prAutopilot.p_GyroSensor.state_in.A, prAutopilot.r_GyroSensor.state_in.A, prAutopilot.state_in.A, prAutopilot.y_AccelSensor.state_in.A, qAutopilot.AOASensor.state_in.A, qAutopilot.state_in.A&nbsp;</td></tr>
+<tr><td>52&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.R&nbsp;</td><td>F16.Aero.state_in.R, F16.Engine.state_in.R, F16.Frame.state_out.R, F16.Trimmer.state_in.R, F16.state_out.R, prAutopilot.AOASensor.state_in.R, prAutopilot.p_GyroSensor.state_in.R, prAutopilot.r_GyroSensor.state_in.R, prAutopilot.state_in.R, prAutopilot.y_AccelSensor.state_in.R, qAutopilot.AOASensor.state_in.R, qAutopilot.state_in.R&nbsp;</td></tr>
+<tr><td>53&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.Rdot&nbsp;</td><td>F16.Aero.state_in.Rdot, F16.Engine.state_in.Rdot, F16.Frame.state_out.Rdot, F16.Trimmer.state_in.Rdot, F16.state_out.Rdot, prAutopilot.AOASensor.state_in.Rdot, prAutopilot.p_GyroSensor.state_in.Rdot, prAutopilot.r_GyroSensor.state_in.Rdot, prAutopilot.state_in.Rdot, prAutopilot.y_AccelSensor.state_in.Rdot, qAutopilot.AOASensor.state_in.Rdot, qAutopilot.state_in.Rdot&nbsp;</td></tr>
+<tr><td>54&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.V&nbsp;</td><td>F16.Aero.state_in.V, F16.Engine.state_in.V, F16.Frame.state_out.V, F16.Trimmer.V, F16.Trimmer.state_in.V, F16.state_out.V, prAutopilot.AOASensor.state_in.V, prAutopilot.p_GyroSensor.state_in.V, prAutopilot.r_GyroSensor.state_in.V, prAutopilot.state_in.V, prAutopilot.y_AccelSensor.state_in.V, qAutopilot.AOASensor.state_in.V, qAutopilot.state_in.V&nbsp;</td></tr>
+<tr><td>55&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.VT&nbsp;</td><td>F16.Aero.VT, F16.Aero.state_in.VT, F16.Engine.state_in.VT, F16.Frame.VT, F16.Frame.state_out.VT, F16.Trimmer.VT, F16.Trimmer.state_in.VT, F16.state_out.VT, prAutopilot.AOASensor.state_in.VT, prAutopilot.p_GyroSensor.state_in.VT, prAutopilot.r_GyroSensor.state_in.VT, prAutopilot.state_in.VT, prAutopilot.y_AccelSensor.state_in.VT, qAutopilot.AOASensor.state_in.VT, qAutopilot.state_in.VT&nbsp;</td></tr>
+<tr><td>56&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.Vdot&nbsp;</td><td>F16.Aero.state_in.Vdot, F16.Engine.state_in.Vdot, F16.Frame.state_out.Vdot, F16.Trimmer.state_in.Vdot, F16.state_out.Vdot, prAutopilot.AOASensor.state_in.Vdot, prAutopilot.p_GyroSensor.state_in.Vdot, prAutopilot.r_GyroSensor.state_in.Vdot, prAutopilot.state_in.Vdot, prAutopilot.y_AccelSensor.state_in.Vdot, qAutopilot.AOASensor.state_in.Vdot, qAutopilot.state_in.Vdot&nbsp;</td></tr>
+<tr><td>57&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.W&nbsp;</td><td>F16.Aero.state_in.W, F16.Engine.state_in.W, F16.Frame.state_out.W, F16.Trimmer.W, F16.Trimmer.state_in.W, F16.state_out.W, prAutopilot.AOASensor.state_in.W, prAutopilot.p_GyroSensor.state_in.W, prAutopilot.r_GyroSensor.state_in.W, prAutopilot.state_in.W, prAutopilot.y_AccelSensor.W, prAutopilot.y_AccelSensor.state_in.W, qAutopilot.AOASensor.state_in.W, qAutopilot.state_in.W&nbsp;</td></tr>
+<tr><td>58&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.Wdot&nbsp;</td><td>F16.Aero.state_in.Wdot, F16.Engine.state_in.Wdot, F16.Frame.state_out.Wdot, F16.Trimmer.state_in.Wdot, F16.state_out.Wdot, prAutopilot.AOASensor.state_in.Wdot, prAutopilot.p_GyroSensor.state_in.Wdot, prAutopilot.r_GyroSensor.state_in.Wdot, prAutopilot.state_in.Wdot, prAutopilot.y_AccelSensor.Wdot, prAutopilot.y_AccelSensor.state_in.Wdot, qAutopilot.AOASensor.state_in.Wdot, qAutopilot.state_in.Wdot&nbsp;</td></tr>
+<tr><td>59&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.alpha&nbsp;</td><td>F16.Aero.state_in.alpha, F16.Engine.state_in.alpha, F16.Frame.alpha, F16.Frame.state_out.alpha, F16.Trimmer.alpha, F16.Trimmer.state_in.alpha, F16.state_out.alpha, prAutopilot.AOASensor.state_in.alpha, prAutopilot.AOASensor.v, prAutopilot.p_GyroSensor.state_in.alpha, prAutopilot.r_GyroSensor.state_in.alpha, prAutopilot.state_in.alpha, prAutopilot.y_AccelSensor.state_in.alpha, qAutopilot.AOASensor.state_in.alpha, qAutopilot.AOASensor.v, qAutopilot.state_in.alpha&nbsp;</td></tr>
+<tr><td>60&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.beta&nbsp;</td><td>F16.Aero.state_in.beta, F16.Engine.state_in.beta, F16.Frame.beta, F16.Frame.state_out.beta, F16.Trimmer.beta, F16.Trimmer.state_in.beta, F16.state_out.beta, prAutopilot.AOASensor.state_in.beta, prAutopilot.p_GyroSensor.state_in.beta, prAutopilot.r_GyroSensor.state_in.beta, prAutopilot.state_in.beta, prAutopilot.y_AccelSensor.state_in.beta, qAutopilot.AOASensor.state_in.beta, qAutopilot.state_in.beta&nbsp;</td></tr>
+<tr><td>61&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.phi&nbsp;</td><td>F16.Aero.state_in.phi, F16.Engine.state_in.phi, F16.Frame.phi, F16.Frame.state_out.phi, F16.Trimmer.phi, F16.Trimmer.state_in.phi, F16.state_out.phi, prAutopilot.AOASensor.state_in.phi, prAutopilot.p_GyroSensor.state_in.phi, prAutopilot.r_GyroSensor.state_in.phi, prAutopilot.state_in.phi, prAutopilot.y_AccelSensor.state_in.phi, qAutopilot.AOASensor.state_in.phi, qAutopilot.state_in.phi&nbsp;</td></tr>
+<tr><td>62&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.psi&nbsp;</td><td>F16.Aero.state_in.psi, F16.Engine.state_in.psi, F16.Frame.psi, F16.Frame.state_out.psi, F16.Trimmer.psi, F16.Trimmer.state_in.psi, F16.state_out.psi, prAutopilot.AOASensor.state_in.psi, prAutopilot.p_GyroSensor.state_in.psi, prAutopilot.r_GyroSensor.state_in.psi, prAutopilot.state_in.psi, prAutopilot.y_AccelSensor.state_in.psi, qAutopilot.AOASensor.state_in.psi, qAutopilot.state_in.psi&nbsp;</td></tr>
+<tr><td>63&nbsp;</td><td>qAutopilot.q_GyroSensor.state_in.theta&nbsp;</td><td>F16.Aero.state_in.theta, F16.Engine.state_in.theta, F16.Frame.state_out.theta, F16.Frame.theta, F16.Trimmer.state_in.theta, F16.Trimmer.theta, F16.state_out.theta, prAutopilot.AOASensor.state_in.theta, prAutopilot.p_GyroSensor.state_in.theta, prAutopilot.r_GyroSensor.state_in.theta, prAutopilot.state_in.theta, prAutopilot.y_AccelSensor.state_in.theta, qAutopilot.AOASensor.state_in.theta, qAutopilot.state_in.theta&nbsp;</td></tr>
+<tr><td>64&nbsp;</td><td>qAutopilot.s_q.signal&nbsp;</td><td>qAutopilot.Dif1.s_in_1.signal&nbsp;</td></tr>
+<tr><td>65&nbsp;</td><td>s_thtl.signal&nbsp;</td><td>F16.Addition_1.s_in_1.signal, F16.s_throttle.signal&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

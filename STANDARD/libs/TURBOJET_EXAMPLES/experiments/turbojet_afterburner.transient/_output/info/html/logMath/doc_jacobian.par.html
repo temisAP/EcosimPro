@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbojet_afterburner.transient.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbojet_afterburner.transient.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Jacobian Matrix Information<br /></h2>
+<br/>
+<font size="4" color="black">Jacobian Independent Variables</font><br/>
+<table border="1" cellspacing="0"><tr><td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>VARIABLE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>CATEGORY&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION&nbsp;</b></color></td>
+<td><color="black"><b>BOX
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v98" data-ajax='false'><font color="red">compressor.N</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v98" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>rpm&nbsp;</td><td>Rotational speed&nbsp;</td><td>&nbsp;</td><td>compressor.N' = turbine.DN&nbsp;</td><td>2&nbsp;</td></tr>
+<br/>
+<tr><td>2&nbsp;</td><td><a href="doc_vars.par.html#v106" data-ajax='false'><font color="green">compressor.beta</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v106" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Beta parameter&nbsp;</td><td>0.7&nbsp;</td><td>[E-31] split1.g_branch.W = split1.k * <b><font color="green">compressor.g_in.W</font></b>&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><a href="doc_vars.par.html#v112" data-ajax='false'><font color="green">compressor.g_in.W</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v112" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>kg/s&nbsp;</td><td>Mass flow (kg/s)&nbsp;</td><td>1&nbsp;</td><td>[E-36] IMPL(<b><font color="green">compressor.beta</font></b>) <b><font color="green">compressor.g_in.W</font></b> * ssqrt(compressor.theta) / compressor.delta = compressor.CG1 * compressor.WRJ&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><a href="doc_vars.par.html#v188" data-ajax='false'><font color="green">nozzle.g_in.W</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v188" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>kg/s&nbsp;</td><td>Mass flow (kg/s)&nbsp;</td><td>1&nbsp;</td><td>[E-67] IMPL(<b><font color="green">turbine.g_out.T</font></b>) turbine.WR - turbine.CG1 * turbine.WRJ = 0&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td><a href="doc_vars.par.html#v270" data-ajax='false'><font color="green">turbine.g_out.T</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v270" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>K&nbsp;</td><td>Temperature (K)&nbsp;</td><td>500&nbsp;</td><td>[E-96] 0 = nozzle.A_exit - <b><font color="green">nozzle.g_in.W</font></b> / (nozzle.Ps_out / (nozzle.Rgas * nozzle.Ts_out) * nozzle.v_out)&nbsp;</td><td>1&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

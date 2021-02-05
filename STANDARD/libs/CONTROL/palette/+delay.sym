@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Delay" >
+
+		<line id="Line_1" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.306" lineColor="255,128,0"   />
+
+		<line id="Line_4" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_1" cx="105" cy="32" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0"  />
+
+		<bezier id="Bezier_3" points="40,276 40,264 48,264 48,276 48,288 56,288 56,276" dx="67" dy="-196" lineColor="255,255,255" lineWidth="1.5"  aliasing="true"  />
+
+		<bezier id="Bezier_1" points="40,276 40,264 48,264 48,276 48,288 56,288 56,276" dx="63" dy="-196" lineWidth="2.5"  aliasing="true"  />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal"  hotPort="s_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="42" dy="75" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="75" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="n"/>
+				<var name="tdelay"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="96.5" cy="114" sx="97" sy="12" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="187" cy="114" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

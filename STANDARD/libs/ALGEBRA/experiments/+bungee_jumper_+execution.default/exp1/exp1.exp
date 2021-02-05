@@ -1,0 +1,14 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: ALGEBRA
+ COMPONENT: Bungee_jumper_Execution
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 05/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Bungee_jumper_Execution.default
+
+   BODY
+		EXEC_INIT()
+END EXPERIMENT

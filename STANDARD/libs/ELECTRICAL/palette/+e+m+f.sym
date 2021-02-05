@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="EMF" >
+
+		<line id="Line_6" points="32.3702,326.876 43.3588,326.823"  end_arrow="true" dx="227.63" dy="-218.876" lineColor="192,192,192"   />
+
+		<line id="Line_1" points="7.3702,368.876 7.3702,352.876" dx="236.63" dy="-234.876" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="7.3702,304.876 7.3702,288.876" dx="236.63" dy="-205.876" lineColor="0,192,0"   />
+
+		<ellipse id="Ellipse_1" cx="-1.6298" cy="318.876" rx="16" ry="16" dx="245.63" dy="-210.876" lineWidth="1.5"  color="0,192,0" aliasing="true"  />
+
+		<g id="Group_2" dx="154" dy="2.5" >
+		
+					<line id="Line_12" points="-14,117 -9,117" dx="111" dy="-36"  />
+		 />
+					<line id="Line_13" points="-14,117 -9,117" rotation="-90" dx="111" dy="-36"  />
+		 />
+		</g>
+
+		<line id="Line_15" points="30,116 34,116" dx="221" dy="18"  />
+
+		<port id="m_out" library="PORTS_LIB" type="mech_rot"  hotPort="m_out" >
+		
+				<symbol dx="276" dy="108" onLabel="true" />
+		
+				<label cx="26" cy="14" dx="274.5" dy="97" />
+		
+		</port>
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="244" dy="84" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="200.5" dy="73" />
+		
+		</port>
+
+		<port id="e_n" library="PORTS_LIB" type="elec"  hotPort="e_n" >
+		
+				<symbol dx="244" dy="132" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="201.5" dy="123" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="k"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="152.5" cy="107" sx="185" sy="30" variable="v"  headerText="v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-20" dy="-20" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="105.5" cy="139" sx="179" sy="30" variable="i"  headerText="i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="28" dy="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="448" cy="139" sx="352" sy="30" variable="m_out.omega"  headerText="m_out.omega"  tailText="rad/s" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dy="-12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

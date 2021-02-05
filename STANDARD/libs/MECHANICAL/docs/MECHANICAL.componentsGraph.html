@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="MECHANICAL.html">MECHANICAL&nbsp;Library</a> |
+	  <a class="qindexHL" href="MECHANICAL.components.html">Components</a> |
+	  <a class="qindex" href="MECHANICAL.ports.html">Ports</a> |
+	  <a class="qindex" href="MECHANICAL.classes.html">Classes</a> |
+	  <a class="qindex" href="MECHANICAL.functions.html">Functions</a> |
+	  <a class="qindex" href="MECHANICAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="MECHANICAL.global.html">Global Variables</a></div>
+<div class="qindex"><a class="qindex" href="MECHANICAL.components.html">Alphabetical</a> | 
+	  <a class="qindex" href="MECHANICAL.componentsTree.html">Inheritance&nbsp;Tree</a> | 
+	  <a class="qindexHL" href="MECHANICAL.componentsGraph.html">Inheritance&nbsp;Graph</a></div><h1 align="center">Components (Inheritance Graph)<br /><small></small></h1><hr><br>  <script type="text/javascript" src="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.js"></script>
+  <link href="file:///C:/Program Files/EcosimPro/EcosimPro_5.12.2/3rdparty/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    #mynetwork {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<div id="mynetwork"></div>
+<script type="text/javascript">
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'CONTROL.ASensor'},
+    {id: 2, label: 'MECHANICAL.Lever2'},
+    {id: 3, label: 'MECHANICAL.Lever3'},
+    {id: 4, label: 'MECHANICAL.R_AbsFriction'},
+    {id: 5, label: 'MECHANICAL.R_AbsoluteSensor'},
+    {id: 6, label: 'MECHANICAL.R_AbsoluteSensorAcceleration'},
+    {id: 7, label: 'MECHANICAL.R_AbsoluteSensorAngle'},
+    {id: 8, label: 'MECHANICAL.R_AbsoluteSensorTorque'},
+    {id: 9, label: 'MECHANICAL.R_AbsoluteSensorVelocity'},
+    {id: 10, label: 'MECHANICAL.R_Actuator'},
+    {id: 11, label: 'MECHANICAL.R_ActuatorAcceleration'},
+    {id: 12, label: 'MECHANICAL.R_ActuatorTorque'},
+    {id: 13, label: 'MECHANICAL.R_ActuatorVelocity'},
+    {id: 14, label: 'MECHANICAL.R_BearingFriction'},
+    {id: 15, label: 'MECHANICAL.R_Brake'},
+    {id: 16, label: 'MECHANICAL.R_Clutch'},
+    {id: 17, label: 'MECHANICAL.R_Compliant'},
+    {id: 18, label: 'MECHANICAL.R_Damper'},
+    {id: 19, label: 'MECHANICAL.R_Efficiency'},
+    {id: 20, label: 'MECHANICAL.R_ElastoBacklash'},
+    {id: 21, label: 'MECHANICAL.R_FixedTorque'},
+    {id: 22, label: 'MECHANICAL.R_FixedVelocity'},
+    {id: 23, label: 'MECHANICAL.R_Gear'},
+    {id: 24, label: 'MECHANICAL.R_GearFriction'},
+    {id: 25, label: 'MECHANICAL.R_GearIdeal'},
+    {id: 26, label: 'MECHANICAL.R_GearIdealR2T'},
+    {id: 27, label: 'MECHANICAL.R_Inertia'},
+    {id: 28, label: 'MECHANICAL.R_Piston'},
+    {id: 29, label: 'MECHANICAL.R_RelativeSensor'},
+    {id: 30, label: 'MECHANICAL.R_RelativeSensorAcceleration'},
+    {id: 31, label: 'MECHANICAL.R_RelativeSensorAngle'},
+    {id: 32, label: 'MECHANICAL.R_RelativeSensorSpeed'},
+    {id: 33, label: 'MECHANICAL.R_Rigid'},
+    {id: 34, label: 'MECHANICAL.R_Spring'},
+    {id: 35, label: 'MECHANICAL.R_SpringBacklash'},
+    {id: 36, label: 'MECHANICAL.R_SpringDamper'},
+    {id: 37, label: 'MECHANICAL.R_Stop'},
+    {id: 38, label: 'MECHANICAL.R_Two_Flanges'},
+    {id: 39, label: 'MECHANICAL.T_AbsoluteSensor'},
+    {id: 40, label: 'MECHANICAL.T_AbsoluteSensorAcceleration'},
+    {id: 41, label: 'MECHANICAL.T_AbsoluteSensorForce'},
+    {id: 42, label: 'MECHANICAL.T_AbsoluteSensorPosition'},
+    {id: 43, label: 'MECHANICAL.T_AbsoluteSensorVelocity'},
+    {id: 44, label: 'MECHANICAL.T_Actuator'},
+    {id: 45, label: 'MECHANICAL.T_ActuatorAcceleration'},
+    {id: 46, label: 'MECHANICAL.T_ActuatorForce'},
+    {id: 47, label: 'MECHANICAL.T_ActuatorPosition'},
+    {id: 48, label: 'MECHANICAL.T_Compliant'},
+    {id: 49, label: 'MECHANICAL.T_Damper'},
+    {id: 50, label: 'MECHANICAL.T_EWall'},
+    {id: 51, label: 'MECHANICAL.T_ElastoGap'},
+    {id: 52, label: 'MECHANICAL.T_FixedAcceleration'},
+    {id: 53, label: 'MECHANICAL.T_FixedForce'},
+    {id: 54, label: 'MECHANICAL.T_FixedPosition'},
+    {id: 55, label: 'MECHANICAL.T_Piston'},
+    {id: 56, label: 'MECHANICAL.T_RelativeSensor'},
+    {id: 57, label: 'MECHANICAL.T_Rigid'},
+    {id: 58, label: 'MECHANICAL.T_Rod'},
+    {id: 59, label: 'MECHANICAL.T_SlidingMass'},
+    {id: 60, label: 'MECHANICAL.T_Spring'},
+    {id: 61, label: 'MECHANICAL.T_SpringBacklash'},
+    {id: 62, label: 'MECHANICAL.T_SpringDamper'},
+    {id: 63, label: 'MECHANICAL.T_Stop'},
+    {id: 64, label: 'MECHANICAL.T_Two_Flanges'},
+    {id: 65, label: 'MECHANICAL.T_Wall'},
+  ]);
+  var edges = new vis.DataSet([
+    {from: 5, to: 1, arrows:'to'},
+    {from: 6, to: 5, arrows:'to'},
+    {from: 7, to: 5, arrows:'to'},
+    {from: 8, to: 29, arrows:'to'},
+    {from: 9, to: 5, arrows:'to'},
+    {from: 11, to: 10, arrows:'to'},
+    {from: 12, to: 10, arrows:'to'},
+    {from: 13, to: 10, arrows:'to'},
+    {from: 14, to: 4, arrows:'to'},
+    {from: 14, to: 33, arrows:'to'},
+    {from: 15, to: 4, arrows:'to'},
+    {from: 15, to: 33, arrows:'to'},
+    {from: 16, to: 4, arrows:'to'},
+    {from: 16, to: 17, arrows:'to'},
+    {from: 17, to: 38, arrows:'to'},
+    {from: 18, to: 17, arrows:'to'},
+    {from: 19, to: 33, arrows:'to'},
+    {from: 20, to: 17, arrows:'to'},
+    {from: 23, to: 38, arrows:'to'},
+    {from: 24, to: 38, arrows:'to'},
+    {from: 25, to: 38, arrows:'to'},
+    {from: 27, to: 33, arrows:'to'},
+    {from: 28, to: 57, arrows:'to'},
+    {from: 29, to: 1, arrows:'to'},
+    {from: 30, to: 29, arrows:'to'},
+    {from: 31, to: 29, arrows:'to'},
+    {from: 32, to: 29, arrows:'to'},
+    {from: 33, to: 38, arrows:'to'},
+    {from: 34, to: 17, arrows:'to'},
+    {from: 35, to: 17, arrows:'to'},
+    {from: 36, to: 17, arrows:'to'},
+    {from: 37, to: 33, arrows:'to'},
+    {from: 39, to: 1, arrows:'to'},
+    {from: 40, to: 39, arrows:'to'},
+    {from: 41, to: 56, arrows:'to'},
+    {from: 42, to: 39, arrows:'to'},
+    {from: 43, to: 39, arrows:'to'},
+    {from: 45, to: 44, arrows:'to'},
+    {from: 46, to: 44, arrows:'to'},
+    {from: 47, to: 44, arrows:'to'},
+    {from: 48, to: 64, arrows:'to'},
+    {from: 49, to: 48, arrows:'to'},
+    {from: 51, to: 48, arrows:'to'},
+    {from: 55, to: 57, arrows:'to'},
+    {from: 56, to: 1, arrows:'to'},
+    {from: 57, to: 64, arrows:'to'},
+    {from: 58, to: 57, arrows:'to'},
+    {from: 59, to: 57, arrows:'to'},
+    {from: 60, to: 48, arrows:'to'},
+    {from: 61, to: 48, arrows:'to'},
+    {from: 62, to: 48, arrows:'to'},
+    {from: 63, to: 57, arrows:'to'},
+  ]);
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {physics:{enabled:true},interaction:{navigationButtons:true,keyboard:true}};
+  var network = new vis.Network(container, data, options);
+</script>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:45)</font></p>
+</body>
+</html>

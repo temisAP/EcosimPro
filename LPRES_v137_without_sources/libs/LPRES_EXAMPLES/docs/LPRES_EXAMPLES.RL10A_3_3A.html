@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES_EXAMPLES.html">LPRES_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">LPRES_EXAMPLES.RL10A_3_3A<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="RL10A_3_3A">RL10A_3_3A</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Pump_LOX_dp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>aux1&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>plot1&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>plot2&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>plot3&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Combustion_Chamber&nbsp;</td><td><a href="../../LPRES/docs/LPRES.CombCha.html">LPRES.CombCha</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>ControlPanel&nbsp;</td><td><a href="../../LPRES/docs/LPRES.ControlPanel.html">LPRES.ControlPanel</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Cooling_Jacket&nbsp;</td><td><a href="../../LPRES/docs/LPRES.CoolingJacket.html">LPRES.CoolingJacket</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FlowMeter_LH2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.FlowMeter.html">LPRES.FlowMeter</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FlowMeter_LOX&nbsp;</td><td><a href="../../LPRES/docs/LPRES.FlowMeter.html">LPRES.FlowMeter</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Gear_Box&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Gearbox.html">LPRES.Gearbox</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Injectors_LH2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Injector.html">LPRES.Injector</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Injectors_LOX&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Injector.html">LPRES.Injector</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Tank_LH2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Tank_LOX&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Junction&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Junction.html">LPRES.Junction</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Pump1_LH2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Pump.html">LPRES.Pump</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Pump2_LH2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Pump.html">LPRES.Pump</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Pump_LOX&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Pump.html">LPRES.Pump</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FCV1&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FCV2&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FINV&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>FSOV&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>OCV&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>OINV&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>TCV&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>TDH&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Venturi&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Regulator.html">LPRES.Regulator</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Split_Frac&nbsp;</td><td><a href="../../LPRES/docs/LPRES.SplitFrac.html">LPRES.SplitFrac</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>ThrustMonitor&nbsp;</td><td><a href="../../LPRES/docs/LPRES.ThrustMonitor.html">LPRES.ThrustMonitor</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Turbine&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Turbine.html">LPRES.Turbine</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Combustion_Chamber.AR&nbsp;</td><td>61&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.AR_r&nbsp;</td><td>14&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Area at the characteristic section of heat exchange divided by the throat area&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.A_th&nbsp;</td><td>0.01238&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Throat area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.A_wet&nbsp;</td><td>4.645&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Nozzle wet area of the cooled zone&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.Cooled&nbsp;</td><td>Yes&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#YesNo" data-ajax='false'>LPRES.YesNo</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.M_P&nbsp;</td><td>14.25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Molar mass of the products using a stoichiometric mixture&nbsp;</td><td>"g/mol"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.OF_st&nbsp;</td><td>8&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Stoichiometric mixture ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.Q_comb&nbsp;</td><td>16000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Heat of combustion per oxidant mass flow unit&nbsp;</td><td>"J/kg"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.T_c0&nbsp;</td><td>3300&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial combustion temperature for iterative calculations&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.W_F0&nbsp;</td><td>2.7&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial fuel mass flow for iterative calculations&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.Zone&nbsp;</td><td>Divergent&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#ConDiv" data-ajax='false'>LPRES.ConDiv</a>&nbsp;</td><td>Convergent if the characteristic section of heat exchange is placed in the convergent zone of the nozzle, Divergent if it is placed in the divergent zone&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.cp_P&nbsp;</td><td>3700&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Specific heat at constant pressure of the products using a stoichiometric mixture&nbsp;</td><td>"J/(kg·K)"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.eta_d&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design combustion efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.p_c&nbsp;</td><td>3275010&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design combustion pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Combustion_Chamber.p_c0&nbsp;</td><td>5000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial combustion pressure for iterative calculations&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.L&nbsp;</td><td>1.48&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.N&nbsp;</td><td>180&nbsp;</td><td>DATA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of channels&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.Type&nbsp;</td><td>Darcy&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Cooling" data-ajax='false'>LPRES.Type_Cooling</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.a&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average width of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.b&nbsp;</td><td>0.008&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average height of the channels&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.dp&nbsp;</td><td>100000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop if Type=Known_dp&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.k_w&nbsp;</td><td>16.09&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Thermal conductivity of the nozzle wall material&nbsp;</td><td>"W/(m·K)"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.rug&nbsp;</td><td>5e-05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Absolute rugosity&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Cooling_Jacket.t_w&nbsp;</td><td>0.00033&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Nozzle wall thickness&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>FCV1.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>FCV1.dp&nbsp;</td><td>93079&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FCV1.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FCV1.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>FCV1.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FCV2.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>FCV2.dp&nbsp;</td><td>272342&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FCV2.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FCV2.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>FCV2.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FINV.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>FINV.dp&nbsp;</td><td>3254&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FINV.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FINV.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>FINV.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FSOV.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>FSOV.dp&nbsp;</td><td>263379&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FSOV.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>FSOV.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>FSOV.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Gear_Box.GR&nbsp;</td><td>2.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Gear ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Gear_Box.eta&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Injectors_LH2.A&nbsp;</td><td>0.00097&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Output area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Injectors_LH2.C_D&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge coefficient (used only in liquid state)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Injectors_LH2.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Injectors_LH2.W&nbsp;</td><td>2.72&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Injectors_LOX.A&nbsp;</td><td>0.001342&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Output area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Injectors_LOX.C_D&nbsp;</td><td>0.3&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge coefficient (used only in liquid state)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Injectors_LOX.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Injectors_LOX.W&nbsp;</td><td>14.25&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Junction.TPL&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure loss&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>OCV.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>OCV.dp&nbsp;</td><td>584674&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>OCV.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>OCV.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>OCV.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>OINV.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>OINV.dp&nbsp;</td><td>5502&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>OINV.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>OINV.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>OINV.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.A_in&nbsp;</td><td>0.00114&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.U_0&nbsp;</td><td>289&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.dp&nbsp;</td><td>7358000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design pressure increase&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.eta_d&nbsp;</td><td>0.581&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.phi_d&nbsp;</td><td>0.11195&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.psi_d&nbsp;</td><td>0.9946&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump1_LH2.r_m&nbsp;</td><td>0.0898&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.A_in&nbsp;</td><td>0.00114&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.U_0&nbsp;</td><td>289&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.dp&nbsp;</td><td>5000000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design pressure increase&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.eta_d&nbsp;</td><td>0.5619&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.phi_d&nbsp;</td><td>0.11195&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.psi_d&nbsp;</td><td>1.0989&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump2_LH2.r_m&nbsp;</td><td>0.0898&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.A_in&nbsp;</td><td>0.006&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.U_0&nbsp;</td><td>69&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.dp&nbsp;</td><td>4282000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design pressure increase&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.eta_d&nbsp;</td><td>0.6422&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.phi_d&nbsp;</td><td>0.02814&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.psi_d&nbsp;</td><td>1.09772&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Pump_LOX.r_m&nbsp;</td><td>0.05334&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Split_Frac.TPL&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure loss&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>TCV.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>TCV.dp&nbsp;</td><td>1613370&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>TCV.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>TCV.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>TCV.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>TDH.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>TDH.dp&nbsp;</td><td>124105&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>TDH.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>TDH.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>TDH.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Tank_LH2.Tt&nbsp;</td><td>21.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Tank_LH2.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Tank_LH2.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Tank_LH2.fluid&nbsp;</td><td>LH2&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Tank_LH2.pt&nbsp;</td><td>193000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Tank_LOX.Tt&nbsp;</td><td>98.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Tank_LOX.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Tank_LOX.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Tank_LOX.fluid&nbsp;</td><td>LOX&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Tank_LOX.pt&nbsp;</td><td>321000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Turbine.A_in&nbsp;</td><td>0.00142&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Turbine.M&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design Mach number in section 2 if Type_AC=Angles and Type=Design or initial Mach number in section 2 for iterative calculations&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Turbines" data-ajax='false'>LPRES.Type_Turbines</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Turbine.Type_AC&nbsp;</td><td>Angles&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#AngCoef" data-ajax='false'>LPRES.AngCoef</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Turbine.U_0&nbsp;</td><td>10000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>"m/s"&nbsp;</td></tr>
+
+<tr><td>Turbine.W&nbsp;</td><td>5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Turbine.alpha_2&nbsp;</td><td>55&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Flow angle in section 2&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Turbine.alpha_4r&nbsp;</td><td>-55&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Relative flow angle in section 4 if Type_AC=Angles&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Turbine.eta_d&nbsp;</td><td>0.7353&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine.phi_d&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design flow coefficient if Type_AC=Coefficients&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine.pi&nbsp;</td><td>1.5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design expansion ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine.psi_d&nbsp;</td><td>0.7&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design loading coefficient if Type_AC=Coefficients&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine.r_m&nbsp;</td><td>0.07493&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Average radius&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>Turbine.rpm&nbsp;</td><td>30000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed [rpm]&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+<tr><td>Venturi.Type&nbsp;</td><td>Known_dp&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Regulator" data-ajax='false'>LPRES.Type_Regulator</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Venturi.dp&nbsp;</td><td>120658&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Venturi.dp_min&nbsp;</td><td>1500&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Minumum total pressure drop&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Venturi.dpr&nbsp;</td><td>0.1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Imposed total pressure drop ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Venturi.pt_out&nbsp;</td><td>1200000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outlet total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:56)</font></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="CONTROL_EXAMPLES" component="LinearSystem" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="comparator.s_in_1.signal[1]"/>
+  <variable name="summer_1.s_in_2.signal[1]"/>
+  <variable name="summer_2.s_in_2.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="compensator.z[1]"/>
+  <variable name="compensator.z[2]"/>
+  <variable name="process_plant.z[1]"/>
+  <variable name="process_plant.z[2]"/>
+  <variable name="process_plant.z[3]"/>
+</dynamics>
+<residues>
+  <r id="1" value="compensator.z[1]' = compensator.z[2]"/>
+  <r id="2" value="compensator.z[2]' = (compensator.s_in.signal[1] - (compensator.q[3] * compensator.z[1] + compensator.q[2] * compensator.z[2])) / compensator.q[1]"/>
+  <r id="3" value="process_plant.z[1]' = process_plant.z[2]"/>
+  <r id="4" value="process_plant.z[2]' = process_plant.z[3]"/>
+  <r id="5" value="process_plant.z[3]' = (process_plant.s_in.signal[1] - (process_plant.q[4] * process_plant.z[1] + process_plant.q[3] * process_plant.z[2] + process_plant.q[2] * process_plant.z[3])) / process_plant.q[1]"/>
+</residues>
+</partitionInfo>

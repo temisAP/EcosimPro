@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="LossyGearDemo1.p1.exp1_1" x="0" y="365" dx="1061" dy="365">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="LossyGearDemo1.p1.exp1_1" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="inertia2.m_out.T" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="LossyGearDemo1.p1.exp1_2" x="0" y="0" dx="1061" dy="365">
+				<plot id="">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME">
+							<font size="8" />
+						</titleAxe>
+					</axeX>
+					<axeY>
+						<titleAxe value="">
+							<font size="8" />
+						</titleAxe>
+					</axeY>
+					<title value="LossyGearDemo1.p1.exp1_2" isShowed="false">
+						<font size="10" />
+					</title>
+					<chartStyles>
+						<var name="inertia1.w" lineColor="255,0,0"/>
+						<var name="inertia2.w" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+
+	<outputWindow height="112" visible="true"/>
+</experiment>

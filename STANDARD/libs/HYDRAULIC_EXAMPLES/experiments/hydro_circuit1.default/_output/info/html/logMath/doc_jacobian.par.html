@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit1.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit1.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Jacobian Matrix Information<br /></h2>
+<br/>
+<font size="4" color="black">Jacobian Independent Variables</font><br/>
+<table border="1" cellspacing="0"><tr><td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>VARIABLE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>CATEGORY&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION&nbsp;</b></color></td>
+<td><color="black"><b>BOX
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v25" data-ajax='false'><font color="red">HydTank1.H[1]</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v25" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>m&nbsp;</td><td>Level&nbsp;</td><td>&nbsp;</td><td>HydTank1.H[1]' = (HydTank1.hp_in.w - HydPipe.hp_in.w) / (1000 * HydTank1.A)&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v26" data-ajax='false'><font color="red">HydTank1.T</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v26" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>K&nbsp;</td><td>Temperature&nbsp;</td><td>&nbsp;</td><td>HydTank1.T' = (HydTank1.hp_in.wh - HydPipe.hp_in.wh - (HydTank1.hp_in.w - HydPipe.hp_in.w) * 4186 * HydTank1.T) / (HydTank1.m * 4186)&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v47" data-ajax='false'><font color="red">HydTank2.H[1]</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v47" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>m&nbsp;</td><td>Level&nbsp;</td><td>&nbsp;</td><td>HydTank2.H[1]' = (HydPipe.hp_in.w - HydTank2.hp_out.w) / (1000 * HydTank2.A)&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v48" data-ajax='false'><font color="red">HydTank2.T</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v48" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>K&nbsp;</td><td>Temperature&nbsp;</td><td>&nbsp;</td><td>HydTank2.T' = (HydTank2.hp_in.wh - HydTank2.hp_out.wh - (HydPipe.hp_in.w - HydTank2.hp_out.w) * 4186 * HydTank2.T) / (HydTank2.m * 4186)&nbsp;</td><td>0&nbsp;</td></tr>
+<br/>
+</table>
+<br/>
+</body></html>

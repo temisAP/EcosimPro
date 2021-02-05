@@ -1,0 +1,39 @@
+//--------------------------------------------------------------------------------------------------
+// Experiment to illustrate the use of the iternal XML parser
+// File exp2.exp
+// Company: EEAA
+// Date: 05-04-2011
+//--------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------
+// Experiment
+//----------------------------------------------------------------------------------------------
+EXPERIMENT exp1 ON xmlExample.default
+   DECLS
+   	STRING inFileName = "exampleInput.xml"
+   	STRING type = "xmlExample"
+   	STRING auxValueString
+   INIT
+   BOUNDS
+   BODY
+  		// Load input XML file
+		IF( NOT in.loadFile(inFileName, type, "") ) THEN
+			STOP "Could not load file." 
+		END IF
+
+		// Get node with value
+		IF( NOT in.goToNodeByPlainPath("node1&&att1_a&&val1.1.a_diff##node2_1##node3&&att&&val1.2.2.3") ) THEN
+			STOP "Node could not found." 
+		END IF
+		
+		// Get current STRING value
+		auxValueString = in.getAttribute( "valueString" )
+
+		IF( auxValueString == "" ) THEN
+			STOP "Attribute could not found." 
+		END IF
+		
+		WRITE("\n\n'valueString' = %s \n\n\n", auxValueString)
+	
+END EXPERIMENT

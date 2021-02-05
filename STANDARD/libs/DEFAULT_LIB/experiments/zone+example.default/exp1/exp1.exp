@@ -1,0 +1,21 @@
+--------------------------------------------------------------------------------
+-- Used to show the behaviour of the ZONE statement
+--------------------------------------------------------------------------------
+EXPERIMENT exp1 ON zoneExample.default
+   INIT
+      -- Dynamic variables
+      y = 0.
+
+   BOUNDS
+      x = sin(TIME)
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 15.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

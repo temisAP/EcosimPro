@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="HYDRAULIC_EXAMPLES" component="hydro_circuit1" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="HydTank1.hp_in.T"/>
+  <variable name="HydTank1.hp_in.w"/>
+  <variable name="HydTank2.hp_out.w"/>
+</boundaries>
+<dynamics>
+  <variable name="HydTank1.H[1]"/>
+  <variable name="HydTank1.T"/>
+  <variable name="HydTank2.H[1]"/>
+  <variable name="HydTank2.T"/>
+</dynamics>
+<residues>
+  <r id="1" value="HydTank1.H[1]' = (HydTank1.hp_in.w - HydPipe.hp_in.w) / (1000 * HydTank1.A)"/>
+  <r id="2" value="HydTank1.T' = (HydTank1.hp_in.wh - HydPipe.hp_in.wh - (HydTank1.hp_in.w - HydPipe.hp_in.w) * 4186 * HydTank1.T) / (HydTank1.m * 4186)"/>
+  <r id="3" value="HydTank2.H[1]' = (HydPipe.hp_in.w - HydTank2.hp_out.w) / (1000 * HydTank2.A)"/>
+  <r id="4" value="HydTank2.T' = (HydTank2.hp_in.wh - HydTank2.hp_out.wh - (HydPipe.hp_in.w - HydTank2.hp_out.w) * 4186 * HydTank2.T) / (HydTank2.m * 4186)"/>
+</residues>
+</partitionInfo>

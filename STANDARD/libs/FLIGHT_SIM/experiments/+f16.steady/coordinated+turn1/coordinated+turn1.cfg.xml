@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_3" x="0" y="470" dx="1061" dy="235">
+				<plot id="Plot_3">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="-0.35" max="0"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.rudder" nick="Aero.rudder" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="235" dx="1061" dy="235">
+				<plot id="Plot_2">
+					<axeX variableName="Trimmer.dpsi_req">
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.aileron" nick="Aero.aileron" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="1061" dy="235">
+				<plot id="Plot_1">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="-5.5" max="-1.5"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.elevator" nick="Aero.elevator" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="0.1" max="0.45"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Engine.throttle[1]" nick="Engine.throttle[1]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_3">
+			<plotWindow title="Plot_2" x="0" y="352" dx="1061" dy="352">
+				<plot id="Plot_2">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="0" max="0.04"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.beta" nick="Aero.beta" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="1061" dy="352">
+				<plot id="Plot_1">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="2" max="9"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Aero.alpha" nick="Aero.alpha" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_4">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_1">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="0" max="1.4"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="state_out.phi" nick="state_out.phi" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_5">
+			<plotWindow title="Plot_2" x="0" y="311" dx="990" dy="311">
+				<plot id="Plot_2">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="-30" max="-5"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="state_out.A[z]" nick="state_out.A[z]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="990" dy="311">
+				<plot id="Plot_1">
+					<axeX variableName="Trimmer.dpsi_req">
+						<scale min="0" max="10"/>
+						<titleAxe value="Trimmer.dpsi_req"/>
+					</axeX>
+					<axeY>
+						<scale min="0" max="4.5"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="state_out.A[x]" nick="state_out.A[x]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="278" visible="true">
+	</watch>
+	<outputWindow height="252" visible="true"/>
+</experiment>

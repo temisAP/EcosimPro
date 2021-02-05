@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Head" >
+
+		<line id="Line_1" points="77.9976,124 46.0004,124" dx="81.9991" dy="-44" lineColor="255,0,0"   />
+
+		<line id="Line_2" points="-1.99907,124 30,124" dx="81.9991" dy="-44" lineColor="255,0,0"   />
+
+		<ellipse id="Ellipse_1" cx="38.0002" cy="116" rx="23" ry="23" rotation="-1" dx="81.9991" dy="-44" color="255,224,192"  />
+
+		<bezier id="Bezier_1" points="30,132 34.0001,136 42.0003,136 46.0004,132" dx="81.9991" dy="-44"  />
+
+		<line id="Line_3" points="38.0002,128 42.0003,128 38.0002,116" dx="81.9991" dy="-44"  />
+
+		<polygon id="Polygon_1" points="13.9995,108 18.0015,108 21.9997,104 25.9999,104 25.9999,100 34.0001,104 38.0002,100 42.0003,104 50.0005,100 50.0005,104 53.9988,104 58.0007,108 61.999,108 61.999,104 58.0007,96 50.0005,91.9999 42.0003,88 34.0001,88 25.9999,91.9999 18.0015,96 13.9995,104" dx="81.9991" dy="-44"  color="170,85,0" gradientColor="255,255,127" gradientType="GR" position="100"  />
+
+		<g id="Group_2" dx="1" dy="-78" >
+		
+					<ellipse id="Ellipse_5" cx="68" cy="108" rx="4" ry="4" rotation="180" flipY="true" dx="60" dy="40" color="255,255,255"  />
+		 />
+					<ellipse id="Ellipse_6" cx="82" cy="106" rx="2" ry="2" rotation="180" flipY="true" dx="46" dy="43" color="0,0,0"  />
+		 />
+		</g>
+
+		<g id="Group_3" dx="-18" dy="-78" >
+		
+					<ellipse id="Ellipse_7" cx="68" cy="108" rx="4" ry="4" rotation="180" flipY="true" dx="60" dy="40" color="255,255,255"  />
+		 />
+					<ellipse id="Ellipse_8" cx="82" cy="106" rx="2" ry="2" rotation="180" flipY="true" dx="46" dy="43" color="0,0,0"  />
+		 />
+		</g>
+
+		<port id="p_in" library="PHYSIOLOGICAL" type="Physi"  hotPort="p_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="40" dy="67" />
+		
+		</port>
+
+		<port id="p_out" library="PHYSIOLOGICAL" type="Physi" >
+		
+				<symbol dx="159.997" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="163.997" dy="67" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="rai"/>
+				<var name="rao"/>
+				<var name="comp"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="60" cy="98" sx="88" sy="12" variable="p_in.p"  headerText="p_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="71" cy="98" sx="110" sy="12" variable="p_in.w"  headerText="p_in.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="62.5" cy="98" sx="93" sy="12" variable="p_out.p"  headerText="p_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="128" dy="-32" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="73.5" cy="98" sx="115" sy="12" variable="p_out.w"  headerText="p_out.w"  tailText="cm^3/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="128" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,44 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: turbopump_offDesign_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 31/03/2016
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON turbopump_offDesign_test.default
+   DECLS
+		REAL dp 				
+		REAL rpm				
+		REAL pi	
+		
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		dp = Pump.f_out.pt - Pump.f_in.pt
+		rpm = Pump.m.N * 60 / 2 / PI
+		pi = Turbine_ch.f_in.pt / Turbine_ch.f_out.pt
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")		
+		PRINT("	Pump pressure increase = $dp")
+		PRINT("	Rotational speed (rpm) = $rpm")
+		PRINT("	Turbine expansion ratio = $pi")
+		PRINT("	Mass flow through the turbine = $Turbine_ch.f_in.W")
+		PRINT(" ")
+
+END EXPERIMENT

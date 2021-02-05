@@ -1,0 +1,73 @@
+EXPERIMENT levelFlight ON F16.steady
+   INIT
+      -- Dynamic variables
+      Frame.R[N] = 0.
+      Frame.R[E] = 0.
+      Frame.R[D] = 0.
+
+      Frame.V[x] = 153.
+      Frame.V[y] = 0.
+      Frame.V[z] = 0.
+
+      Frame.dynAtt[1] = 0.
+      Frame.dynAtt[2] = 0.
+      Frame.dynAtt[3] = 0.
+      Frame.dynAtt[4] = 0.
+
+      Frame.W[x] = 0.
+      Frame.W[y] = 0.
+      Frame.W[z] = 0.
+
+      Engine.apow = 0.
+
+      Trimmer.elevator = 0.
+      Trimmer.aileron = 0.
+      Trimmer.rudder = 0.
+      Trimmer.throttle = 0.
+
+      El_Actuator.defl = 0.
+      Ail_Actuator.defl = 0.
+      Rdr_Actuator.defl = 0.
+
+   BOUNDS
+      FLIGHT_SIM.Vwind[D] = 0.
+      FLIGHT_SIM.Vwind[E] = 0.
+      FLIGHT_SIM.Vwind[N] = 0.
+
+      s_aileron.signal[1] = 0.
+      s_elevator.signal[1] = 0.
+      s_rudder.signal[1] = 0.
+      s_throttle.signal[1] = 0.
+
+   BODY
+      REPORT_LIST("reportAll", " * ")
+
+      TIME = 0.
+
+      Aero.xcg = 0.3
+
+      ------------------------------------------------------------------------
+      -- Steady state conditions:
+      ------------------------------------------------------------------------
+      --   VT = 153 m/s
+      --   ClimbAngle = 10 deg
+      --   psi' = 0 deg/s
+      ------------------------------------------------------------------------
+      Trim = 1
+
+      Trimmer.VT_req = 153.
+      Trimmer.ClimbAngle_req = 10.
+      Trimmer.dpsi_req = 0.
+
+      STEADY()
+
+      ------------------------------------------------------------------------
+      -- Ascensional wings level flight (ascensional path angle, 10 deg)
+      ------------------------------------------------------------------------
+      Trim = 0.
+
+      TSTOP = 20.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

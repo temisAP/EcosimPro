@@ -1,0 +1,18 @@
+EXPERIMENT exp1 ON pendulum.default
+   INIT
+      -- Dynamic variables
+      x = 0.
+      x' = 1.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      y = -1.
+
+      TSTOP = 5.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

@@ -1,0 +1,17 @@
+EXPERIMENT exp1 ON lorentz.default
+   INIT
+      -- Dynamic variables
+      y1 = 0.
+      y2 = 1.
+      y3 = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 40.
+      CINT = 0.01
+      INTEG()
+
+END EXPERIMENT

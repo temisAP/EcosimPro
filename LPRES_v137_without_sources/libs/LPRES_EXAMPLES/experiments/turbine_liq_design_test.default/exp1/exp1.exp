@@ -1,0 +1,25 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: turbine_liq_design_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 19/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON turbine_liq_design_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+
+   BODY		
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+
+END EXPERIMENT

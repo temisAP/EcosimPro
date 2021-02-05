@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="Digital_ramp" >
+
+		<line id="Line_2" points="26,45 38,45"  end_arrow="true" dx="118" dy="35" lineColor="255,192,0"  aliasing="true"  />
+
+		<line id="Line_3" points="26,45 38,45"  end_arrow="true" dx="118" dy="83" lineColor="255,128,0"  aliasing="true"  />
+
+		<rect id="Rectangle_1" cx="34.0495" cy="659.765" sx="47.9999" sy="96" dx="85.9506" dy="-555.765" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<text id="Text_1" cx="9" cy="9" sx="18" sy="18" aliasing="true" dx="95.1518" dy="87.057"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">X0</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_2" cx="16.5" cy="9" sx="33" sy="18" aliasing="true" dx="95" dy="136"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">CYCLE</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_3" cx="20.5" cy="10.5" sx="41" sy="21" aliasing="true" dx="100" dy="55"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600; color:#000000;">RAMP</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_4" cx="9.5" cy="9" sx="19" sy="18" aliasing="true" dx="95.1518" dy="120.057"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">TR</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_5" cx="14.5" cy="9" sx="29" sy="18" aliasing="true" dx="117" dy="72"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">BUSY</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_6" cx="13" cy="9" sx="26" sy="18" aliasing="true" dx="94.1518" dy="72.057"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">RUN</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_7" cx="9" cy="9" sx="18" sy="18" aliasing="true" dx="95.1518" dy="103.057"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">X1</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_8" cx="15" cy="9" sx="30" sy="18" aliasing="true" dx="116" dy="120"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:6pt; font-weight:600; color:#646464;">XOUT</span></p></body></html>]]>
+		</text>
+
+		<line id="Line_1" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="56.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_4" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="72.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_5" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="40.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_6" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="88.3061" lineColor="255,128,0"  aliasing="true"  />
+
+		<line id="Line_7" points="114.02,39.6939 129.02,39.6939"  end_arrow="true" dx="-34.02" dy="104.306" lineColor="255,128,0"  aliasing="true"  />
+
+		<port id="RUN" library="PORTS_LIB" type="analog_signal"  hotPort="RUN" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="17.5" cy="12" dx="42" dy="68" />
+		
+		</port>
+
+		<port id="X0" library="PORTS_LIB" type="analog_signal"  hotPort="X0" >
+		
+				<symbol dx="80" dy="96" onLabel="true" />
+		
+				<label cx="11" cy="12" dx="53" dy="84" />
+		
+		</port>
+
+		<port id="X1" library="PORTS_LIB" type="analog_signal"  hotPort="X1" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="11" cy="12" dx="53" dy="100" />
+		
+		</port>
+
+		<port id="TR" library="PORTS_LIB" type="analog_signal"  hotPort="TR" >
+		
+				<symbol dx="80" dy="128" onLabel="true" />
+		
+				<label cx="12" cy="12" dx="51.5" dy="116" />
+		
+		</port>
+
+		<port id="CYCLE" library="PORTS_LIB" type="analog_signal"  hotPort="CYCLE" >
+		
+				<symbol dx="80" dy="144" onLabel="true" />
+		
+				<label cx="25.5" cy="12" dx="29" dy="132" />
+		
+		</port>
+
+		<port id="XOUT" library="PORTS_LIB" type="analog_signal"  hotPort="XOUT" >
+		
+				<symbol dx="160" dy="128" onLabel="true" />
+		
+				<label cx="20.5" cy="12" dx="163" dy="116" />
+		
+		</port>
+
+		<port id="BUSY" library="PORTS_LIB" type="bool_signal"  hotPort="BUSY" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="160.5" dy="68" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+</palette>

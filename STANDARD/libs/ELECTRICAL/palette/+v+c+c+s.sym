@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="VCCS" >
+
+		<rect id="Rectangle_2" cx="7.375" cy="49" sx="64" sy="48" dx="112.625" dy="47" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<ellipse id="Ellipse_1" cx="188" cy="238" rx="8" ry="8" dx="-68" dy="-142" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_15" points="56,78 62,78" dx="21" dy="42.8416"  />
+
+		<line id="Line_16" points="56,78 62,78" dx="101" dy="42.8416"  />
+
+		<g id="Group_3" dx="4.75" dy="3.7587" >
+		
+					<line id="Line_17" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_18" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<g id="Group_4" dx="85" dy="3.7587" >
+		
+					<line id="Line_20" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_21" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<line id="Line_22" points="100,150 100,140"  end_arrow="true" dx="20" dy="-49" lineColor="0,192,0"   />
+
+		<line id="Line_23" points="110,75 134,75" dx="-30" dy="5" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_24" points="110,60 134,60" rotation="180" flipX="true" dx="-30" dy="52" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_25" points="76.3858,130.211 81.6943,132.718 71.5006,135.269 82.008,137.662 71.6484,140.835 81.8512,142.924 71.7753,145.915 81.8512,148.187 71.6574,150.579 81.8512,154.088 71.6574,157.118 81.6943,159.669 76.3858,162.211" dx="27.6142" dy="-50.2112" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_26" points="110,70 150,70 150,78" flipY="true" flipX="true" dx="10" dy="34" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_27" points="110,70 150,70 150,62" flipY="true" flipX="true" dx="10" dy="18" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_28" points="74.769,130.371 81.6943,132.718 71.5006,135.269 82.008,137.662 71.6484,140.835 81.8512,142.924 71.7753,145.915 81.894,148.483 71.6574,150.579 81.644,154.309 71.6574,157.118 81.6943,159.669 75.644,162.035" rotation="180" flipY="true" dx="63.2461" dy="-50.3711" lineColor="0,192,0"  aliasing="true"  />
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="73" />
+		
+		</port>
+
+		<port id="e_n1" library="PORTS_LIB" type="elec"  hotPort="e_n1" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="105" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="166" dy="73" />
+		
+		</port>
+
+		<port id="e_n2" library="PORTS_LIB" type="elec"  hotPort="e_n2" >
+		
+				<symbol dx="160" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="164" dy="105" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="R1"/>
+				<var name="R2"/>
+				<var name="transConductance"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="127" cy="155" sx="198" sy="30" variable="v1"  headerText="v1"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="112" cy="187" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="307" cy="155" sx="198" sy="30" variable="v2"  headerText="v2"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="304" cy="187" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-44" dy="-4" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

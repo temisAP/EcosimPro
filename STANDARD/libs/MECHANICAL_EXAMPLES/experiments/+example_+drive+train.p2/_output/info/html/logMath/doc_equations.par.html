@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+drive+train.p2.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+example_+drive+train.p2.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 47<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>productSignal.s_in_1.signal[1] =  ZONE[2] (TIME &lt; sineSignal.Tstart) sineSignal.Offset ZONE[2] (sineSignal.source == Source_Constant) sineSignal.Amp + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Sine) sineSignal.Amp * sin(6.28318530717959 / sineSignal.Period * (TIME - sineSignal.Tstart) + sineSignal.Phase) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Pulse) sineSignal.Amp * pulse(TIME - sineSignal.Tstart, sineSignal.Period, sineSignal.pulseWidth, 1) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Step) sineSignal.Amp * step(TIME, sineSignal.Tstart, 2) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_SawTooth) sineSignal.Amp * ramp(TIME - sineSignal.Tstart, sineSignal.Period, 3) / sineSignal.Period + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Square) sineSignal.Amp * square(TIME - sineSignal.Tstart, sineSignal.Period, 4) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Ramp) sineSignal.Amp / sineSignal.rampDuration * (TIME - sineSignal.Tstart) * (1 - step(TIME, sineSignal.Tstart + sineSignal.rampDuration, 5)) + sineSignal.Amp * step(TIME, sineSignal.Tstart + sineSignal.rampDuration, 6) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Table AND sineSignal.tabmethod == LinearInterpWithEvents) sineSignal.Amp * timeTableInterp(TIME - sineSignal.Tstart, sineSignal.timeTable, 7) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Table AND sineSignal.tabmethod == LinearInterpWithoutEvents) sineSignal.Amp * linearInterp1D(sineSignal.timeTable, TIME - sineSignal.Tstart) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Table AND sineSignal.tabmethod == SplineInterp) sineSignal.Amp * splineInterp1D(sineSignal.timeTable, TIME - sineSignal.Tstart) + sineSignal.Offset ZONE[2] (sineSignal.source == Source_Table AND sineSignal.tabmethod == StepConnect) sineSignal.Amp * timeTableStep(TIME - sineSignal.Tstart, sineSignal.timeTable, 8) + sineSignal.Offset	  OTHERS 0<br/>
+<a name="e2">[E-2] </a>productSignal.s_in_2.signal[1] =  ZONE[3] (TIME &lt; startTime) startSignal.Offset ZONE[3] (startSignal.source == Source_Constant) startSignal.Amp + startSignal.Offset ZONE[3] (startSignal.source == Source_Sine) startSignal.Amp * sin(6.28318530717959 / startSignal.Period * (TIME - startTime) + startSignal.Phase) + startSignal.Offset ZONE[3] (startSignal.source == Source_Pulse) startSignal.Amp * pulse(TIME - startTime, startSignal.Period, startSignal.pulseWidth, 9) + startSignal.Offset ZONE[3] (startSignal.source == Source_Step) startSignal.Amp * step(TIME, startTime, 10) + startSignal.Offset ZONE[3] (startSignal.source == Source_SawTooth) startSignal.Amp * ramp(TIME - startTime, startSignal.Period, 11) / startSignal.Period + startSignal.Offset ZONE[3] (startSignal.source == Source_Square) startSignal.Amp * square(TIME - startTime, startSignal.Period, 12) + startSignal.Offset ZONE[3] (startSignal.source == Source_Ramp) startSignal.Amp / startSignal.rampDuration * (TIME - startTime) * (1 - step(TIME, startTime + startSignal.rampDuration, 13)) + startSignal.Amp * step(TIME, startTime + startSignal.rampDuration, 14) + startSignal.Offset ZONE[3] (startSignal.source == Source_Table AND startSignal.tabmethod == LinearInterpWithEvents) startSignal.Amp * timeTableInterp(TIME - startTime, startSignal.timeTable, 15) + startSignal.Offset ZONE[3] (startSignal.source == Source_Table AND startSignal.tabmethod == LinearInterpWithoutEvents) startSignal.Amp * linearInterp1D(startSignal.timeTable, TIME - startTime) + startSignal.Offset ZONE[3] (startSignal.source == Source_Table AND startSignal.tabmethod == SplineInterp) startSignal.Amp * splineInterp1D(startSignal.timeTable, TIME - startTime) + startSignal.Offset ZONE[3] (startSignal.source == Source_Table AND startSignal.tabmethod == StepConnect) startSignal.Amp * timeTableStep(TIME - startTime, startSignal.timeTable, 16) + startSignal.Offset	  OTHERS 0<br/>
+<a name="e3">[E-3] </a>torque1.s_in.signal[1] = productSignal.s_in_1.signal[1] * productSignal.s_in_2.signal[1]<br/>
+<a name="e4">[E-4] </a>inertia3.m_in.T = torque1.s_in.signal[1]<br/>
+<a name="e5">[E-5] </a>spring.w_rel = <b><font color="red">brake.w</font></b> - <b><font color="red">inertia2.w</font></b><br/>
+<a name="e6">[E-6] </a>brake.m_in.T = -spring.c * (<b><font color="red">spring.phi_rel</font></b> - spring.phi_rel0) - spring.d * spring.w_rel<br/>
+<a name="e7">[E-7] </a>clutch.mue0 = linearInterp1D(clutch.mue_pos, 0)<br/>
+<a name="e8">[E-8] </a>clutch.inPort.signal[1] =  ZONE[5] (TIME &lt; clutchSignal.Tstart) clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Constant) clutchSignal.Amp + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Sine) clutchSignal.Amp * sin(6.28318530717959 / clutchSignal.Period * (TIME - clutchSignal.Tstart) + clutchSignal.Phase) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Pulse) clutchSignal.Amp * pulse(TIME - clutchSignal.Tstart, clutchSignal.Period, clutchSignal.pulseWidth, 25) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Step) clutchSignal.Amp * step(TIME, clutchSignal.Tstart, 26) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_SawTooth) clutchSignal.Amp * ramp(TIME - clutchSignal.Tstart, clutchSignal.Period, 27) / clutchSignal.Period + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Square) clutchSignal.Amp * square(TIME - clutchSignal.Tstart, clutchSignal.Period, 28) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Ramp) clutchSignal.Amp / clutchSignal.rampDuration * (TIME - clutchSignal.Tstart) * (1 - step(TIME, clutchSignal.Tstart + clutchSignal.rampDuration, 29)) + clutchSignal.Amp * step(TIME, clutchSignal.Tstart + clutchSignal.rampDuration, 30) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Table AND clutchSignal.tabmethod == LinearInterpWithEvents) clutchSignal.Amp * timeTableInterp(TIME - clutchSignal.Tstart, clutchSignal.timeTable, 31) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Table AND clutchSignal.tabmethod == LinearInterpWithoutEvents) clutchSignal.Amp * linearInterp1D(clutchSignal.timeTable, TIME - clutchSignal.Tstart) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Table AND clutchSignal.tabmethod == SplineInterp) clutchSignal.Amp * splineInterp1D(clutchSignal.timeTable, TIME - clutchSignal.Tstart) + clutchSignal.Offset ZONE[5] (clutchSignal.source == Source_Table AND clutchSignal.tabmethod == StepConnect) clutchSignal.Amp * timeTableStep(TIME - clutchSignal.Tstart, clutchSignal.timeTable, 32) + clutchSignal.Offset	  OTHERS 0<br/>
+<a name="e9">[E-9] </a>clutch.fn = clutch.fn_max * clutch.inPort.signal[1]<br/>
+<a name="e10">[E-10] </a>clutch.tau0 = clutch.mue0 * clutch.cgeo * clutch.fn<br/>
+<a name="e11">[E-11] </a>clutch.phi_rel' = <b><font color="red">inertia2.w</font></b> - <b><font color="red">inertia3.w</font></b><br/>
+<a name="e12">[E-12] </a>clutch.w_rel = <b><font color="red">clutch.phi_rel</font></b>'<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v66" data-ajax='false'><font color="green">clutch.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v66" data-ajax='false'><font color="green">clutch.sa</font></a>&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-22] MECHANICAL.fun_R_AbsFriction(clutch.imode, clutch.a_rel, <b><font color="green">clutch.sa</font></b>, clutch.tau0) = 0&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e13">[E-13] </a>clutch.tau =  ZONE[1] (clutch.imode == 0) <b><font color="green">clutch.sa</font></b> ZONE[1] (clutch.imode == 1) clutch.cgeo * clutch.fn * linearInterp1D(clutch.mue_pos, clutch.w_rel) ZONE[1] (clutch.imode == -1) -clutch.cgeo * clutch.fn * linearInterp1D(clutch.mue_pos, -clutch.w_rel) ZONE[1] (clutch.imode == 2) clutch.cgeo * clutch.fn * linearInterp1D(clutch.mue_pos, clutch.w_rel) ZONE[1] (clutch.imode == -2) -clutch.cgeo * clutch.fn * linearInterp1D(clutch.mue_pos, -clutch.w_rel)	  OTHERS 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e14">[E-14] </a>clutch.m_in.T = -clutch.tau<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e15">[E-15] </a>inertia3.a = (inertia3.m_in.T - clutch.m_in.T) / inertia3.I<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e16">[E-16] </a>inertia3.w' = inertia3.a<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e17">[E-17] </a>inertia2.a = (clutch.m_in.T - brake.m_in.T) / inertia2.I<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e18">[E-18] </a>inertia2.w' = inertia2.a<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e19">[E-19] </a>clutch.phi_rel'' = <b><font color="red">inertia2.w</font></b>' - <b><font color="red">inertia3.w</font></b>'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e20">[E-20] </a>clutch.w_rel' = <b><font color="red">clutch.phi_rel</font></b>''<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e21">[E-21] </a>clutch.a_rel = clutch.w_rel'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e22">[E-22] </a>MECHANICAL.fun_R_AbsFriction(clutch.imode, clutch.a_rel, <b><font color="green">clutch.sa</font></b>, clutch.tau0) = 0	{I@clutch.sa}<br/>
+</b><hr>END OF BOX 1<hr><a name="e23">[E-23] </a>clutch.tau0_max = clutch.peak * clutch.tau0<br/>
+<a name="e24">[E-24] </a>torque2.s_in.signal[1] =  ZONE[4] (TIME &lt; torqueZero.Tstart) torqueZero.Offset ZONE[4] (torqueZero.source == Source_Constant) torqueZero.Amp + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Sine) torqueZero.Amp * sin(6.28318530717959 / torqueZero.Period * (TIME - torqueZero.Tstart) + torqueZero.Phase) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Pulse) torqueZero.Amp * pulse(TIME - torqueZero.Tstart, torqueZero.Period, torqueZero.pulseWidth, 17) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Step) torqueZero.Amp * step(TIME, torqueZero.Tstart, 18) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_SawTooth) torqueZero.Amp * ramp(TIME - torqueZero.Tstart, torqueZero.Period, 19) / torqueZero.Period + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Square) torqueZero.Amp * square(TIME - torqueZero.Tstart, torqueZero.Period, 20) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Ramp) torqueZero.Amp / torqueZero.rampDuration * (TIME - torqueZero.Tstart) * (1 - step(TIME, torqueZero.Tstart + torqueZero.rampDuration, 21)) + torqueZero.Amp * step(TIME, torqueZero.Tstart + torqueZero.rampDuration, 22) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Table AND torqueZero.tabmethod == LinearInterpWithEvents) torqueZero.Amp * timeTableInterp(TIME - torqueZero.Tstart, torqueZero.timeTable, 23) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Table AND torqueZero.tabmethod == LinearInterpWithoutEvents) torqueZero.Amp * linearInterp1D(torqueZero.timeTable, TIME - torqueZero.Tstart) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Table AND torqueZero.tabmethod == SplineInterp) torqueZero.Amp * splineInterp1D(torqueZero.timeTable, TIME - torqueZero.Tstart) + torqueZero.Offset ZONE[4] (torqueZero.source == Source_Table AND torqueZero.tabmethod == StepConnect) torqueZero.Amp * timeTableStep(TIME - torqueZero.Tstart, torqueZero.timeTable, 24) + torqueZero.Offset	  OTHERS 0<br/>
+<a name="e25">[E-25] </a>brake.inPort.signal[1] =  ZONE[6] (TIME &lt; startTime) brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Constant) brakeSignal.Amp + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Sine) brakeSignal.Amp * sin(6.28318530717959 / brakeSignal.Period * (TIME - startTime) + brakeSignal.Phase) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Pulse) brakeSignal.Amp * pulse(TIME - startTime, brakeSignal.Period, brakeSignal.pulseWidth, 33) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Step) brakeSignal.Amp * step(TIME, startTime, 34) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_SawTooth) brakeSignal.Amp * ramp(TIME - startTime, brakeSignal.Period, 35) / brakeSignal.Period + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Square) brakeSignal.Amp * square(TIME - startTime, brakeSignal.Period, 36) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Ramp) brakeSignal.Amp / brakeSignal.rampDuration * (TIME - startTime) * (1 - step(TIME, startTime + brakeSignal.rampDuration, 37)) + brakeSignal.Amp * step(TIME, startTime + brakeSignal.rampDuration, 38) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Table AND brakeSignal.tabmethod == LinearInterpWithEvents) brakeSignal.Amp * timeTableInterp(TIME - startTime, brakeSignal.timeTable, 39) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Table AND brakeSignal.tabmethod == LinearInterpWithoutEvents) brakeSignal.Amp * linearInterp1D(brakeSignal.timeTable, TIME - startTime) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Table AND brakeSignal.tabmethod == SplineInterp) brakeSignal.Amp * splineInterp1D(brakeSignal.timeTable, TIME - startTime) + brakeSignal.Offset ZONE[6] (brakeSignal.source == Source_Table AND brakeSignal.tabmethod == StepConnect) brakeSignal.Amp * timeTableStep(TIME - startTime, brakeSignal.timeTable, 40) + brakeSignal.Offset	  OTHERS 0<br/>
+<a name="e26">[E-26] </a>inertia1.m_out.T = -torque2.s_in.signal[1]<br/>
+<a name="e27">[E-27] </a>torque2.m_out.T = -inertia1.m_out.T<br/>
+<a name="e28">[E-28] </a>spring.phi_rel' = <b><font color="red">brake.w</font></b> - <b><font color="red">inertia2.w</font></b><br/>
+<a name="e29">[E-29] </a>brake.fn = brake.fn_max * brake.inPort.signal[1]<br/>
+<a name="e30">[E-30] </a>brake.mue0 = linearInterp1D(brake.mue_pos, 0)<br/>
+<a name="e31">[E-31] </a>brake.tau0 = brake.mue0 * brake.cgeo * brake.fn<br/>
+<br/>
+<hr>BOX 2 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v20" data-ajax='false'><font color="green">brake.sa</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v20" data-ajax='false'><font color="green">brake.sa</font></a>&nbsp;</td><td>-&nbsp;</td><td>Path parameter of friction characteristic (-)&nbsp;</td><td>&nbsp;</td><td>[E-34] MECHANICAL.fun_R_AbsFriction(brake.imode, brake.a, <b><font color="green">brake.sa</font></b>, brake.tau0) = 0&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><a href="doc_vars.par.html#v25" data-ajax='false'><font color="green">brake.w'</font></a>&nbsp;</td><td><a href="doc_vars.par.html#v25" data-ajax='false'><font color="green">brake.w'</font></a>&nbsp;</td><td>&nbsp;</td><td>Derivative of variable brake.w&nbsp;</td><td>&nbsp;</td><td>[E-37] <b><font color="red">brake.w</font></b>' = inertia1.a&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e32">[E-32] </a>brake.tau =  ZONE[7] (brake.imode == 0) <b><font color="green">brake.sa</font></b> ZONE[7] (brake.imode == 1) brake.cgeo * brake.fn * linearInterp1D(brake.mue_pos, <b><font color="red">brake.w</font></b>) ZONE[7] (brake.imode == -1) -brake.cgeo * brake.fn * linearInterp1D(brake.mue_pos, -<b><font color="red">brake.w</font></b>) ZONE[7] (brake.imode == 2) brake.cgeo * brake.fn * linearInterp1D(brake.mue_pos, <b><font color="red">brake.w</font></b>) ZONE[7] (brake.imode == -2) -brake.cgeo * brake.fn * linearInterp1D(brake.mue_pos, -<b><font color="red">brake.w</font></b>)	  OTHERS 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e33">[E-33] </a>brake.a = <b><font color="red">brake.w</font></b>'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e34">[E-34] </a>MECHANICAL.fun_R_AbsFriction(brake.imode, brake.a, <b><font color="green">brake.sa</font></b>, brake.tau0) = 0	{I@brake.sa}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e35">[E-35] </a>inertia1.m_in.T = (100000000 * brake.m_in.T - (brake.a + 100000000 * brake.tau)) / 100000000<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e36">[E-36] </a>inertia1.a = (inertia1.m_in.T - inertia1.m_out.T) / inertia1.I<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e37">[E-37] </a><b><font color="red">brake.w</font></b>' = inertia1.a	{I@brake.w'}<br/>
+</b><hr>END OF BOX 2<hr><a name="e38">[E-38] </a>brake.tau0_max = brake.peak * brake.tau0<br/>
+<a name="e39">[E-39] </a>brake.m_in.n = <b><font color="red">brake.w</font></b> / 0.10471975511966<br/>
+<a name="e40">[E-40] </a>inertia1.m_in.n = <b><font color="red">brake.w</font></b> / 0.10471975511966<br/>
+<a name="e41">[E-41] </a>clutch.m_in.n = <b><font color="red">inertia3.w</font></b> / 0.10471975511966<br/>
+<a name="e42">[E-42] </a>inertia2.m_in.n = <b><font color="red">inertia2.w</font></b> / 0.10471975511966<br/>
+<a name="e43">[E-43] </a>inertia1.m_out.n = <b><font color="red">brake.w</font></b> / 0.10471975511966<br/>
+<a name="e44">[E-44] </a>torque2.m_out.n = <b><font color="red">brake.w</font></b> / 0.10471975511966<br/>
+<a name="e45">[E-45] </a>spring.m_in.n = <b><font color="red">inertia2.w</font></b> / 0.10471975511966<br/>
+<a name="e46">[E-46] </a>inertia3.m_in.n = <b><font color="red">inertia3.w</font></b> / 0.10471975511966<br/>
+<a name="e47">[E-47] </a>clutch.phi_rel'. = clutch.phi_rel'<br/>
+</body></html>

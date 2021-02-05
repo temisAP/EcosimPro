@@ -1,0 +1,73 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: TurbojetEngine_performance
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 19/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON TurbojetEngine_performance.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      p25t = 4e5
+		p4t = 20e5
+      T5t = 1100
+      HPC.M_in = 0.001
+      LPC.M_in = 0.001
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      GG.OF = 50 * (1.4 - TIME / 40)
+      LPRES.Altitude = 0
+
+   BODY
+		LPC.r_m = 1.12838045
+		HPC.r_m = 0.636602763
+		LPC.A_in = 0.848805831
+		HPC.A_in = 0.231940088
+		HPT.A_in = 0.0162651797
+		LPT.A_in = 0.0338995545 
+		Nozzle.A = 0.0370254355
+	
+      DEBUG_LEVEL= 1
+      TOLERANCE = 1e-006
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()
+		
+		EXEC_INIT()				
+		HPT.A_in = 0.0162651797 * 1.05
+		LPT.A_in = 0.0338995545 
+		Nozzle.A = 0.0370254355
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()
+		
+		EXEC_INIT()					
+		HPT.A_in = 0.0162651797
+		LPT.A_in = 0.0338995545 * 1.05 
+		Nozzle.A = 0.0370254355
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()
+		
+		RESTORE_STATE("..\..\+turbojet+engine_design.default\exp1\TurbojetEngine_design_state.txt")	
+		HPT.A_in = 0.0162651797
+		LPT.A_in = 0.0338995545
+		Nozzle.A = 0.0370254355 * 1.05
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()		
+		
+END EXPERIMENT

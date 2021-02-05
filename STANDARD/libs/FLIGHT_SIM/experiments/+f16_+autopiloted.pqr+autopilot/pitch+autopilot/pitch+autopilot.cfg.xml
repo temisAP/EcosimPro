@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_10" x="660" y="495" dx="330" dy="165">
+				<plot id="Plot_10">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-80" max="20"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_10" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.A[x]" nick="F16.state_out.A[x]" lineColor="255,0,0"/>
+						<var name="F16.state_out.A[z]" nick="F16.state_out.A[z]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_9" x="660" y="330" dx="330" dy="165">
+				<plot id="Plot_9">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-7" max="1"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_9" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.Aero.elevator" nick="F16.Aero.elevator" lineColor="255,0,0"/>
+						<var name="F16.Engine.throttle[1]" nick="F16.Engine.throttle[1]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_8" x="660" y="165" dx="330" dy="165">
+				<plot id="Plot_8">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-2" max="2"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_8" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.theta" nick="F16.state_out.theta" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_7" x="660" y="0" dx="330" dy="165">
+				<plot id="Plot_7">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-2" max="12"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_7" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.Aero.alpha" nick="F16.Aero.alpha" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_6" x="330" y="440" dx="330" dy="220">
+				<plot id="Plot_6">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-0.3" max="0.3"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_6" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.Wdot[y]" nick="F16.state_out.Wdot[y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_5" x="330" y="220" dx="330" dy="220">
+				<plot id="Plot_5">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-0.05" max="0.2"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_5" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.W[y]" nick="F16.state_out.W[y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_4" x="330" y="0" dx="330" dy="220">
+				<plot id="Plot_4">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-15" max="20"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.Vdot[x]" nick="F16.state_out.Vdot[x]" lineColor="255,0,0"/>
+						<var name="F16.state_out.Vdot[z]" nick="F16.state_out.Vdot[z]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="0" y="440" dx="330" dy="220">
+				<plot id="Plot_3">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-100" max="500"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.V[x]" nick="F16.state_out.V[x]" lineColor="255,0,0"/>
+						<var name="F16.state_out.V[z]" nick="F16.state_out.V[z]" lineColor="0,204,153"/>
+						<var name="F16.state_out.VT" nick="F16.state_out.VT" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="220" dx="330" dy="220">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<scale min="0" max="120"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-400" max="400"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.Rdot[D]" nick="F16.state_out.Rdot[D]" lineColor="255,0,0"/>
+						<var name="F16.state_out.Rdot[N]" nick="F16.state_out.Rdot[N]" lineColor="0,204,153"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="330" dy="220">
+				<plot id="Plot_1">
+					<axeX variableName="F16.state_out.R[N]">
+						<scale min="0" max="8000"/>
+						<titleAxe value="F16.state_out.R[N]"/>
+					</axeX>
+					<axeY>
+						<scale isRev="true" min="-10000" max="2000"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="F16.state_out.R[D]" nick="F16.state_out.R[D]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="278" visible="true">
+	</watch>
+	<outputWindow height="213" visible="true"/>
+</experiment>

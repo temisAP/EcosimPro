@@ -1,0 +1,110 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: RL10_design
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON RL10_design.default
+   DECLS
+		REAL M_comb	
+		REAL cp_comb
+		
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junct.f_in1.Tt = 1
+      Junct.f_in2.W = 1
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+      Turbine.U = 10000
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 9000
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine.M = 0.5):")
+		PRINT(" ")		
+		PRINT("	LOX pump average radius = $Pump_LOX.r_m_d")		
+		PRINT("	LH2 pump average radius = $Pump_LH2.r_m_d")	
+		PRINT("	LOX pump input area = $Pump_LOX.A_in_d")		
+		PRINT("	LH2 pump input area = $Pump_LH2.A_in_d")	
+		
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")	
+			
+		PRINT("	Turbine mass flow = $Turbine.f_in.W")			
+		PRINT("	Turbine input area = $Turbine.A_in_d")	
+		PRINT("	Turbine average radius = $Turbine.r_m_d")			
+		
+		PRINT("	LOX injector area = $Inj_LOX.A_d")	
+		PRINT("	LH2 injector area = $Inj_LH2.A_d")
+		
+		PRINT("	Throat area = $CC.A_th_d")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		
+		M_comb = M(CC.g.fluid)
+		cp_comb = cp(CC.g.fluid)
+		
+		PRINT("	Combustion products molar mass (g/mol) = $M_comb")	
+		PRINT("	Combustion products specific heat at constant pressure (J/(kg·K)) = $cp_comb")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")		
+		
+		Turbine.M = 1
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Turbine.M = 1):")
+		PRINT(" ")		
+		PRINT("	LOX pump average radius = $Pump_LOX.r_m_d")		
+		PRINT("	LH2 pump average radius = $Pump_LH2.r_m_d")	
+		PRINT("	LOX pump input area = $Pump_LOX.A_in_d")		
+		PRINT("	LH2 pump input area = $Pump_LH2.A_in_d")	
+		
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")	
+			
+		PRINT("	Turbine mass flow = $Turbine.f_in.W")			
+		PRINT("	Turbine input area = $Turbine.A_in_d")	
+		PRINT("	Turbine average radius = $Turbine.r_m_d")			
+		
+		PRINT("	LOX injector area = $Inj_LOX.A_d")	
+		PRINT("	LH2 injector area = $Inj_LH2.A_d")
+		
+		PRINT("	Throat area = $CC.A_th_d")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		
+		M_comb = M(CC.g.fluid)
+		cp_comb = cp(CC.g.fluid)
+		
+		PRINT("	Combustion products molar mass (g/mol) = $M_comb")	
+		PRINT("	Combustion products specific heat at constant pressure (J/(kg·K)) = $cp_comb")
+		
+		PRINT("	Thrust = $ControlPanel.Thrust")
+		PRINT("	Isp_0 = $ControlPanel.Isp_0")
+		PRINT("	C_E = $ControlPanel.C_E")		
+		PRINT("	c* = $ControlPanel.c_star")
+		PRINT(" ")
+		
+		SAVE_STATE("RL10_state.txt")
+
+END EXPERIMENT

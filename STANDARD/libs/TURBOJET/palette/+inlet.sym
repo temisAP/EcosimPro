@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Inlet" >
+
+		<closedBezier id="ClosedBezier_2" points="27.9876,498.147 7.9876,494.147 7.9876,478.147 27.9876,474.147" dx="28.0124" dy="-374.147" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_5" points="43.9876,446.147 43.9876,426.147"  end_arrow="true" dx="20.0124" dy="-358.147" lineColor="128,0,0"  aliasing="true"  />
+
+		<polygon id="Polygon_5" points="35.9876,510.147 35.9876,462.147 59.9876,450.147 59.9876,522.147" dx="20.0124" dy="-374.147" lineWidth="1.5"   color="170,170,255" gradientColor="255,255,255" gradientType="GR" position="100" aliasing="true"  />
+
+		<line id="Line_8" points="119.928,38.0307 131.928,38.0307"  end_arrow="true" dx="-39.928" dy="41.9693" lineColor="0,0,255"  aliasing="true"  />
+
+		<port id="g_out" library="TURBOJET" type="Gas"  hotPort="g_out" >
+		
+				<symbol dx="96" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="108" dy="68" />
+		
+		</port>
+
+		<port id="thrust" library="TURBOJET" type="Force"  hotPort="thrust" >
+		
+				<symbol dx="64" dy="64" onLabel="true" />
+		
+				<label cx="20.5" cy="12" dx="43" dy="36" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="Flight conditions">
+				<var name="dTamb"/>
+				<var name="Rhum"/>
+			</tab>
+			<tab name="Efficiency">
+				<var name="ERAM"/>
+				<var name="eramxx" conditionVar="ERAM" conditionVals="FromTable"/>
+				<var name="zeram" conditionVar="ERAM" conditionVals="FromData"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_5" cx="80.5" cy="70" sx="113" sy="12" variable="sh_out.Power"  headerText="sh_out.Power"  tailText="W" family="MS Shell Dlg 2" points="6" dx="-12" dy="-16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_1" cx="135.5" cy="86" sx="103" sy="12" variable="g_out.W"  headerText="g_out.W"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-4" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="130.5" cy="86" sx="93" sy="12" variable="g_out.P"  headerText="g_out.P"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-4" dy="16" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

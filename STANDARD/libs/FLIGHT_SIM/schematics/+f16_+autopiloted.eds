@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<port id="s_thtl" library="PORTS_LIB" type="analog_signal" layer="1"  hotPort="s_thtl" direction="IN" elPosition="0" >
+	
+		<symbol dx="251.036" dy="368" onLabel="true" />
+	
+		<label cx="20" cy="12" dx="231.536" dy="372" />
+	
+	</port>
+
+	<component id="prAutopilot" library="FLIGHT_SIM" type="F16prAutopilot" layer="1" elPosition="2"  hotPort="s_r" >
+	
+		<symbol cx="120" cy="92.125" sx="89" sy="65.25" dx="171.036" dy="192" onLabel="true" />
+	
+		<label cx="35" cy="12" dx="171.036" dy="272" />
+	
+	</component>
+
+	<component id="qAutopilot" library="FLIGHT_SIM" type="F16qAutopilot" layer="1" elPosition="3"  hotPort="s_q" >
+	
+		<symbol cx="120" cy="78.125" sx="89" sy="69.25" dx="171.036" dy="387.75" rotation="180" flipX="true" onLabel="true" />
+	
+		<label cx="33" cy="12" dx="171.036" dy="448" />
+	
+	</component>
+
+	<component id="F16" library="FLIGHT_SIM" type="F16" layer="1" elPosition="4"  hotPort="s_aileron" >
+	
+		<symbol cx="251.75" cy="144" sx="356.5" sy="137" dx="472" dy="224" onLabel="true" />
+	
+		<label cx="15" cy="12" dx="708.75" dy="417" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="qAutopilot" sPort="s_elevator" eShape="F16" ePort="s_elevator" points="551.286,416" elPosition="0" dx="-4.964" dy="48" lineColor="255,85,0"   />
+
+	<connector id="Connector_2" sShape="prAutopilot" sPort="s_aileron" eShape="F16" ePort="s_aileron" points="624,224" elPosition="1" dx="-4.964" dy="48" lineColor="255,85,0"   />
+
+	<connector id="Connector_3" sShape="prAutopilot" sPort="s_rudder" eShape="F16" ePort="s_rudder" elPosition="2" dx="-4.964" dy="48" lineColor="255,85,0"   />
+
+	<connector id="Connector_4" sPort="s_thtl" eShape="F16" ePort="s_throttle" elPosition="3" dx="-4.964" dy="48" lineColor="255,85,0"   />
+
+	<connector id="Connector_5" sShape="F16" sPort="state_out" eShape="qAutopilot" ePort="state_in" points="880,256 880,448" elPosition="4" dx="-4.964" dy="48" lineColor="85,85,255"   />
+
+	<connector id="Connector_6" sShape="F16" sPort="state_out" eShape="prAutopilot" ePort="state_in" points="880,256 880,208" elPosition="5" dx="-4.964" dy="48" lineColor="85,85,255"   />
+
+	<bodyEL>
+	<![CDATA[COMPONENT %NAME% 
+&#34;F16_Autopiloted example&#34;
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="PORTS_LIB" version="1.1" auto="false" />
+</schematic>

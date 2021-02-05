@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" />
+
+	<componentType id="AOASensor" >
+
+		<line id="Line_1" points="152.001,38 168,38" dx="-72.001" dy="42" lineColor="85,85,255" lineWidth="1.5"   />
+
+		<line id="Line_2" points="216,38 231.999,38" dx="-72.001" dy="42" lineColor="255,128,0" lineWidth="1.5"   />
+
+		<ellipse id="Ellipse_1" cx="120" cy="72" rx="24" ry="24" dy="8" lineWidth="1.5"  color="192,192,192" aliasing="true"  />
+
+		<line id="Line_3" points="176.001,45.9999 207.999,30.0001" dx="-72.001" dy="42" lineWidth="3"   />
+
+		<ellipse id="Ellipse_2" cx="192" cy="38" rx="4.50612" ry="3.9619" dx="-72.001" dy="42" color="0,0,0"  />
+
+		<port id="state_in" library="FLIGHT_SIM" type="State"  hotPort="state_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="27" cy="12" dx="21" dy="69" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="164" dy="69" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="bias"/>
+				<var name="gain"/>
+			</tab>
+		</editor>
+
+	</componentType>
+</palette>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="FLIGHT_SIM.html">FLIGHT_SIM&nbsp;Library</a> |
+	  <a class="qindex" href="FLIGHT_SIM.components.html">Components</a> |
+	  <a class="qindex" href="FLIGHT_SIM.ports.html">Ports</a> |
+	  <a class="qindex" href="FLIGHT_SIM.classes.html">Classes</a> |
+	  <a class="qindex" href="FLIGHT_SIM.functions.html">Functions</a> |
+	  <a class="qindex" href="FLIGHT_SIM.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="FLIGHT_SIM.global.html">Global Variables</a></div>
+<h1 align="center">FLIGHT_SIM.F16Engine<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="F16Engine">F16Engine</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/FLIGHT_SIM.F16Engine.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">F-16 engine response</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>forces_out&nbsp;</td><td><a href="FLIGHT_SIM.Forces.html">Forces</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Output engine thrust forces port&nbsp;</td></tr>
+
+<tr><td>s_Mach&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input mach number port (-)&nbsp;</td></tr>
+
+<tr><td>s_throttle&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.analog_signal.html">PORTS_LIB.analog_signal</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input throttle level port (-)&nbsp;</td></tr>
+
+<tr><td>state_in&nbsp;</td><td><a href="FLIGHT_SIM.State.html">State</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Input aircraft state port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Thrust for IDLE power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>B&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Thrust for MILITARY power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>C&nbsp;</td><td>TABLE_2D &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Thrust for MAXIMUM power level (N) vs Mach (-) and altitude (m)&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>H&nbsp;</td><td>REAL &nbsp;</td><td>225&nbsp;</td><td>&nbsp;</td><td>engine angular momentum assumed fixed at 160 slugs*ft^2/s&nbsp;</td><td>kg·m^2/s&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Mach[1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Mach number&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>Rt&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Calculated inverse of the lag time constant&nbsp;</td><td>1/s&nbsp;</td></tr>
+
+<tr><td>Rtau&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Limited inverse of the lag time constant&nbsp;</td><td>1/s&nbsp;</td></tr>
+
+<tr><td>altitude&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Altitude&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>apow&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Actual engine power level&nbsp;</td><td>%&nbsp;</td></tr>
+
+<tr><td>cpow&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Commanded engine power level&nbsp;</td><td>%&nbsp;</td></tr>
+
+<tr><td>dpow&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Required power level rate&nbsp;</td><td>%&nbsp;</td></tr>
+
+<tr><td>throttle[1]&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>0,1&nbsp;</td><td>Throttle level [0,1]&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>thrust&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Engine thrust&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>tidl&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Idle thrust&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>tmax&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Maximum thrust&nbsp;</td><td>N&nbsp;</td></tr>
+
+<tr><td>tmil&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Military thrus&nbsp;</td><td>N&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:17)</font></p>
+</body>
+</html>

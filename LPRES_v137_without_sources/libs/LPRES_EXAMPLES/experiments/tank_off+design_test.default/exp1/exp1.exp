@@ -1,0 +1,83 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: tank_offDesign_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON tank_offDesign_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Tank.M_g = 0.1
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Tank.l.W = 100
+
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Inlet.pt = 100e5):")
+		PRINT(" ")			
+		PRINT("	Regulator outlet total pressure = $Regulator.f_out.pt")
+		PRINT(" 	Tank pressure = $Tank.p_g")
+		PRINT(" ")	
+		
+		Inlet.pt = 1201500
+		STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("  RESULTS (Inlet.pt = 1201500):")
+		PRINT(" ")			
+		PRINT("	Regulator outlet total pressure = $Regulator.f_out.pt")
+		PRINT(" 	Tank pressure = $Tank.p_g")
+		PRINT(" ")	
+		
+		Inlet.pt = 1201000
+		STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Inlet.pt = 1201000):")
+		PRINT(" ")
+		PRINT("	Regulator outlet total pressure = $Regulator.f_out.pt")
+		PRINT(" 	Tank pressure = $Tank.p_g")
+		PRINT(" ")	
+		
+		Inlet.pt = 1200000
+		STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Inlet.pt = 1200000):")
+		PRINT(" ")
+		PRINT("	Regulator outlet total pressure = $Regulator.f_out.pt")
+		PRINT(" 	Tank pressure = $Tank.p_g")
+		PRINT(" ")
+		
+		Inlet.pt = 1000000
+		STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS (Inlet.pt = 1000000):")
+		PRINT(" ")
+		PRINT("	Regulator outlet total pressure = $Regulator.f_out.pt")
+		PRINT(" 	Tank pressure = $Tank.p_g")
+		PRINT(" ")
+
+END EXPERIMENT

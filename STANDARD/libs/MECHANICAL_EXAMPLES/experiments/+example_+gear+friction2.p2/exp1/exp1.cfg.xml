@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="GearFrictionDemo3.p1.exp1_1" x="0" y="0" dx="1274" dy="636">
+				<plot id="GearFrictionDemo3.p1.exp1_1">
+					<axeX variableName="TIME">
+						<scale min="0" max="2"/>
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<scale min="-3.5" max="0.5"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="GearFrictionDemo3.p1.exp1_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="bearingFriction.w" nick="bearingFriction.w" lineColor="255,0,0"/>
+						<var name="inertia1.w" nick="inertia1.w" lineColor="0,204,153"/>
+						<var name="inertia2.w" nick="inertia2.w" lineColor="0,0,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="101" visible="false">
+	</watch>
+	<outputWindow height="252" visible="true"/>
+</experiment>

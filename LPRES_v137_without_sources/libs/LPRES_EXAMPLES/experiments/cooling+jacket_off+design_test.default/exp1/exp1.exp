@@ -1,0 +1,40 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: coolingJacket_offDesign_test
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON coolingJacket_offDesign_test.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		CC.M_r = 100
+      CC.p_out_ch = 100
+
+   BOUNDS
+   BODY
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+		
+		PRINT(" ")
+		PRINT("-----------------------------------------------------------------")
+		PRINT(" ")
+		PRINT("	RESULTS:")
+		PRINT(" ")		
+		PRINT("	Fuel mass flow = $Injector_F.f_in.W")	
+		PRINT("	Oxidant mass flow = $Injector_O.f_in.W")		
+		
+		PRINT("	Cooling jacket outlet total temperature = $CJ.g.Tt")
+		PRINT("	Cooling jacket outlet total pressure = $CJ.g.pt")				
+		PRINT("	Cooling liquid speed = $CJ.v")
+		
+		PRINT("	Combustion pressure = $CC.g.pt")	
+		PRINT("	Combustion temperature = $CC.T_c")
+		PRINT(" ")	
+
+END EXPERIMENT

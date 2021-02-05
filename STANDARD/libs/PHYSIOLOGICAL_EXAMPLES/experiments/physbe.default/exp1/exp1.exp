@@ -1,0 +1,16 @@
+EXPERIMENT exp1 ON physbe.default
+   INIT
+      -- Dynamic variables
+      Ventricle_right.vol = 120.
+      Ventricle_left.vol = 319.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 5.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

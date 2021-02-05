@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Line_LRCG" >
+
+		<rect id="Rectangle_1" cx="6" cy="621" sx="112" sy="64" dx="138" dy="-541" lineColor="0,192,0" lineWidth="1.5"   />
+
+		<line id="Line_1" points="-44,613 -40,609 -36,617 -32,609 -28,617 -24,609 -20,617 -16,613" dx="136" dy="-533" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="9,613 77,613" dx="139" dy="-533" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="-48.0364,613.055 -60.0364,613.055" dx="140.036" dy="-533.055" lineColor="0,192,0"   />
+
+		<line id="Line_4" points="33,617 33,628" dx="123" dy="-537" lineColor="0,192,0"   />
+
+		<line id="Line_5" points="38,629 26,629" dx="124" dy="-537" lineColor="0,192,0"   />
+
+		<line id="Line_6" points="25,634 37,634" dx="125" dy="-538" lineColor="0,192,0"   />
+
+		<line id="Line_7" points="30,637 30,645" dx="126" dy="-541" lineColor="0,192,0"   />
+
+		<line id="Line_8" points="53,649 -47,649" dx="143" dy="-545" lineColor="0,192,0"   />
+
+		<line id="Line_9" points="9,654 9,669" dx="135" dy="-550" lineColor="0,192,0"   />
+
+		<line id="Line_11" points="-12.8,613 -8.8,613" dx="132.8" dy="-533" lineColor="0,192,0"   />
+
+		<bezier id="Bezier_1" points="-7,613 -7,605 1,605 1,613 1,621 -3,621 -3,613 -3,605 7,605 7,613 7,621 3,621 3,613 3,605 13,605 13,613 13,621 9,621 9,613 9,605 17,605 17,613" dx="131" dy="-533" lineColor="0,192,0"   />
+
+		<line id="Line_12" points="53,621.25 45,625.25 53,629.25 45,633.25 53,637.25 45,641.25 53,645.25" dx="127" dy="-541.25" lineColor="0,192,0"   />
+
+		<line id="Line_13" points="49.0377,643.075 49.0377,651.075" dx="130.962" dy="-539.075" lineColor="0,192,0"   />
+
+		<text id="Text_1" cx="8" cy="11.5" sx="16" sy="23" dx="97.5" dy="58"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">R</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_2" cx="7.5" cy="11.5" sx="15" sy="23" dx="129.5" dy="56"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">L</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_3" cx="8" cy="11.5" sx="16" sy="23" dx="131.5" dy="82"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">C</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_4" cx="8" cy="11.5" sx="16" sy="23" dx="179.5" dy="82"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:7pt; font-weight:600; color:#00c000;">G</span></p></body></html>]]>
+		</text>
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="29" dy="64" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="208" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="204" dy="68" />
+		
+		</port>
+
+		<port id="e_p3" library="PORTS_LIB" type="elec"  hotPort="e_p3" >
+		
+				<symbol dx="144" dy="120" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="124" dy="116" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="N"/>
+				<var name="c"/>
+				<var name="g"/>
+				<var name="l"/>
+				<var name="length"/>
+				<var name="r"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="166" cy="11" sx="172" sy="30" variable="v13"  headerText="v13"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-60" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="170" cy="35" sx="172" sy="30" variable="v23"  headerText="v23"  tailText="" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="104" dy="-28" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="124" cy="171" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-28" dy="-140" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="180" cy="215" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="84" dy="-188" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

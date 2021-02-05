@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.1.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="240" dx="805" dy="240">
+				<plot id="Plot_1">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="thruster1.N1.T" nick="thruster1.N1.T" lineColor="255,0,0"/>
+						<var name="thruster1.N10.T" nick="thruster1.N10.T" lineColor="0,204,153"/>
+						<var name="thruster1.N11.T" nick="thruster1.N11.T" lineColor="0,0,255"/>
+						<var name="thruster1.N12.T" nick="thruster1.N12.T" lineColor="255,255,0"/>
+						<var name="thruster1.N13.T" nick="thruster1.N13.T" lineColor="0,102,0"/>
+						<var name="thruster1.N14.T" nick="thruster1.N14.T" lineColor="51,204,255"/>
+						<var name="thruster1.N15.T" nick="thruster1.N15.T" lineColor="255,153,0"/>
+						<var name="thruster1.N2.T" nick="thruster1.N2.T" lineColor="153,0,0"/>
+						<var name="thruster1.N3.T" nick="thruster1.N3.T" lineColor="0,0,153"/>
+						<var name="thruster1.N4.T" nick="thruster1.N4.T" lineColor="153,102,0"/>
+						<var name="thruster1.N5.T" nick="thruster1.N5.T" lineColor="204,0,255"/>
+						<var name="thruster1.N6.T" nick="thruster1.N6.T" lineColor="102,102,102"/>
+						<var name="thruster1.N7.T" nick="thruster1.N7.T" lineColor="102,51,0"/>
+						<var name="thruster1.N8.T" nick="thruster1.N8.T" lineColor="51,255,255"/>
+						<var name="thruster1.N9.T" nick="thruster1.N9.T" lineColor="255,153,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="0" dx="805" dy="240">
+				<plot id="Plot_2">
+					<axeX variableName="TIME">
+						<titleAxe value="TIME"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="thruster2.N1.T" nick="thruster2.N1.T" lineColor="255,0,0"/>
+						<var name="thruster2.N10.T" nick="thruster2.N10.T" lineColor="0,204,153"/>
+						<var name="thruster2.N11.T" nick="thruster2.N11.T" lineColor="0,0,255"/>
+						<var name="thruster2.N12.T" nick="thruster2.N12.T" lineColor="255,255,0"/>
+						<var name="thruster2.N13.T" nick="thruster2.N13.T" lineColor="0,102,0"/>
+						<var name="thruster2.N14.T" nick="thruster2.N14.T" lineColor="51,204,255"/>
+						<var name="thruster2.N15.T" nick="thruster2.N15.T" lineColor="255,153,0"/>
+						<var name="thruster2.N2.T" nick="thruster2.N2.T" lineColor="153,0,0"/>
+						<var name="thruster2.N3.T" nick="thruster2.N3.T" lineColor="0,0,153"/>
+						<var name="thruster2.N4.T" nick="thruster2.N4.T" lineColor="153,102,0"/>
+						<var name="thruster2.N5.T" nick="thruster2.N5.T" lineColor="204,0,255"/>
+						<var name="thruster2.N6.T" nick="thruster2.N6.T" lineColor="102,102,102"/>
+						<var name="thruster2.N7.T" nick="thruster2.N7.T" lineColor="102,51,0"/>
+						<var name="thruster2.N8.T" nick="thruster2.N8.T" lineColor="51,255,255"/>
+						<var name="thruster2.N9.T" nick="thruster2.N9.T" lineColor="255,153,255"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="435" visible="true">
+		<var name="GR_coupling.tp_in.Tc[1]" code="2"/>
+		<var name="GR_coupling.tp_in.Tk[1]" code="2"/>
+		<var name="GR_coupling.tp_in.q[1]" code="2"/>
+		<var name="GR_coupling.tp_out.Tc[1]" code="2"/>
+		<var name="GR_coupling.tp_out.Tk[1]" code="2"/>
+		<var name="GR_coupling.tp_out.q[1]" code="2"/>
+		<var name="Space.Tmax" code="2"/>
+		<var name="Space.Tmin" code="2"/>
+		<var name="Space.q" code="2"/>
+		<var name="Space.tp_in.Tc[1]" code="2"/>
+		<var name="Space.tp_in.Tk[1]" code="2"/>
+		<var name="Space.tp_in.q[1]" code="2"/>
+	</watch>
+	<outputWindow height="350" visible="true"/>
+</experiment>

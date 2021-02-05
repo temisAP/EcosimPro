@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbojet.transient.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbojet.transient.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>burner.f_in.WFHV&nbsp;</td><td>valve_burner.f_out.WFHV&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>burner.f_in.WX&nbsp;</td><td>valve_burner.f_out.WX&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>burner.g_in.T&nbsp;</td><td>split2.g_out.T&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>burner.g_in.W&nbsp;</td><td>split2.g_out.W&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>burner.g_in.WF&nbsp;</td><td>split2.g_out.WF&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>burner.g_in.WH&nbsp;</td><td>split2.g_out.WH&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>compressor.N'&nbsp;</td><td>turbine.N'&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>compressor.N&nbsp;</td><td>compressor.sh_in.N, compressor.sh_out.N, sh_end_comp.sh_in.N, sh_end_tur.sh_in.N, turbine.N, turbine.sh_in.N, turbine.sh_out.N&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>compressor.g_in.FAR&nbsp;</td><td>burner.g_in.FAR, compressor.g_out.FAR, inlet.g_out.FAR, split1.g_branch.FAR, split1.g_in.FAR, split1.g_out.FAR, split2.g_branch.FAR, split2.g_in.FAR, split2.g_out.FAR&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>compressor.g_in.H&nbsp;</td><td>inlet.g_out.H&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>compressor.g_in.P&nbsp;</td><td>inlet.g_out.P&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>compressor.g_in.T&nbsp;</td><td>inlet.g_out.T&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>compressor.g_in.W&nbsp;</td><td>compressor.g_out.W, inlet.g_out.W, split1.g_in.W&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>compressor.g_in.WF&nbsp;</td><td>inlet.g_out.WF&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>compressor.g_in.WH&nbsp;</td><td>inlet.g_out.WH&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>compressor.sh_in.Power&nbsp;</td><td>turbine.sh_out.Power&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>fuel_tank.FHV&nbsp;</td><td>burner.f_in.FHV, fuel_tank.f_out.FHV, fuelmeter.f_in.FHV, fuelmeter.f_out.FHV, valve_burner.f_in.FHV, valve_burner.f_out.FHV&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>fuelmeter.f_in.W&nbsp;</td><td>burner.f_in.W, fuel_tank.f_out.W, fuelmeter.f_out.W, valve_burner.f_in.W, valve_burner.f_out.W&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>fuelmeter.f_in.WFHV&nbsp;</td><td>fuel_tank.f_out.WFHV&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>fuelmeter.f_in.WX&nbsp;</td><td>fuel_tank.f_out.WX&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>fuelmeter.f_in.X&nbsp;</td><td>burner.f_in.X, fuel_tank.f_out.X, fuelmeter.f_out.X, valve_burner.f_in.X, valve_burner.f_out.X&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>monitor.s_fuel.signal&nbsp;</td><td>fuelmeter.s_out.signal&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>nozzle.A_exit&nbsp;</td><td>nozzle.A_exit_v&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>nozzle.g_in.P&nbsp;</td><td>split2.g_branch.P, turbine.g_out.P&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>sh_end_comp.sh_in.Power&nbsp;</td><td>compressor.sh_out.Power&nbsp;</td></tr>
+<tr><td>26&nbsp;</td><td>split1.g_in.H&nbsp;</td><td>burner.g_in.H, compressor.g_out.H, split1.g_branch.H, split1.g_out.H, split2.g_branch.H, split2.g_in.H, split2.g_out.H&nbsp;</td></tr>
+<tr><td>27&nbsp;</td><td>split1.g_in.P&nbsp;</td><td>burner.g_in.P, compressor.g_out.P, split1.g_out.P, split2.g_in.P, split2.g_out.P&nbsp;</td></tr>
+<tr><td>28&nbsp;</td><td>split1.g_in.T&nbsp;</td><td>compressor.g_out.T&nbsp;</td></tr>
+<tr><td>29&nbsp;</td><td>split1.g_in.WF&nbsp;</td><td>compressor.g_out.WF&nbsp;</td></tr>
+<tr><td>30&nbsp;</td><td>split1.g_in.WH&nbsp;</td><td>compressor.g_out.WH&nbsp;</td></tr>
+<tr><td>31&nbsp;</td><td>split2.g_in.T&nbsp;</td><td>split1.g_out.T&nbsp;</td></tr>
+<tr><td>32&nbsp;</td><td>split2.g_in.W&nbsp;</td><td>split1.g_out.W&nbsp;</td></tr>
+<tr><td>33&nbsp;</td><td>split2.g_in.WF&nbsp;</td><td>split1.g_out.WF&nbsp;</td></tr>
+<tr><td>34&nbsp;</td><td>split2.g_in.WH&nbsp;</td><td>split1.g_out.WH&nbsp;</td></tr>
+<tr><td>35&nbsp;</td><td>turbine.g_in.FAR&nbsp;</td><td>turbine.g_out.FAR&nbsp;</td></tr>
+<tr><td>36&nbsp;</td><td>turbine.g_in.P&nbsp;</td><td>burner.g_out.P, split1.g_branch.P&nbsp;</td></tr>
+<tr><td>37&nbsp;</td><td>turbine.g_in.W&nbsp;</td><td>turbine.g_out.W&nbsp;</td></tr>
+<tr><td>38&nbsp;</td><td>valve_burner.f_in.WFHV&nbsp;</td><td>fuelmeter.f_out.WFHV&nbsp;</td></tr>
+<tr><td>39&nbsp;</td><td>valve_burner.f_in.WX&nbsp;</td><td>fuelmeter.f_out.WX&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

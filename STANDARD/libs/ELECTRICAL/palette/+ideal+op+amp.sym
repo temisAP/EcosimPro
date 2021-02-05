@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="IdealOpAmp" >
+
+		<line id="Line_1" points="28,484 28,452" dx="84" dy="-356" lineColor="0,192,0"   />
+
+		<line id="Line_3" points="34,455 42,455" dx="86" dy="-359" lineColor="0,192,0"   />
+
+		<line id="Line_4" points="-42,443 -27,443" dx="122" dy="-363" lineColor="0,192,0"   />
+
+		<line id="Line_5" points="-42,475 -27,475" dx="122" dy="-363" lineColor="0,192,0"   />
+
+		<polygon id="Polygon_1" points="8,455 -24,431 -24,479" dx="112" dy="-359" lineWidth="1.5"  color="0,192,0"  />
+
+		<text id="Text_1" cx="6.5" cy="12" sx="13" sy="24" lineWidth="0"  dx="95.5" dy="117.5"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;">-</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_2" cx="6.5" cy="12" sx="13" sy="24" lineWidth="0"  dx="89.5" dy="94.5"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;">-</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_3" cx="8" cy="12" sx="16" sy="24" lineWidth="0"  dx="88" dy="75.5"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;">+</span></p></body></html>]]>
+		</text>
+
+		<text id="Text_4" cx="8" cy="12" sx="16" sy="24" lineWidth="0"  dx="122" dy="70.5"  >
+			<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;">+</span></p></body></html>]]>
+		</text>
+
+		<port id="e_p1" library="PORTS_LIB" type="elec"  hotPort="e_p1" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="71" />
+		
+		</port>
+
+		<port id="e_n1" library="PORTS_LIB" type="elec"  hotPort="e_n1" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="28" dy="103" />
+		
+		</port>
+
+		<port id="e_p2" library="PORTS_LIB" type="elec"  hotPort="e_p2" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="128" dy="84" />
+		
+		</port>
+
+		<port id="e_n2" library="PORTS_LIB" type="elec"  hotPort="e_n2" >
+		
+				<symbol dx="112" dy="128" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="112" dy="116" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="G"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="179" cy="27" sx="198" sy="30" variable="v1"  headerText="v1"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-76" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="176" cy="59" sx="192" sy="30" variable="i1"  headerText="i1"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-72" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="287" cy="27" sx="198" sy="30" variable="v2"  headerText="v2"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" dy="-8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="288" cy="59" sx="192" sy="30" variable="i2"  headerText="i2"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" dy="-12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

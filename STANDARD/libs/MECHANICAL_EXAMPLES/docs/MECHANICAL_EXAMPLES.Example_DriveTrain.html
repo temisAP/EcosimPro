@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="MECHANICAL_EXAMPLES.html">MECHANICAL_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="MECHANICAL_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">MECHANICAL_EXAMPLES.Example_DriveTrain<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Example_DriveTrain">Example_DriveTrain</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>startTime&nbsp;</td><td>REAL &nbsp;</td><td>0.5&nbsp;</td><td>&nbsp;</td><td>Start time of step&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>inertia3&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_Inertia.html">MECHANICAL.R_Inertia</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>clutch&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_Clutch.html">MECHANICAL.R_Clutch</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>sineSignal&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>startSignal&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>torqueZero&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>clutchSignal&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>brakeSignal&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.AnalogSource.html">CONTROL.AnalogSource</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>inertia2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_Inertia.html">MECHANICAL.R_Inertia</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>torque2&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_ActuatorTorque.html">MECHANICAL.R_ActuatorTorque</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>torque1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_ActuatorTorque.html">MECHANICAL.R_ActuatorTorque</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>spring&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_SpringDamper.html">MECHANICAL.R_SpringDamper</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>brake&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_Brake.html">MECHANICAL.R_Brake</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>inertia1&nbsp;</td><td><a href="../../MECHANICAL/docs/MECHANICAL.R_Inertia.html">MECHANICAL.R_Inertia</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>productSignal&nbsp;</td><td><a href="../../CONTROL/docs/CONTROL.Product.html">CONTROL.Product</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>brake.cgeo&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Geometry constant containing friction distribution assumption&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>brake.fn_max&nbsp;</td><td>1600&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Maximum normal force&nbsp;</td><td>"N"&nbsp;</td></tr>
+
+<tr><td>brake.mue_pos&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>[w,mue] positive sliding friction coefficient: w_rel>=0&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>brake.peak&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Maximum value of mue for w_rel=0&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>brake.w_i&nbsp;</td><td>90&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial relative angular velocity&nbsp;</td><td>"rad/s"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.Amp&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.Offset&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.Period&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.Tstart&nbsp;</td><td>startTime&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>brakeSignal.source&nbsp;</td><td>Source_Step&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>brakeSignal.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>brakeSignal.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>clutch.cgeo&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Geometry constant containing friction distribution assumption&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>clutch.fn_max&nbsp;</td><td>160&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Maximum normal force&nbsp;</td><td>"N"&nbsp;</td></tr>
+
+<tr><td>clutch.mue_pos&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Positive sliding friction coefficient&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>clutch.peak&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Maximum value of mue for w_rel=0&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>clutch.phi_rel_i&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial angular distance between ports&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>clutch.w_rel_i&nbsp;</td><td>-10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial relative angular velocity&nbsp;</td><td>"rad/s"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.Amp&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.Offset&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.Period&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.Tstart&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>clutchSignal.source&nbsp;</td><td>Source_Constant&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>clutchSignal.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>clutchSignal.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>inertia1.I&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia of body&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>inertia1.w0&nbsp;</td><td>90&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial angular velocity&nbsp;</td><td>"rad/s"&nbsp;</td></tr>
+
+<tr><td>inertia2.I&nbsp;</td><td>0.05&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia of body&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>inertia2.w0&nbsp;</td><td>90&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial angular velocity&nbsp;</td><td>"rad/s"&nbsp;</td></tr>
+
+<tr><td>inertia3.I&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Moment of inertia of body&nbsp;</td><td>"kg·m^2"&nbsp;</td></tr>
+
+<tr><td>inertia3.w0&nbsp;</td><td>100&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial angular velocity&nbsp;</td><td>"rad/s"&nbsp;</td></tr>
+
+<tr><td>productSignal.n&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of inputs and outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>sineSignal.Amp&nbsp;</td><td>200&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>sineSignal.Offset&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>sineSignal.Period&nbsp;</td><td>PI / 50&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>sineSignal.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>sineSignal.Tstart&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>sineSignal.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>sineSignal.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>sineSignal.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>sineSignal.source&nbsp;</td><td>Source_Sine&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>sineSignal.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>sineSignal.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>spring.c&nbsp;</td><td>160&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Spring constant&nbsp;</td><td>"N·m/rad"&nbsp;</td></tr>
+
+<tr><td>spring.d&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Damping constant&nbsp;</td><td>"N·m·s/rad"&nbsp;</td></tr>
+
+<tr><td>spring.phi_rel0&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Angular distance between ports for unstretched spring&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>spring.phi_rel_i&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial angular distance between ports&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>startSignal.Amp&nbsp;</td><td>-1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>startSignal.Offset&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>startSignal.Period&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>startSignal.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>startSignal.Tstart&nbsp;</td><td>startTime&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>startSignal.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>startSignal.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>startSignal.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>startSignal.source&nbsp;</td><td>Source_Constant&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>startSignal.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>startSignal.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>torqueZero.Amp&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Signal amplitude or height&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>torqueZero.Offset&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Offset of output signal&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>torqueZero.Period&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Period of sine, pulse, sawtooth, or square source&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>torqueZero.Phase&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Phase of sine source&nbsp;</td><td>"rad"&nbsp;</td></tr>
+
+<tr><td>torqueZero.Tstart&nbsp;</td><td>0&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Starting time of signal generation&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>torqueZero.n_out&nbsp;</td><td>1&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Dimension of outputs&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>torqueZero.pulseWidth&nbsp;</td><td>0.001&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Pulse width of pulse wave&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>torqueZero.rampDuration&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Duration of the ramp&nbsp;</td><td>"s"&nbsp;</td></tr>
+
+<tr><td>torqueZero.source&nbsp;</td><td>Source_Constant&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#SourceOption" data-ajax='false'>CONTROL.SourceOption</a>&nbsp;</td><td>Waveform&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>torqueZero.tabmethod&nbsp;</td><td>LinearInterpWithEvents&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/AUF/EcosimPro_5.12.2/STANDARD/libs/CONTROL/docs/CONTROL.enumerativeTypes.html#tableMethod" data-ajax='false'>CONTROL.tableMethod</a>&nbsp;</td><td>Method to interpolate or connect the table points&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>torqueZero.timeTable&nbsp;</td><td>&nbsp;</td><td>DATA&nbsp;</td><td>TABLE_1D &nbsp;</td><td>Table for table source&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:48)</font></p>
+</body>
+</html>

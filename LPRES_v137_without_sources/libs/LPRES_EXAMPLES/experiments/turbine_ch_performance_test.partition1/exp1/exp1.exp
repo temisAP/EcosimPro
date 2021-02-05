@@ -1,0 +1,38 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: turbine_ch_performance_test
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON turbine_ch_performance_test.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+      Nozzle.A = 0.0018 * (0.8 + TIME / 40.)
+      Turbine_ch.m.N = 6000
+
+   BODY
+      DEBUG_LEVEL= 1   
+      TOLERANCE = 1e-006
+		
+      TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()	
+		
+		Turbine_ch.m.N = 0
+		
+		TIME = 0
+      TSTOP = 20
+      CINT = 0.1
+      INTEG()	
+		
+END EXPERIMENT

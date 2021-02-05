@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="T_ElastoGap" >
+
+		<line id="Line_1" points="144,80 144,100 104,100 104,60 144,60 144,80 156,80"  end_arrow="true" dx="16" dy="16" lineColor="192,192,192"   />
+
+		<line id="Line_8" points="152,511.999 152,471.999" dx="-32" dy="-395.999" lineWidth="2.5"   />
+
+		<line id="Line_11" points="136,464.008 136,524.008" dx="-24" dy="-396.008" lineWidth="4"   />
+
+		<rect id="Rectangle_4" cx="37.0009" cy="623.018" sx="32" sy="16" dx="102.999" dy="-547.018" lineWidth="1.5"  color="220,220,220"  />
+
+		<line id="Line_14" points="5.001,623.018 9.001,623.018 13.001,619.018 17.001,627.018 21.001,619.018 25.001,627.018 29.001,619.018 33.001,623.018 37.001,623.018" dx="118.999" dy="-547.018"  />
+
+		<line id="Line_15" points="93,515.998 113,515.998" dx="31" dy="-387.998" lineWidth="1.5"   />
+
+		<line id="Line_16" points="92.9991,484 112.999,484" dx="31.0009" dy="-380" lineWidth="1.5"   />
+
+		<line id="Line_17" points="101,484.002 100.999,508" dx="31.0009" dy="-380"  />
+
+		<rect id="Rectangle_5" cx="103" cy="496" sx="4" sy="24" dx="27" dy="-380" color="100,100,100"  />
+
+		<line id="Line_18" points="154,577 170,577"  end_arrow="true" dx="-58" dy="-481" lineColor="192,192,192"   />
+
+		<rect id="Rectangle_6" cx="261.999" cy="573" sx="24" sy="24" dx="-117.999" dy="-457" lineWidth="1.5"  color="220,220,220"  />
+
+		<port id="m_in" library="PORTS_LIB" type="mech_trans"  hotPort="m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="54" dy="86" />
+		
+		</port>
+
+		<port id="m_out" library="PORTS_LIB" type="mech_trans"  hotPort="m_out" >
+		
+				<symbol dx="176" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="183" dy="86" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="68" cy="58" sx="88" sy="12" variable="m_in.F"  headerText="m_in.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="65" cy="66" sx="90" sy="12" variable="m_in.s"  headerText="m_in.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="10" dy="12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="210.5" cy="122" sx="93" sy="12" variable="m_out.F"  headerText="m_out.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="28" dy="8" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="211.5" cy="142" sx="95" sy="12" variable="m_out.s"  headerText="m_out.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="27" dy="2" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xmlExample version="1.0" type="testType">
+   <node1 valueString="my value" valueReal="1.2" valueInteger="2" valueBoolean="1">
+   </node1>
+		 
+</xmlExample>

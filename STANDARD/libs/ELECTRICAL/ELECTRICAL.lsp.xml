@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.0">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="ELEC_Funcs.el"/>
+  <file name="ELEC_CompAbstract.el"/>
+  <file name="ELEC_CompBasic.el"/>
+  <file name="ELEC_CompControlledSources.el"/>
+  <file name="ELEC_CompSensors.el"/>
+  <file name="ELEC_CompIdeal.el"/>
+  <file name="ELEC_CompSemiconductors.el"/>
+  <file name="ELEC_CompSources.el"/>
+  <file name="ELEC_CompLines.el"/>
+ </filedeps>
+ <libdeps>
+  <lib name="MATH" version=""/>
+  <lib name="PORTS_LIB" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+ <symcategories>
+  <category name="Sources">
+   <symbol name="CurrentConstant"/>
+   <symbol name="CurrentSignal"/>
+   <symbol name="CurrentSine"/>
+   <symbol name="VoltageConstant"/>
+   <symbol name="VoltageSignal"/>
+   <symbol name="VoltageSine"/>
+  </category>
+  <category name="Basic">
+   <symbol name="Capacitor"/>
+   <symbol name="Conductor"/>
+   <symbol name="CoupledInductor"/>
+   <symbol name="EMF"/>
+   <symbol name="Ground"/>
+   <symbol name="Gyrator"/>
+   <symbol name="Inductor"/>
+   <symbol name="Resistor"/>
+  </category>
+  <category name="Controlled_sources">
+   <symbol name="CCCS"/>
+   <symbol name="CCVS"/>
+   <symbol name="VCCS"/>
+   <symbol name="VCVS"/>
+  </category>
+  <category name="Ideal_components">
+   <symbol name="ControlledIdealCommutingSwitch"/>
+   <symbol name="ControlledIdealSwitch"/>
+   <symbol name="IdealDiode"/>
+   <symbol name="IdealGTOThyristor"/>
+   <symbol name="IdealOpAmp"/>
+   <symbol name="IdealOpAmp3Pin"/>
+   <symbol name="IdealSwitch"/>
+   <symbol name="IdealThyristor"/>
+   <symbol name="IdealTransformer"/>
+   <symbol name="Short"/>
+  </category>
+  <category name="Lossy_Lossless_transmission_lines">
+   <symbol name="Line_LRCG"/>
+   <symbol name="Line_RC"/>
+  </category>
+  <category name="Semiconductors">
+   <symbol name="Diode"/>
+   <symbol name="NMOS"/>
+   <symbol name="NPN"/>
+   <symbol name="PMOS"/>
+   <symbol name="PNP"/>
+  </category>
+  <category name="Sensors">
+   <symbol name="SensorCurrent"/>
+   <symbol name="SensorPotential"/>
+   <symbol name="SensorVoltage"/>
+  </category>
+ </symcategories>
+</library>

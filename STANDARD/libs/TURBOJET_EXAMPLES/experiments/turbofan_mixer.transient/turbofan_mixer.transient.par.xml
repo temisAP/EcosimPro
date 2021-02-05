@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="TURBOJET_EXAMPLES" component="turbofan_mixer" partition="transient">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<boundaries>
+  <variable name="TURBOJET.Altitude"/>
+  <variable name="TURBOJET.Mach"/>
+  <variable name="fuel_valve.s_flow.signal[1]"/>
+</boundaries>
+<dynamics>
+  <variable name="fan.N"/>
+  <variable name="compressor.N"/>
+</dynamics>
+<algebraics>
+  <variable name="compressor.beta"/>
+  <variable name="fan.BPR"/>
+  <variable name="fan.beta"/>
+  <variable name="fan.g_in.W"/>
+  <variable name="hp_turbine.g_out.T"/>
+  <variable name="mixer.Ps1"/>
+  <variable name="mixer.g_in1.T"/>
+</algebraics>
+<residues>
+  <r id="1" value="fan.N' = fan.DN"/>
+  <r id="2" value="compressor.N' = hp_turbine.DN"/>
+  <r id="3" value="IMPL(fan.beta) fan.g_in.W * ssqrt(fan.theta) / fan.delta = fan.CG1 * fan.WRJ"/>
+  <r id="4" value="IMPL(mixer.g_in2.W) mixer.g_in2.W = mixer.rhos2 * mixer.A2 * mixer.v2"/>
+  <r id="5" value="IMPL(compressor.beta) compressor.g_in.W * ssqrt(compressor.theta) / compressor.delta = compressor.CG1 * compressor.WRJ"/>
+  <r id="6" value="IMPL(hp_turbine.g_out.T) hp_turbine.WR - hp_turbine.CG1 * hp_turbine.WRJ = 0"/>
+  <r id="7" value="IMPL(mixer.g_in1.T) lp_turbine.WR - lp_turbine.CG1 * lp_turbine.WRJ = 0"/>
+  <r id="8" value="IMPL(lp_turbine.g_in.W) lp_turbine.g_in.W = mixer.rhos1 * mixer.A1 * mixer.v1"/>
+  <r id="9" value="0 = nozzle.A_exit - nozzle.g_in.W / (nozzle.Ps_out / (nozzle.Rgas * nozzle.Ts_out) * nozzle.v_out)"/>
+</residues>
+</partitionInfo>

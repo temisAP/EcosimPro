@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="IdealOpAmp3Pin" >
+
+		<line id="Line_3" points="34,455 42,455" dx="86" dy="-359" lineColor="0,192,0"   />
+
+		<line id="Line_1" points="-42,443 -27,443" dx="122" dy="-363" lineColor="0,192,0"   />
+
+		<line id="Line_2" points="-42,475 -27,475" dx="122" dy="-363" lineColor="0,192,0"   />
+
+		<polygon id="Polygon_1" points="8,455 -24,431 -24,479" dx="112" dy="-359" lineWidth="1.5"  color="0,192,0"  />
+
+		<line id="Line_7" points="56.75,78 61.25,78" dx="34.25" dy="28"  />
+
+		<g id="Group_2" dx="18" dy="1.5" >
+		
+					<line id="Line_8" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_10" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<g id="Group_1" dx="53" dy="2.5" >
+		
+					<line id="Line_12" points="-5.5,5 -1,5" dx="78.5" dy="78.75"  />
+		 />
+					<line id="Line_13" points="-5.5,5 -1,5" rotation="-90" dx="78.5" dy="78.75"  />
+		 />
+		</g>
+
+		<port id="e_in_p" library="PORTS_LIB" type="elec"  hotPort="e_in_p" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="28.5" cy="14" dx="15.5" dy="71" />
+		
+		</port>
+
+		<port id="e_in_n" library="PORTS_LIB" type="elec"  hotPort="e_in_n" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="28.5" cy="14" dx="15.5" dy="103" />
+		
+		</port>
+
+		<port id="e_out" library="PORTS_LIB" type="elec"  hotPort="e_out" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="24" cy="14" dx="132" dy="87" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="G"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="146.5" cy="23" sx="261" sy="30" variable="e_in_p.v"  headerText="e_in_p.v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="159.5" cy="59" sx="255" sy="30" variable="e_in_p.i"  headerText="e_in_p.i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-32" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="146.5" cy="155" sx="261" sy="30" variable="e_in_n.v"  headerText="e_in_n.v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" dy="-4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="143.5" cy="187" sx="255" sy="30" variable="e_in_n.i"  headerText="e_in_n.i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-16" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_5" cx="317" cy="91" sx="250" sy="30" variable="e_out.v"  headerText="e_out.v"  tailText="V" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="4" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_6" cx="330" cy="119" sx="244" sy="30" variable="e_out.i"  headerText="e_out.i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-8" dy="-16" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES.html">LPRES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES.functions.html">Functions</a> |
+	  <a class="qindex" href="LPRES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES.global.html">Global Variables</a></div>
+<h1 align="center">LPRES.Pump<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="Pump">Pump</a> IS_A <a href="LPRES.FluidInFluidOut.html">FluidInFluidOut</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/LPRES.Pump.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Pump</font><br/>
+<br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Type&nbsp;</td><td>ENUM <a href="LPRES.enumerativeTypes.html#OnOffDesign">OnOffDesign</a>&nbsp;</td><td>Design&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>f_in&nbsp;</td><td><a href="LPRES.Fluid.html">Fluid</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Inlet fluid port&nbsp;</td></tr>
+
+<tr><td>f_out&nbsp;</td><td><a href="LPRES.Fluid.html">Fluid</a>&nbsp;</td><td>&nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Outlet fluid port&nbsp;</td></tr>
+
+<tr><td>m&nbsp;</td><td><a href="LPRES.Mechanical.html">Mechanical</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Inlet mechanical port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A_in&nbsp;</td><td>REAL &nbsp;</td><td>0.01&nbsp;</td><td>&nbsp;</td><td>Input area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>U_0&nbsp;</td><td>REAL &nbsp;</td><td>500&nbsp;</td><td>&nbsp;</td><td>Initial blade speed for iterative calculations&nbsp;</td><td>m/s&nbsp;</td></tr>
+
+<tr><td>dp&nbsp;</td><td>REAL &nbsp;</td><td>5000000&nbsp;</td><td>&nbsp;</td><td>Design pressure increase&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+<tr><td>eta_d&nbsp;</td><td>REAL &nbsp;</td><td>0.8&nbsp;</td><td>&nbsp;</td><td>Design efficiency&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>phi_d&nbsp;</td><td>REAL &nbsp;</td><td>0.05&nbsp;</td><td>&nbsp;</td><td>Design flow coefficient&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>psi_d&nbsp;</td><td>REAL &nbsp;</td><td>0.7&nbsp;</td><td>&nbsp;</td><td>Design loading coefficient&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>r_m&nbsp;</td><td>REAL &nbsp;</td><td>0.05&nbsp;</td><td>&nbsp;</td><td>Average radius&nbsp;</td><td>m&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A_in_d&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Design input area&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>H&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Head&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Power&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Mechanical power&nbsp;</td><td>W&nbsp;</td></tr>
+
+<tr><td>U&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Blade speed&nbsp;</td><td>m/s&nbsp;</td></tr>
+
+<tr><td>eta&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Efficiency&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>phi&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Flow coefficient&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>psi&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Loading coefficient&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>r_m_d&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Design average radius&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>tau&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Specific work&nbsp;</td><td>J/kg&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:47)</font></p>
+</body>
+</html>

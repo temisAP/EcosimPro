@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="FirstOrderHold" >
+
+		<line id="Line_9" points="26,45 38,45"  end_arrow="true" dx="102" dy="35" lineColor="255,128,0"   />
+
+		<line id="Line_1" points="110.02,39.6939 125.02,39.6939"  end_arrow="true" dx="-30.02" dy="40.3061" lineColor="255,128,0"   />
+
+		<rect id="Rectangle_2" cx="105" cy="32" sx="32" sy="32" dx="7" dy="48" lineWidth="1.5"  color="255,128,0"  />
+
+		<line id="Line_3" points="21.44,437 25.304,436.126 29.44,425 33.44,429 37.44,417 41.44,425 45.44,417" dx="78.56" dy="-345" lineWidth="2.5"  aliasing="true"  />
+
+		<port id="s_in" library="PORTS_LIB" type="analog_signal"  hotPort="s_in" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="16" cy="12" dx="42" dy="74" />
+		
+		</port>
+
+		<port id="s_out" library="PORTS_LIB" type="analog_signal"  hotPort="s_out" >
+		
+				<symbol dx="144" dy="80" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="151" dy="74" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="dt"/>
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="106" sx="97" sy="12" variable="s_in.signal[1]"  headerText="s_in.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-16" dy="4" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="203" cy="98" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="12" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

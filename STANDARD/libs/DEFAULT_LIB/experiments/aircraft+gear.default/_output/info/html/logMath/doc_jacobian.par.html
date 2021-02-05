@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../aircraft+gear.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../aircraft+gear.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Jacobian Matrix Information<br /></h2>
+<br/>
+<font size="4" color="black">Jacobian Independent Variables</font><br/>
+<table border="1" cellspacing="0"><tr><td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>VARIABLE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>CATEGORY&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION&nbsp;</b></color></td>
+<td><color="black"><b>BOX
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v20" data-ajax='false'><font color="red">y3</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v20" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>m&nbsp;</td><td>Displacements &nbsp;</td><td>&nbsp;</td><td>y3'. = y3'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v21" data-ajax='false'><font color="red">y3'</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v21" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>&nbsp;</td><td>Derivative of variable y3&nbsp;</td><td>&nbsp;</td><td>y3'' = (fk2 - fdrag) / m3&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v17" data-ajax='false'><font color="red">y2</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v17" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>m&nbsp;</td><td>Displacements &nbsp;</td><td>&nbsp;</td><td>y2'. = y2'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v18" data-ajax='false'><font color="red">y2'</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v18" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>&nbsp;</td><td>Derivative of variable y2&nbsp;</td><td>&nbsp;</td><td>y2'' = (2 * fk1 - fk2) / m2&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v13" data-ajax='false'><font color="red">x</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v13" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>m&nbsp;</td><td>Horizontal distance aircraft arrester cable&nbsp;</td><td>&nbsp;</td><td>x'. = x'&nbsp;</td><td>0&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v14" data-ajax='false'><font color="red">x'</font></a></font>&nbsp;</td><td><font color="red"><a href="doc_vars.par.html#v14" data-ajax='false'><font color="red"></font></a></font>&nbsp;</td><td>DYNAMIC&nbsp;</td><td>&nbsp;</td><td>Derivative of variable x&nbsp;</td><td>&nbsp;</td><td>x'' = -2 * fk1 * sinetheta / m1&nbsp;</td><td>0&nbsp;</td></tr>
+<br/>
+</table>
+<br/>
+</body></html>

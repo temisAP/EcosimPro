@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="TH_FuncsPureFluids.el"/>
+  <file name="TH_Common.el"/>
+  <file name="TH_CommonProp.el"/>
+  <file name="TH_CompAbstract.el"/>
+  <file name="TH_FunVCHPs.el"/>
+  <file name="TH_FunFreeConvec.el"/>
+  <file name="TH_CompBasics.el"/>
+  <file name="TH_CompSensors.el"/>
+  <file name="TH_CompWall.el"/>
+  <file name="TH_CompPlate.el"/>
+  <file name="TH_CompCylinder.el"/>
+  <file name="TH_CompDNphases.el"/>
+  <file name="TH_CompPeltier.el"/>
+  <file name="TH_CompView_Factors.el"/>
+  <file name="TH_CompPeriodic_Stop_Control.el"/>
+  <file name="TH_CompTube.el"/>
+  <file name="TH_CompVCHP.el"/>
+  <file name="TH_CompSaddle.el"/>
+  <file name="TH_CompRadiator.el"/>
+  <file name="TH_CompFreeConvec.el"/>
+  <file name="TH_CompHeatFlowMultiplier.el"/>
+  <file name="TH_CompMuxers.el"/>
+ </filedeps>
+ <libdeps>
+  <lib name="CONTROL" version=""/>
+  <lib name="MATH" version=""/>
+  <lib name="PORTS_LIB" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

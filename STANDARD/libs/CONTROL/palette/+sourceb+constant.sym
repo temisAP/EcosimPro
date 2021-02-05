@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="SourcebConstant" >
+
+		<line id="Line_1" points="26,45 38,45"  end_arrow="true" dx="86" dy="51" lineColor="255,192,0"   />
+
+		<rect id="Rectangle_2" cx="105" cy="32" sx="32" sy="32" dx="-9" dy="64" lineWidth="1.5"  color="255,192,0"  />
+
+		<line id="Line_5" points="100,148 100,172" dx="-16" dy="-64" lineColor="170,0,0"   />
+
+		<line id="Line_6" points="88,176 112,176" dx="-4" dy="-68" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="119,808 96,808" dx="-11" dy="-712"  />
+
+		<port id="s_out" library="PORTS_LIB" type="bool_signal"  hotPort="s_out" >
+		
+				<symbol dx="128" dy="96" onLabel="true" />
+		
+				<label cx="20" cy="12" dx="135" dy="88" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="k"/>
+				<var name="n_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="183" cy="114" sx="102" sy="12" variable="s_out.signal[1]"  headerText="s_out.signal[1]"  tailText="" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-4" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

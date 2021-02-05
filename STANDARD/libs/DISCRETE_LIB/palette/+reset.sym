@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Reset" >
+
+		<line id="Line_2" points="26,45 38,45"  end_arrow="true" dx="86.5" dy="51" lineColor="0,131,0"  aliasing="true"  />
+
+		<rect id="Rectangle_1" cx="105" cy="40" sx="32" sy="32" dx="-7.5" dy="56" lineWidth="1.5"  color="0,170,0" aliasing="true"  />
+
+		<text id="Text_1" cx="16" cy="11" sx="32" sy="22" aliasing="true" dx="80" dy="84"  >
+			<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62;&#60;span style=&#34; font-family:&#39;MS Shell Dlg 2&#39;; font-size:9pt; font-weight:600; color:#000000;&#34;&#62;RST&#60;/span&#62;&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+		</text>
+
+		<port id="po" library="DISCRETE_LIB" type="DigitalPort"  hotPort="po" >
+		
+				<symbol dx="129.5" dy="96" onLabel="true" />
+		
+				<label cx="11" cy="12" dx="139.5" dy="86.5" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="delay"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="190.5" cy="62" sx="117" sy="12" variable="po.s"  headerText="po.s"  tailText="TRUE/FALSE" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="8" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

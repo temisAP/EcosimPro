@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="ELECTRICAL_EXAMPLES" component="CommonEmitterAmplifier" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="Cin.v"/>
+  <variable name="Cout.v"/>
+  <variable name="NPN_1.vbc"/>
+  <variable name="NPN_1.e_C.v"/>
+  <variable name="NPN_1.vbe"/>
+</dynamics>
+<residues>
+  <r id="1" value="Cin.v' = VoltageSine_1.e_n.i / Cin.C"/>
+  <r id="2" value="Cout.v' = Cout.e_p.i / Cout.C"/>
+  <r id="3" value="NPN_1.vbc' = ((NPN_1.ibe - NPN_1.ibc) * NPN_1.qbk - NPN_1.ibc / NPN_1.Br - (NPN_1.e_C.i - NPN_1.Ccs * NPN_1.e_C.v')) / NPN_1.cbc"/>
+  <r id="4" value="NPN_1.e_C.v' = (Re.e_n.i - (-NPN_1.e_B.i - NPN_1.e_C.i)) / NPN_1.Ccs"/>
+  <r id="5" value="NPN_1.vbe' = (NPN_1.e_B.i - (NPN_1.ibe / NPN_1.Bf + NPN_1.ibc / NPN_1.Br + NPN_1.cbc * NPN_1.vbc')) / NPN_1.cbe"/>
+</residues>
+</partitionInfo>

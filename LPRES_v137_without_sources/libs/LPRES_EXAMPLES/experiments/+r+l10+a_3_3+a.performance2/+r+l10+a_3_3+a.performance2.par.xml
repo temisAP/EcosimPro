@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="RL10A_3_3A" partition="performance2">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="OCV.dp"/>
+  <variable name="TCV.dp"/>
+</noDatas>
+<boundaries>
+  <variable name="Combustion_Chamber.OF"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="TCV.dp"/>
+</boundaries>
+<algebraics>
+  <variable name="Combustion_Chamber.M_r"/>
+  <variable name="Combustion_Chamber.W_F"/>
+  <variable name="Injectors_LOX.M_out"/>
+  <variable name="Injectors_LOX.PR"/>
+  <variable name="Pump1_LH2.U"/>
+  <variable name="Split_Frac.f_in.Tt"/>
+  <variable name="ThrustMonitor.g.Tt"/>
+  <variable name="Turbine.M_2"/>
+  <variable name="Combustion_Chamber.p_out_ch"/>
+  <variable name="ThrustMonitor.M_out"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

@@ -1,0 +1,109 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: MATH
+ COMPONENT: testFFT
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 17/10/2018
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON testFFT.default
+   DECLS
+		INTEGER ic, lnp, np_fft
+		REAL To = 1
+		REAL px[2048], py[2048], pz[2048], xfft[1024], yfft_amy[1024], yfft_amz[1024], yfft_phy[1024]
+   OBJECTS
+   INIT
+      -- initial values for state variables
+      y = 1
+      z = 1
+      z' = 0
+
+   BOUNDS
+		x = step(TIME,To)*(TIME-To)
+
+   BODY
+      f  = 3
+		for = 10
+		cv = 0.01
+		K_spr = 100
+		fase = 10
+
+
+      -- set the debug level (valid range [0,4])
+      DEBUG_LEVEL= 1   
+      -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), , CVODE_AM, RK4, EULER, AM1, AM2 and AM4
+      IMETHOD= CVODE_BDF_SPARSE -- default is DASSL
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
+      eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
+      -- set tolerances and other important inputs
+      REL_ERROR = 1e-06 -- transient solver relative tolerance
+      ABS_ERROR = 1e-06 -- transient solver absolute tolerance
+      TOLERANCE = 1e-06 -- steady solver relative tolerance
+      INIT_INTEG_STEP = -1 -- initial integration step size (-1 means use the solver estimation) 
+      MAX_INTEG_STEP = -1 -- maximum integration step size (-1 means use the solver estimation) 
+      NSTEPS = 1 -- Only for explicit solvers use CINT/NSTEPS as integration step size
+      REPORT_MODE = IS_STEP -- by default it reports results at every CINT and event detection. Other valid options are IS_STEP, IS_CINT and IS_MANUAL_REFRESH 
+
+      TIME = 0
+      TSTOP = To
+      CINT = 1
+--		setSilentMode(TRUE)		
+      INTEG()
+--		setSilentMode(FALSE)		
+
+      TSTOP = To + 5
+		-- determinacion del paso de tiempo para FFT
+		np_fft = 2**11
+      CINT = (TSTOP-TIME)/(np_fft-1)
+		EXEC_INIT()  -- solo necesario si no hay un INTEG previo
+
+		ic = 1
+		px[ic] = x
+		py[ic] = y
+		pz[ic] = z
+		WHILE(INTEG_CINT() != INTEG_END)
+			ic = ic + 1
+			px[ic] = x
+			py[ic] = y
+			pz[ic] = z
+--WRITEF("timeHistory.rpt","\n%g\t%g\t%g\t%g\t",TIME,px[ic],py[ic],pz[ic])
+		END WHILE
+		ic = ic + 1
+		px[ic] = x
+		py[ic] = y
+		pz[ic] = z
+--WRITEF("timeHistory.rpt","\n%g\t%g\t%g\t%g\t",TIME,px[ic],py[ic],pz[ic])
+		ASSERT(ic == np_fft) FATAL ("ERROR: no. de pasos de INTEG_CINT mal calculado")
+
+		-- Function calculating the transfer function by FFT
+		treatfft(4,TIME-To, ic, px,py, 0,50., lnp, xfft,yfft_amy)
+		treatfft(5,TIME-To, ic, px,py, 0,50., lnp, xfft,yfft_phy)
+		treatfft(4,TIME-To, ic, px,pz, 0,50., lnp, xfft,yfft_amz)
+
+		REPORT_REFRESH()
+
+--------------------------------------------------------------------------------
+--	Function calculating the transfer function by FFT
+--		treatfft(iff,TIME, np, px,py, fr1,fr2, lnp, xfft,yfft)
+--
+--   *****************************************************************
+--   * inputs:                                                       *
+--   *     iff= Tipo de tratamiento espectral deseado :              *
+--   *           iff=1  Fourier transform. en amplitud               *
+--   *           iff=2  Fourier transform. en fase                   *
+--   *           iff=3  Fourier transform. en densidad espectral     *
+--   *           iff=4  Funcion de transferencia en amplitud         *
+--   *           iff=5  Funcion de transferencia en fase             *
+--   *     time= tiempo de simulacion                                *
+--   *     np = numero de puntos de los arrays pxnfft,pynfft         *
+--   *     px = array valores de x para tiempos equiespac.           *
+--   *     py = array valores de y para tiempos equiespac.           *
+--   * outputs                                                       *
+--   *     lnp=numero de frecuencias despues de la transformacion    *
+--   *     xfft=array de frecuencias                                   *
+--   *     yfft=array de respuesta (y/x si iff>3) funcion de frec.     *
+--   *****************************************************************
+END EXPERIMENT

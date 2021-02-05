@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_2" x="839" y="0" dx="536" dy="305">
+				<plot id="Plot_2" graphType="plot_vec">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="xfft[0251]">
+							<titleAxe value=""/>
+							<scale/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="yfft_amy[0251]
+						vs
+						xfft[0251]" isMainLine="true"/>
+							<var name="yfft_amy[0251]" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="629" dy="260">
+				<plot id="Plot_1" graphType="plot_time">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="x" nick=""/>
+							<var name="y" nick=""/>
+							<var name="z" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_4" x="838" y="308" dx="537" dy="290">
+				<plot id="Plot_4" graphType="plot_vec">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="xfft[0251]">
+							<titleAxe value=""/>
+							<scale/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="yfft_phy[0251]
+						vs
+						xfft[0251]" isMainLine="true"/>
+							<var name="yfft_phy[0251]" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="34" y="315" dx="718" dy="291">
+				<plot id="Plot_3" graphType="plot_vec">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="xfft[0251]">
+							<titleAxe value=""/>
+							<scale/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="yfft_amz[0251]
+						vs
+						xfft[0251]" isMainLine="true"/>
+							<var name="yfft_amz[0251]" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="133" height="633" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="301" width="1858" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

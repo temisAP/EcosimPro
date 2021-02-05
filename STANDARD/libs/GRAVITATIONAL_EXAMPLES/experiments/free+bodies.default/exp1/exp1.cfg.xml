@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.0.1">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_4" x="637" y="327" dx="637" dy="327">
+				<plot id="Plot_4">
+					<axeX variableName="Universe.R[1,2,x]">
+						<scale min="-0.001" max="0.003"/>
+						<titleAxe value="Universe.R[1,2,x]"/>
+					</axeX>
+					<axeY>
+						<scale min="-0.0015" max="0.0015"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_4" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Universe.R[1,2,y]" nick="Universe.R[1,2,y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="637" y="0" dx="637" dy="327">
+				<plot id="Plot_3">
+					<axeX variableName="OrbitalBody2.r[x]">
+						<titleAxe value="OrbitalBody2.r[x]"/>
+					</axeX>
+					<axeY>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_3" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="OrbitalBody2.r[y]" nick="OrbitalBody2.r[y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="327" dx="637" dy="327">
+				<plot id="Plot_2">
+					<axeX variableName="Universe.R[2,1,x]">
+						<scale min="-0.003" max="0.001"/>
+						<titleAxe value="Universe.R[2,1,x]"/>
+					</axeX>
+					<axeY>
+						<scale min="-0.0015" max="0.0015"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_2" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="Universe.R[2,1,y]" nick="Universe.R[2,1,y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+			<plotWindow title="Plot_1" x="0" y="0" dx="637" dy="327">
+				<plot id="Plot_1">
+					<axeX variableName="OrbitalBody1.r[x]">
+						<scale min="-0.0005" max="0.002"/>
+						<titleAxe value="OrbitalBody1.r[x]"/>
+					</axeX>
+					<axeY>
+						<scale min="0" max="0.01"/>
+						<titleAxe value=""/>
+					</axeY>
+					<title value="Plot_1" isShowed="false">
+						<font size="10"/>
+					</title>
+					<canvas>
+						<majorGrid  lineType="dot" lineColor="160,160,164"/>
+						<minorGrid  lineType="dot" lineColor="160,160,164"/>
+					</canvas>
+					<chartStyles>
+						<var name="OrbitalBody1.r[y]" nick="OrbitalBody1.r[y]" lineColor="255,0,0"/>
+					</chartStyles>
+				</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="101" visible="false">
+	</watch>
+	<outputWindow height="222" visible="true"/>
+</experiment>

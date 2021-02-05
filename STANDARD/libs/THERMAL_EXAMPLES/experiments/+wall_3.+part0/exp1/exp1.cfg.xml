@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Plot_1" x="0" y="0" dx="994" dy="709">
+				<plot id="Plot_1">
+						<title value="Plot_1" isShowed="false">
+							<font size="10"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<legend/>
+							<font/>
+							<majorGrid lineType="dot" lineColor="160,160,164"/>
+							<minorGrid lineType="dot" lineColor="160,160,164"/>
+						</layout>
+						<chartStyles>
+							<var name="layer2.T[1]" nick="layer2.T[1]" lineColor="255,0,0"/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="497" y="0" dx="497" dy="691">
+				<plot id="Plot_1">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<legend/>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<chartStyles>
+							<var name="layer1.tp_in.Tc[1]" nick=""/>
+							<var name="layer3.tp_out.Tc[1]" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="0" dx="497" dy="691">
+				<plot id="Plot_2">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scale_in_use="custom" scale_custom_type="auto"/>
+						</axeY>
+						<layout>
+							<legend/>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<chartStyles>
+							<var name="layer3.tp_out.q[1]" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="274" height="142" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+				<var name="layer1.tp_in.Tc[1]"/>
+				<var name="layer2.tp_in.Tc[1]"/>
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="142" width="1280" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_2" />
+</experiment>

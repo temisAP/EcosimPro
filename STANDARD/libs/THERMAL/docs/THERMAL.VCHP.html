@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="THERMAL.html">THERMAL&nbsp;Library</a> |
+	  <a class="qindex" href="THERMAL.components.html">Components</a> |
+	  <a class="qindex" href="THERMAL.ports.html">Ports</a> |
+	  <a class="qindex" href="THERMAL.classes.html">Classes</a> |
+	  <a class="qindex" href="THERMAL.functions.html">Functions</a> |
+	  <a class="qindex" href="THERMAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="THERMAL.global.html">Global Variables</a></div>
+<h1 align="center">THERMAL.VCHP<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="VCHP">VCHP</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/THERMAL.VCHP.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Variable Conductance Heat Pipe component</font><br/>
+<br/>
+<font size="4" color="black">CONSTRUCTION PARAMETERS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>N_evap&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>Number of nodes in evaporator&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>N_ec&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>Number of nodes in evap-cond adibatic tube&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>N_cond&nbsp;</td><td>INTEGER &nbsp;</td><td>5&nbsp;</td><td>Number of nodes in condenser&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>N_cr&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>Number of nodes in cond-rese adibatic tube&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>N_rese&nbsp;</td><td>INTEGER &nbsp;</td><td>1&nbsp;</td><td>Number of nodes in reservoir&nbsp;</td><td>-&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>tp_cond&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = N_cond) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Condenser thermal outlet port&nbsp;</td></tr>
+
+<tr><td>tp_evap&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = N_evap) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Evaporator thermal outlet port&nbsp;</td></tr>
+
+<tr><td>tp_rese&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.thermal.html">PORTS_LIB.thermal</a>&nbsp;</td><td> (n = N_rese) &nbsp;</td><td>OUT &nbsp;</td><td>&nbsp;</td><td>Reservoir thermal outlet port&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>A_vap_cond&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>&nbsp;</td><td>Vapour cross section area in condenser&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>A_vap_cr&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>&nbsp;</td><td>Vapour cross section area in cond-rese adiabatic tube&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>A_vap_ec&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>&nbsp;</td><td>Vapour cross section area in evap-cond adiabatic tube&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>A_vap_evap&nbsp;</td><td>REAL &nbsp;</td><td>0.0001&nbsp;</td><td>&nbsp;</td><td>Vapour cross section area in evaporator&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>A_vap_rese&nbsp;</td><td>REAL &nbsp;</td><td>0.0005&nbsp;</td><td>&nbsp;</td><td>Vapour cross section area in reservoir&nbsp;</td><td>m^2&nbsp;</td></tr>
+
+<tr><td>C_vap&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Thermal capacitance of vapour&nbsp;</td><td>J/K&nbsp;</td></tr>
+
+<tr><td>D_i_cond&nbsp;</td><td>REAL &nbsp;</td><td>0.018&nbsp;</td><td>&nbsp;</td><td>Condenser inner diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_i_cr&nbsp;</td><td>REAL &nbsp;</td><td>0.018&nbsp;</td><td>&nbsp;</td><td>Adiabatic cond-rese inner diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_i_ec&nbsp;</td><td>REAL &nbsp;</td><td>0.018&nbsp;</td><td>&nbsp;</td><td>Adiabatic evap-cond inner diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_i_evap&nbsp;</td><td>REAL &nbsp;</td><td>0.018&nbsp;</td><td>&nbsp;</td><td>Evaporator inner diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_i_rese&nbsp;</td><td>REAL &nbsp;</td><td>0.048&nbsp;</td><td>&nbsp;</td><td>Reservoir inner diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_o_cond&nbsp;</td><td>REAL &nbsp;</td><td>0.02&nbsp;</td><td>&nbsp;</td><td>Condenser outer diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_o_cr&nbsp;</td><td>REAL &nbsp;</td><td>0.02&nbsp;</td><td>&nbsp;</td><td>Adiabatic cond-rese outer diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_o_ec&nbsp;</td><td>REAL &nbsp;</td><td>0.02&nbsp;</td><td>&nbsp;</td><td>Adiabatic evap-cond outer diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_o_evap&nbsp;</td><td>REAL &nbsp;</td><td>0.02&nbsp;</td><td>&nbsp;</td><td>Evaporator outer diameter &nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>D_o_rese&nbsp;</td><td>REAL &nbsp;</td><td>0.05&nbsp;</td><td>&nbsp;</td><td>Reservoir outer diameter&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Design&nbsp;</td><td>BOOLEAN &nbsp;</td><td> FALSE &nbsp;</td><td>&nbsp;</td><td>Flag used to set model on design or transient mode&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>T_gas_o&nbsp;</td><td>REAL &nbsp;</td><td>273.15&nbsp;</td><td>&nbsp;</td><td>Default gas temperature for design mode&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>T_vap_o&nbsp;</td><td>REAL &nbsp;</td><td>273.15&nbsp;</td><td>&nbsp;</td><td>Default vapour temperature for design mode&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>To&nbsp;</td><td>REAL &nbsp;</td><td>290&nbsp;</td><td>&nbsp;</td><td>Initial temperature of tube nodes&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>h_cond&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Vapour-tube heat transfer coefficient in condenser&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>h_cr&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Vapour-tube heat transfer coefficient in cond-rese tube&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>h_ec&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Vapour-tube heat transfer coefficient in evap-cond tube &nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>h_evap&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Vapour-tube heat transfer coefficient in evaporator&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>h_rese&nbsp;</td><td>REAL &nbsp;</td><td>1000&nbsp;</td><td>&nbsp;</td><td>Vapour-tube heat transfer coefficient in reservoir&nbsp;</td><td>W/(m^2·K)&nbsp;</td></tr>
+
+<tr><td>l_cond&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Length of condenser&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_cr&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Length of adiabatic cond-rese tube&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_ec&nbsp;</td><td>REAL &nbsp;</td><td>0.5&nbsp;</td><td>&nbsp;</td><td>Length of adiabatic evap-cond tube&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_evap&nbsp;</td><td>REAL &nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>Length of evaporator&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_rese&nbsp;</td><td>REAL &nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>Length of reservoir&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_vap_o&nbsp;</td><td>REAL &nbsp;</td><td>2&nbsp;</td><td>&nbsp;</td><td>Default total vapour length for design mode&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>mat_cond&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for condenser&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>mat_cr&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for cond-rese adiabatic tube&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>mat_ec&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for evap-cond adiabatic tube&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>mat_evap&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for evaporator&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>mat_rese&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>None&nbsp;</td><td>&nbsp;</td><td>Material used for reservoir&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>n_gas_o&nbsp;</td><td>REAL &nbsp;</td><td>0.01&nbsp;</td><td>&nbsp;</td><td>Default number of moles of gas&nbsp;</td><td>mol&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>RGAS_mol&nbsp;</td><td>CONST REAL &nbsp;</td><td>8.314&nbsp;</td><td>&nbsp;</td><td>Universal gas constant&nbsp;</td><td>J/(mol·K)&nbsp;</td></tr>
+
+<tr><td>T_vap&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Vapour temperature in pipe&nbsp;</td><td>K&nbsp;</td></tr>
+
+<tr><td>l&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total heater pipe length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>l_vap&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total vapour length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>n_gas&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Number of moles of gas&nbsp;</td><td>mol&nbsp;</td></tr>
+
+<tr><td>p&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Total pressure in pipe&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>evap&nbsp;</td><td><a href="THERMAL.Tube.html">Tube</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>adia_ec&nbsp;</td><td><a href="THERMAL.Tube.html">Tube</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>cond&nbsp;</td><td><a href="THERMAL.Tube.html">Tube</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>adia_cr&nbsp;</td><td><a href="THERMAL.Tube.html">Tube</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>rese&nbsp;</td><td><a href="THERMAL.Tube.html">Tube</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>adia_cr.A_vap&nbsp;</td><td>A_vap_cr&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fluid cross section area in tube&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>adia_cr.D_i&nbsp;</td><td>D_i_cr&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inner diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_cr.D_o&nbsp;</td><td>D_o_cr&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outer diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_cr.To&nbsp;</td><td>To&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperature of nodes&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>adia_cr.h&nbsp;</td><td>h_cr&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Vapour-tube heat transfer coefficient&nbsp;</td><td>"W/(m^2·K)"&nbsp;</td></tr>
+
+<tr><td>adia_cr.l&nbsp;</td><td>l_cr&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_cr.mat&nbsp;</td><td>mat_cr&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>Material used for tube&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>adia_cr.n&nbsp;</td><td>N_cr&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes in tube (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>adia_ec.A_vap&nbsp;</td><td>A_vap_ec&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fluid cross section area in tube&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>adia_ec.D_i&nbsp;</td><td>D_i_ec&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inner diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_ec.D_o&nbsp;</td><td>D_o_ec&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outer diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_ec.To&nbsp;</td><td>To&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperature of nodes&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>adia_ec.h&nbsp;</td><td>h_ec&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Vapour-tube heat transfer coefficient&nbsp;</td><td>"W/(m^2·K)"&nbsp;</td></tr>
+
+<tr><td>adia_ec.l&nbsp;</td><td>l_ec&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>adia_ec.mat&nbsp;</td><td>mat_ec&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>Material used for tube&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>adia_ec.n&nbsp;</td><td>N_ec&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes in tube (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>cond.A_vap&nbsp;</td><td>A_vap_cond&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fluid cross section area in tube&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>cond.D_i&nbsp;</td><td>D_i_cond&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inner diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>cond.D_o&nbsp;</td><td>D_o_cond&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outer diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>cond.To&nbsp;</td><td>To&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperature of nodes&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>cond.h&nbsp;</td><td>h_cond&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Vapour-tube heat transfer coefficient&nbsp;</td><td>"W/(m^2·K)"&nbsp;</td></tr>
+
+<tr><td>cond.l&nbsp;</td><td>l_cond&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>cond.mat&nbsp;</td><td>mat_cond&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>Material used for tube&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>cond.n&nbsp;</td><td>N_cond&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes in tube (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>evap.A_vap&nbsp;</td><td>A_vap_evap&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fluid cross section area in tube&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>evap.D_i&nbsp;</td><td>D_i_evap&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inner diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>evap.D_o&nbsp;</td><td>D_o_evap&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outer diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>evap.To&nbsp;</td><td>To&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperature of nodes&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>evap.h&nbsp;</td><td>h_evap&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Vapour-tube heat transfer coefficient&nbsp;</td><td>"W/(m^2·K)"&nbsp;</td></tr>
+
+<tr><td>evap.l&nbsp;</td><td>l_evap&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>evap.mat&nbsp;</td><td>mat_evap&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>Material used for tube&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>evap.n&nbsp;</td><td>N_evap&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes in tube (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>rese.A_vap&nbsp;</td><td>A_vap_rese&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Fluid cross section area in tube&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>rese.D_i&nbsp;</td><td>D_i_rese&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Inner diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>rese.D_o&nbsp;</td><td>D_o_rese&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Outer diameter of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>rese.To&nbsp;</td><td>To&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Initial temperature of nodes&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>rese.h&nbsp;</td><td>h_rese&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Vapour-tube heat transfer coefficient&nbsp;</td><td>"W/(m^2·K)"&nbsp;</td></tr>
+
+<tr><td>rese.l&nbsp;</td><td>l_rese&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Length of tube&nbsp;</td><td>"m"&nbsp;</td></tr>
+
+<tr><td>rese.mat&nbsp;</td><td>mat_rese&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="THERMAL.enumerativeTypes.html#Material">Material</a>&nbsp;</td><td>Material used for tube&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>rese.n&nbsp;</td><td>N_rese&nbsp;</td><td>PARA&nbsp;</td><td>INTEGER &nbsp;</td><td>Number of nodes in tube (-)&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:20:04)</font></p>
+</body>
+</html>

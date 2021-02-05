@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.0">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="CTRL_Common.el"/>
+  <file name="CTRL_PrivateFunctions.el"/>
+  <file name="CTRL_CompContinuous.el"/>
+  <file name="CTRL_CompControllers.el"/>
+  <file name="CTRL_CompMath.el"/>
+  <file name="CTRL_CompLogical.el"/>
+  <file name="CTRL_CompSources.el"/>
+  <file name="CTRL_CompNonLinear.el"/>
+  <file name="CTRL_CompASensor.el"/>
+  <file name="CTRL_CompMuxers.el"/>
+  <file name="CTRL_CompDiscrete.el"/>
+  <file name="CTRL_CompDigitalPID.el"/>
+  <file name="CTRL_CompBistable.el"/>
+  <file name="CTRL_CompComparison.el"/>
+  <file name="CTRL_CompCounters.el"/>
+  <file name="CTRL_CompOthers.el"/>
+  <file name="CTRL_CompSignalTreatment.el"/>
+  <file name="CTRL_CompTimers.el"/>
+ </filedeps>
+ <libdeps>
+  <lib name="MATH" version=""/>
+  <lib name="PORTS_LIB" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+ <symcategories>
+  <category name="Counters">
+   <symbol name="Counter_DOWN"/>
+   <symbol name="Counter_UP"/>
+   <symbol name="Counter_UP_DOWN"/>
+  </category>
+  <category name="Split_merge_elements">
+   <symbol name="Demux2"/>
+   <symbol name="Demux3"/>
+   <symbol name="Demux4"/>
+   <symbol name="Demux5"/>
+   <symbol name="Demux6"/>
+   <symbol name="Demux7"/>
+   <symbol name="Demux8"/>
+   <symbol name="Mux2"/>
+   <symbol name="Mux3"/>
+   <symbol name="Mux4"/>
+   <symbol name="Mux5"/>
+   <symbol name="Mux6"/>
+   <symbol name="Mux7"/>
+   <symbol name="Mux8"/>
+  </category>
+  <category name="Controllers">
+   <symbol name="Cntrl_DigitalPID"/>
+   <symbol name="Cntrl_P"/>
+   <symbol name="Cntrl_PI"/>
+   <symbol name="Cntrl_PID"/>
+  </category>
+  <category name="Operators">
+   <symbol name="Addition"/>
+   <symbol name="BooleanToReal"/>
+   <symbol name="Derivative"/>
+   <symbol name="EQ"/>
+   <symbol name="Integrator"/>
+   <symbol name="Inverse"/>
+   <symbol name="LE"/>
+   <symbol name="LT"/>
+   <symbol name="Module"/>
+   <symbol name="Product"/>
+   <symbol name="RealToBoolean"/>
+   <symbol name="RelationalOperator"/>
+   <symbol name="Subtraction"/>
+  </category>
+  <category name="Timers">
+   <symbol name="Timer_TOFF"/>
+   <symbol name="Timer_TON"/>
+   <symbol name="Timer_TP"/>
+  </category>
+  <category name="Sources">
+   <symbol name="AnalogSource"/>
+   <symbol name="RandomSource"/>
+   <symbol name="SourceDataFile"/>
+   <symbol name="SourceExp"/>
+   <symbol name="SourceExpSine"/>
+   <symbol name="SourcebConstant"/>
+   <symbol name="SourcebPulse"/>
+   <symbol name="SourcebSampleTrigger"/>
+   <symbol name="SourcebStep"/>
+  </category>
+  <category name="Logic_gates">
+   <symbol name="Gate_AND"/>
+   <symbol name="Gate_NOT"/>
+   <symbol name="Gate_OR"/>
+   <symbol name="Gate_XOR"/>
+  </category>
+  <category name="Selectors">
+   <symbol name="LogicalSwitch"/>
+   <symbol name="Selector"/>
+   <symbol name="Switch"/>
+  </category>
+  <category name="Function_blocks">
+   <symbol name="UnitDelay"/>
+   <symbol name="dFilter"/>
+   <symbol name="dIntegrator"/>
+   <symbol name="dStateSpace"/>
+   <symbol name="dTransferFunction"/>
+   <symbol name="dZeroPole"/>
+  </category>
+ </symcategories>
+</library>

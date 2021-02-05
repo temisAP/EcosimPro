@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="TURBOJET_EXAMPLES" component="turbofan_mixer_afterburner" partition="design">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="afterburner.A"/>
+  <variable name="burner.GLP"/>
+  <variable name="burner.VOL"/>
+  <variable name="compressor.CG1"/>
+  <variable name="compressor.CG2"/>
+  <variable name="compressor.CG4"/>
+  <variable name="compressor.ND"/>
+  <variable name="fan.CG1"/>
+  <variable name="fan.CG2"/>
+  <variable name="fan.CG4"/>
+  <variable name="fan.ND"/>
+  <variable name="hp_turbine.CG1"/>
+  <variable name="hp_turbine.CG2"/>
+  <variable name="hp_turbine.CG3"/>
+  <variable name="hp_turbine.CG4"/>
+  <variable name="lp_turbine.CG1"/>
+  <variable name="lp_turbine.CG2"/>
+  <variable name="lp_turbine.CG3"/>
+  <variable name="lp_turbine.CG4"/>
+  <variable name="mixer.A1"/>
+  <variable name="mixer.A2"/>
+  <variable name="nozzle.A_exit"/>
+</noDatas>
+<boundaries>
+  <variable name="TURBOJET.Altitude"/>
+  <variable name="TURBOJET.Mach"/>
+  <variable name="afterburner.M_in"/>
+  <variable name="burner.AL"/>
+  <variable name="burner.PQ"/>
+  <variable name="compressor.DN"/>
+  <variable name="compressor.EPD"/>
+  <variable name="compressor.PCNR"/>
+  <variable name="compressor.beta"/>
+  <variable name="compressor.g_in.W"/>
+  <variable name="fan.BPR"/>
+  <variable name="fan.DN"/>
+  <variable name="fan.EPD"/>
+  <variable name="fan.PCNR"/>
+  <variable name="fan.PQ"/>
+  <variable name="fan.beta"/>
+  <variable name="hp_turbine.DHQTJ"/>
+  <variable name="hp_turbine.EPD"/>
+  <variable name="hp_turbine.NRJ"/>
+  <variable name="hp_turbine.g_in.T"/>
+  <variable name="lp_turbine.DHQTJ"/>
+  <variable name="lp_turbine.EPD"/>
+  <variable name="lp_turbine.NRJ"/>
+  <variable name="mixer.Ps1"/>
+  <variable name="nozzle.g_in.T"/>
+  <variable name="nozzle.s_Area.signal[1]"/>
+  <variable name="split1.g_in.P"/>
+</boundaries>
+<dynamics>
+  <variable name="compressor.N"/>
+  <variable name="fan.N"/>
+</dynamics>
+<algebraics>
+  <variable name="mixer.g_in2.T"/>
+  <variable name="split1.g_in.T"/>
+  <variable name="hp_turbine.g_in.W"/>
+  <variable name="afterburner.f_in.W"/>
+  <variable name="afterburner.A"/>
+</algebraics>
+<residues>
+  <r id="1" value="compressor.N' = compressor.DN"/>
+  <r id="2" value="fan.N' = fan.DN"/>
+  <r id="3" value="(TURBOJET.Phi_T_FAR(mixer.g_in2.T, compressor.g_in.FAR) - TURBOJET.Phi_T_FAR(fan.g_in.T, compressor.g_in.FAR)) * fan.EPD = TURBOJET.R_FAR(compressor.g_in.FAR) * log(fan.PQ)"/>
+  <r id="4" value="(TURBOJET.Phi_T_FAR(split1.g_in.T, compressor.g_in.FAR) - TURBOJET.Phi_T_FAR(compressor.g_in.T, compressor.g_in.FAR)) * compressor.EPD = TURBOJET.R_FAR(compressor.g_in.FAR) * log(compressor.PQ)"/>
+  <r id="5" value="burner.g_out.W * burner.g_out.H = burner.g_in.W * split1.g_in.H + burner.eta * burner.f_in.W * fuel_tank.FHV * 1000"/>
+  <r id="6" value="nozzle.g_in.W * nozzle.g_in.H = afterburner.g_in.W * afterburner.g_in.H + afterburner.eta * afterburner.f_in.W * fuel_tank.FHV * 1000"/>
+  <r id="7" value="afterburner.c_in = TURBOJET.Vs_T_FAR(afterburner.Ts_in, afterburner.g_in.FAR)"/>
+</residues>
+</partitionInfo>

@@ -1,0 +1,26 @@
+--------------------------------------------------------------------------------
+-- Used to show the behaviour of step, pulse, and timeTableInterp functions
+--------------------------------------------------------------------------------
+EXPERIMENT exp1 ON waveFunctions.default
+   DECLS
+      TABLE_1D v_in = {{0., 3., 5., 8., 12., 15.}, {3., 3., 4., 4., 3., 3.}}
+
+   INIT
+      -- Dynamic variables
+      C1.v = 0.
+
+   BOUNDS
+      R1.e_p.v = 2. * step(TIME, 2.)
+      R2.e_p.v = 5. * pulse(TIME, 3., 0.5)
+      R4.e_n.v = 3. * timeTableInterp(TIME, v_in)
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 150.
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT

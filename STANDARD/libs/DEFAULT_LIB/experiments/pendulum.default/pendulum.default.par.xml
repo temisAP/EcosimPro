@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="DEFAULT_LIB" component="pendulum" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<highIndexVars>
+  <variable name="y"/>
+  <variable name="y'"/>
+</highIndexVars>
+<dynamics>
+  <variable name="x"/>
+  <variable name="x'"/>
+</dynamics>
+<algebraics>
+  <variable name="y"/>
+</algebraics>
+<residues>
+  <r id="1" value="x'. = x'"/>
+  <r id="2" value="2 * x' * x' + 2 * x * x'' + 2 * y' * y' + 2 * y * y'' = 0"/>
+  <r id="3" value="x ** 2 + y ** 2 = L ** 2"/>
+</residues>
+</partitionInfo>

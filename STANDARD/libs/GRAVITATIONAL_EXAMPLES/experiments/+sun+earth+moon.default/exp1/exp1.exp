@@ -1,0 +1,37 @@
+EXPERIMENT exp1 ON SunEarthMoon.default
+   INIT
+      -- Dynamic variables
+      CentralBody.r[x] = 0.
+      CentralBody.r[y] = 0.
+      CentralBody.r[z] = 0.
+
+      CentralBody.r[x]' = 0.
+      CentralBody.r[y]' = 0.
+      CentralBody.r[z]' = 0.
+
+      OrbitalBody1.r[x] = 1.000001
+      OrbitalBody1.r[y] = 0.
+      OrbitalBody1.r[z] = 0.
+
+      OrbitalBody1.r[x]' = 0.
+      OrbitalBody1.r[y]' = 29786. * MStoAUD
+      OrbitalBody1.r[z]' = 0.
+
+      OrbitalBody2.r[x] = 1.000001 + 0.002570
+      OrbitalBody2.r[y] = 0.
+      OrbitalBody2.r[z] = 0.
+
+      OrbitalBody2.r[x]' = 0.
+      OrbitalBody2.r[y]' = (29786. + 1018.) * MStoAUD
+      OrbitalBody2.r[z]' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 365.
+      CINT = 0.25
+      INTEG()
+
+END EXPERIMENT

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="ControlledIdealCommutingSwitch" >
+
+		<line id="Line_5" points="-6,111 18,111 31.8023,139.25"  end_arrow="true" dx="86" dy="-31" lineColor="0,192,0"  aliasing="true"  />
+
+		<line id="Line_9" points="22,140 45,140" dx="114" dy="-28" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<line id="Line_1" points="161,72 136.831,71.7914 121,104 81,104" dx="-1" dy="8" lineColor="0,192,0" lineWidth="2"  aliasing="true"  />
+
+		<g id="Group_1" dx="-19" dy="21.5" >
+		
+					<line id="Line_7" points="-14,117 -9,117" dx="111" dy="-36"  />
+		 />
+					<line id="Line_3" points="-14,117 -9,117" rotation="-90" dx="111" dy="-36"  />
+		 />
+		</g>
+
+		<line id="Line_4" points="30,116 34,116" dx="128" dy="-12" aliasing="true"  />
+
+		<line id="Line_6" points="30,116 34,116" dx="128" dy="-28" aliasing="true"  />
+
+		<port id="e_p" library="PORTS_LIB" type="elec"  hotPort="e_p" >
+		
+				<symbol dx="80" dy="112" onLabel="true" />
+		
+				<label cx="17.5" cy="14" dx="43.5" dy="100" />
+		
+		</port>
+
+		<port id="e_n2" library="PORTS_LIB" type="elec"  hotPort="e_n2" >
+		
+				<symbol dx="160" dy="112" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="162" dy="100" />
+		
+		</port>
+
+		<port id="e_n1" library="PORTS_LIB" type="elec"  hotPort="e_n1" >
+		
+				<symbol dx="160" dy="80" onLabel="true" />
+		
+				<label cx="22" cy="14" dx="162" dy="63" />
+		
+		</port>
+
+		<port id="e_control" library="PORTS_LIB" type="elec"  hotPort="e_control" >
+		
+				<symbol dx="80" dy="80" onLabel="true" />
+		
+				<label cx="37.5" cy="14" dx="12" dy="68" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Gon"/>
+				<var name="Roff"/>
+				<var name="level"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="208" cy="139" sx="224" sy="30" variable="e_p.i"  headerText="e_p.i"  tailText="A" family="MS Shell Dlg 2" points="14" fontColor="0,0,0" dx="-48" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

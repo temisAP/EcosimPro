@@ -1,0 +1,13 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: ALGEBRA
+ COMPONENT: GetMethods_Execution
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: EMPTY EXPERIMENT 
+ CREATION DATE: 05/12/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON GetMethods_Execution.default
+   BODY
+		EXEC_INIT()
+END EXPERIMENT

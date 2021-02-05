@@ -1,0 +1,44 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: LPRES_EXAMPLES
+ COMPONENT: RL10_offDesign
+ PARTITION: default
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 15/06/2017
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON RL10_offDesign.default
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		CC.M_r = 10
+      Junct.f_in2.Tt = 170
+      CC.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 9000
+
+   BODY
+		Pump_LOX.r_m = 0.194281146
+		Pump_LH2.r_m = 0.208304833
+		Pump_LOX.A_in = 0.0014118924
+		Pump_LH2.A_in = 0.000677279675
+			
+		Turbine.A_in = 0.000513113762
+		Turbine.r_m	= 0.715229315
+		
+		Regulator_1.dp = 3219188.99
+		Regulator_3.dp = 0
+		
+		Inj_LOX.A = 0.000580606872
+		Inj_LH2.A = 0.00178349971
+		CC.A_th = 0.0134109877
+		
+      DEBUG_LEVEL= 3
+      TOLERANCE = 1e-006
+      STEADY()
+
+END EXPERIMENT

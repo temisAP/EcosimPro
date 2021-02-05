@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Insulation" >
+
+		<line id="Line_1" points="184,423 200,423"  end_arrow="true" dx="-88" dy="-327" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_1" cx="202" cy="423" sx="4" sy="32" dx="-88" dy="-327" color="64,64,64"  />
+
+		<port id="tp" library="PORTS_LIB" type="thermal"  hotPort="tp" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="9.5" cy="12" dx="76.0079" dy="98.5553" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="n"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="95.5" cy="130" sx="79" sy="12" variable="tp.Tk[1]"  headerText="tp.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-12" dy="-56" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="93" cy="130" sx="74" sy="12" variable="tp.q[1]"  headerText="tp.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-12" dy="-44" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

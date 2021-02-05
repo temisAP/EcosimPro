@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="DEFAULT_LIB" component="lorentz" partition="default">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="TRUE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<dynamics>
+  <variable name="y1"/>
+  <variable name="y2"/>
+  <variable name="y3"/>
+</dynamics>
+<residues>
+  <r id="1" value="y1' = alfa * (y2 - y1)"/>
+  <r id="2" value="y2' = r * y1 - y2 - y1 * y3"/>
+  <r id="3" value="y3' = y1 * y2 - b * y3"/>
+</residues>
+</partitionInfo>

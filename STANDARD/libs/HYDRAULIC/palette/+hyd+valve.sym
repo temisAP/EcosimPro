@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="HydValve" >
+
+		<line id="Line_1" points="70.0005,205 6.0003,205" dx="89.999" dy="-109" lineColor="0,0,255" lineWidth="1.5"  aliasing="true"  />
+
+		<line id="Line_3" points="37.999,173 37.999,193"  end_arrow="true" dx="90.001" dy="-125" lineColor="255,128,0"  aliasing="true"  />
+
+		<polygon id="Polygon_1" points="12.0003,213 12.0003,189 52.0003,213 52.0003,189" dx="96" dy="-105" lineWidth="1.5"  color="0,170,255" aliasing="true"  />
+
+		<line id="Line_4" points="37.999,207 37.999,183" dx="90.001" dy="-111" lineWidth="1.5"  aliasing="true"  />
+
+		<closedBezier id="ClosedBezier_2" points="25.9998,205 25.9998,189 49.9998,189 49.9998,205" dx="90.0002" dy="-125" lineWidth="1.5"  color="255,128,0" aliasing="true"  />
+
+		<port id="hp_in" library="HYDRAULIC" type="Hydraulic"  hotPort="hp_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="19.5" cy="12" dx="53.5" dy="86" />
+		
+		</port>
+
+		<port id="s_position" library="PORTS_LIB" type="analog_signal"  hotPort="s_position" >
+		
+				<symbol dx="128" dy="48" onLabel="true" />
+		
+				<label cx="33.5" cy="12" dx="94.5" dy="22" />
+		
+		</port>
+
+		<port id="hp_out" library="HYDRAULIC" type="Hydraulic"  hotPort="hp_out" >
+		
+				<symbol dx="160" dy="96" onLabel="true" />
+		
+				<label cx="23.5" cy="12" dx="168.5" dy="86" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="Avo"/>
+				<var name="dp_lam"/>
+				<var name="z_in"/>
+				<var name="z_out"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="106.5" cy="110" sx="101" sy="12" variable="hp_in.w"  headerText="hp_in.w"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-14" dy="6" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="102" cy="110" sx="92" sy="12" variable="hp_in.p"  headerText="hp_in.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-14" dy="22" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="109" cy="110" sx="106" sy="12" variable="hp_out.w"  headerText="hp_out.w"  tailText="kg/s" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="92" dy="-44" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="104.5" cy="110" sx="97" sy="12" variable="hp_out.p"  headerText="hp_out.p"  tailText="Pa" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="92" dy="-28" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

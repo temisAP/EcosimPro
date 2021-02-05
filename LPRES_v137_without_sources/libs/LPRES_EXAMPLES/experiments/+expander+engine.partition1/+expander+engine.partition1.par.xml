@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="ExpanderEngine" partition="partition1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateParInfoExtra value="FALSE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<generateParResiduesForDiff value="FALSE"/>
+<generateAdvancedBox value="disabled"/>
+<noDatas>
+  <variable name="Injector_1.W"/>
+</noDatas>
+<boundaries>
+  <variable name="LPRES.Altitude"/>
+</boundaries>
+<algebraics>
+  <variable name="CombCha_1.M_r"/>
+  <variable name="Junction_1.f_in2.Tt"/>
+  <variable name="CombCha_1.p_out_ch"/>
+  <variable name="ThrustMonitor_1.M_out"/>
+  <variable name="Pump_1.U"/>
+  <variable name="Pump_2.U"/>
+</algebraics>
+<residues>
+</residues>
+</partitionInfo>

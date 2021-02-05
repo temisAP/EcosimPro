@@ -1,0 +1,51 @@
+EXPERIMENT exp1 ON turbojet.prediction
+   INIT
+      -- Dynamic variables
+      compressor.N = 12000.
+
+      -- Algebraic variables
+      compressor.beta = 0.7
+      compressor.g_in.W = 100.
+
+      fuelmeter.f_in.W = 0.5
+
+      turbine.g_out.T = 1500.
+
+   BOUNDS
+      TURBOJET.Altitude = 0.
+      TURBOJET.Mach = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      burner.GLP = 0.002773234272
+      burner.VOL = 0.05260683639
+
+      compressor.CG1 = 27.4242601
+      compressor.CG2 = 0.9095852489
+      compressor.CG4 = 1207.284802
+      compressor.ND = 13051.39746
+
+      turbine.CG1 = 5.51235636
+      turbine.CG2 = 0.9
+      turbine.CG3 = 282.8427125
+      turbine.CG4 = 185.2109198
+
+      nozzle.A_exit = 0.0482178271
+
+      -- Changing the step to 50 does not converge
+      FOR (i IN 0,20)
+         turbine.g_in.T = 1800. - i * 25.
+
+         STEADY()
+
+         PRINT(" ")
+         PRINT("   turbine.g_in.T = $turbine.g_in.T")
+         PRINT("   Thrust = $monitor.thrust.F")
+         PRINT("   SFC = $monitor.SFC")
+
+      END FOR
+
+END EXPERIMENT

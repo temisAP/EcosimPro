@@ -1,0 +1,29 @@
+EXPERIMENT exp1 ON EarthMoon.default
+   INIT
+      -- Dynamic variables
+      CentralBody.r[x] = 0.
+      CentralBody.r[y] = 0.
+      CentralBody.r[z] = 0.
+
+      CentralBody.r[x]' = 0.
+      CentralBody.r[y]' = 0.
+      CentralBody.r[z]' = 0.
+
+      OrbitalBody.r[x] = 0.002570
+      OrbitalBody.r[y] = 0.
+      OrbitalBody.r[z] = 0.
+
+      OrbitalBody.r[x]' = 0.
+      OrbitalBody.r[y]' = 1018. * MStoAUD
+      OrbitalBody.r[z]' = 0.
+
+   BODY
+      REPORT_TABLE("reportAll", " * ")
+
+      TIME = 0.
+
+      TSTOP = 28.
+      CINT = 0.25
+      INTEG()
+
+END EXPERIMENT

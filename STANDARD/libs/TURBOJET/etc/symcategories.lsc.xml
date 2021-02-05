@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<symcategories>
+ <category name="Turbomachinery">
+  <symbol name="Compressor"/>
+  <symbol name="Fan"/>
+  <symbol name="Turbine"/>
+ </category>
+ <category name="Mechanical">
+  <symbol name="Force"/>
+  <symbol name="Gear"/>
+  <symbol name="ShaftEnd"/>
+  <symbol name="ShaftI"/>
+ </category>
+ <category name="Fuel">
+  <symbol name="Fuel"/>
+  <symbol name="FuelTank"/>
+  <symbol name="FuelValve"/>
+  <symbol name="Fuelmeter"/>
+ </category>
+ <category name="Ducts">
+  <symbol name="AfterBurner"/>
+  <symbol name="Burner"/>
+  <symbol name="Gas"/>
+  <symbol name="Inlet"/>
+  <symbol name="Mixer"/>
+  <symbol name="Nozzle"/>
+  <symbol name="Nozzle_ConDiv"/>
+  <symbol name="Nozzle_Var"/>
+  <symbol name="Regenerator"/>
+  <symbol name="SplitFrac"/>
+ </category>
+ <category name="Ports">
+  <symbol name="Force"/>
+  <symbol name="Fuel"/>
+  <symbol name="Gas"/>
+  <symbol name="Shaft"/>
+ </category>
+ <category name="Control">
+  <symbol name="Fuelmeter"/>
+  <symbol name="Monitor"/>
+ </category>
+</symcategories>

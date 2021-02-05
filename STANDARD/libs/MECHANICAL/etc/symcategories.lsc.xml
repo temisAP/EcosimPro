@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<symcategories>
+ <category name="Rotational">
+  <symbol name="R_AbsoluteSensorAcceleration"/>
+  <symbol name="R_AbsoluteSensorAngle"/>
+  <symbol name="R_AbsoluteSensorTorque"/>
+  <symbol name="R_AbsoluteSensorVelocity"/>
+  <symbol name="R_ActuatorAcceleration"/>
+  <symbol name="R_ActuatorTorque"/>
+  <symbol name="R_ActuatorVelocity"/>
+  <symbol name="R_BearingFriction"/>
+  <symbol name="R_Brake"/>
+  <symbol name="R_Clutch"/>
+  <symbol name="R_Damper"/>
+  <symbol name="R_Efficiency"/>
+  <symbol name="R_ElastoBacklash"/>
+  <symbol name="R_FixedTorque"/>
+  <symbol name="R_FixedVelocity"/>
+  <symbol name="R_Gear"/>
+  <symbol name="R_GearFriction"/>
+  <symbol name="R_GearIdeal"/>
+  <symbol name="R_GearIdealR2T"/>
+  <symbol name="R_Inertia"/>
+  <symbol name="R_Piston"/>
+  <symbol name="R_RelativeSensorAcceleration"/>
+  <symbol name="R_RelativeSensorAngle"/>
+  <symbol name="R_RelativeSensorSpeed"/>
+  <symbol name="R_Spring"/>
+  <symbol name="R_SpringBacklash"/>
+  <symbol name="R_SpringDamper"/>
+  <symbol name="R_Stop"/>
+ </category>
+ <category name="Translational">
+  <symbol name="T_AbsoluteSensorAcceleration"/>
+  <symbol name="T_AbsoluteSensorForce"/>
+  <symbol name="T_AbsoluteSensorPosition"/>
+  <symbol name="T_AbsoluteSensorVelocity"/>
+  <symbol name="T_ActuatorAcceleration"/>
+  <symbol name="T_ActuatorForce"/>
+  <symbol name="T_ActuatorPosition"/>
+  <symbol name="T_Damper"/>
+  <symbol name="T_EWall"/>
+  <symbol name="T_ElastoGap"/>
+  <symbol name="T_FixedAcceleration"/>
+  <symbol name="T_FixedForce"/>
+  <symbol name="T_FixedPosition"/>
+  <symbol name="T_Piston"/>
+  <symbol name="T_Rod"/>
+  <symbol name="T_SlidingMass"/>
+  <symbol name="T_Spring"/>
+  <symbol name="T_SpringBacklash"/>
+  <symbol name="T_SpringDamper"/>
+  <symbol name="T_Stop"/>
+  <symbol name="T_Wall"/>
+ </category>
+</symcategories>

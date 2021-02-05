@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="R_GearIdealR2T" >
+
+		<line id="Line_3" points="431.023,128.814 443.023,128.814"  end_arrow="true" dx="-287.023" dy="-16.814" lineColor="192,192,192"   />
+
+		<ellipse id="Ellipse_1" cx="91" cy="265.999" rx="12" ry="12" rotation="90" dx="33" dy="-169.999" lineWidth="1.5"  color="220,220,220"  />
+
+		<rect id="Rectangle_1" cx="107" cy="286.001" sx="32" sy="8" dx="20.9999" dy="-174.001" lineWidth="1.5"  color="220,220,220"  />
+
+		<line id="Line_4" points="399.023,128.814 415.023,128.814"  end_arrow="true" dx="-303.023" dy="-32.814" lineColor="100,100,100"   />
+
+		<port id="R_m_in" library="PORTS_LIB" type="mech_rot"  hotPort="R_m_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="26" cy="12" dx="38" dy="86" />
+		
+		</port>
+
+		<port id="T_m_out" library="PORTS_LIB" type="mech_trans"  hotPort="T_m_out" >
+		
+				<symbol dx="160" dy="112" onLabel="true" />
+		
+				<label cx="29" cy="12" dx="167" dy="102" />
+		
+		</port>
+
+		<editor used="false">
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="86" cy="38" sx="108" sy="12" variable="R_m_in.T"  headerText="R_m_in.T"  tailText="N·m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="85" cy="50" sx="106" sy="12" variable="R_m_in.n"  headerText="R_m_in.n"  tailText="rpm" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="219" cy="130" sx="102" sy="12" variable="T_m_out.F"  headerText="T_m_out.F"  tailText="N" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="228" cy="138" sx="104" sy="12" variable="T_m_out.s"  headerText="T_m_out.s"  tailText="m" family="MS Shell Dlg 2" points="6" fontColor="0,0,0" dx="-8" dy="8" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

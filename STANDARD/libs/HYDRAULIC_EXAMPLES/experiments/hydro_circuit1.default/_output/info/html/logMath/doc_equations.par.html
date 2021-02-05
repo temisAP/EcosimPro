@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit1.default.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../hydro_circuit1.default.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_diff.par.html">Validation Differences</a>
+</div><h2>Equations<br /></h2>
+Equations: 24<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>HydTank1.H[1] = <b><font color="red">HydTank1.H[1].</font></b><br/>
+<a name="e2">[E-2] </a>HydTank2.H[1] = <b><font color="red">HydTank2.H[1].</font></b><br/>
+<a name="e3">[E-3] </a>HydPipe.hp_in.p = HydTank1.p0 + 9806 * (HydTank1.H[1] - HydTank1.z_out)<br/>
+<a name="e4">[E-4] </a>HydTank2.hp_in.p = HydTank2.p0 + 9806 * (HydTank2.H[1] - HydTank2.z_in)<br/>
+<a name="e5">[E-5] </a>HydPipe.A = 0.785398163397448 * HydPipe.d ** 2<br/>
+<a name="e6">[E-6] </a>HydPipe.w_lam = HydPipe.A * sqrt(2 * HydPipe.d * HydPipe.dp_lam * 1000 / (HydPipe.f * HydPipe.l))<br/>
+<a name="e7">[E-7] </a>HydPipe.hp_in.w = fsqrt((HydPipe.hp_in.p - HydTank2.hp_in.p + 9806 * (HydPipe.z_in - HydPipe.z_out)) * HydPipe.d * 1000 * HydPipe.A ** 2 / (0.5 * HydPipe.f * HydPipe.l), spow2(HydPipe.w_lam))<br/>
+<a name="e8">[E-8] </a>HydTank1.H[1]' = (HydTank1.hp_in.w - HydPipe.hp_in.w) / (1000 * HydTank1.A)<br/>
+<a name="e9">[E-9] </a>HydTank1.m = HydTank1.H[1] * 1000 * HydTank1.A<br/>
+<a name="e10">[E-10] </a>HydTank1.hp_in.p = HydTank1.p0 + 9806 * (HydTank1.H[1] - HydTank1.z_in)<br/>
+<a name="e11">[E-11] </a>HydTank1.hp_in.h = HydTank1.hp_in.T / 0.000238891543239369<br/>
+<a name="e12">[E-12] </a>HydTank1.hp_in.wh = HydTank1.hp_in.w * HydTank1.hp_in.h<br/>
+<a name="e13">[E-13] </a>HydPipe.hp_in.h = <b><font color="red">HydTank1.T</font></b> / 0.000238891543239369<br/>
+<a name="e14">[E-14] </a>HydPipe.hp_in.wh = HydPipe.hp_in.w * HydPipe.hp_in.h<br/>
+<a name="e15">[E-15] </a>HydTank1.T' = (HydTank1.hp_in.wh - HydPipe.hp_in.wh - (HydTank1.hp_in.w - HydPipe.hp_in.w) * 4186 * <b><font color="red">HydTank1.T</font></b>) / (HydTank1.m * 4186)<br/>
+<a name="e16">[E-16] </a>HydTank1.s_level.signal[1] = HydTank1.H[1]<br/>
+<a name="e17">[E-17] </a>HydTank2.H[1]' = (HydPipe.hp_in.w - HydTank2.hp_out.w) / (1000 * HydTank2.A)<br/>
+<a name="e18">[E-18] </a>HydTank2.m = HydTank2.H[1] * 1000 * HydTank2.A<br/>
+<a name="e19">[E-19] </a>HydTank2.hp_out.p = HydTank2.p0 + 9806 * (HydTank2.H[1] - HydTank2.z_out)<br/>
+<a name="e20">[E-20] </a>HydTank2.hp_in.wh = HydPipe.hp_in.w * HydPipe.hp_in.h<br/>
+<a name="e21">[E-21] </a>HydTank2.hp_out.h = <b><font color="red">HydTank2.T</font></b> / 0.000238891543239369<br/>
+<a name="e22">[E-22] </a>HydTank2.hp_out.wh = HydTank2.hp_out.w * HydTank2.hp_out.h<br/>
+<a name="e23">[E-23] </a>HydTank2.T' = (HydTank2.hp_in.wh - HydTank2.hp_out.wh - (HydPipe.hp_in.w - HydTank2.hp_out.w) * 4186 * <b><font color="red">HydTank2.T</font></b>) / (HydTank2.m * 4186)<br/>
+<a name="e24">[E-24] </a>HydTank2.s_level.signal[1] = HydTank2.H[1]<br/>
+</body></html>

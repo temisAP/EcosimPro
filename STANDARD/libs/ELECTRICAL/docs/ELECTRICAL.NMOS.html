@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="ELECTRICAL.html">ELECTRICAL&nbsp;Library</a> |
+	  <a class="qindex" href="ELECTRICAL.components.html">Components</a> |
+	  <a class="qindex" href="ELECTRICAL.ports.html">Ports</a> |
+	  <a class="qindex" href="ELECTRICAL.classes.html">Classes</a> |
+	  <a class="qindex" href="ELECTRICAL.functions.html">Functions</a> |
+	  <a class="qindex" href="ELECTRICAL.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="ELECTRICAL.global.html">Global Variables</a></div>
+<h1 align="center">ELECTRICAL.NMOS<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="NMOS">NMOS</a>
+</font><br/>
+<br/>
+<font size="4" color="black">ICON: </font><br/>
+<p><img src="icons/ELECTRICAL.NMOS.png"></p><br/>
+<font size="4" color="black">DESCRIPTION: </font><br/>
+<font size="3" color="black">Simple MOS Transistor</font><br/>
+<br/>
+<font size="4" color="black">PORTS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>PARAMETERS&nbsp;</b></color></td>
+<td><color="black"><b>DIRECTION&nbsp;</b></color></td>
+<td><color="black"><b>CARDINALITY&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>e_B&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.elec.html">PORTS_LIB.elec</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Bulk&nbsp;</td></tr>
+
+<tr><td>e_D&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.elec.html">PORTS_LIB.elec</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Drain&nbsp;</td></tr>
+
+<tr><td>e_G&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.elec.html">PORTS_LIB.elec</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Gate&nbsp;</td></tr>
+
+<tr><td>e_S&nbsp;</td><td><a href="../../PORTS_LIB/docs/PORTS_LIB.elec.html">PORTS_LIB.elec</a>&nbsp;</td><td>&nbsp;</td><td>IN &nbsp;</td><td>&nbsp;</td><td>Source&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DATA:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#FFFFC6" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DEFAULT&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Beta&nbsp;</td><td>REAL &nbsp;</td><td>0.041&nbsp;</td><td>&nbsp;</td><td>Transconductance parameter&nbsp;</td><td>A/V^2&nbsp;</td></tr>
+
+<tr><td>K2&nbsp;</td><td>REAL &nbsp;</td><td>1.144&nbsp;</td><td>&nbsp;</td><td>Bulk threshold parameter&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>K5&nbsp;</td><td>REAL &nbsp;</td><td>0.7311&nbsp;</td><td>&nbsp;</td><td>Reduction of pinch-off region&nbsp;</td><td>-&nbsp;</td></tr>
+
+<tr><td>L&nbsp;</td><td>REAL &nbsp;</td><td>6e-06&nbsp;</td><td>&nbsp;</td><td>Length&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>Vt&nbsp;</td><td>REAL &nbsp;</td><td>0.8&nbsp;</td><td>&nbsp;</td><td>Zero bias threshold voltage&nbsp;</td><td>V&nbsp;</td></tr>
+
+<tr><td>W&nbsp;</td><td>REAL &nbsp;</td><td>2e-05&nbsp;</td><td>&nbsp;</td><td>Width&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>dL&nbsp;</td><td>REAL &nbsp;</td><td>-1.5e-06&nbsp;</td><td>&nbsp;</td><td>Shortening of channel&nbsp;</td><td>m&nbsp;</td></tr>
+
+<tr><td>dW&nbsp;</td><td>REAL &nbsp;</td><td>-2.5e-06&nbsp;</td><td>&nbsp;</td><td>Narrowing of channel&nbsp;</td><td>m&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>id&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ubs&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ud&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>uds&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>ugst&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>us&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>v&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</table>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2019:01:23, Time: 00:19:10)</font></p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sym SYSTEM "DTDFILE_FULLPATH">
+<palette version="1.2.0" sx="480" sy="320" label-status="showed" aliasingInShapes="true" aliasingInUnitSymbols="true" simulation-status="allshowed" >
+
+	<grid enabled="true" snap="true" hspacing="4" vspacing="4" colorMain="210,210,210" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<componentType id="Wall" >
+
+		<line id="Line_1" points="6.023,730.996 22.022,730.996"  end_arrow="true" dx="89.977" dy="-634.997" lineColor="170,0,0"   />
+
+		<line id="Line_2" points="46.023,730.997 58.023,730.997"  end_arrow="true" dx="113.977" dy="-634.997" lineColor="170,0,0"   />
+
+		<rect id="Rectangle_1" cx="46.023" cy="730.997" sx="48" sy="64" dx="89.977" dy="-634.997" lineWidth="1.5"  color="192,192,192"  />
+
+		<line id="Line_3" points="30.023,698.997 30.023,762.997" dx="89.977" dy="-634.997" lineType="2"  aliasing="true"  />
+
+		<line id="Line_4" points="38.023,698.997 38.023,762.997" dx="97.977" dy="-634.997" lineType="2"  aliasing="true"  />
+
+		<line id="Line_5" points="46.022,698.997 46.022,762.997" dx="105.978" dy="-634.997" lineType="2"  aliasing="true"  />
+
+		<port id="tp_in" library="PORTS_LIB" type="thermal"  hotPort="tp_in" >
+		
+				<symbol dx="96" dy="96" onLabel="true" />
+		
+				<label cx="18" cy="12" dx="57.5692" dy="90.6296" />
+		
+		</port>
+
+		<port id="tp_out" library="PORTS_LIB" type="thermal" >
+		
+				<symbol dx="176" dy="96" onLabel="true" />
+		
+				<label cx="22" cy="12" dx="181.209" dy="92.8758" />
+		
+		</port>
+
+		<editor used="true">
+			<tab name="General">
+				<var name="A"/>
+				<var name="TemperatureDependance"/>
+				<var name="To"/>
+				<var name="To_linear"/>
+				<var name="To_table"/>
+				<var name="cp"/>
+				<var name="e"/>
+				<var name="init_mode"/>
+				<var name="k"/>
+				<var name="mat"/>
+				<var name="n"/>
+				<var name="nodes"/>
+				<var name="rho"/>
+			</tab>
+		</editor>
+
+	</componentType>
+	<simulation>
+			<variableLabel  id="VariableLabel_1" cx="100.5" cy="130" sx="89" sy="12" variable="tp_in.Tk[1]"  headerText="tp_in.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-20" dy="-24" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_2" cx="98" cy="130" sx="84" sy="12" variable="tp_in.q[1]"  headerText="tp_in.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="-20" dy="-12" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_3" cx="103" cy="130" sx="94" sy="12" variable="tp_out.Tk[1]"  headerText="tp_out.Tk[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-60" lineType="-1"   />
+	
+			<variableLabel  id="VariableLabel_4" cx="100.5" cy="130" sx="89" sy="12" variable="tp_out.q[1]"  headerText="tp_out.q[1]"  tailText="" family="MS Shell Dlg 2" points="6" dx="104" dy="-48" lineType="-1"   />
+	
+	
+	</simulation>
+</palette>

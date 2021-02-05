@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+      <html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+      <title>Library documentation</title> 
+      <link href="mstyles.css" rel="stylesheet" type="text/css"> 
+      </head><body> 
+      <div class="qindex"><a class="qindex" href="LPRES_EXAMPLES.html">LPRES_EXAMPLES&nbsp;Library</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.components.html">Components</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.ports.html">Ports</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.classes.html">Classes</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.functions.html">Functions</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.enumerativeTypes.html">Enumeratives</a> |
+	  <a class="qindex" href="LPRES_EXAMPLES.global.html">Global Variables</a></div>
+<h1 align="center">LPRES_EXAMPLES.turbine_ch_performance_test<br /><small></small></h1><hr><br><font size="5" color="black">COMPONENT <a name="turbine_ch_performance_test">turbine_ch_performance_test</a>
+</font><br/>
+<br/>
+<font size="4" color="black">DECLS:</font><br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RANGE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>dp&nbsp;</td><td>REAL &nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Pressure increase (Pa)&nbsp;</td><td>Pa&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES (TOPOLOGY BLOCK):</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>OBJECT&nbsp;</b></color></td>
+<td><color="black"><b>COMPONENT TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Inlet&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Inlet.html">LPRES.Inlet</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Nozzle&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Nozzle.html">LPRES.Nozzle</a>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Turbine_ch&nbsp;</td><td><a href="../../LPRES/docs/LPRES.Turbine_ch.html">LPRES.Turbine_ch</a>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+<br/>
+<br/>
+<font size="4" color="black">COMPONENT INSTANCES DATA:</font><br/>
+<br/>
+<table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>DATUM&nbsp;</b></color></td>
+<td><color="black"><b>VALUE&nbsp;</b></color></td>
+<td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>UNITS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>Inlet.Tt&nbsp;</td><td>270&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total temperature&nbsp;</td><td>"K"&nbsp;</td></tr>
+
+<tr><td>Inlet.Type&nbsp;</td><td>Unknown_W&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Inlet" data-ajax='false'>LPRES.Type_Inlet</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet.W&nbsp;</td><td>1&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Inlet.fluid&nbsp;</td><td>H2&nbsp;</td><td>DATA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>Working fluid name&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Inlet.pt&nbsp;</td><td>8600000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Total pressure&nbsp;</td><td>"Pa"&nbsp;</td></tr>
+
+<tr><td>Nozzle.A&nbsp;</td><td>0.0018&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Discharge area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Nozzle.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#OnOffDesign" data-ajax='false'>LPRES.OnOffDesign</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.A_in&nbsp;</td><td>0.0019&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Input area&nbsp;</td><td>"m^2"&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.Type&nbsp;</td><td>Off_design&nbsp;</td><td>PARA&nbsp;</td><td>ENUM <a href="file:///C:/Users/auz/Documents/libs/LPRES/tag/libs/LPRES/docs/LPRES.enumerativeTypes.html#Type_Turbines" data-ajax='false'>LPRES.Type_Turbines</a>&nbsp;</td><td>&nbsp;</td><td>""&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.W&nbsp;</td><td>5&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design mass flow&nbsp;</td><td>"kg/s"&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.alpha_2&nbsp;</td><td>45&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Flow angle in section 2&nbsp;</td><td>"deg"&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.eta_d&nbsp;</td><td>0.7&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design efficiency&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.pi&nbsp;</td><td>10&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design expansion ratio&nbsp;</td><td>"-"&nbsp;</td></tr>
+
+<tr><td>Turbine_ch.rpm&nbsp;</td><td>30000&nbsp;</td><td>DATA&nbsp;</td><td>REAL &nbsp;</td><td>Design rotational speed [rpm]&nbsp;</td><td>"rpm"&nbsp;</td></tr>
+
+</table>
+<br/>
+<font size="4" color="black">FORMULATION:</font><br/>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><p><font size="2">Document generated automatically (Date: 2020:10:21, Time: 12:26:56)</font></p>
+</body>
+</html>
