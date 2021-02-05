@@ -2,7 +2,7 @@
 <workspace version="1.3" wsVersion="1.3.7"  wsDate="06/11/2020"  wsAuthor=""  wsDescription="">
  <library name="MATH" version="3.2.7" dir="../../libs/MATH" dirType="REL_WORKSPACE"/>
  <library name="LPRES" version="1.3.7" dir="../../libs/LPRES" dirType="REL_WORKSPACE"/>
- <library name="LPRES_EXAMPLES" version="1.3.6" dir="../../libs/LPRES_EXAMPLES" dirType="REL_WORKSPACE"/>
  <library name="TRABAJO" version="0.0" dir="../../libs/TRABAJO" dirType="REL_WORKSPACE"/>
+ <library name="LPRES_EXAMPLES" version="1.3.6" dir="../../libs/LPRES_EXAMPLES" dirType="REL_WORKSPACE"/>
  <setLibrariesPath value=""/>
 </workspace>

@@ -1,0 +1,38 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: TRABAJO
+ COMPONENT: RL10_offdesign
+ PARTITION: offdesign_partition
+ EXPERIMENT: steady
+ TEMPLATE: TRANSIENT
+ TEMPLATE: STEADY
+ CREATION DATE: 05/02/2021
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT steady ON RL10_offdesign.offdesign_partition
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      HeadLoss_TO.f_in.W = 10.
+      Junction.f_in2.Tt = 170.
+      CombCha.p_out_ch = 100.
+      ThrustMonitor.M_out = 100.
+		Junction.f_in2.Tt = 170.
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 9000.
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*")
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+	FOR(LPRES.Altitude=0.;LPRES.Altitude<=100.e3;LPRES.Altitude=LPRES.Altitude+100.)
+      STEADY()
+		END FOR
+
+END EXPERIMENT
