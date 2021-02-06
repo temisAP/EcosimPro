@@ -15,19 +15,17 @@
 <generateAdvancedBox value="disabled"/>
 <noDatas>
   <variable name="Regulator_F.dp"/>
-  <variable name="Regulator_O.dp"/>
 </noDatas>
 <boundaries>
   <variable name="CombCha.OF"/>
   <variable name="LPRES.Altitude"/>
   <variable name="Regulator_F.dp"/>
-  <variable name="Regulator_O.dp"/>
 </boundaries>
 <algebraics>
   <variable name="CombCha.M_r"/>
   <variable name="CombCha.W_F"/>
   <variable name="Injector_O.PR"/>
-  <variable name="Junction.f_in2.W"/>
+  <variable name="Junction.f_in2.Tt"/>
   <variable name="Pump_F.U"/>
   <variable name="ThrustMonitor.g.Tt"/>
   <variable name="Turbine.M_2"/>

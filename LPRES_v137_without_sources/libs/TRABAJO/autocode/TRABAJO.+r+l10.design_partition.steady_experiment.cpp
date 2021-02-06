@@ -12,7 +12,7 @@ m_infoGroupName = "";
 m_infoExperimentName = "steady_experiment";
 m_infoExperimentFileName = "TRABAJO.+r+l10.design_partition.steady_experiment";
 m_infoExperimentFileNameExtra = "steady_experiment";
-m_infoExperimentDate = "05/02/2021 17:16:38.207000";
+m_infoExperimentDate = "06/02/2021 00:58:41.597000";
 
 m_perfFlag = false;
 
@@ -63,11 +63,10 @@ void TRABAJO__RL10_design_partition_steady_experiment::initDefaultsLibraryGlobal
 /* Initialisation of variables in experiment*/
 void TRABAJO__RL10_design_partition_steady_experiment::initDefaultsExp()
 {
-	dyn[1] = 1. ;
+	dyn[0] = 10. ;
 	dyn[2] = 1. ;
 	dyn[3] = 100. ;
 	dyn[4] = 100. ;
-	unkR[179] = 3000. ;
 }
 
 /* Initialisation of boundaries*/

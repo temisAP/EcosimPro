@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usedInputFiles version="1.0" library="LPRES_EXAMPLES" component="RL10_offDesign" partition="performance2" experiment="exp1" date="2021:02:06" time="01:13:27">
+  <rvar id="FGAMMA_comb" type="REAL" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="0"/>
+  <rvar id="R_comb" type="REAL" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="0"/>
+  <rboundlaw id="CC.OF"/>
+  <rboundlaw id="LPRES.Altitude"/>
+  <rboundlaw id="Regulator_1.dp"/>
+  <rboundlaw id="Regulator_1.dp_d"/>
+</usedInputFiles>

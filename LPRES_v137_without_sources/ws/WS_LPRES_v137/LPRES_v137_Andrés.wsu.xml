@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <openFiles version="1.0">
  <file path="@TRABAJO@/schematics/+r+l10_control.eds" area="mdi_main"/>
+ <file path="@TRABAJO@/schematics/+r+l10.eds" area="mdi_main"/>
  <file path="@TRABAJO@/experiments/+r+l10_control.regulator/steady/steady.exp" area="mdi_main"/>
+ <file path="@LPRES_EXAMPLES@/experiments/+r+l10_off+design.performance2/exp1/exp1.exp" area="mdi_main"/>
 </openFiles>

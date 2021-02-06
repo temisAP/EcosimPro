@@ -14,16 +14,15 @@ EXPERIMENT steady ON RL10_control.regulator
    INIT
       -- initial values for algebraics
       Injector_O.PR = 10
-      Junction.f_in2.W = 1
+      Junction.f_in2.Tt = 100
       CombCha.p_out_ch = 100
       ThrustMonitor.M_out = 100
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      CombCha.OF = 0
-      LPRES.Altitude = 0
+      CombCha.OF = 6.05499999
+      LPRES.Altitude = 9000
       Regulator_F.dp = 3219188.99
-      Regulator_O.dp = 100000
 
    BODY
       -- report results in file reportAll.rpt
