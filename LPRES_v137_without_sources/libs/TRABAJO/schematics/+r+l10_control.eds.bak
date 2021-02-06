@@ -135,11 +135,11 @@
 	
 	</component>
 
-	<component id="FlowMeter_O" library="LPRES" type="FlowMeter" layer="1" elPosition="7"  hotPort="f_in" >
+	<component id="FlowMeter_O" library="LPRES" type="FlowMeter" layer="1" elPosition="7"  hotPort="f_out" >
 	
-		<symbol cx="244" cy="128" sx="49" sy="73" dx="56" dy="144" rotation="180" flipY="true" onLabel="true" />
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="56" dy="168" rotation="180" flipY="true" onLabel="true" />
 	
-		<label cx="42.5" cy="12" dx="251.5" dy="306" />
+		<label cx="42.5" cy="12" dx="251.5" dy="330" />
 	
 	</component>
 
@@ -305,9 +305,9 @@
 
 	<connector id="Connector_2" sShape="Gearbox" sPort="m_in" eShape="Pump_O" ePort="m" points="360,140"  intermediate2="1" elPosition="1" dx="-12.0004" dy="-28"  />
 
-	<connector id="Connector_3" sShape="FlowMeter_O" sPort="i" eShape="ControlPanel" ePort="i_W" points="284,299"  intermediate1="1" elPosition="2" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_3" sShape="FlowMeter_O" sPort="i" eShape="ControlPanel" ePort="i_W" points="284,324"  intermediate1="1" elPosition="2" dx="-12.0004" dy="-28"  />
 
-	<connector id="Connector_4" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_O" ePort="f_in" points="332,184"  intermediate1="1" elPosition="3" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_4" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_O" ePort="f_in" points="312,292"  intermediate2="1" elPosition="3" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h" points="696,590"  intermediate2="1" elPosition="4" dx="-12.0004" dy="-28"  />
 
@@ -318,8 +318,6 @@
 	<connector id="Connector_8" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="624,470"  intermediate1="1" elPosition="7" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_9" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="496,470"  intermediate1="1" elPosition="8" dx="-12.0004" dy="-28"  />
-
-	<connector id="Connector_10" sShape="FlowMeter_O" sPort="f_out" eShape="Injector_O" ePort="f_in" points="316,331 316,355 500,355 500,384"  intermediate2="4" elPosition="9" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_11" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb" points="524,522 524,519 76,519 76,591 120,591"  intermediate1="1"  intermediate2="4" elPosition="10" dx="-12.0004" dy="-28"  />
 
@@ -353,7 +351,19 @@
 
 	<connector id="Connector_26" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="760,334 760,355 724,355"  intermediate1="1"  intermediate2="2" elPosition="25" dx="-12.0004" dy="-28"  />
 
+	<component id="Regulator_O" library="LPRES" type="Regulator" layer="1" elPosition="21"  hotPort="f_out" >
+	
+		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="172" dy="240" onLabel="true" />
+	
+		<label cx="40" cy="12" dx="356" dy="337" />
+	
+	</component>
+
 	<connector id="Connector_27" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="628,282 628,299"  intermediate1="1" elPosition="26" dx="-12.0004" dy="-28"  />
+
+	<connector id="Connector_10" sShape="FlowMeter_O" sPort="f_out" eShape="Regulator_O" ePort="f_in" elPosition="27"  />
+
+	<connector id="Connector_28" sShape="Regulator_O" sPort="f_out" eShape="Injector_O" ePort="f_in" points="484,328" elPosition="28"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

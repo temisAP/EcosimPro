@@ -1,0 +1,39 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: TRABAJO
+ COMPONENT: RL10_alternative_control
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ TEMPLATE: STEADY
+ CREATION DATE: 06/02/2021
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON RL10_alternative_control.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      HeadLoss_TO.f_in.W = 4
+		Junction.f_in2.Tt = 170
+		CombCha.p_out_ch = 4252 
+      ThrustMonitor.M_out = 4.53 
+		Turbine.M_2 = 0.5
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      CombCha.OF = 6.0549999999
+      LPRES.Altitude = 9000
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*")
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+		FOR(Regulator_F.dp=25e+5;Regulator_F.dp<=40e+5;Regulator_F.dp=Regulator_F.dp+1e+5)
+      	STEADY()
+		END FOR
+
+END EXPERIMENT

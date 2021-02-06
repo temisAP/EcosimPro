@@ -231,13 +231,13 @@
 
 	<component id="HeadLoss_TF" library="LPRES" type="Regulator" layer="1"  hotPort="f_out" >
 	
-		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="678" dy="-14" rotation="180" flipY="true" onLabel="true" />
+		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="676" dy="-16" rotation="180" flipY="true" onLabel="true" />
 	
-		<label cx="44" cy="12" dx="853" dy="80" />
+		<label cx="44" cy="12" dx="851" dy="78" />
 	
 		<instanceData>
-			<datum id="Type" value="Known_dp" pos="P" />
 			<datum id="dp" value="3254.325" pos="D" />
+			<datum id="Type" value="Known_dp" pos="P" />
 		</instanceData>
 	
 	</component>
@@ -308,9 +308,9 @@
 
 	<connector id="Connector_16" sShape="HeadLoss_TO" sPort="f_out" eShape="Pump_O" ePort="f_in" dx="10" dy="10"  />
 
-	<connector id="Connector_17" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_17" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in" points="926,64"  intermediate2="1" dx="10" dy="10"  />
 
-	<connector id="Connector_18" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_18" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in" points="854,64"  intermediate1="1" dx="10" dy="10"  />
 
 	<connector id="Connector_19" sShape="Regulator_F" sPort="f_out" eShape="Junction" ePort="f_in2" dx="10" dy="10"  />
 

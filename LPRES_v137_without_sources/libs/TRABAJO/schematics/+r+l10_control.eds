@@ -43,9 +43,9 @@
 
 	<component id="Turbine" library="LPRES" type="Turbine" layer="1" elPosition="2"  hotPort="f_out" >
 	
-		<symbol cx="280" cy="249.974" sx="129" sy="92.9472" dx="292.026" dy="-55.9736" rotation="90" onLabel="true" />
+		<symbol cx="280" cy="249.974" sx="129" sy="92.9472" dx="286.026" dy="-53.9736" rotation="90" onLabel="true" />
 	
-		<label cx="25" cy="12" dx="542.526" dy="237.974" />
+		<label cx="25" cy="12" dx="536.526" dy="239.974" />
 	
 		<instanceData>
 			<datum id="Type_AC" value="Angles" pos="P" />
@@ -301,7 +301,7 @@
 	
 	</component>
 
-	<connector id="Connector_1" sShape="Pump_F" sPort="m" eShape="Turbine" ePort="m" points="778,162"  intermediate1="1" elPosition="0" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_1" sShape="Pump_F" sPort="m" eShape="Turbine" ePort="m" points="564,138"  intermediate2="1" elPosition="0" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_2" sShape="Gearbox" sPort="m_in" eShape="Pump_O" ePort="m" points="360,140"  intermediate2="1" elPosition="1" dx="-12.0004" dy="-28"  />
 
@@ -311,7 +311,7 @@
 
 	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h" points="696,590"  intermediate2="1" elPosition="4" dx="-12.0004" dy="-28"  />
 
-	<connector id="Connector_6" sShape="Gearbox" sPort="m_out" eShape="Turbine" ePort="m" points="570,140"  intermediate2="1" elPosition="5" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_6" sShape="Gearbox" sPort="m_out" eShape="Turbine" ePort="m" points="564,140"  intermediate2="1" elPosition="5" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_7" sShape="CombCha" sPort="g" eShape="ThrustMonitor" ePort="g" points="572,642"  intermediate1="1" elPosition="6" dx="-12.0004" dy="-28"  />
 
@@ -343,7 +343,7 @@
 
 	<connector id="Connector_22" sShape="CoolingJacket" sPort="g" eShape="SplitFrac" ePort="f_in" points="772,512 772,335 948,335 948,356"  intermediate2="4" elPosition="21" dx="-12.0004" dy="-28"  />
 
-	<connector id="Connector_23" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="936,284 936,235 700,235 700,163 626,163"  intermediate1="1" elPosition="22" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_23" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="936,284 936,235 700,235 700,163 620,163"  intermediate1="1" elPosition="22" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_24" sShape="FlowMeter_F" sPort="f_out" eShape="CoolingJacket" ePort="l" points="1012,707 684,707 684,620"  intermediate2="3" elPosition="23" dx="-12.0004" dy="-28"  />
 
@@ -359,7 +359,7 @@
 	
 	</component>
 
-	<connector id="Connector_27" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="628,282 628,299"  intermediate1="1" elPosition="26" dx="-12.0004" dy="-28"  />
+	<connector id="Connector_27" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="628,284 628,299"  intermediate1="1" elPosition="26" dx="-12.0004" dy="-28"  />
 
 	<connector id="Connector_10" sShape="FlowMeter_O" sPort="f_out" eShape="Regulator_O" ePort="f_in" elPosition="27"  />
 

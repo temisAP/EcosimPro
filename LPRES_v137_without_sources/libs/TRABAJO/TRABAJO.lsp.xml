@@ -5,6 +5,10 @@
   <file name="RL10.eds"/>
   <file name="RL10_offdesign.eds"/>
   <file name="RL10_control.eds"/>
+  <file name="RL10_alternative_control.eds"/>
+  <file name="Simp.eds"/>
+  <file name="simp.eds"/>
+  <file name="mass_flow_splitter.el"/>
  </filedeps>
  <libdeps>
  </libdeps>

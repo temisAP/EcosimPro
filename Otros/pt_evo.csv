@@ -1,0 +1,12 @@
+Experiment: steady_experiment Library: TRABAJO Component: RL10 Partition: design_partition																															
+User: Andrés Date: 2021:02:06 Time: 11:33:19																															
+Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.17763]																															
+Library dependency list: LPRES V1.3.7 MATH V3.2.7 TRABAJO V0.0 																															
+Programme and Version: EcosimPro V6.0.0																															
+																															
+Point\Name	CombCha.g.pt	CoolingJacket.g.pt	CoolingJacket.l.pt	HeadLoss_Junct.f_in.pt	HeadLoss_Junct.f_out.pt	HeadLoss_TF.f_in.pt	HeadLoss_TF.f_out.pt	HeadLoss_TO.f_in.pt	HeadLoss_TO.f_out.pt	HeadLoss_Turb.f_in.pt	HeadLoss_Turb.f_out.pt	Injector_F.f_in.pt	Injector_O.f_in.pt	Junction.f_in1.pt	Junction.f_in2.pt	Junction.f_out.pt	Pump_F.f_in.pt	Pump_F.f_out.pt	Pump_O.f_in.pt	Pump_O.f_out.pt	Regulator_F.f_in.pt	Regulator_F.f_out.pt	SplitFrac.f_b.pt	SplitFrac.f_in.pt	SplitFrac.f_out.pt	Tank_F.f.pt	Tank_F.pt	Tank_O.f.pt	Tank_O.pt	Turbine.f_in.pt	Turbine.f_out.pt
+Units	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa	Pa
+Alias	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+0	3275010	6963937.62	7547798.88	3744748.63	3494748.63	193053.2	189798875	320606.2	315104184	3868854.23	3744748.63	3494748.63	4597104.18	3744748.63	3744748.63	3744748.63	189798875	7547798.88	315104184	4597104.18	6963937.62	3744748.63	6963937.62	6963937.62	6963937.62	193053.2	193053.2	320606.2	320606.2	6963937.62	3868854.23
+x	317	528	546	404	365	534	497	99	140	353	392	350	286	404	446	424	465	465	174	174	495	456	506	527	527	564	598	68	34	318	349
+y	327	329	375	221	221	70	70	68	68	186	186	232	232	185	185	207	68	122	66	118	185	185	186	208	164	66	66	68	68	108	176

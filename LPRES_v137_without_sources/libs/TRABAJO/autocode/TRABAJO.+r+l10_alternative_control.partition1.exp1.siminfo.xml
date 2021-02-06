@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usedInputFiles version="1.0" library="TRABAJO" component="RL10_alternative_control" partition="partition1" experiment="exp1" date="2021:02:06" time="23:49:01">
+  <rboundlaw id="CombCha.OF"/>
+  <rboundlaw id="LPRES.Altitude"/>
+</usedInputFiles>

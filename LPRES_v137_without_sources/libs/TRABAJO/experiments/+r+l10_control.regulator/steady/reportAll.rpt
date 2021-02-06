@@ -1,5 +1,5 @@
 Experiment: steady Library: TRABAJO Component: RL10_control Partition: regulator
-User: Andrés Date: 2021:02:06 Time: 01:24:57
+User: Andrés Date: 2021:02:06 Time: 20:24:48
 Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.17763]
 Library dependency list: LPRES V1.3.7 MATH V3.2.7 TRABAJO V0.0 
 Programme and Version: EcosimPro V6.0.0

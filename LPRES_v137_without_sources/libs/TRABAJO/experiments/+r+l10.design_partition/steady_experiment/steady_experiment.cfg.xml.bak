@@ -57,6 +57,7 @@
 					<var name="Regulator_F.dp_d"/>
 					<var name="CombCha.A_out"/>
 					<var name="CombCha.A_r"/>
+					<var name="CombCha.OF"/>
 				</table>
 			</tableWindow>
 		</tab>

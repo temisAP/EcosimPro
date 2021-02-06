@@ -2,33 +2,6 @@
 <experiment version="1.4.0">
 	<experimentViews>
 		<tab name="Tab_1">
-			<plotWindow title="c_estrella" x="231" y="-54" dx="1017" dy="569">
-				<plot id="c_estrella" graphType="plot_x_y">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="Regulator_F.dp">
-							<titleAxe value="Regulator_F.dp"/>
-							<scale minCurrent="1.67422e+06" maxCurrent="2.24674e+06" scaleType="current"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale minCurrent="2306.41" maxCurrent="2306.57" scaleType="current"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.c_star" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
 			<plotWindow title="Tc" x="277" y="133" dx="1089" dy="527">
 				<plot id="Tc" graphType="plot_x_y">
 						<title value="">
@@ -56,18 +29,18 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Relacion" x="244" y="-111" dx="1246" dy="743">
+			<plotWindow title="Relacion" x="-32" y="128" dx="1252" dy="743">
 				<plot id="Relacion" graphType="plot_x_y">
 						<title value="">
 							<font/>
 						</title>
 						<axeX variableName="Regulator_F.dp">
 							<titleAxe value="Regulator_F.dp"/>
-							<scale minCurrent="2.4e+06" maxCurrent="4e+06" scaleType="current"/>
+							<scale minCurrent="2.31111e+06" maxCurrent="4.08889e+06" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value=""/>
-							<scale minCurrent="-600000" maxCurrent="800000" scaleType="current"/>
+							<scale minCurrent="-677778" maxCurrent="877778" scaleType="current"/>
 						</axeY>
 						<layout>
 							<font/>
@@ -83,7 +56,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="OF" x="383" y="42" dx="973" dy="548">
+			<plotWindow title="OF" x="715" y="312" dx="973" dy="548">
 				<plot id="OF" graphType="plot_x_y">
 						<title value="">
 							<font/>
@@ -110,9 +83,36 @@
 					
 					</plot>
 			</plotWindow>
+			<plotWindow title="c_estrella" x="231" y="-54" dx="1017" dy="569">
+				<plot id="c_estrella" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="1.67422e+06" maxCurrent="2.24674e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="2306.41" maxCurrent="2306.57" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.c_star" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
 		</tab>
 	</experimentViews>
-	<watch width="141" height="686" visible="true" pos="right" >
+	<watch width="461" height="816" visible="true" pos="right" >
 		<currentTab name="view"/>
 		<variables>
 			<tab name="initial"> 
@@ -145,7 +145,7 @@
 		</layout>
 	</watch>
 
-	<outputWindow height="217" width="1822" visible="true" pos="bottom" />
+	<outputWindow height="87" width="1822" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 

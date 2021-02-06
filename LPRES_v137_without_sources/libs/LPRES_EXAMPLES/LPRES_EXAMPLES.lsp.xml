@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<library version="1.1.0">
+<library version="1.1.1">
  <filedeps>
   <file name="version.el"/>
   <file name="turbopump_offDesign_test.eds"/>
@@ -26,6 +26,7 @@
   <file name="PressureFedEngine_offDesign.eds"/>
   <file name="PressureFedEngine_design.eds"/>
   <file name="turbine_liq_offDesign_test.eds"/>
+  <file name="inj.eds"/>
  </filedeps>
  <libdeps>
   <lib name="LPRES" version=""/>
@@ -33,6 +34,4 @@
  </libdeps>
  <otherdeps>
  </otherdeps>
- <symcategories>
- </symcategories>
 </library>
