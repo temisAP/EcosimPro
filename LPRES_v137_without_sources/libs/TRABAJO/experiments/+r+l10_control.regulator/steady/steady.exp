@@ -13,10 +13,10 @@ EXPERIMENT steady ON RL10_control.regulator
    OBJECTS
    INIT
       -- initial values for algebraics
-      Injector_O.PR = 10
-      Junction.f_in2.Tt = 100
-      CombCha.p_out_ch = 100
-      ThrustMonitor.M_out = 100
+      Injector_O.PR = 1.4 -- 10
+      Junction.f_in2.Tt = 200 --100
+      CombCha.p_out_ch = 4252 --100
+      ThrustMonitor.M_out = 4.53 --100
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)

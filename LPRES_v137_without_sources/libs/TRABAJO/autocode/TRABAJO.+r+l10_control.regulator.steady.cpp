@@ -12,7 +12,7 @@ m_infoGroupName = "";
 m_infoExperimentName = "steady";
 m_infoExperimentFileName = "TRABAJO.+r+l10_control.regulator.steady";
 m_infoExperimentFileNameExtra = "steady";
-m_infoExperimentDate = "06/02/2021 01:20:43.720000";
+m_infoExperimentDate = "06/02/2021 01:24:24.245000";
 
 m_perfFlag = false;
 
@@ -72,9 +72,9 @@ void TRABAJO__RL10_control_regulator_steady::initDefaultsLibraryGlobalsInExp()
 void TRABAJO__RL10_control_regulator_steady::initDefaultsExp()
 {
 	dyn[2] = 1.4 ;
-	dyn[3] = 100. ;
-	dyn[7] = 100. ;
-	dyn[8] = 100. ;
+	dyn[3] = 200. ;
+	dyn[7] = 4252. ;
+	dyn[8] = 4.53 ;
 }
 
 /* Initialisation of boundaries*/

@@ -2,34 +2,7 @@
 <experiment version="1.4.0">
 	<experimentViews>
 		<tab name="Tab_1">
-			<plotWindow title="OF" x="-10" y="68" dx="973" dy="548">
-				<plot id="OF" graphType="plot_x_y">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="Regulator_F.dp">
-							<titleAxe value="Regulator_F.dp"/>
-							<scale minCurrent="2.45321e+06" maxCurrent="4.05481e+06" scaleType="current"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale minCurrent="6.05165" maxCurrent="6.05808" scaleType="current"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.OF" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="c_estrella" x="231" y="27" dx="1017" dy="569">
+			<plotWindow title="c_estrella" x="231" y="-54" dx="1017" dy="569">
 				<plot id="c_estrella" graphType="plot_x_y">
 						<title value="">
 							<font/>
@@ -56,34 +29,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Tc" x="541" y="50" dx="1089" dy="527">
-				<plot id="Tc" graphType="plot_x_y">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="Regulator_F.dp">
-							<titleAxe value="Regulator_F.dp"/>
-							<scale minCurrent="2.43137e+06" maxCurrent="4e+06" scaleType="current"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale minCurrent="3178.98" maxCurrent="3183.54" scaleType="current"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.T_c" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="Relacion" x="244" y="-30" dx="1246" dy="743">
+			<plotWindow title="Relacion" x="244" y="-111" dx="1246" dy="743">
 				<plot id="Relacion" graphType="plot_x_y">
 						<title value="">
 							<font/>
@@ -110,9 +56,63 @@
 					
 					</plot>
 			</plotWindow>
+			<plotWindow title="OF" x="-10" y="-13" dx="973" dy="548">
+				<plot id="OF" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.45321e+06" maxCurrent="4.05481e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="6.05165" maxCurrent="6.05808" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.OF" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Tc" x="277" y="133" dx="1089" dy="527">
+				<plot id="Tc" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.24739e+06" maxCurrent="4.18398e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="3178.45" maxCurrent="3184.07" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.T_c" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
 		</tab>
 	</experimentViews>
-	<watch width="141" height="793" visible="true" pos="right" >
+	<watch width="141" height="686" visible="true" pos="right" >
 		<currentTab name="view"/>
 		<variables>
 			<tab name="initial"> 
@@ -145,7 +145,7 @@
 		</layout>
 	</watch>
 
-	<outputWindow height="110" width="1822" visible="true" pos="bottom" />
+	<outputWindow height="217" width="1822" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
