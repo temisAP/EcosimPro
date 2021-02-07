@@ -12,36 +12,37 @@ data = './pt_evo.csv'
 print('Proceeding with ' + data)
 with open(data, 'r') as data:
     # Graph data
-    datx = []
-    daty = []
     datz = []
     k = 0
     for line in data:
         k = k+1
         if k == 10:
             datz = line.split()
-        if k == 11:
-            datx = line.split()
-        if k == 12:
-            daty = line.split()
 
-datx.pop(0)
-daty.pop(0)
 datz.pop(0)
+datz = np.array(datz,dtype = float)
+print(datz)
 
-X = np.array(datx,dtype=float)
-Y = np.array(daty,dtype=float)
-Z = np.array(datz,dtype=float)
-xi,yi = np.meshgrid(X,Y)
-zi = griddata((X,Y), Z, (xi, yi),method='cubic')
+minz = min(datz)
+maxz = max(datz)
 
+datz = (datz - minz) / (maxz-minz)
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
-plt.gca().invert_yaxis()
-CS3 = plt.contourf(xi,yi,zi, cmap='jet')
-plt.colorbar()
-plt.grid()
-plt.savefig('presiones'+'.png')
+print(datz)
+
+jet = plt.get_cmap('jet')
+
+colors = jet(datz)
+print(colors)
+htmlcolors = []
+for color in colors:
+    r = int(color[0]*255)
+    g = int(color[1]*255)
+    b = int(color[2]*255)
+    htmlcolors.append('#%02x%02x%02x' % (r, g, b))
+print(htmlcolors)
+
+x = np.linspace(0,1,len(colors))
+for i in range(len(x)):
+    plt.scatter(x[i],x[i],color = colors[i])
 plt.show()
-plt.close()

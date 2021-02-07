@@ -56,34 +56,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="OF" x="715" y="312" dx="973" dy="548">
-				<plot id="OF" graphType="plot_x_y">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="Regulator_F.dp">
-							<titleAxe value="Regulator_F.dp"/>
-							<scale minCurrent="2.45321e+06" maxCurrent="4.05481e+06" scaleType="current"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale minCurrent="6.05165" maxCurrent="6.05808" scaleType="current"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.OF" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="c_estrella" x="231" y="-54" dx="1017" dy="569">
+			<plotWindow title="c_estrella" x="138" y="68" dx="1017" dy="569">
 				<plot id="c_estrella" graphType="plot_x_y">
 						<title value="">
 							<font/>
@@ -106,6 +79,33 @@
 						</legend>
 						<chartStyles>
 							<var name="CombCha.c_star" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="OF" x="82" y="64" dx="973" dy="548">
+				<plot id="OF" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Regulator_F.dp">
+							<titleAxe value="Regulator_F.dp"/>
+							<scale minCurrent="2.45321e+06" maxCurrent="4.05481e+06" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="6.05165" maxCurrent="6.05808" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.OF" nick=""/>
 						</chartStyles>
 					
 					</plot>
